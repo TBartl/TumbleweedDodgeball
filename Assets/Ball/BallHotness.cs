@@ -1,0 +1,53 @@
+﻿using UnityEngine;
+using System.Collections;
+
+public class BallHotness : MonoBehaviour {
+	TrailRenderer tr;
+	Rigidbody2D rb;
+
+	public float threshold;
+	bool isHot = false;
+
+	float initialTrailWidth;
+	float initialTrailTime;
+
+	//TODO Add player id
+
+	void Awake()
+	{
+		tr = this.GetComponentInChildren<TrailRenderer>();
+		rb = this.GetComponent<Rigidbody2D>();
+
+		initialTrailWidth = tr.startWidth;
+		initialTrailTime = tr.time;
+	}
+	
+	// Update is called once per frame
+	void Update () {
+		isHot = (rb.velocity.magnitude >= threshold);
+		if (isHot)
+			tr.startWidth = initialTrailWidth;
+		else
+			tr.startWidth = Mathf.Max(0, tr.startWidth - 2 * Time.deltaTime);//Hardcoded because yolo
+
+		// If we're effectively at 0 velocity, don't record the trail 
+		// so when we throw it the trail will start from the hands
+		if (rb.velocity.magnitude <= .05f)
+			tr.time = 0;
+		else
+			tr.time = initialTrailTime;
+
+	}
+
+	void OnCollisionEnter2D(Collision2D other)
+	{
+		if (other.gameObject.tag == "Hittable" && isHot)
+		{
+			other.gameObject.GetComponent<Hittable>().Hit();
+		}
+	}
+
+	public bool GetIsHot() {
+		return isHot;
+	}
+}
