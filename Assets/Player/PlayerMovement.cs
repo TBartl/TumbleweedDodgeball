@@ -9,14 +9,19 @@ public class PlayerMovement : MonoBehaviour {
 
 	public List<float> modifiers;
 
+    PlayerData playerData;
+
 	void Awake()
 	{
 		rb = this.GetComponent<Rigidbody2D>();
 	}
 
+    void Start() {
+        playerData = GetComponent<PlayerData>();
+    }
+
 	void FixedUpdate () {
-		//TODO Input change to left analog stick
-		Vector3 direction = new Vector3(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"), 0).normalized;
+        Vector3 direction = Controller.GetMovementDirection(playerData.playerNum);
 
 		float speed = maxSpeed;
 		foreach (float f in modifiers)

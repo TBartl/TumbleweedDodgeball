@@ -22,6 +22,8 @@ GameObject:
   - 58: {fileID: 58000010337138070}
   - 114: {fileID: 114000010706421666}
   - 50: {fileID: 50000010210598728}
+  - 114: {fileID: 114000010262568514}
+  - 114: {fileID: 114000012787307484}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -85,6 +87,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 4000010533420606}
   - 114: {fileID: 114000013450401840}
+  - 114: {fileID: 114000012509833368}
   m_Layer: 0
   m_Name: Direction
   m_TagString: Untagged
@@ -102,6 +105,7 @@ GameObject:
   - 4: {fileID: 4000012455043304}
   - 114: {fileID: 114000012977783076}
   - 58: {fileID: 58000013512003936}
+  - 114: {fileID: 114000013011323482}
   m_Layer: 0
   m_Name: Hands
   m_TagString: Untagged
@@ -340,6 +344,23 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 1
+--- !u!114 &114000010262568514
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000010031701256}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c7b5e8de77c5b4597ae7fbfb49a95e22, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  logDebugInfo: 0
+  invertYAxis: 0
+  enableXInput: 0
+  useFixedUpdate: 0
+  dontDestroyOnLoad: 0
+  customProfiles: []
 --- !u!114 &114000010706421666
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -353,6 +374,35 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxSpeed: 5
   modifiers: []
+--- !u!114 &114000012509833368
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000012539578334}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c7b5e8de77c5b4597ae7fbfb49a95e22, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  logDebugInfo: 0
+  invertYAxis: 0
+  enableXInput: 0
+  useFixedUpdate: 0
+  dontDestroyOnLoad: 0
+  customProfiles: []
+--- !u!114 &114000012787307484
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000010031701256}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d3489716234a80645aa100081b8d45bf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerNum: 0
 --- !u!114 &114000012977783076
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -374,6 +424,23 @@ MonoBehaviour:
   chargeSpeed: 1.5
   rethrowDelay: 0.3
   barPrefab: {fileID: 1000012365056356, guid: 2e29da32e7cfa764e90eb131ecb4b3ce, type: 2}
+--- !u!114 &114000013011323482
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000013242270802}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c7b5e8de77c5b4597ae7fbfb49a95e22, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  logDebugInfo: 0
+  invertYAxis: 0
+  enableXInput: 0
+  useFixedUpdate: 0
+  dontDestroyOnLoad: 0
+  customProfiles: []
 --- !u!114 &114000013450401840
 MonoBehaviour:
   m_ObjectHideFlags: 1

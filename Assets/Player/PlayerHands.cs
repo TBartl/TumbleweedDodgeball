@@ -8,6 +8,8 @@ public class PlayerHands : MonoBehaviour {
 	List<Ball> balls;
 	bool doingSomething = false;
 
+    PlayerData playerData;
+
 
 	public float throwPower = 20f;
 	public Vector2 powerRange;
@@ -19,13 +21,9 @@ public class PlayerHands : MonoBehaviour {
 	public GameObject barPrefab;
 	Transform resizableBar;
 
-	PlayerDirection playerDirection;
-
-	void Awake() {
-		playerDirection = transform.parent.gameObject.GetComponentInChildren<PlayerDirection>();
-	}
-
 	void Start() {
+        playerData = GetComponentInParent<PlayerData>();
+
 		//TODO replace hands with predetermined bones in the armature
 		balls = new List<Ball>();
 		for (int i = 0; i < hands.Count; i++) {
@@ -38,10 +36,9 @@ public class PlayerHands : MonoBehaviour {
 
 	void Update() {
 		if (!doingSomething) {
-			//TODO Change to triggers
-			if (balls[0] != null && Input.GetMouseButtonDown(0))
-				StartCoroutine(ChargeThrowBall(0));
-			else if (balls[1] != null && Input.GetMouseButtonDown(1))
+            if (balls[0] != null && Controller.GetHandAction(playerData.playerNum, 0))
+                StartCoroutine(ChargeThrowBall(0));
+            else if (balls[1] != null && Controller.GetHandAction(playerData.playerNum, 0))
 				StartCoroutine(ChargeThrowBall(1));
 		}
 	}
@@ -79,8 +76,7 @@ public class PlayerHands : MonoBehaviour {
 		transform.parent.GetComponent<PlayerMovement>().modifiers.Add(.2f);
 
 		float val = 0;
-		//TODO Input stuff here
-		while (Input.GetMouseButton(hand)) {
+		while (Controller.GetHandAction(playerData.playerNum, hand)) {
 			val += chargeSpeed * Time.deltaTime;
 			if (val > 1) {
 				val = 1;
@@ -100,7 +96,7 @@ public class PlayerHands : MonoBehaviour {
 			resizableBar.transform.localScale = new Vector3(1, 2f, 2f);
 		}
 
-		Vector2 directionDiff = playerDirection.GetDirection();
+		Vector2 directionDiff = Controller.GetDirection(playerData.playerNum);
 		balls[hand].Throw(directionDiff.normalized * power);
 		balls[hand] = null;
 
