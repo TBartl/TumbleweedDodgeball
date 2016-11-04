@@ -19,7 +19,7 @@ public class Controller : MonoBehaviour {
 
 	void Start() {
 		if (InputManager.Devices.Count > inputDeviceNum) {
-			inputDevice = InputManager.Devices[0];
+			inputDevice = InputManager.Devices[inputDeviceNum];
 		}
 	}
 
