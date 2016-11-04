@@ -21,8 +21,11 @@ public class PlayerHands : MonoBehaviour {
 	public GameObject barPrefab;
 	Transform resizableBar;
 
+	public Controller controller;
+
 	void Start() {
         playerData = GetComponentInParent<PlayerData>();
+		controller = GetComponentInParent<Controller>();
 
 		//TODO replace hands with predetermined bones in the armature
 		balls = new List<Ball>();
@@ -36,9 +39,9 @@ public class PlayerHands : MonoBehaviour {
 
 	void Update() {
 		if (!doingSomething) {
-            if (balls[0] != null && Controller.GetHandAction(playerData.playerNum, 0))
-                StartCoroutine(ChargeThrowBall(0));
-            else if (balls[1] != null && Controller.GetHandAction(playerData.playerNum, 0))
+			if (balls[0] != null && controller.GetHandActionDown(0))
+				StartCoroutine(ChargeThrowBall(0));
+			else if (balls[1] != null && controller.GetHandActionDown(1))
 				StartCoroutine(ChargeThrowBall(1));
 		}
 	}
@@ -76,7 +79,7 @@ public class PlayerHands : MonoBehaviour {
 		transform.parent.GetComponent<PlayerMovement>().modifiers.Add(.2f);
 
 		float val = 0;
-		while (Controller.GetHandAction(playerData.playerNum, hand)) {
+		while (controller.GetHandActionHeld(hand)) {
 			val += chargeSpeed * Time.deltaTime;
 			if (val > 1) {
 				val = 1;
@@ -96,7 +99,7 @@ public class PlayerHands : MonoBehaviour {
 			resizableBar.transform.localScale = new Vector3(1, 2f, 2f);
 		}
 
-		Vector2 directionDiff = Controller.GetDirection(playerData.playerNum);
+		Vector2 directionDiff = controller.GetDirection();
 		balls[hand].Throw(directionDiff.normalized * power);
 		balls[hand] = null;
 
@@ -121,16 +124,15 @@ public class PlayerHands : MonoBehaviour {
 				Ball b = other.GetComponent<Ball>();
 
 				// TODO add trigger stuff here too
-				bool leftTriggerHeld = Input.GetMouseButton(0);
-				bool leftTriggerDown = Input.GetMouseButtonDown(0);
-				bool rightTriggerHeld = Input.GetMouseButton(1);
-				bool rightTriggerDown = Input.GetMouseButtonDown(1);
+				bool leftTriggerHeld = controller.GetHandActionHeld(0);
+				bool leftTriggerDown = controller.GetHandActionDown(0);
+				bool rightTriggerHeld = controller.GetHandActionHeld(1);
+				bool rightTriggerDown = controller.GetHandActionDown(1);
 				bool ballIsHot = b.hotness.GetIsHot();
 				if (balls[0] == null && (leftTriggerDown || (leftTriggerHeld && !ballIsHot)))
 					StartCoroutine(AddBall(b, 0));
 				else if (balls[1] == null && (rightTriggerDown || (rightTriggerHeld && !ballIsHot)))
 					StartCoroutine(AddBall(b, 1));
-
 			}
 		}
 	}

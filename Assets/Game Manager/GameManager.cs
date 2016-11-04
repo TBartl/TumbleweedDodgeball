@@ -24,7 +24,7 @@ public class GameManager : MonoBehaviour {
         for (int i = 0; i < players.Length; ++i) {
             // TODO let players pick their number
             // for now controller number = player number
-            Controller.controlMapping.Add(i, i);
+            //Controller.controlMapping.Add(i, i);
         }
     }
 	

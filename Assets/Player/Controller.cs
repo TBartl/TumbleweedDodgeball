@@ -2,58 +2,123 @@
 using System.Collections;
 using InControl;
 
-public static class Controller {
+public class Controller : MonoBehaviour {
 
-    public static Hashtable controlMapping = new Hashtable();
+	public int inputDeviceNum;
 
-    public static Vector3 GetDirection(int playerNum) {
+	InputDevice inputDevice = null;
 
-        if (GameManager.instance.devMode) { // use keyboard & mouse
-            return GetMousePosition() - GameManager.instance.players[playerNum].transform.position;
-        }
+	bool prevLeftTriggerPressed = false;
+	bool prevRightTriggerPressed = false;
 
-        // use controller
-        InputDevice inputDevice = InputManager.Devices[(int) controlMapping[playerNum]];
-        return new Vector3(inputDevice.RightStickX, inputDevice.RightStickY, 0);
-    }
+	// used to store the current orientation of the player
+	// that way if the player isn't pressing the right stick,
+	// the direction doesn't jump back to the default, it stays
+	// where it was
+	Vector3 direction;
 
-    static Vector3 GetMousePosition() {
-        Vector3 v = Vector3.zero;
+	void Start() {
+		if (InputManager.Devices.Count > inputDeviceNum) {
+			inputDevice = InputManager.Devices[0];
+		}
+	}
 
-        Plane p = new Plane(Vector3.back, Vector3.zero);
-        Ray r = Camera.main.ScreenPointToRay(Input.mousePosition);
-        float distance = 0;
-        if (p.Raycast(r, out distance)) {
-            v = r.GetPoint(distance);
-        }
-        return v;
-    }
+	void LateUpdate() {
+		if (inputDevice == null) {
+			PrintErrorMessage();
+			return;
+		}
+		prevLeftTriggerPressed = inputDevice.LeftTrigger > 0;
+		prevRightTriggerPressed = inputDevice.RightTrigger > 0;
+	}
 
-    public static Vector3 GetMovementDirection(int playerNum) {
+	void PrintErrorMessage() {
+		print("Error: No controller for input number " + inputDeviceNum + ". Plug in a controller or press F1 to enter dev mode");
+	}
+
+	public Vector3 GetDirection() {
+		if (GameManager.instance.devMode) { // use keyboard & mouse
+			return GetMousePosition() - transform.position;
+		}
+
+		// use controller
+		if (inputDevice == null) {
+			PrintErrorMessage();
+			return Vector3.zero;
+		}
+
+		if (inputDevice.RightStickX != 0 || inputDevice.RightStickY != 0) {
+			direction =  new Vector3(inputDevice.RightStickX, inputDevice.RightStickY, 0);
+		}
+
+		return direction;
+	}
+
+	static Vector3 GetMousePosition() {
+		Vector3 v = Vector3.zero;
+
+		Plane p = new Plane(Vector3.back, Vector3.zero);
+		Ray r = Camera.main.ScreenPointToRay(Input.mousePosition);
+		float distance = 0;
+		if (p.Raycast(r, out distance)) {
+			v = r.GetPoint(distance);
+		}
+		return v;
+	}
+
+	public Vector3 GetMovementDirection() {
         if (GameManager.instance.devMode) { // use keyboard & mouse
             return new Vector3(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"), 0).normalized;
         }
 
-        // use controller
-        InputDevice inputDevice = InputManager.Devices[(int)controlMapping[playerNum]];
-        return new Vector3(inputDevice.LeftStick.X, inputDevice.LeftStick.Y, 0);
+		// use controller
+		if (inputDevice == null) {
+			PrintErrorMessage();
+			return Vector3.zero;
+		}
+
+		return new Vector3(inputDevice.LeftStick.X, inputDevice.LeftStick.Y, 0);
     }
 
-    public static bool GetHandAction(int playerNum, int hand) {
-        if (GameManager.instance.devMode) { // use keyboard & mouse
-            return Input.GetMouseButtonDown(hand);
-        }
+	// returns true if the trigger was pressed down this frame
+	public bool GetHandActionDown(int hand) {
+		if (GameManager.instance.devMode) { // use keyboard & mouse
+			return Input.GetMouseButtonDown(hand);
+		}
 
-        // use controller
-        InputDevice inputDevice = InputManager.Devices[(int)controlMapping[playerNum]];
-        switch (hand) {
-            // TODO might need to adjust the threshold
-            case 0:
-                return inputDevice.LeftTrigger > .1;
-            case 1:
-				MonoBehaviour.print(inputDevice.RightTrigger);
-                return inputDevice.RightTrigger > .1;
-        }
-        return false;
-    }
+		// use controller
+		if (inputDevice == null) {
+			PrintErrorMessage();
+			return false;
+		}
+
+		switch (hand) {
+			case 0:
+				return inputDevice.LeftTrigger.Value > 0 && prevLeftTriggerPressed == false;
+			case 1:
+				return inputDevice.RightTrigger.Value > 0 && prevRightTriggerPressed == false;
+		}
+		return false;
+	}
+
+	// returns true if the trigger is down at all
+	public bool GetHandActionHeld(int hand) {
+		if (GameManager.instance.devMode) { // use keyboard & mouse
+			return Input.GetMouseButton(hand);
+		}
+
+		// use controller
+		if (inputDevice == null) {
+			PrintErrorMessage();
+			return false;
+		}
+
+		switch (hand) {
+			case 0:
+				return inputDevice.LeftTrigger.Value > 0;
+			case 1:
+				return inputDevice.RightTrigger.Value > 0;
+		}
+		return false;
+	}
 }

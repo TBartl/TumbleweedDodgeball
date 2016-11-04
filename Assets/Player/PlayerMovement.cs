@@ -10,6 +10,7 @@ public class PlayerMovement : MonoBehaviour {
 	public List<float> modifiers;
 
     PlayerData playerData;
+	Controller controller;
 
 	void Awake()
 	{
@@ -18,10 +19,11 @@ public class PlayerMovement : MonoBehaviour {
 
     void Start() {
         playerData = GetComponent<PlayerData>();
+		controller = GetComponent<Controller>();
     }
 
 	void FixedUpdate () {
-        Vector3 direction = Controller.GetMovementDirection(playerData.playerNum);
+		Vector3 direction = controller.GetMovementDirection();
 
 		float speed = maxSpeed;
 		foreach (float f in modifiers)
