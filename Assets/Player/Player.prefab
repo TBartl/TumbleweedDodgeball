@@ -89,6 +89,7 @@ GameObject:
   - 4: {fileID: 4000010533420606}
   - 114: {fileID: 114000013450401840}
   - 114: {fileID: 114000012509833368}
+  - 114: {fileID: 114000014135917682}
   m_Layer: 0
   m_Name: Direction
   m_TagString: Untagged
@@ -387,6 +388,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxSpeed: 5
   modifiers: []
+  playerMats:
+  - {fileID: 2100000, guid: a16e6b79ee9ee41d9ade8816235d3031, type: 2}
+  - {fileID: 2100000, guid: 6fa98773c855447aca4078c45da2a153, type: 2}
+  - {fileID: 2100000, guid: cc36fe8f5d2b844cca310b1b607ed162, type: 2}
+  - {fileID: 2100000, guid: 3d1c495ccd15e4f2eae7be664ad34858, type: 2}
 --- !u!114 &114000012509833368
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -466,3 +472,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b041fb51102da734a85b81c1027f90a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &114000014135917682
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000012539578334}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f676cfa3e99a34fa58dd146c6bdf5baa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerMats:
+  - {fileID: 2100000, guid: a16e6b79ee9ee41d9ade8816235d3031, type: 2}
+  - {fileID: 2100000, guid: 6fa98773c855447aca4078c45da2a153, type: 2}
+  - {fileID: 2100000, guid: cc36fe8f5d2b844cca310b1b607ed162, type: 2}
+  - {fileID: 2100000, guid: 3d1c495ccd15e4f2eae7be664ad34858, type: 2}

@@ -12,6 +12,8 @@ public class PlayerMovement : MonoBehaviour {
     PlayerData playerData;
 	Controller controller;
 
+	public Material[] playerMats = new Material[4];
+
 	void Awake()
 	{
 		rb = this.GetComponent<Rigidbody2D>();
@@ -20,6 +22,7 @@ public class PlayerMovement : MonoBehaviour {
     void Start() {
         playerData = GetComponent<PlayerData>();
 		controller = GetComponent<Controller>();
+		GetComponentInChildren<Renderer>().material = playerMats[playerData.playerNum];
     }
 
 	void FixedUpdate () {
