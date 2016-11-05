@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class GameTimer : MonoBehaviour {
 
-	private float curTime = 10;
+	private float curTime = 180;
 	private Text timer;
 
 	static public bool play;

@@ -56,7 +56,7 @@ public class PlayerHands : MonoBehaviour {
 	IEnumerator AddBall(Ball b, int hand) {
 		doingSomething = true;
 
-		b.Grab();
+		b.Grab(playerData.playerNum);
 		Vector3 originalPos = b.transform.position;
 		Vector3 targetPos = hands[hand].position;
 

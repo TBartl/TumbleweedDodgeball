@@ -4,20 +4,20 @@ using UnityEngine.UI;
 
 public class PlayerAddHit : MonoBehaviour {
 
-	public GameObject[] playerHitCount;
-	private int[] counts = {0,0,0,0};
+	public GameObject[] playerHitCount = new GameObject[4];
+	static private Text[] hitText  = new Text[4];
+	private static int[] counts = {0,0,0,0};
 
 	void Start () {
 		for (int i = 0; i < playerHitCount.Length; ++i) {
-			Text temp = playerHitCount[i].GetComponent<Text>();
-			temp.text = "Hits:"+counts[i];
+			hitText[i] = playerHitCount[i].GetComponent<Text>();
+			hitText[i].text = "Hits:"+counts[i];
 		}
 	}
 
-	public void AddHit (int playerID) {
+	public static void AddHit (int playerID) {
 		counts[playerID]++;
-		Text temp = playerHitCount[playerID].GetComponent<Text>();
-		temp.text = "Hits:"+counts[playerID];
+		hitText[playerID].text = "Hits:"+counts[playerID];
 	}
 
 }
