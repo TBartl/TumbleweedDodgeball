@@ -3,23 +3,18 @@ using System.Collections;
 
 public class BallSource : MonoBehaviour {
 
-	public int throwID;
-	public bool held;
+	int sourceID;
 
 	void Awake () {
-		throwID = -1;
-		held = false;
-	}
-	
-	public void setID (int ID) {
-		throwID = ID;
+		sourceID = -1;
 	}
 
-	public void holdBall () {
-		held = true;
+	public void  SetSourceID(int newSourceID) {
+		sourceID = newSourceID;
 	}
 
-	public void releaseBall () {
-		held = false;
+	public int GetSourceID() {
+		return sourceID;
 	}
+
 }

@@ -4,6 +4,7 @@ using System.Collections;
 public class BallHotness : MonoBehaviour {
 	TrailRenderer tr;
 	Rigidbody2D rb;
+	BallSource source;
 
 	public float threshold;
 	bool isHot = false;
@@ -11,12 +12,11 @@ public class BallHotness : MonoBehaviour {
 	float initialTrailWidth;
 	float initialTrailTime;
 
-	//TODO Add player id
-
 	void Awake()
 	{
 		tr = this.GetComponentInChildren<TrailRenderer>();
 		rb = this.GetComponent<Rigidbody2D>();
+		source = this.GetComponent<BallSource>();
 
 		initialTrailWidth = tr.startWidth;
 		initialTrailTime = tr.time;
@@ -43,8 +43,13 @@ public class BallHotness : MonoBehaviour {
 	{
 		if (other.gameObject.tag == "Hittable" && isHot)
 		{
-			other.gameObject.GetComponent<Hittable>().Hit();
+			other.gameObject.GetComponent<Hittable>().Hit(source.GetSourceID());
+			this.OnHit();
 		}
+	}
+
+	protected virtual void OnHit() {
+
 	}
 
 	public bool GetIsHot() {

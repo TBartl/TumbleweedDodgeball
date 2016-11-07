@@ -9,7 +9,7 @@ public class PlayerHands : MonoBehaviour {
 	bool doingSomething = false;
 
     PlayerData playerData;
-
+	Controller controller;
 
 	public float throwPower = 20f;
 	public Vector2 powerRange;
@@ -21,11 +21,12 @@ public class PlayerHands : MonoBehaviour {
 	public GameObject barPrefab;
 	Transform resizableBar;
 
-	public Controller controller;
+	void Awake() {
+		playerData = GetComponentInParent<PlayerData>();
+		controller = GetComponentInParent<Controller>();
+	}
 
 	void Start() {
-        playerData = GetComponentInParent<PlayerData>();
-		controller = GetComponentInParent<Controller>();
 
 		//TODO replace hands with predetermined bones in the armature
 		balls = new List<Ball>();
@@ -56,7 +57,7 @@ public class PlayerHands : MonoBehaviour {
 	IEnumerator AddBall(Ball b, int hand) {
 		doingSomething = true;
 
-		b.Grab(playerData.playerNum);
+		b.Grab(playerData.num);
 		Vector3 originalPos = b.transform.position;
 		Vector3 targetPos = hands[hand].position;
 
@@ -101,6 +102,7 @@ public class PlayerHands : MonoBehaviour {
 
 		Vector2 directionDiff = controller.GetDirection();
 		balls[hand].Throw(directionDiff.normalized * power);
+		balls[hand].GetComponent<BallSource>().SetSourceID(playerData.num);
 		balls[hand] = null;
 
 		for (float t = 0; t < rethrowDelay; t += Time.deltaTime)

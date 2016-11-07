@@ -6,24 +6,15 @@ public class PlayerMovement : MonoBehaviour {
 
 	public float maxSpeed;
 	Rigidbody2D rb;
-
-	public List<float> modifiers;
-
-    PlayerData playerData;
 	Controller controller;
 
-	public Material[] playerMats = new Material[4];
+	public List<float> modifiers;
 
 	void Awake()
 	{
 		rb = this.GetComponent<Rigidbody2D>();
+		controller = this.GetComponent<Controller>();
 	}
-
-    void Start() {
-        playerData = GetComponent<PlayerData>();
-		controller = GetComponent<Controller>();
-		GetComponentInChildren<Renderer>().material = playerMats[playerData.playerNum];
-    }
 
 	void FixedUpdate () {
 		Vector3 direction = controller.GetMovementDirection();

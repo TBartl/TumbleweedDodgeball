@@ -3,14 +3,11 @@ using System.Collections;
 
 
 public class PlayerDirection : MonoBehaviour {
-
-    PlayerData playerData;
 	Controller controller;
 
-    void Start() {
-        playerData = GetComponentInParent<PlayerData>();
+	void Awake() {
 		controller = GetComponentInParent<Controller>();
-    }
+	}
 
 	void Update () {
 		Vector3 directionDiff = controller.GetDirection();
