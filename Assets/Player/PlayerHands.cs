@@ -57,6 +57,7 @@ public class PlayerHands : MonoBehaviour {
 		doingSomething = true;
 
 		b.Grab(playerData.playerNum);
+		AddBallUI.BalltoUI(playerData.playerNum, hand);
 		Vector3 originalPos = b.transform.position;
 		Vector3 targetPos = hands[hand].position;
 
@@ -106,6 +107,7 @@ public class PlayerHands : MonoBehaviour {
 		for (float t = 0; t < rethrowDelay; t += Time.deltaTime)
 			yield return null;
 
+		AddBallUI.BallfromUI(playerData.playerNum, hand);
 
 		transform.parent.GetComponent<PlayerMovement>().modifiers.Remove(.2f);
 		resizableBar.parent.parent.gameObject.SetActive(false);

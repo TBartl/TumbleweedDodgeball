@@ -34,5 +34,4 @@ public class PlayerMovement : MonoBehaviour {
 		rb.velocity = direction * speed;
 	}
 
-
 }
