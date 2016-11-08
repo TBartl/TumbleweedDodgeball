@@ -91,6 +91,7 @@ public class PlayerHands : MonoBehaviour {
 				val = 0;
 				chargeSpeed *= -1;
 			}
+			controller.Vibrate(val);
 			resizableBar.transform.localScale = new Vector3(val, 1, 1);
 			yield return null;
 		}

@@ -17,7 +17,7 @@ public class Controller : MonoBehaviour {
 	// that way if the player isn't pressing the right stick,
 	// the direction doesn't jump back to the default, it stays
 	// where it was
-	Vector3 direction;
+	Vector3 direction = new Vector3(1, 0, 0);
 
 	void Start() {
 		if (InControl.InputManager.Devices.Count > inputDeviceNum) {
@@ -127,5 +127,11 @@ public class Controller : MonoBehaviour {
 				return inputDevice.RightTrigger.Value > 0;
 		}
 		return false;
+	}
+
+	public void Vibrate(float intensity) {
+		//inputDevice.Vibrate(intensity);
+		//inputDevice.Vibrate(intensity, intensity);
+		// TODO neither of these work
 	}
 }
