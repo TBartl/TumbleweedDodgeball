@@ -1253,8 +1253,8 @@ MonoBehaviour:
   prefabs:
   - {fileID: 1000013903614682, guid: f85825572bb59904c936e399975e49a4, type: 2}
   - {fileID: 1000013903614682, guid: f2a2b5cf0a110474badd347b37341cf7, type: 2}
-  - {fileID: 1000010745825914, guid: 2dea40bf994329e49b2bc47c2f6674ad, type: 2}
   - {fileID: 1000011732276918, guid: 4501538b57b623b4da90a09a13d8085e, type: 2}
+  - {fileID: 1000010745825914, guid: 2dea40bf994329e49b2bc47c2f6674ad, type: 2}
 --- !u!114 &114000014024199090
 MonoBehaviour:
   m_ObjectHideFlags: 1
