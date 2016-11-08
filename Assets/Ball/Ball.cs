@@ -8,6 +8,7 @@ public class Ball : MonoBehaviour {
 	BallGlow glow;
 	[HideInInspector]
 	public BallHotness hotness;
+	public float squishFactor;
 
 	void Awake() {
 		rb = this.GetComponent<Rigidbody2D>();
@@ -29,5 +30,17 @@ public class Ball : MonoBehaviour {
 		rb.velocity = velocity;
 		transform.parent = null;
 		bounce.Reset();
+	}
+
+	void OnCollisionEnter2D(Collision2D coll) {
+		if (hotness.GetIsHot()) { // only squish if the ball is hot
+			Vector3 direction = rb.velocity.normalized;
+			transform.localScale = new Vector3(transform.localScale.x - squishFactor * direction.x, transform.localScale.y - squishFactor * direction.y, transform.localScale.z);
+			Invoke("Unsquish", 1);
+		}
+	}
+
+	void Unsquish() {
+		transform.localScale = Vector3.one;
 	}
 }

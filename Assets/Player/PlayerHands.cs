@@ -128,7 +128,6 @@ public class PlayerHands : MonoBehaviour {
 			if (!doingSomething) {
 				Ball b = other.GetComponent<Ball>();
 
-				// TODO add trigger stuff here too
 				bool leftTriggerHeld = controller.GetHandActionHeld(0);
 				bool leftTriggerDown = controller.GetHandActionDown(0);
 				bool rightTriggerHeld = controller.GetHandActionHeld(1);
