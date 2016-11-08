@@ -348,6 +348,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 4000012354146762}
+  - 114: {fileID: 114000013947605996}
   m_Layer: 0
   m_Name: Debug Spawn Manager
   m_TagString: Untagged
@@ -686,7 +687,12 @@ MonoBehaviour:
   - {r: 0.9485294, g: 0.34872404, b: 0.34872404, a: 1}
   - {r: 0.34509802, g: 0.42371866, b: 0.94509804, a: 1}
   - {r: 0.7630288, g: 0.34509802, b: 0.94509804, a: 1}
-  - {r: 0.34509802, g: 0.94509804, b: 0.94509804, a: 1}
+  - {r: 0.51475316, g: 0.94509804, b: 0.34509802, a: 1}
+  materials:
+  - {fileID: 2100000, guid: 8aa2fc53e3be06c41b52a21b3b467314, type: 2}
+  - {fileID: 2100000, guid: 30fff8dd9b791f4488bd21e6e52d1b4f, type: 2}
+  - {fileID: 2100000, guid: a96a3685b89ddc34f830aee8940b5203, type: 2}
+  - {fileID: 2100000, guid: b99b0b5eed265914bbe76ee25983a384, type: 2}
 --- !u!114 &114000011231749194
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1231,6 +1237,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0c1a58282f245064ca01ed258371d439, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &114000013947605996
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000013933476204}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 759db2806628f7c4caff53bee87be990, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnInterval: 5
+  boxRadius: {x: 14, y: 7}
+  prefabs:
+  - {fileID: 1000013903614682, guid: f85825572bb59904c936e399975e49a4, type: 2}
+  - {fileID: 1000013903614682, guid: f2a2b5cf0a110474badd347b37341cf7, type: 2}
+  - {fileID: 1000010745825914, guid: 2dea40bf994329e49b2bc47c2f6674ad, type: 2}
+  - {fileID: 1000011732276918, guid: 4501538b57b623b4da90a09a13d8085e, type: 2}
 --- !u!114 &114000014024199090
 MonoBehaviour:
   m_ObjectHideFlags: 1

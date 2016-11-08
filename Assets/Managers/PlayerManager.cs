@@ -7,6 +7,7 @@ public class PlayerManager : MonoBehaviour {
 
 	public List<GameObject> players;
 	public List<Color> colors;
+	public List<Material> materials;
 
 	void Awake() {
 		if (inst == null)
@@ -16,5 +17,9 @@ public class PlayerManager : MonoBehaviour {
 
 	public Color GetColor(int playerID) {
 		return colors[playerID];
+	}
+
+	public Material GetMaterial(int playerID) {
+		return materials[playerID];
 	}
 }
