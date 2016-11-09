@@ -133,10 +133,14 @@ public class PlayerHands : MonoBehaviour {
 				bool rightTriggerHeld = controller.GetHandActionHeld(1);
 				bool rightTriggerDown = controller.GetHandActionDown(1);
 				bool ballIsHot = b.hotness.GetIsHot();
-				if (balls[0] == null && (leftTriggerDown || (leftTriggerHeld && !ballIsHot)))
+
+				if (balls[0] == null && ((ballIsHot && leftTriggerDown && b.catchable) || (!ballIsHot && leftTriggerHeld))) {
 					StartCoroutine(AddBall(b, 0));
-				else if (balls[1] == null && (rightTriggerDown || (rightTriggerHeld && !ballIsHot)))
+				}
+				else if (balls[1] == null && ((ballIsHot && rightTriggerDown && b.catchable) || (!ballIsHot && rightTriggerHeld))) {
 					StartCoroutine(AddBall(b, 1));
+				}
+
 			}
 		}
 	}

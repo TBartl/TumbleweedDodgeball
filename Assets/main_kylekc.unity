@@ -449,16 +449,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 4
       objectReference: {fileID: 0}
-    - target: {fileID: 114000011747105902, guid: bbaeeea7aebdf8c438b3ae2ddcdb2a38,
-        type: 2}
-      propertyPath: squishFactor
-      value: 0.1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114000011747105902, guid: bbaeeea7aebdf8c438b3ae2ddcdb2a38,
-        type: 2}
-      propertyPath: squishDuration
-      value: 0.05
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: bbaeeea7aebdf8c438b3ae2ddcdb2a38, type: 2}
   m_IsPrefabParent: 0
@@ -3039,11 +3029,6 @@ Prefab:
       propertyPath: m_Name
       value: Ball (2)
       objectReference: {fileID: 0}
-    - target: {fileID: 114000010143438534, guid: bbaeeea7aebdf8c438b3ae2ddcdb2a38,
-        type: 2}
-      propertyPath: squishFactor
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: bbaeeea7aebdf8c438b3ae2ddcdb2a38, type: 2}
   m_IsPrefabParent: 0
@@ -3420,6 +3405,11 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 114000013947605996, guid: 7195cefd3cff64240bb942110d4250b7,
+        type: 2}
+      propertyPath: prefabs.Array.size
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 4000010541229136, guid: 7195cefd3cff64240bb942110d4250b7, type: 2}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -3465,13 +3455,19 @@ Prefab:
     - target: {fileID: 224000013084658178, guid: 7195cefd3cff64240bb942110d4250b7,
         type: 2}
       propertyPath: m_SizeDelta.y
-      value: 224.13794
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224000013431957010, guid: 7195cefd3cff64240bb942110d4250b7,
         type: 2}
       propertyPath: m_SizeDelta.y
-      value: 55.172417
+      value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114000013947605996, guid: 7195cefd3cff64240bb942110d4250b7,
+        type: 2}
+      propertyPath: prefabs.Array.data[4]
+      value: 
+      objectReference: {fileID: 1000013903614682, guid: 502e7c62848d21447b734a65d00c9c87,
+        type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7195cefd3cff64240bb942110d4250b7, type: 2}
   m_IsPrefabParent: 0

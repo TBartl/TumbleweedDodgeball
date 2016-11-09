@@ -8,6 +8,7 @@ public class Ball : MonoBehaviour {
 	BallGlow glow;
 	[HideInInspector]
 	public BallHotness hotness;
+	public bool catchable;
 
 	void Awake() {
 		rb = this.GetComponent<Rigidbody2D>();
