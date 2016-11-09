@@ -329,8 +329,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 059aa7fc6fab71c4eb77e5822f8bb7ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  squishFactor: 0
-  squishDuration: 0
+  squishFactor: 0.025
+  squishDuration: 0.07
 --- !u!114 &114000014181126182
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -41,14 +41,14 @@ public class BallHotness : MonoBehaviour {
 
 	void OnCollisionEnter2D(Collision2D other)
 	{
-		if (other.gameObject.tag == "Hittable" && isHot)
+		if (isHot && (other.gameObject.tag == "Hittable" || other.gameObject.tag == "Player"))
 		{
 			other.gameObject.GetComponent<Hittable>().Hit(source.GetSourceID());
-			this.OnHit();
+			this.OnHit(other.gameObject.tag);
 		}
 	}
 
-	protected virtual void OnHit() {
+	protected virtual void OnHit(string tag) {
 
 	}
 
