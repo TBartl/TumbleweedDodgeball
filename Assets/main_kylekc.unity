@@ -449,6 +449,16 @@ Prefab:
       propertyPath: m_RootOrder
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 114000011747105902, guid: bbaeeea7aebdf8c438b3ae2ddcdb2a38,
+        type: 2}
+      propertyPath: squishFactor
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000011747105902, guid: bbaeeea7aebdf8c438b3ae2ddcdb2a38,
+        type: 2}
+      propertyPath: squishDuration
+      value: 0.05
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: bbaeeea7aebdf8c438b3ae2ddcdb2a38, type: 2}
   m_IsPrefabParent: 0
@@ -3455,12 +3465,12 @@ Prefab:
     - target: {fileID: 224000013084658178, guid: 7195cefd3cff64240bb942110d4250b7,
         type: 2}
       propertyPath: m_SizeDelta.y
-      value: 223.2558
+      value: 224.13794
       objectReference: {fileID: 0}
     - target: {fileID: 224000013431957010, guid: 7195cefd3cff64240bb942110d4250b7,
         type: 2}
       propertyPath: m_SizeDelta.y
-      value: 55.81395
+      value: 55.172417
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7195cefd3cff64240bb942110d4250b7, type: 2}

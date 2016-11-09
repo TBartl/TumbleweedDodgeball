@@ -4,7 +4,7 @@ using InControl;
 
 public class Controller : MonoBehaviour {
 
-	static bool devMode;
+	static bool devMode = false;
 
 	public int inputDeviceNum;
 
@@ -32,11 +32,15 @@ public class Controller : MonoBehaviour {
 
 	void LateUpdate() {
 		if (inputDevice == null) {
-			PrintErrorMessage();
-			return;
+			if (!devMode) {
+				PrintErrorMessage();
+				return;
+			}
 		}
-		prevLeftTriggerPressed = inputDevice.LeftTrigger > 0;
-		prevRightTriggerPressed = inputDevice.RightTrigger > 0;
+		else {
+			prevLeftTriggerPressed = inputDevice.LeftTrigger > 0;
+			prevRightTriggerPressed = inputDevice.RightTrigger > 0;
+		}
 	}
 
 	void PrintErrorMessage() {

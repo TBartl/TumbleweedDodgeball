@@ -76,6 +76,7 @@ GameObject:
   - 114: {fileID: 114000010179219912}
   - 114: {fileID: 114000010620058036}
   - 114: {fileID: 114000011125999118}
+  - 114: {fileID: 114000011747105902}
   m_Layer: 0
   m_Name: Ball
   m_TagString: Ball
@@ -190,7 +191,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 1
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!58 &58000013684870730
 CircleCollider2D:
   m_ObjectHideFlags: 1
@@ -267,7 +268,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hotness: {fileID: 0}
-  squishFactor: 5
 --- !u!114 &114000010179219912
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -303,6 +303,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a2adcceb1d62f4db6a26153031de443b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &114000011747105902
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000013903614682}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 059aa7fc6fab71c4eb77e5822f8bb7ac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  squishFactor: 0.025
+  squishDuration: 0.07
 --- !u!114 &114000012302093280
 MonoBehaviour:
   m_ObjectHideFlags: 1
