@@ -2,11 +2,12 @@
 using System.Collections;
 
 public class BallSquish : MonoBehaviour {
-	bool squishing = false, unsquishing = false;
+	bool squishing = false, unsquishing = false, colliding = false;
 	public float squishFactor;
+	public float stretchFactor;
 	public float squishDuration;
 	float squishStartTime, squishFinishTime, unsquishStartTime, unsquishFinishTime;
-	Vector2 squishVector, stretchVector;
+	Vector2 squishVector, stretchVector, ballDir;
 	
 	Ball ball;
 	Rigidbody2D body;
@@ -18,6 +19,7 @@ public class BallSquish : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+		if(!colliding) ballDir = body.velocity.normalized;
 		if (squishing) {
 			if (Time.time >= squishFinishTime) {
 				squishing = false;
@@ -44,17 +46,19 @@ public class BallSquish : MonoBehaviour {
 					transform.localScale.y + currentSquishVector.y - currentStretchVector.y, transform.localScale.z);
 			}
 		}
+		if (!squishing && !unsquishing && colliding) colliding = false;
 	}
 
 	void OnCollisionEnter2D(Collision2D coll) {
 		if (ball.hotness.GetIsHot()) { // only squish if the ball is hot
-			Vector2 direction = new Vector3(Mathf.Abs(body.velocity.x), Mathf.Abs(body.velocity.y));
+			colliding = true;
+			Vector2 direction = ballDir;//new Vector3(Mathf.Abs(body.velocity.x), Mathf.Abs(body.velocity.y));
 			squishStartTime = Time.time;
 			squishFinishTime = squishStartTime + squishDuration;
 			squishing = true;
-			squishVector = direction * squishFactor;
+			squishVector = direction*squishFactor;
 			direction = Quaternion.Euler(new Vector3(0, 0, 90)) * direction;
-			stretchVector = direction * squishFactor;
+			stretchVector = direction/stretchFactor;
 		}
 	}
 }
