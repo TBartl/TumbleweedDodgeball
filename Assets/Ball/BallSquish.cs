@@ -30,8 +30,8 @@ public class BallSquish : MonoBehaviour {
 			else {
 				Vector2 currentSquishVector = (squishVector * (Time.time - squishStartTime) / (squishFinishTime - squishStartTime));
 				Vector2 currentStretchVector = (stretchVector * (Time.time - squishStartTime) / (squishFinishTime - squishStartTime));
-				transform.localScale = new Vector3(transform.localScale.x - currentSquishVector.x + currentStretchVector.x, 
-					transform.localScale.y - currentSquishVector.y + currentStretchVector.y, transform.localScale.z);
+				//transform.localScale = new Vector3(transform.localScale.x - currentSquishVector.x + currentStretchVector.x, 
+				//	transform.localScale.y - currentSquishVector.y + currentStretchVector.y, transform.localScale.z);
 			}
 		}
 		if (unsquishing) {
@@ -42,8 +42,8 @@ public class BallSquish : MonoBehaviour {
 			else {
 				Vector2 currentSquishVector = (squishVector * (Time.time - unsquishStartTime) / (unsquishFinishTime - unsquishStartTime));
 				Vector2 currentStretchVector = (stretchVector * (Time.time - unsquishStartTime) / (unsquishFinishTime - unsquishStartTime));
-				transform.localScale = new Vector3(transform.localScale.x + currentSquishVector.x - currentStretchVector.x, 
-					transform.localScale.y + currentSquishVector.y - currentStretchVector.y, transform.localScale.z);
+				//transform.localScale = new Vector3(transform.localScale.x + currentSquishVector.x - currentStretchVector.x, 
+				//	transform.localScale.y + currentSquishVector.y - currentStretchVector.y, transform.localScale.z);
 			}
 		}
 		if (!squishing && !unsquishing && colliding) colliding = false;
