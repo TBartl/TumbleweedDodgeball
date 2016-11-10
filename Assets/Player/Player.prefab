@@ -405,6 +405,7 @@ MonoBehaviour:
   chargeSpeed: 1.5
   rethrowDelay: 0.3
   barPrefab: {fileID: 1000012365056356, guid: 2e29da32e7cfa764e90eb131ecb4b3ce, type: 2}
+  aimAssistAngle: 5
 --- !u!114 &114000013450401840
 MonoBehaviour:
   m_ObjectHideFlags: 1

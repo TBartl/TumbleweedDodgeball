@@ -21,6 +21,8 @@ public class PlayerHands : MonoBehaviour {
 	public GameObject barPrefab;
 	Transform resizableBar;
 
+	public float aimAssistAngle;
+
 	void Awake() {
 		playerData = GetComponentInParent<PlayerData>();
 		controller = GetComponentInParent<Controller>();
@@ -103,6 +105,7 @@ public class PlayerHands : MonoBehaviour {
 		}
 
 		Vector2 directionDiff = controller.GetDirection();
+		directionDiff = AimAssist(directionDiff, balls[hand].transform.position);
 		balls[hand].Throw(directionDiff.normalized * power);
 		balls[hand].GetComponent<BallSource>().SetSourceID(playerData.num);
 		balls[hand] = null;
@@ -149,5 +152,25 @@ public class PlayerHands : MonoBehaviour {
 		if (other.tag == "Ball") {
 			other.GetComponent<BallGlow>().RemoveInRange(transform.parent.gameObject);
 		}
+	}
+
+	Vector2 AimAssist(Vector2 currentDirection, Vector3 ballPosition) {
+		float angle, smallestAngle = float.MaxValue;
+		Vector2 newDirection = currentDirection;
+		foreach (GameObject player in PlayerManager.inst.players) {
+			if (player.GetComponent<PlayerData>().num != playerData.num) {
+				angle = Vector2.Angle(currentDirection, player.transform.position - ballPosition);
+				if (angle < smallestAngle) {
+					smallestAngle = angle;
+					newDirection = player.transform.position - ballPosition;
+				}
+			}
+		}
+
+		if (smallestAngle <= aimAssistAngle) {
+			print(smallestAngle);
+			return newDirection;
+		}
+		return currentDirection;
 	}
 }

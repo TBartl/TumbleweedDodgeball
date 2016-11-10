@@ -45,7 +45,6 @@ public class BallCombo : MonoBehaviour {
 			}
 
 			if (nextToVisit != null) {
-				print(nextToVisit.GetComponent<PlayerData>().num);
 				body.velocity = (nextToVisit.transform.position - transform.position).normalized * speed;
 			}
 		}
