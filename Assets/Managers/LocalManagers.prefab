@@ -683,6 +683,7 @@ MonoBehaviour:
   players:
   - {fileID: 0}
   - {fileID: 0}
+  - {fileID: 0}
   colors:
   - {r: 0.9485294, g: 0.34872404, b: 0.34872404, a: 1}
   - {r: 0.34509802, g: 0.42371866, b: 0.94509804, a: 1}
@@ -1255,6 +1256,8 @@ MonoBehaviour:
   - {fileID: 1000013903614682, guid: f2a2b5cf0a110474badd347b37341cf7, type: 2}
   - {fileID: 1000011732276918, guid: 4501538b57b623b4da90a09a13d8085e, type: 2}
   - {fileID: 1000010745825914, guid: 2dea40bf994329e49b2bc47c2f6674ad, type: 2}
+  - {fileID: 1000013903614682, guid: 502e7c62848d21447b734a65d00c9c87, type: 2}
+  - {fileID: 1000013903614682, guid: 32cdaa252eb8fcf48b67ed6909222168, type: 2}
 --- !u!114 &114000014024199090
 MonoBehaviour:
   m_ObjectHideFlags: 1
