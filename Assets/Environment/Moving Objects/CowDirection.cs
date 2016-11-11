@@ -4,18 +4,21 @@ using System.Collections;
 public class CowDirection : MonoBehaviour {
 
 	Vector3 prevPosition;
-	CowMovement movement;
+	CowMoovement moovement;
 
 	// Use this for initialization
 	void Start () {
 		prevPosition = transform.position;
-		movement = GetComponent<CowMovement>();
+		moovement = GetComponent<CowMoovement>();
 	}
 
 	// Update is called once per frame
 	void Update () {
-		if (movement.currentSpeed != 0 && transform.position != prevPosition) {
-			transform.rotation = Quaternion.LookRotation(transform.position - prevPosition);
+		if (moovement.currentSpeed != 0 && transform.position != prevPosition) {
+			Quaternion rotation = Quaternion.LookRotation(transform.position - prevPosition, Vector3.up);
+			rotation.x = 0;
+			rotation.y = 0;
+			transform.rotation = rotation;
 			prevPosition = transform.position;
 		}
 	}

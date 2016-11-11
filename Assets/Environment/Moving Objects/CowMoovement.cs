@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class CowMovement : MonoBehaviour {
+public class CowMoovement : MonoBehaviour {
 
 	private enum State {STOPPED, ACCELERATING, STEADY, DECCELERATING}
 
