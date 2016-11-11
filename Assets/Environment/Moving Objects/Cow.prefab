@@ -20,9 +20,12 @@ GameObject:
   m_Component:
   - 4: {fileID: 4000012991995774}
   - 33: {fileID: 33000014022727154}
-  - 65: {fileID: 65000013407457060}
   - 23: {fileID: 23000013283113892}
-  - 114: {fileID: 114000011116385848}
+  - 50: {fileID: 50000010881714898}
+  - 61: {fileID: 61000012051800922}
+  - 114: {fileID: 114000010576328512}
+  - 114: {fileID: 114000012628622942}
+  - 114: {fileID: 114000010313003954}
   m_Layer: 0
   m_Name: Cow
   m_TagString: Untagged
@@ -79,19 +82,38 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000012869742214}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!65 &65000013407457060
-BoxCollider:
+--- !u!50 &50000010881714898
+Rigidbody2D:
+  serializedVersion: 2
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000012869742214}
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
+--- !u!61 &61000012051800922
+BoxCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000012869742214}
+  m_Enabled: 1
+  m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &114000011116385848
+  m_Size: {x: 1, y: 1}
+--- !u!114 &114000010313003954
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -99,6 +121,44 @@ MonoBehaviour:
   m_GameObject: {fileID: 1000012869742214}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ac5c063bd094999439f22004fb8cd00a, type: 3}
+  m_Script: {fileID: 11500000, guid: 3b911a3c82004034f8bc04abf7f069a6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxSpeed: 0.02
+  acceleration: 0.01
+  maxDuration: 5
+  currentSpeed: 0
+--- !u!114 &114000010576328512
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000012869742214}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 01bffa8aa898b437183cd5617f7b5303, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pathName: Cow Path
+  pathColor: {r: 0, g: 1, b: 1, a: 1}
+  nodes:
+  - {x: 6, y: -3, z: 0}
+  - {x: 10, y: -3, z: 0}
+  - {x: 11, y: 5.5, z: 0}
+  - {x: 5.5, y: 6, z: 0}
+  - {x: 6, y: -3, z: 0}
+  nodeCount: 5
+  initialized: 1
+  initialName: New Path 1
+  pathVisible: 1
+--- !u!114 &114000012628622942
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000012869742214}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd524debe83e49342ab28225596ddc55, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 

@@ -949,70 +949,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 80662470}
   m_RootOrder: 27
---- !u!1 &669028572 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1000012869742214, guid: c1fd770acbbcca8438b926454f89a5f7,
-    type: 2}
-  m_PrefabInternal: {fileID: 1677040256}
 --- !u!4 &669028573 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4000012991995774, guid: c1fd770acbbcca8438b926454f89a5f7,
     type: 2}
   m_PrefabInternal: {fileID: 1677040256}
---- !u!114 &669028574
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 669028572}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 01bffa8aa898b437183cd5617f7b5303, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  pathName: Cow Path
-  pathColor: {r: 0, g: 1, b: 1, a: 1}
-  nodes:
-  - {x: 6, y: -3, z: 0}
-  - {x: 10, y: -3, z: 0}
-  - {x: 11, y: 5.5, z: 0}
-  - {x: 5.5, y: 6, z: 0}
-  - {x: 6, y: -3, z: 0}
-  nodeCount: 5
-  initialized: 1
-  initialName: New Path 1
-  pathVisible: 1
---- !u!50 &669028575
-Rigidbody2D:
-  serializedVersion: 2
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 669028572}
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 1
-  m_IsKinematic: 1
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 0
---- !u!61 &669028576
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 669028572}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_Offset: {x: 0, y: 0}
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1}
 --- !u!1001 &712866400
 Prefab:
   m_ObjectHideFlags: 0
@@ -2554,13 +2495,15 @@ Prefab:
       propertyPath: m_RootOrder
       value: 31
       objectReference: {fileID: 0}
-    - target: {fileID: 114000011116385848, guid: c1fd770acbbcca8438b926454f89a5f7,
-        type: 2}
-      propertyPath: speed
+    - target: {fileID: 0}
+      propertyPath: maxSpeed
       value: 0.04
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 65000013407457060, guid: c1fd770acbbcca8438b926454f89a5f7, type: 2}
+    - target: {fileID: 0}
+      propertyPath: maxDuration
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c1fd770acbbcca8438b926454f89a5f7, type: 2}
   m_IsPrefabParent: 0
 --- !u!1 &1695959967
@@ -3228,12 +3171,12 @@ Prefab:
     - target: {fileID: 224000013431957010, guid: 7195cefd3cff64240bb942110d4250b7,
         type: 2}
       propertyPath: m_SizeDelta.y
-      value: 0
+      value: 53.932587
       objectReference: {fileID: 0}
     - target: {fileID: 224000013084658178, guid: 7195cefd3cff64240bb942110d4250b7,
         type: 2}
       propertyPath: m_SizeDelta.y
-      value: 0
+      value: 222.92136
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7195cefd3cff64240bb942110d4250b7, type: 2}
