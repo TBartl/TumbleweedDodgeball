@@ -238,6 +238,21 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &1000012358656008
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 4000012448076230}
+  m_Layer: 0
+  m_Name: PowerupManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &1000012782303898
 GameObject:
   m_ObjectHideFlags: 1
@@ -455,6 +470,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
+  - {fileID: 4000012448076230}
   - {fileID: 4000010696570118}
   - {fileID: 4000013968527688}
   - {fileID: 4000013691594930}
@@ -474,7 +490,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 4000010541229136}
-  m_RootOrder: 0
+  m_RootOrder: 1
 --- !u!4 &4000011433132342
 Transform:
   m_ObjectHideFlags: 1
@@ -488,7 +504,7 @@ Transform:
   m_Children:
   - {fileID: 224000013987138794}
   m_Father: {fileID: 4000010541229136}
-  m_RootOrder: 4
+  m_RootOrder: 5
 --- !u!4 &4000012354146762
 Transform:
   m_ObjectHideFlags: 1
@@ -501,7 +517,20 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 4000010541229136}
-  m_RootOrder: 3
+  m_RootOrder: 4
+--- !u!4 &4000012448076230
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000012358656008}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_Children: []
+  m_Father: {fileID: 4000010541229136}
+  m_RootOrder: 0
 --- !u!4 &4000013691594930
 Transform:
   m_ObjectHideFlags: 1
@@ -514,7 +543,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 4000010541229136}
-  m_RootOrder: 2
+  m_RootOrder: 3
 --- !u!4 &4000013968527688
 Transform:
   m_ObjectHideFlags: 1
@@ -527,7 +556,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 4000010541229136}
-  m_RootOrder: 1
+  m_RootOrder: 2
 --- !u!114 &114000010001189930
 MonoBehaviour:
   m_ObjectHideFlags: 1

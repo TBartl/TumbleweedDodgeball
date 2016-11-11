@@ -9,6 +9,9 @@ public class PlayerHittable : Hittable {
 	}
 
 	public override void Hit(int source) {
+        //check for invincibility powerup
+        if (PowerupManager.S.getPowerup(playerData.num) == Powerup.Invincible) return;
+
 		base.Hit(source);
 
 		if (playerData.num == source)

@@ -44,7 +44,7 @@ public class Controller : MonoBehaviour {
 	}
 
 	void PrintErrorMessage() {
-		print("Error: No controller for input number " + inputDeviceNum + ". Plug in a controller or press F1 to enter dev mode");
+		//print("Error: No controller for input number " + inputDeviceNum + ". Plug in a controller or press F1 to enter dev mode");
 	}
 
 	public Vector3 GetDirection() {

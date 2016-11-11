@@ -79,26 +79,31 @@ public class PlayerHands : MonoBehaviour {
 
 	IEnumerator ChargeThrowBall(int hand) {
 		doingSomething = true;
-		resizableBar.parent.parent.gameObject.SetActive(true);
+        //Get variables for this player's available powerups 
+        bool instantThrow = PowerupManager.S.getPowerup(controller.inputDeviceNum) == Powerup.ThrowQuick;
+        float increasedCharge = PowerupManager.S.getPowerup(controller.inputDeviceNum) == Powerup.QuickCharge ? 2 : 1;
+        resizableBar.parent.parent.gameObject.SetActive(true);
 		transform.parent.GetComponent<PlayerMovement>().modifiers.Add(.2f);
 
-		float val = 0;
-		while (controller.GetHandActionHeld(hand)) {
-			val += chargeSpeed * Time.deltaTime;
-			if (val > 1) {
-				val = 1;
-				chargeSpeed *= -1;
-			}
-			if (val < 0) {
-				val = 0;
-				chargeSpeed *= -1;
-			}
-			controller.Vibrate(val);
-			resizableBar.transform.localScale = new Vector3(val, 1, 1);
-			yield return null;
-		}
+        float val = 0;
+        if (!instantThrow) {
+            while (controller.GetHandActionHeld(hand)) {
+                val += chargeSpeed * Time.deltaTime * increasedCharge;
+                if (val > 1) {
+                    val = 1;
+                    chargeSpeed *= -1;
+                }
+                if (val < 0) {
+                    val = 0;
+                    chargeSpeed *= -1;
+                }
+                controller.Vibrate(val);
+                resizableBar.transform.localScale = new Vector3(val, 1, 1);
+                yield return null;
+            }
+        }
 
-		float power = Mathf.Lerp(powerRange.x, powerRange.y, val);
+		float power = instantThrow ? throwPower : Mathf.Lerp(powerRange.x, powerRange.y, val);
 		if (val > 1 - superThrowThreshold) {
 			power = superThrowPower;
 			resizableBar.transform.localScale = new Vector3(1, 2f, 2f);
@@ -121,7 +126,7 @@ public class PlayerHands : MonoBehaviour {
 	}
 
 	void OnTriggerEnter2D(Collider2D other) {
-		if (other.tag == "Ball") {
+		if (other.tag == "Ball" || other.tag == "Powerup") {
 			other.GetComponent<BallGlow>().AddInRange(transform.parent.gameObject);
 		}
 	}
@@ -146,10 +151,18 @@ public class PlayerHands : MonoBehaviour {
 
 			}
 		}
+        else if(other.tag == "Powerup") {
+            bool leftTriggerHeld = controller.GetHandActionHeld(0);
+            bool leftTriggerDown = controller.GetHandActionDown(0);
+            bool rightTriggerDown = controller.GetHandActionDown(1);
+            bool rightTriggerHeld = controller.GetHandActionHeld(1);
+            if (balls[0] == null && (leftTriggerDown ||leftTriggerHeld)) other.GetComponent<PowerupController>().PickUp(playerData.num);
+            else if (balls[1] == null && (rightTriggerDown || rightTriggerHeld)) other.GetComponent<PowerupController>().PickUp(playerData.num);
+        }
 	}
 
 	void OnTriggerExit2D(Collider2D other) {
-		if (other.tag == "Ball") {
+		if (other.tag == "Ball" || other.tag == "Powerup") {
 			other.GetComponent<BallGlow>().RemoveInRange(transform.parent.gameObject);
 		}
 	}
