@@ -181,7 +181,6 @@ public class PlayerHands : MonoBehaviour {
 		}
 
 		if (smallestAngle <= aimAssistAngle) {
-			print(smallestAngle);
 			return newDirection;
 		}
 		return currentDirection;

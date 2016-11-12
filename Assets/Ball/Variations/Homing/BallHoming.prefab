@@ -269,7 +269,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hotness: {fileID: 0}
-  catchable: 0
+  catchable: 1
 --- !u!114 &114000010620058036
 MonoBehaviour:
   m_ObjectHideFlags: 1
