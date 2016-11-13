@@ -48,7 +48,7 @@ public class Controller : MonoBehaviour {
 	}
 
 	public Vector3 GetDirection() {
-		if (devMode || InputManager.Devices.Count == 0) { // use keyboard & mouse
+		if (devMode || InputManager.Devices.Count == inputDeviceNum) { // use keyboard & mouse
 			return GetMousePosition() - transform.position;
 		}
 
