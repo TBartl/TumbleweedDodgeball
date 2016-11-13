@@ -112,7 +112,7 @@ public class PlayerHands : MonoBehaviour {
 		Vector2 directionDiff = controller.GetDirection();
 		directionDiff = AimAssist(directionDiff, balls[hand].transform.position);
 		balls[hand].Throw(directionDiff.normalized * power);
-		balls[hand].GetComponent<BallSource>().SetSourceID(playerData.num);
+		balls[hand].GetComponent<BallSource>().SetThrower(playerData);
 		balls[hand] = null;
 		AddBallUI.BallfromUI(playerData.num, hand);
 

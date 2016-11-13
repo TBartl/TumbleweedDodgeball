@@ -76,8 +76,8 @@ GameObject:
   - 114: {fileID: 114000010620058036}
   - 114: {fileID: 114000012370941110}
   - 114: {fileID: 114000014092498420}
-  - 114: {fileID: 114000014234118552}
-  - 114: {fileID: 114000013096382636}
+  - 114: {fileID: 114000012855236000}
+  - 114: {fileID: 114000011369388026}
   m_Layer: 0
   m_Name: BallHoming
   m_TagString: Ball
@@ -282,6 +282,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   glowChild: {fileID: 1000011605347460}
+--- !u!114 &114000011369388026
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000013903614682}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee9197d361aa2a74eb560ee75b5508bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  threshold: 5
 --- !u!114 &114000012302093280
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -306,7 +318,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a2adcceb1d62f4db6a26153031de443b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &114000013096382636
+--- !u!114 &114000012855236000
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -314,10 +326,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1000013903614682}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ee9197d361aa2a74eb560ee75b5508bc, type: 3}
+  m_Script: {fileID: 11500000, guid: ddcce71ee69bf9a41ac23d8a4e6fe253, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  threshold: 5
+  aggressiveness: 3
+  seekThreshold: 5
 --- !u!114 &114000014092498420
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -343,18 +356,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a367666ce8656584eba43c8316b63392, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  force: 0.15
---- !u!114 &114000014234118552
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1000013903614682}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ddcce71ee69bf9a41ac23d8a4e6fe253, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  force: 1
 --- !u!212 &212000011417400082
 SpriteRenderer:
   m_ObjectHideFlags: 1

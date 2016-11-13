@@ -3,7 +3,7 @@ using System.Collections;
 
 public class BallHotnessAndDestroy : BallHotness {
 
-	protected override void OnHit(string tag) {
+	protected override void OnHitOther(GameObject other) {
 		Destroy(this.gameObject);
 	}
 }

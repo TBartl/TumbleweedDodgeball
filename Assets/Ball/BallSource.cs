@@ -3,18 +3,14 @@ using System.Collections;
 
 public class BallSource : MonoBehaviour {
 
-	int sourceID;
+	PlayerData thrower;
 
-	void Awake () {
-		sourceID = -1;
+	public void SetThrower(PlayerData t) {
+		thrower = t;
 	}
 
-	public void  SetSourceID(int newSourceID) {
-		sourceID = newSourceID;
-	}
-
-	public int GetSourceID() {
-		return sourceID;
+	public PlayerData GetThrower() {
+		return thrower;
 	}
 
 }

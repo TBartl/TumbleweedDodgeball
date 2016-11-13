@@ -1,10 +1,11 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+// Used for things like weak wood
 public class ExplodeOnHit : Hittable{
 	public GameObject shardsPrefab;
 
-	public override void Hit(int source)
+	public override void Hit(PlayerData source)
 	{
 		base.Hit(source);
 		Destroy(this.gameObject);

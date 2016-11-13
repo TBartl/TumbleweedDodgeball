@@ -3,8 +3,8 @@ using System.Collections;
 
 public class BallHotness : MonoBehaviour {
 	TrailRenderer tr;
-	Rigidbody2D rb;
-	BallSource source;
+	protected Rigidbody2D rigid;
+	protected BallSource source;
 
 	public float threshold;
 	bool isHot = false;
@@ -15,7 +15,7 @@ public class BallHotness : MonoBehaviour {
 	void Awake()
 	{
 		tr = this.GetComponentInChildren<TrailRenderer>();
-		rb = this.GetComponent<Rigidbody2D>();
+		rigid = this.GetComponent<Rigidbody2D>();
 		source = this.GetComponent<BallSource>();
 
 		initialTrailWidth = tr.startWidth;
@@ -24,7 +24,7 @@ public class BallHotness : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		isHot = (rb.velocity.magnitude >= threshold);
+		isHot = (rigid.velocity.magnitude >= threshold);
 		if (isHot)
 			tr.startWidth = initialTrailWidth;
 		else
@@ -32,7 +32,7 @@ public class BallHotness : MonoBehaviour {
 
 		// If we're effectively at 0 velocity, don't record the trail 
 		// so when we throw it the trail will start from the hands
-		if (rb.velocity.magnitude <= .05f)
+		if (rigid.velocity.magnitude <= .05f)
 			tr.time = 0;
 		else
 			tr.time = initialTrailTime;
@@ -41,14 +41,16 @@ public class BallHotness : MonoBehaviour {
 
 	void OnCollisionEnter2D(Collision2D other)
 	{
-		if (isHot && (other.gameObject.tag == "Hittable" || other.gameObject.tag == "Player"))
-		{
-			other.gameObject.GetComponent<Hittable>().Hit(source.GetSourceID());
-			this.OnHit(other.gameObject.tag);
+		if (isHot && 
+			(other.gameObject.tag == "Hittable" ||
+			(other.gameObject.tag == "Player" && source.GetThrower() != other.gameObject.GetComponent<PlayerData>()))
+			) {
+			other.gameObject.GetComponent<Hittable>().Hit(source.GetThrower());
+			this.OnHitOther(other.gameObject);
 		}
 	}
 
-	protected virtual void OnHit(string tag) {
+	protected virtual void OnHitOther(GameObject other) {
 
 	}
 

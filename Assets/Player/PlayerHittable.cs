@@ -8,15 +8,15 @@ public class PlayerHittable : Hittable {
 		playerData = this.GetComponent<PlayerData>();
 	}
 
-	public override void Hit(int source) {
+	public override void Hit(PlayerData source) {
         //check for invincibility powerup
         if (PowerupManager.S.getPowerup(playerData.num) == Powerup.Invincible) return;
 
 		base.Hit(source);
 
-		if (playerData.num == source)
+		if (playerData == source)
 			return;
 
-		ScoreManager.inst.IncrementScore(source);
+		ScoreManager.inst.IncrementScore(source.num);
 	}
 }

@@ -76,7 +76,6 @@ GameObject:
   - 114: {fileID: 114000010620058036}
   - 114: {fileID: 114000012370941110}
   - 114: {fileID: 114000014092498420}
-  - 114: {fileID: 114000011012765770}
   - 114: {fileID: 114000010765540912}
   m_Layer: 0
   m_Name: BallCombo
@@ -132,7 +131,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000013903614682}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.59, y: -2.18, z: 0}
+  m_LocalPosition: {x: -7, y: 6, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
@@ -294,17 +293,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   threshold: 5
---- !u!114 &114000011012765770
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1000013903614682}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 47f568195de4a6648ae0e892a437c724, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  speedBoost: 5
 --- !u!114 &114000012302093280
 MonoBehaviour:
   m_ObjectHideFlags: 1
