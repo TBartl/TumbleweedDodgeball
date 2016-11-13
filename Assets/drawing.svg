@@ -19,6 +19,46 @@
    sodipodi:docname="drawing.svg">
   <defs
      id="defs4">
+    <linearGradient
+       id="linearGradient4345"
+       inkscape:collect="always">
+      <stop
+         id="stop4347"
+         offset="0"
+         style="stop-color:#ac9661;stop-opacity:1" />
+      <stop
+         style="stop-color:#ac9661;stop-opacity:1"
+         offset="0.87725806"
+         id="stop4349" />
+      <stop
+         id="stop4351"
+         offset="0.90252686"
+         style="stop-color:#c5b180;stop-opacity:1" />
+      <stop
+         id="stop4353"
+         offset="1"
+         style="stop-color:#c5b180;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient
+       inkscape:collect="always"
+       id="linearGradient4276">
+      <stop
+         style="stop-color:#ac6186;stop-opacity:1"
+         offset="0"
+         id="stop4278" />
+      <stop
+         id="stop4284"
+         offset="0.87725806"
+         style="stop-color:#ac6186;stop-opacity:1" />
+      <stop
+         style="stop-color:#d08cad;stop-opacity:1"
+         offset="0.90252686"
+         id="stop4286" />
+      <stop
+         style="stop-color:#d08cad;stop-opacity:1"
+         offset="1"
+         id="stop4280" />
+    </linearGradient>
     <filter
        inkscape:collect="always"
        style="color-interpolation-filters:sRGB"
@@ -32,6 +72,25 @@
          stdDeviation="20.457143"
          id="feGaussianBlur4294" />
     </filter>
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient4276"
+       id="linearGradient4282"
+       x1="-1497.7668"
+       y1="2703.9971"
+       x2="-1241.7668"
+       y2="2703.9971"
+       gradientUnits="userSpaceOnUse" />
+    <linearGradient
+       gradientTransform="translate(0,82.857149)"
+       inkscape:collect="always"
+       xlink:href="#linearGradient4345"
+       id="linearGradient4282-0"
+       x1="-1497.7668"
+       y1="2703.9971"
+       x2="-1241.7668"
+       y2="2703.9971"
+       gradientUnits="userSpaceOnUse" />
   </defs>
   <sodipodi:namedview
      id="base"
@@ -40,9 +99,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.24748737"
-     inkscape:cx="146.32695"
-     inkscape:cy="-676.43159"
+     inkscape:zoom="1.979899"
+     inkscape:cx="-1315.0618"
+     inkscape:cy="-1762.2758"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -52,7 +111,8 @@
      inkscape:window-y="-8"
      inkscape:window-maximized="1"
      inkscape:snap-bbox="true"
-     inkscape:bbox-nodes="true" />
+     inkscape:bbox-nodes="true"
+     showguides="false" />
   <metadata
      id="metadata7">
     <rdf:RDF>
@@ -503,5 +563,60 @@
        inkscape:export-filename="C:\Users\tabsk\Desktop\eecs-494-f16-p4\Assets\Player\texture2.png"
        inkscape:export-xdpi="5.625"
        inkscape:export-ydpi="5.625" />
+    <rect
+       style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:#b3b3b3;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:15;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
+       id="rect4180"
+       width="290.92395"
+       height="290.92395"
+       x="2137.4829"
+       y="1161.4587"
+       inkscape:export-filename="C:\Users\tabsk\Desktop\eecs-494-f16-p4\Assets\Levels\Debug\debugTexture.png"
+       inkscape:export-xdpi="79.195953"
+       inkscape:export-ydpi="79.195953" />
+    <rect
+       style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:#cccccc;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:15;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
+       id="rect4180-8"
+       width="260.61938"
+       height="260.61938"
+       x="2152.6353"
+       y="1176.6111"
+       inkscape:export-filename="C:\Users\tabsk\Desktop\eecs-494-f16-p4\Assets\Levels\Debug\debugTexture.png"
+       inkscape:export-xdpi="79.195953"
+       inkscape:export-ydpi="79.195953" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:84.29575348px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#b3b3b3;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;"
+       x="2180.9297"
+       y="1337.5233"
+       id="text4248"
+       sodipodi:linespacing="125%"
+       inkscape:export-filename="C:\Users\tabsk\Desktop\eecs-494-f16-p4\Assets\Levels\Debug\debugTexture.png"
+       inkscape:export-xdpi="79.195953"
+       inkscape:export-ydpi="79.195953"><tspan
+         sodipodi:role="line"
+         id="tspan4250"
+         x="2180.9297"
+         y="1337.5233"
+         style="font-weight:bold;fill:#b3b3b3;fill-opacity:1;">DBG</tspan></text>
+    <rect
+       style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:url(#linearGradient4282);fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:15;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
+       id="rect4161-0-2-1-3-4-3"
+       width="256"
+       height="64"
+       x="-1497.7668"
+       y="2671.9971"
+       inkscape:export-filename="C:\Users\tabsk\Desktop\eecs-494-f16-p4\Assets\Ball\Variations\Bouncy\bouncyRamp.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <rect
+       style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:url(#linearGradient4282-0);fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:15;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
+       id="rect4161-0-2-1-3-4-3-4"
+       width="256"
+       height="64"
+       x="-1497.7668"
+       y="2754.8542"
+       inkscape:export-filename="C:\Users\tabsk\Desktop\eecs-494-f16-p4\Assets\Ball\Variations\Combo\comboRamp.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
   </g>
 </svg>

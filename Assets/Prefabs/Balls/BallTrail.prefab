@@ -96,7 +96,6 @@ GameObject:
   - 114: {fileID: 114000013211762436}
   - 114: {fileID: 114000012370941110}
   - 114: {fileID: 114000014092498420}
-  - 114: {fileID: 114000014103024108}
   m_Layer: 0
   m_Name: BallTrail
   m_TagString: Ball
@@ -139,7 +138,7 @@ Transform:
   m_GameObject: {fileID: 1000010453628594}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.4, y: 0.4, z: 0.4}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 4000012238923910}
@@ -151,7 +150,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000013903614682}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -8.419809, y: -2.2091982, z: 0}
+  m_LocalPosition: {x: 1, y: 6, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
@@ -208,7 +207,7 @@ MeshFilter:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000010453628594}
-  m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+  m_Mesh: {fileID: 4300008, guid: df12746c6b0e9b7459501b5f6695adcd, type: 3}
 --- !u!50 &50000013591812516
 Rigidbody2D:
   serializedVersion: 2
@@ -387,17 +386,6 @@ MonoBehaviour:
   squishFactor: 0.025
   stretchFactor: 0
   squishDuration: 0.07
---- !u!114 &114000014103024108
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1000013903614682}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4ee86b876e6d2df4ca5b5dfeb920ee98, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &114000014181126182
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -460,7 +448,7 @@ ParticleSystem:
   moveWithTransform: 0
   autoRandomSeed: 1
   scalingMode: 1
-  randomSeed: -781477246
+  randomSeed: -1240922515
   InitialModule:
     serializedVersion: 2
     enabled: 1

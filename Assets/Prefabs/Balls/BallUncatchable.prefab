@@ -119,7 +119,7 @@ Transform:
   m_GameObject: {fileID: 1000010453628594}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.4, y: 0.4, z: 0.4}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 4000012238923910}
@@ -152,7 +152,8 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: 5478047b159a81942866f383267bb9b9, type: 2}
+  - {fileID: 2100000, guid: cc21cce4442c1664eaf1fa294bdc3b77, type: 2}
+  - {fileID: 2100000, guid: 11910321754360e4194edc09601a934d, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_ProbeAnchor: {fileID: 0}
@@ -174,7 +175,7 @@ MeshFilter:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000010453628594}
-  m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+  m_Mesh: {fileID: 4300012, guid: df12746c6b0e9b7459501b5f6695adcd, type: 3}
 --- !u!50 &50000013591812516
 Rigidbody2D:
   serializedVersion: 2
