@@ -26,7 +26,7 @@ GameObject:
   - 114: {fileID: 114000012625303914}
   - 114: {fileID: 114000011308612312}
   - 114: {fileID: 114000010289484232}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -44,7 +44,7 @@ GameObject:
   - 33: {fileID: 33000013435270896}
   - 23: {fileID: 23000012262092876}
   - 95: {fileID: 95000011442830604}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Model
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -60,7 +60,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 4000011987303786}
   - 212: {fileID: 212000012136408814}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Directional Arrow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -75,7 +75,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 4000011091117928}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: LeftHand
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -90,7 +90,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 4000011492551254}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: RightHand
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -106,7 +106,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 4000010533420606}
   - 114: {fileID: 114000013450401840}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Direction
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -123,7 +123,7 @@ GameObject:
   - 4: {fileID: 4000012455043304}
   - 114: {fileID: 114000012977783076}
   - 58: {fileID: 58000013512003936}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Hands
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -337,7 +337,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   invincibilityFrameLength: 1.5
-  flickerSpeed: 0.2
+  flickerInterval: 0.2
 --- !u!114 &114000010706421666
 MonoBehaviour:
   m_ObjectHideFlags: 1
