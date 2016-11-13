@@ -43,12 +43,13 @@ public class BallHotness : MonoBehaviour {
 	{
 		if (isHot && 
 			(other.gameObject.tag == "Hittable" ||
-			(other.gameObject.tag == "Player" && source.GetThrower() != other.gameObject.GetComponent<PlayerData>()))
+			(other.gameObject.tag == "Player" && other.gameObject.GetComponent<PlayerHittable>().GetHittable(source.GetThrower())))
 			) {
 			other.gameObject.GetComponent<Hittable>().Hit(source.GetThrower());
 			this.OnHitOther(other.gameObject);
 		}
 	}
+	
 
 	protected virtual void OnHitOther(GameObject other) {
 

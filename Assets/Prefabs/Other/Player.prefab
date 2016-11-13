@@ -336,6 +336,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6ff88e1c9d4430c4aa9f0e1c7d525856, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  invincibilityFrameLength: 1.5
+  flickerSpeed: 0.2
 --- !u!114 &114000010706421666
 MonoBehaviour:
   m_ObjectHideFlags: 1

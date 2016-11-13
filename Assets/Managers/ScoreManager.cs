@@ -21,4 +21,11 @@ public class ScoreManager : MonoBehaviour {
 			addHitUI.UpdateScore(playerID, scores[playerID]);
 		}
 	}
+
+	public void DecrementScore(int playerID) {
+		if (playerID >= 0 && playerID <= 4) {
+			scores[playerID] -= 1;
+			addHitUI.UpdateScore(playerID, scores[playerID]);
+		}
+	}
 }

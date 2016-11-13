@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 
 public class BallHotnessCombo : BallHotness {
-	public float speedBoost = 5f;
+	public float speedBoost = 10f;
 	List<PlayerData> alreadyHit = new List<PlayerData>();
 
 
@@ -38,7 +38,7 @@ public class BallHotnessCombo : BallHotness {
 		// Find a new direction (doesn't matter if this was destroyed)
 		GameObject target = FindClosestPlayer();
 		if (target != null)
-			rigid.velocity = (target.transform.position - this.transform.position).normalized * rigid.velocity.magnitude;
+			rigid.velocity = (target.transform.position - this.transform.position).normalized * (rigid.velocity.magnitude + speedBoost);
 	}
 
 	GameObject FindClosestPlayer() {
@@ -48,6 +48,8 @@ public class BallHotnessCombo : BallHotness {
 			float thisDistance = DistanceToPlayer(player);
 			if (closestPlayer == null || thisDistance < shortestDistance) {
 				if (source.GetThrower() == player.GetComponent<PlayerData>())
+					continue;
+				if (alreadyHit.Contains(player.GetComponent<PlayerData>()))
 					continue;
 				closestPlayer = player;
 				shortestDistance = thisDistance;
