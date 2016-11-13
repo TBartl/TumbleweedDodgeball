@@ -433,7 +433,6 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: 39fd2d4898820a64e8b5cca32032f4d5, type: 2}
   - {fileID: 2100000, guid: 2b2740c3cbeda6c439a486a3ac1a751a, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
@@ -1476,12 +1475,12 @@ Prefab:
     - target: {fileID: 224000013084658178, guid: 7195cefd3cff64240bb942110d4250b7,
         type: 2}
       propertyPath: m_SizeDelta.y
-      value: 230.07916
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224000013431957010, guid: 7195cefd3cff64240bb942110d4250b7,
         type: 2}
       propertyPath: m_SizeDelta.y
-      value: 58.047493
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 114000014024199090, guid: 7195cefd3cff64240bb942110d4250b7,
         type: 2}
