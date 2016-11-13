@@ -229,8 +229,8 @@ GameObject:
   - 114: {fileID: 114000011427831614}
   - 114: {fileID: 114000010723926732}
   - 114: {fileID: 114000011756073794}
-  - 114: {fileID: 114000014204658836}
   - 114: {fileID: 114000012041999460}
+  - 114: {fileID: 114000010960520986}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -655,7 +655,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f997346fa6faa6947827913b4ad5d3ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  addHitUI: {fileID: 0}
+  addHitUI: {fileID: 114000010960520986}
 --- !u!114 &114000010714008506
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -724,6 +724,22 @@ MonoBehaviour:
   - {fileID: 2100000, guid: 30fff8dd9b791f4488bd21e6e52d1b4f, type: 2}
   - {fileID: 2100000, guid: a96a3685b89ddc34f830aee8940b5203, type: 2}
   - {fileID: 2100000, guid: b99b0b5eed265914bbe76ee25983a384, type: 2}
+--- !u!114 &114000010960520986
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000012106902972}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 97be19004bf354f4d8f90071f9953ca9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hitText:
+  - {fileID: 114000013135453050}
+  - {fileID: 114000011584455558}
+  - {fileID: 114000010510053478}
+  - {fileID: 114000012482063178}
 --- !u!114 &114000011231749194
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -907,10 +923,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerList:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 1000011950147234}
+  - {fileID: 1000013992174152}
+  - {fileID: 1000011470487208}
+  - {fileID: 1000013966975546}
 --- !u!114 &114000011884107154
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -969,16 +985,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   balls:
-  - {fileID: 0}
+  - {fileID: 1000012923397192, guid: b197189ecafde4944876d1b32e8da461, type: 2}
   UIpos:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 1000011917472376}
+  - {fileID: 1000012782303898}
+  - {fileID: 1000013490136402}
+  - {fileID: 1000011352257490}
+  - {fileID: 1000013081309228}
+  - {fileID: 1000010238863860}
+  - {fileID: 1000011063355340}
+  - {fileID: 1000010572463008}
 --- !u!114 &114000012068769936
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1280,14 +1296,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawnInterval: 5
-  boxRadius: {x: 14, y: 7}
+  boxRadius: {x: 10, y: 4}
   prefabs:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 1000013903614682, guid: f85825572bb59904c936e399975e49a4, type: 2}
+  - {fileID: 1000013903614682, guid: f2a2b5cf0a110474badd347b37341cf7, type: 2}
+  - {fileID: 1000013903614682, guid: 502e7c62848d21447b734a65d00c9c87, type: 2}
+  - {fileID: 1000013903614682, guid: 32cdaa252eb8fcf48b67ed6909222168, type: 2}
 --- !u!114 &114000013970701250
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1399,22 +1413,6 @@ MonoBehaviour:
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
---- !u!114 &114000014204658836
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1000012106902972}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 97be19004bf354f4d8f90071f9953ca9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  hitText:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
 --- !u!114 &114000014260375002
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -1,6 +1,6 @@
 fileFormatVersion: 2
-guid: df12746c6b0e9b7459501b5f6695adcd
-timeCreated: 1478631637
+guid: 30e789f0bd8d2504e8c3c64688b77aab
+timeCreated: 1479002860
 licenseType: Free
 ModelImporter:
   serializedVersion: 19
@@ -9,12 +9,11 @@ ModelImporter:
     400000: //RootNode
     2300000: //RootNode
     3300000: //RootNode
-    4300000: Plane
-    4300002: tumbleweed
+    4300000: debugLevel
     7400000: Default Take
     9500000: //RootNode
   materials:
-    importMaterials: 0
+    importMaterials: 1
     materialName: 0
     materialSearch: 1
   animations:

@@ -56,7 +56,7 @@ GameObject:
   - 114: {fileID: 114000011994580848}
   - 61: {fileID: 61000012766692960}
   m_Layer: 0
-  m_Name: QuickThrowPowerup
+  m_Name: PowerupQuickCharge
   m_TagString: Powerup
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -116,7 +116,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: 267c2b64d788aab4b9420f44c4e7aa37, type: 2}
+  - {fileID: 2100000, guid: 2ef56d80750254d46b6320d06ca2e1ab, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_ProbeAnchor: {fileID: 0}
@@ -164,7 +164,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e927a71fca976dc4aa134c59506aed67, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  powerup: 3
+  powerup: 2
 --- !u!114 &114000011994580848
 MonoBehaviour:
   m_ObjectHideFlags: 1

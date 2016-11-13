@@ -78,7 +78,7 @@ public class Controller : MonoBehaviour {
 	}
 
 	public Vector3 GetMovementDirection() {
-        if (devMode || InputManager.Devices.Count == 0) { // use keyboard & mouse
+        if (devMode || InputManager.Devices.Count == inputDeviceNum) { // use keyboard & mouse
             return new Vector3(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"), 0).normalized;
         }
 
@@ -93,7 +93,7 @@ public class Controller : MonoBehaviour {
 
 	// returns true if the trigger was pressed down this frame
 	public bool GetHandActionDown(int hand) {
-		if (devMode || InputManager.Devices.Count == 0) { // use keyboard & mouse
+		if (devMode || InputManager.Devices.Count == inputDeviceNum) { // use keyboard & mouse
 			return Input.GetMouseButtonDown(hand);
 		}
 
@@ -114,7 +114,7 @@ public class Controller : MonoBehaviour {
 
 	// returns true if the trigger is down at all
 	public bool GetHandActionHeld(int hand) {
-		if (devMode || InputManager.Devices.Count == 0) { // use keyboard & mouse
+		if (devMode || InputManager.Devices.Count == inputDeviceNum) { // use keyboard & mouse
 			return Input.GetMouseButton(hand);
 		}
 

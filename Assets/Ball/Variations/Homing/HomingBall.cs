@@ -32,12 +32,6 @@ public class HomingBall : MonoBehaviour {
         
 	}
 
-	void OnCollisionEnter2D(Collision2D coll) {
-		if (coll.collider.tag == "Player") {
-            Destroy(this.gameObject); //FIXME what happens on hit?
-		}
-	}
-
     GameObject findClosestPlayer() {
         GameObject closestPlayer = null;
         float shortestDistance = float.MaxValue, distance;

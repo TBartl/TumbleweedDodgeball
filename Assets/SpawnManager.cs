@@ -16,7 +16,7 @@ public class SpawnManager : MonoBehaviour {
 	void Update () {
 		timeUntilSpawn -= Time.deltaTime;
 		
-		if (timeUntilSpawn <= spawnInterval) {
+		if (timeUntilSpawn <= spawnInterval && prefabs.Count > 0) {
 			GameObject prefab = prefabs[Random.Range(0, prefabs.Count)];
 			Vector3 spawnLocation = new Vector3(boxRadius.x * Random.Range(-1f, 1f), boxRadius.y * Random.Range(-1f, 1f), 0);
 			Quaternion spawnRotation = Quaternion.Euler(0,0 , Random.Range(0,360));
