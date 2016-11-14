@@ -9,12 +9,12 @@ public class PlayerScoreUI : MonoBehaviour {
 
 	void Start () {
 		for (int i = 0; i < 4; ++i) {
-			hitText[i].text = "Hits: 0";
+			hitText[i].text = "Score: 0";
 		}
 	}
 
 	public void UpdateScore (int playerID, int amount) {
-		hitText[playerID].text = "Hits: " + amount;
+		hitText[playerID].text = "Score: " + amount;
 	}
 
 }
