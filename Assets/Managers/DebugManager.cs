@@ -8,5 +8,8 @@ public class DebugManager : MonoBehaviour {
 	void Update () {
 		if (Input.GetKeyDown(KeyCode.Alpha1))
 			SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);	
+
+		if (Time.timeSinceLevelLoad > 183)
+			SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
 	}
 }
