@@ -8,11 +8,10 @@ public class PlayerHittable : Hittable {
 	public float flickerInterval = .2f;
 	bool hasInvincibilityFrames = false;
 
-	List<MeshRenderer> meshes;
+	public MeshRenderer playerMesh;
 
 	void Awake() {
 		playerData = this.GetComponent<PlayerData>();
-		meshes = new List<MeshRenderer>(this.GetComponentsInChildren<MeshRenderer>());
 	}
 
 	public override void Hit(PlayerData source) {
@@ -24,7 +23,8 @@ public class PlayerHittable : Hittable {
 
 		base.Hit(source);
 		StartCoroutine(InvincibilityFrames());
-		ScoreManager.inst.IncrementScore(source.num);
+		if (source != null)
+			ScoreManager.inst.IncrementScore(source.num);
 		ScoreManager.inst.DecrementScore(playerData.num);
 
 	}
@@ -56,14 +56,10 @@ public class PlayerHittable : Hittable {
 	}
 
 	void TurnOnMesh() {
-		foreach (MeshRenderer mr in meshes) {
-			mr.enabled = true;
-		}
+		playerMesh.enabled = true;
 	}
 
 	void TurnOffMesh() {
-		foreach (MeshRenderer mr in meshes) {
-			mr.enabled = false;
-		}
+		playerMesh.enabled = false;
 	}
 }

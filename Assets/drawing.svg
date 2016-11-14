@@ -151,6 +151,19 @@
        x2="-1241.7668"
        y2="2703.9971"
        gradientUnits="userSpaceOnUse" />
+    <filter
+       inkscape:collect="always"
+       style="color-interpolation-filters:sRGB"
+       id="filter4645"
+       x="-0.174"
+       width="1.348"
+       y="-0.174"
+       height="1.348">
+      <feGaussianBlur
+         inkscape:collect="always"
+         stdDeviation="28.122646"
+         id="feGaussianBlur4647" />
+    </filter>
   </defs>
   <sodipodi:namedview
      id="base"
@@ -159,9 +172,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="1.979899"
-     inkscape:cx="-1321.6278"
-     inkscape:cy="-1815.8139"
+     inkscape:zoom="0.35000001"
+     inkscape:cx="-1351.2386"
+     inkscape:cy="636.32671"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -172,7 +185,7 @@
      inkscape:window-maximized="1"
      inkscape:snap-bbox="true"
      inkscape:bbox-nodes="true"
-     showguides="false" />
+     showguides="true" />
   <metadata
      id="metadata7">
     <rdf:RDF>
@@ -233,7 +246,7 @@
        inkscape:export-ydpi="72.800003" />
     <path
        style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:none;fill-opacity:1;fill-rule:nonzero;stroke:#ffffff;stroke-width:15;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
-       d="m 519.54041,-160.34952 -138.02475,0 69.01237,-71.75058 z"
+       d="m 518.11184,-151.77809 -135.16761,0 67.5838,-166.0363 z"
        id="path4137-0-8-4"
        inkscape:connector-curvature="0"
        sodipodi:nodetypes="cccc"
@@ -698,5 +711,36 @@
        inkscape:export-filename="C:\Users\tabsk\Desktop\eecs-494-f16-p4\Assets\Ball\Variations\Trail\poopRamp.png"
        inkscape:export-xdpi="90"
        inkscape:export-ydpi="90" />
+    <rect
+       style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:#cd8114;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:15;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
+       id="rect4161-0-1"
+       width="256"
+       height="256"
+       x="2317.7144"
+       y="1710.6479"
+       inkscape:export-filename="C:\Users\tabsk\Desktop\eecs-494-f16-p4\Assets\Powerups\QuickThrow\appleJuice.png"
+       inkscape:export-xdpi="45"
+       inkscape:export-ydpi="45" />
+    <rect
+       style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:#4e320e;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:15;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
+       id="rect4161-0-2-3"
+       width="256"
+       height="256"
+       x="2317.7144"
+       y="1966.6479"
+       inkscape:export-filename="C:\Users\tabsk\Desktop\eecs-494-f16-p4\Assets\Powerups\QuickThrow\appleJuice.png"
+       inkscape:export-xdpi="45"
+       inkscape:export-ydpi="45" />
+    <rect
+       style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:15;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate;filter:url(#filter4645)"
+       id="rect4230"
+       width="387.89856"
+       height="387.89856"
+       x="-1733.793"
+       y="-91.249405"
+       transform="matrix(0.52170807,0,0,0.52170807,-733.63767,57.691952)"
+       inkscape:export-filename="C:\Users\tabsk\Desktop\eecs-494-f16-p4\Assets\Powerups\glow.png"
+       inkscape:export-xdpi="84.45916"
+       inkscape:export-ydpi="84.45916" />
   </g>
 </svg>

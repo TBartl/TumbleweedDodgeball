@@ -25,7 +25,7 @@ public class ColorChange : MonoBehaviour {
 
 	void Start () {
 
-		numPlayers = NumPlayers.inst.GetNumPlayers();
+		numPlayers = GlobalPlayerManager.inst.GetNumPlayers();
 
 		for (int i = 0; i < playerReady2.Length; ++i) {
 			playerReady2[i].SetActive(false);
@@ -90,7 +90,7 @@ public class ColorChange : MonoBehaviour {
 					}
 					break;
 	        }
-			NumPlayers.inst.SetMaterial(0,materials[currentMat[0]]);
+			GlobalPlayerManager.inst.SetMaterial(0,materials[currentMat[0]]);
         }
         else if (Input.GetKeyDown(KeyCode.W) && !p1Ready) {
             currentMat[0]++;
@@ -116,7 +116,7 @@ public class ColorChange : MonoBehaviour {
 					}
 					break;
 	        }
-			NumPlayers.inst.SetMaterial(0,materials[currentMat[0]]);
+			GlobalPlayerManager.inst.SetMaterial(0,materials[currentMat[0]]);
         }
         else if (Input.GetKeyDown(KeyCode.A)) {
             p1Ready = true;
@@ -172,7 +172,7 @@ public class ColorChange : MonoBehaviour {
 					}
 					break;
 	        }
-			NumPlayers.inst.SetMaterial(1,materials[currentMat[1]]);
+			GlobalPlayerManager.inst.SetMaterial(1,materials[currentMat[1]]);
         }
         else if (Input.GetKeyDown(KeyCode.R) && !p2Ready) {
             currentMat[1]++;
@@ -198,7 +198,7 @@ public class ColorChange : MonoBehaviour {
 					}
 					break;
 	        }
-			NumPlayers.inst.SetMaterial(1,materials[currentMat[1]]);
+			GlobalPlayerManager.inst.SetMaterial(1,materials[currentMat[1]]);
         }
         else if (Input.GetKeyDown(KeyCode.D)) {
             p2Ready = true;
@@ -255,7 +255,7 @@ public class ColorChange : MonoBehaviour {
 						}
 						break;
 		        }
-				NumPlayers.inst.SetMaterial(2,materials[currentMat[2]]);
+				GlobalPlayerManager.inst.SetMaterial(2,materials[currentMat[2]]);
 	        }
 	        else if (Input.GetKeyDown(KeyCode.Y) && !p3Ready) {
 	            currentMat[2]++;
@@ -281,7 +281,7 @@ public class ColorChange : MonoBehaviour {
 						}
 						break;
 		        }
-				NumPlayers.inst.SetMaterial(2,materials[currentMat[2]]);
+				GlobalPlayerManager.inst.SetMaterial(2,materials[currentMat[2]]);
 	        }
 	        else if (Input.GetKeyDown(KeyCode.G)) {//readies p3
 	            p3Ready = true;
@@ -339,7 +339,7 @@ public class ColorChange : MonoBehaviour {
 						}
 						break;
 		        }
-				NumPlayers.inst.SetMaterial(3,materials[currentMat[3]]);
+				GlobalPlayerManager.inst.SetMaterial(3,materials[currentMat[3]]);
 	        }
 	        else if (Input.GetKeyDown(KeyCode.I) && !p4Ready) {
 	            currentMat[3]++;
@@ -365,7 +365,7 @@ public class ColorChange : MonoBehaviour {
 						}
 						break;
 		        }
-				NumPlayers.inst.SetMaterial(3,materials[currentMat[3]]);
+				GlobalPlayerManager.inst.SetMaterial(3,materials[currentMat[3]]);
 	        }
 	        else if (Input.GetKeyDown(KeyCode.J)) {
 	            p4Ready = true;

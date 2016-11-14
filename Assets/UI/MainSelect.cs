@@ -27,7 +27,7 @@ public class MainSelect : MonoBehaviour {
 			Selectors[curSelect].SetActive(true);
 		} else if (Input.GetKeyDown(KeyCode.Return)) {
 			if (curSelect == 3) {}//go to controls screen
-			else NumPlayers.inst.SetNumPlayers(curSelect+2);
+			else GlobalPlayerManager.inst.SetNumPlayers(curSelect+2);
 			SceneManager.LoadScene("CharSelect");
 		}
 	}

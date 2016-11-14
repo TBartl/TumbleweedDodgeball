@@ -5,7 +5,7 @@ using InControl;
 public class Controller : MonoBehaviour {
 
 	static bool devMode = false;
-
+	
 	public int inputDeviceNum;
 
 	InputDevice inputDevice = null;
@@ -79,7 +79,17 @@ public class Controller : MonoBehaviour {
 
 	public Vector3 GetMovementDirection() {
         if (devMode || InputManager.Devices.Count == inputDeviceNum) { // use keyboard & mouse
-            return new Vector3(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"), 0).normalized;
+			Vector3 dir = Vector3.zero;
+			if (Input.GetKey(KeyCode.W))
+				dir += Vector3.up;
+			if (Input.GetKey(KeyCode.S))
+				dir += Vector3.down;
+			if (Input.GetKey(KeyCode.A))
+				dir += Vector3.left;
+			if (Input.GetKey(KeyCode.D))
+				dir += Vector3.right;
+			dir = dir.normalized;
+			return dir;
         }
 
 		// use controller

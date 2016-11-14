@@ -5,6 +5,8 @@ using System.Collections.Generic;
 public class PlayerHands : MonoBehaviour {
 
 	public List<Transform> hands;
+	public Transform throwPosition;
+
 	List<Ball> balls;
 	bool doingSomething = false;
 
@@ -23,9 +25,14 @@ public class PlayerHands : MonoBehaviour {
 
 	public float aimAssistAngle;
 
+	public MeshRenderer smackEffect;
+	public float smackActive;
+	public float smackCooldown;
+
 	void Awake() {
 		playerData = GetComponentInParent<PlayerData>();
 		controller = GetComponentInParent<Controller>();
+		smackEffect.enabled = false;
 	}
 
 	void Start() {
@@ -42,10 +49,16 @@ public class PlayerHands : MonoBehaviour {
 
 	void Update() {
 		if (!doingSomething) {
-			if (balls[0] != null && controller.GetHandActionDown(0))
-				StartCoroutine(ChargeThrowBall(0));
-			else if (balls[1] != null && controller.GetHandActionDown(1))
-				StartCoroutine(ChargeThrowBall(1));
+			//For both hands
+			for (int i = 0; i < 2; i++) {
+				if (controller.GetHandActionDown(i)) {
+					if (balls[i] != null)
+						StartCoroutine(ChargeThrowBall(i));
+					else
+						StartCoroutine(Smack());
+					break;
+				}					
+			}
 		}
 	}
 
@@ -86,7 +99,8 @@ public class PlayerHands : MonoBehaviour {
 		transform.parent.GetComponent<PlayerMovement>().modifiers.Add(.2f);
 
         float val = 0;
-        if (!instantThrow) {
+		
+		if (!instantThrow) {
             while (controller.GetHandActionHeld(hand)) {
                 val += chargeSpeed * Time.deltaTime * increasedCharge;
                 if (val > 1) {
@@ -103,14 +117,17 @@ public class PlayerHands : MonoBehaviour {
             }
         }
 
+		balls[hand].transform.position = throwPosition.position;
+
+
 		float power = instantThrow ? throwPower : Mathf.Lerp(powerRange.x, powerRange.y, val);
 		if (val > 1 - superThrowThreshold) {
 			power = superThrowPower;
 			resizableBar.transform.localScale = new Vector3(1, 2f, 2f);
 		}
 
-		Vector2 directionDiff = controller.GetDirection();
-		directionDiff = AimAssist(directionDiff, balls[hand].transform.position);
+		Vector2 directionDiff = controller.GetDirection().normalized;
+		directionDiff = AimAssist(directionDiff);
 		balls[hand].Throw(directionDiff.normalized * power);
 		balls[hand].GetComponent<BallSource>().SetThrower(playerData);
 		balls[hand] = null;
@@ -129,6 +146,31 @@ public class PlayerHands : MonoBehaviour {
 		if (other.tag == "Ball" || other.tag == "Powerup") {
 			other.GetComponent<BallGlow>().AddInRange(transform.parent.gameObject);
 		}
+	}
+
+	IEnumerator Smack() {
+		//Wait a frame so if we pick up a ball after Update() it's not a problem
+		yield return new WaitForFixedUpdate();
+		if (doingSomething)
+			yield break;
+
+		doingSomething = true;
+
+		smackEffect.enabled = true;
+		smackEffect.gameObject.layer = LayerMask.NameToLayer("Default");
+		for (float t = 0; t < smackActive; t += Time.deltaTime) {
+			smackEffect.transform.localPosition = Vector3.Lerp(
+				Vector3.forward * .1f,
+				Vector3.zero,
+				Mathf.Sin((t/smackActive)*Mathf.PI));
+			yield return null;
+		}
+		smackEffect.gameObject.layer = LayerMask.NameToLayer("NoCollision");
+		smackEffect.enabled = false;
+
+		yield return new WaitForSeconds(smackCooldown);
+
+		doingSomething = false;
 	}
 
 	void OnTriggerStay2D(Collider2D other) {
@@ -167,20 +209,24 @@ public class PlayerHands : MonoBehaviour {
 		}
 	}
 
-	Vector2 AimAssist(Vector2 currentDirection, Vector3 ballPosition) {
+	Vector2 AimAssist(Vector2 currentDirection) {
 		float angle, smallestAngle = float.MaxValue;
 		Vector2 newDirection = currentDirection;
 		foreach (GameObject player in PlayerManager.inst.players) {
 			if (player.GetComponent<PlayerData>().num != playerData.num) {
-				angle = Vector2.Angle(currentDirection, player.transform.position - ballPosition);
+				Vector2 playerDiff = (player.transform.position - this.transform.position).normalized;
+				//Debug.DrawRay(transform.position + Vector3.back, playerDiff, Color.green, 3f);
+				//Debug.DrawRay(transform.position + Vector3.back, currentDirection, Color.blue, 3f);
+				angle = Vector2.Angle(currentDirection, playerDiff);
 				if (angle < smallestAngle) {
 					smallestAngle = angle;
-					newDirection = player.transform.position - ballPosition;
+					newDirection = playerDiff;
 				}
 			}
 		}
 
 		if (smallestAngle <= aimAssistAngle) {
+			//Debug.DrawRay(transform.position + Vector3.back, newDirection, Color.red, 3f);
 			return newDirection;
 		}
 		return currentDirection;

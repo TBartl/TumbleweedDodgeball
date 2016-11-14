@@ -304,7 +304,7 @@ Transform:
   - {fileID: 80662470}
   - {fileID: 1776136592}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 4
 --- !u!1001 &628799737
 Prefab:
   m_ObjectHideFlags: 0
@@ -575,7 +575,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4000011357969870, guid: 9248d7b7c3bc46940a4b55d0939b9fe8, type: 2}
       propertyPath: m_RootOrder
-      value: 7
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 1000010031701256, guid: 9248d7b7c3bc46940a4b55d0939b9fe8, type: 2}
       propertyPath: m_Name
@@ -845,7 +845,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: -15, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 3
 --- !u!1001 &1273876836
 Prefab:
   m_ObjectHideFlags: 0
@@ -883,7 +883,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4000012956191226, guid: 68a756743dcb5ad4da7e729c7fff48c8, type: 2}
       propertyPath: m_RootOrder
-      value: 2
+      value: 20
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 68a756743dcb5ad4da7e729c7fff48c8, type: 2}
@@ -1294,7 +1294,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4000011357969870, guid: 9248d7b7c3bc46940a4b55d0939b9fe8, type: 2}
       propertyPath: m_RootOrder
-      value: 20
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 1000010031701256, guid: 9248d7b7c3bc46940a4b55d0939b9fe8, type: 2}
       propertyPath: m_Name
@@ -1460,7 +1460,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4000010541229136, guid: 7195cefd3cff64240bb942110d4250b7, type: 2}
       propertyPath: m_RootOrder
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 114000010754467132, guid: 7195cefd3cff64240bb942110d4250b7,
         type: 2}
@@ -1475,12 +1475,12 @@ Prefab:
     - target: {fileID: 224000013084658178, guid: 7195cefd3cff64240bb942110d4250b7,
         type: 2}
       propertyPath: m_SizeDelta.y
-      value: 0
+      value: 230.07916
       objectReference: {fileID: 0}
     - target: {fileID: 224000013431957010, guid: 7195cefd3cff64240bb942110d4250b7,
         type: 2}
       propertyPath: m_SizeDelta.y
-      value: 0
+      value: 58.047493
       objectReference: {fileID: 0}
     - target: {fileID: 114000014024199090, guid: 7195cefd3cff64240bb942110d4250b7,
         type: 2}

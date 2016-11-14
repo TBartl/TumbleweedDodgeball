@@ -3,9 +3,9 @@ using System.Collections;
 
 using System.Collections.Generic;
 
-public class NumPlayers : MonoBehaviour {
+public class GlobalPlayerManager : MonoBehaviour {
 
-	public static NumPlayers inst;
+	public static GlobalPlayerManager inst;
 
 	public int players;
 	public List<Material> materials;
@@ -13,7 +13,6 @@ public class NumPlayers : MonoBehaviour {
 	void Awake() {
 		if (inst == null)
 			inst = this;
-		DontDestroyOnLoad(this.gameObject);
 	}
 	
 	public void SetMaterial(int playerID, Material Mat) {

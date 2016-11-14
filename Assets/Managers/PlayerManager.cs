@@ -5,7 +5,7 @@ using System.Collections.Generic;
 public class PlayerManager : MonoBehaviour {
 	public static PlayerManager inst;
 
-//	[HideInInspector] 
+	[HideInInspector] 
 	public List<GameObject> players;
 	public List<Color> colors;
 	public List<Material> materials;
@@ -14,8 +14,20 @@ public class PlayerManager : MonoBehaviour {
 		if (inst == null)
 			inst = this;
 		players = new List<GameObject>(GameObject.FindGameObjectsWithTag("Player"));
-		materials = NumPlayers.inst.materials;
-		for (int i = 0; i < 4-NumPlayers.inst.GetNumPlayers(); ++i) {
+		for (int i = 0; i < players.Count; i++) {
+			players[i].GetComponent<PlayerData>().num = i;
+			players[i].GetComponent<Controller>().inputDeviceNum = i;
+		}
+			
+		for (int i = 0; i < players.Count; i++) {
+			players[i].GetComponent<PlayerData>().num = i;
+			players[i].GetComponent<Controller>().inputDeviceNum = i;
+		}
+	}
+
+	void Start() {
+		materials = GlobalPlayerManager.inst.materials;
+		for (int i = 3; i > GlobalPlayerManager.inst.GetNumPlayers(); i--) {
 			players[i].SetActive(false);
 		}
 	}
