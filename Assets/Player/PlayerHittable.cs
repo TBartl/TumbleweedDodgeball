@@ -17,8 +17,7 @@ public class PlayerHittable : Hittable {
 
 	public override void Hit(PlayerData source) {
 		//check for invincibility 
-		if (hasInvincibilityFrames)
-			return;
+		if (hasInvincibilityFrames || PowerupManager.S.getPowerup(playerData.num) == Powerup.Invincible) return;
 
 		if (playerData == source)
 			return;
