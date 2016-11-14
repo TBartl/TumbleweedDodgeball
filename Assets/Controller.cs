@@ -38,8 +38,8 @@ public class Controller : MonoBehaviour {
 			}
 		}
 		else {
-			prevLeftTriggerPressed = inputDevice.LeftTrigger > 0;
-			prevRightTriggerPressed = inputDevice.RightTrigger > 0;
+			prevLeftTriggerPressed = inputDevice.LeftBumper.IsPressed;
+			prevRightTriggerPressed = inputDevice.RightBumper.IsPressed;
 		}
 	}
 
@@ -115,9 +115,9 @@ public class Controller : MonoBehaviour {
 
 		switch (hand) {
 			case 0:
-				return inputDevice.LeftTrigger.Value > 0 && prevLeftTriggerPressed == false;
+				return inputDevice.LeftBumper.IsPressed && prevLeftTriggerPressed == false;
 			case 1:
-				return inputDevice.RightTrigger.Value > 0 && prevRightTriggerPressed == false;
+				return inputDevice.RightBumper.IsPressed && prevRightTriggerPressed == false;
 		}
 		return false;
 	}
@@ -136,9 +136,9 @@ public class Controller : MonoBehaviour {
 
 		switch (hand) {
 			case 0:
-				return inputDevice.LeftTrigger.Value > 0;
+				return inputDevice.LeftBumper.IsPressed;
 			case 1:
-				return inputDevice.RightTrigger.Value > 0;
+				return inputDevice.RightBumper.IsPressed;
 		}
 		return false;
 	}
