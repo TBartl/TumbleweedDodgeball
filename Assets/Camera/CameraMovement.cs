@@ -6,6 +6,7 @@ public class CameraMovement : MonoBehaviour {
 	public Transform cameraTransform;
 
 	Transform[] playerTransforms;
+	public float yOffset = -3.5f;
 
 	// Use this for initialization
 	void Start () {
@@ -18,16 +19,20 @@ public class CameraMovement : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		cameraTransform.position = AveragePositions();
+		cameraTransform.position = GetPosition();
 	}
 
-	Vector3 AveragePositions() {
-		Vector3 average = Vector3.zero;
+	Vector3 GetPosition() {
+
+		float minX = float.MaxValue, maxX = float.MinValue, minY = float.MaxValue, maxY = float.MinValue;
+
 		foreach (Transform transform in playerTransforms) {
-			average += transform.position;
+			minX = Mathf.Min(minX, transform.position.x);
+			maxX = Mathf.Max(maxX, transform.position.x);
+			minY = Mathf.Min(minY, transform.position.y);
+			maxY = Mathf.Max(maxY, transform.position.y);
 		}
-		average /= playerTransforms.Length;
-		average.z = cameraTransform.position.z;
-		return average;
+
+		return new Vector3((minX + maxX) / 2, (minY + maxY) / 2 + yOffset, cameraTransform.position.z);
 	}
 }
