@@ -45,4 +45,10 @@ public class PlayerDaze : MonoBehaviour {
 		dazeIcon.enabled = false;
 		movement.modifiers.Remove(moveModifier);
 	}
+
+	public void InBallTrail() {
+		if (timeRemaining <= 0)
+			ActivateDaze();
+		timeRemaining = duration;
+	}
 }

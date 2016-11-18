@@ -10,11 +10,12 @@ public class BallTrailCollider : MonoBehaviour {
 	ParticleSystem trail;
 	ParticleSystem.Particle[] particles;
 	List<PlayerMovement> playerMovements;
+	BallSource ballSource;
 
 	void Start() {
 		trail = GetComponent<ParticleSystem>();
+		ballSource = GetComponentInParent<BallSource>();
 		particles = new ParticleSystem.Particle[trail.maxParticles];
-		//foreach ()
 	}
 
 	void Update() {
@@ -26,9 +27,10 @@ public class BallTrailCollider : MonoBehaviour {
 
 	void CheckForCollision(ParticleSystem.Particle particle) {
 		foreach (GameObject player in PlayerManager.inst.players) {
-			if (Physics2D.Raycast(particle.position, player.transform.position - particle.position, 1f)) {
-				//player.GetComponent<PlayerMovement>().modifiers.Add(.5f);
-				//player.
+			if (player.GetComponent<PlayerData>() != ballSource.GetThrower()) {
+				if (Vector2.Distance(player.transform.position, particle.position) < 1) {
+					player.GetComponent<PlayerDaze>().InBallTrail();
+				}
 			}
 		}
 	}
