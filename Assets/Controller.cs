@@ -50,7 +50,7 @@ public class Controller : MonoBehaviour {
 
 	public Vector3 GetDirection() {
         if (!canMove) return Vector3.zero; //player is frozen
-		if (devMode || InputManager.Devices.Count == inputDeviceNum) { // use keyboard & mouse
+		if (devMode || InputManager.Devices.Count <= inputDeviceNum) { // use keyboard & mouse
 			return GetMousePosition() - transform.position;
 		}
 
@@ -81,7 +81,7 @@ public class Controller : MonoBehaviour {
 
     public bool GetDash() {
         if (!canMove) return false; //player is frozen
-        if (devMode || InputManager.Devices.Count == inputDeviceNum) {// use keyboard & mouse
+        if (devMode || InputManager.Devices.Count <= inputDeviceNum) {// use keyboard & mouse
             return Input.GetKey(KeyCode.B);
         }
         else return inputDevice.GetControl(InputControlType.Action2);
@@ -89,7 +89,7 @@ public class Controller : MonoBehaviour {
 
 	public Vector3 GetMovementDirection() {
         if (!canMove) return Vector3.zero; //Player is frozen
-        if (devMode || InputManager.Devices.Count == inputDeviceNum) { // use keyboard & mouse
+        if (devMode || InputManager.Devices.Count <= inputDeviceNum) { // use keyboard & mouse
 			Vector3 dir = Vector3.zero;
 			if (Input.GetKey(KeyCode.W))
 				dir += Vector3.up;
@@ -114,7 +114,7 @@ public class Controller : MonoBehaviour {
 
 	// returns true if the trigger was pressed down this frame
 	public bool GetHandActionDown(int hand) {
-		if (devMode || InputManager.Devices.Count == inputDeviceNum) { // use keyboard & mouse
+		if (devMode || InputManager.Devices.Count <= inputDeviceNum) { // use keyboard & mouse
 			return Input.GetMouseButtonDown(hand);
 		}
 
@@ -135,7 +135,7 @@ public class Controller : MonoBehaviour {
 
 	// returns true if the trigger is down at all
 	public bool GetHandActionHeld(int hand) {
-		if (devMode || InputManager.Devices.Count == inputDeviceNum) { // use keyboard & mouse
+		if (devMode || InputManager.Devices.Count <= inputDeviceNum) { // use keyboard & mouse
 			return Input.GetMouseButton(hand);
 		}
 
