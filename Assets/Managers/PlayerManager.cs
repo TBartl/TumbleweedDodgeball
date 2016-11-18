@@ -43,4 +43,8 @@ public class PlayerManager : MonoBehaviour {
 	public void SetMaterials(List<Material> mats) {
 		materials = mats;
 	}
+
+    public void UnfreezePlayers() {
+        Controller.canMove = true;
+    }
 }

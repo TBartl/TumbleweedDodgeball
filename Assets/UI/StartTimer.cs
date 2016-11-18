@@ -17,7 +17,8 @@ public class StartTimer : MonoBehaviour {
 			yield return null;
 		}
 
-		timer.text = "GO";
+        PlayerManager.inst.UnfreezePlayers();
+        timer.text = "GO";
 		for (float t = 0; t < 1f; t += Time.deltaTime)
 			yield return null;
 

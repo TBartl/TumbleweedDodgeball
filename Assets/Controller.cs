@@ -5,7 +5,8 @@ using InControl;
 public class Controller : MonoBehaviour {
 
 	static bool devMode = false;
-	
+    static public bool canMove = false;
+
 	public int inputDeviceNum;
 
 	InputDevice inputDevice = null;
@@ -48,6 +49,7 @@ public class Controller : MonoBehaviour {
 	}
 
 	public Vector3 GetDirection() {
+        if (!canMove) return Vector3.zero; //player is frozen
 		if (devMode || InputManager.Devices.Count == inputDeviceNum) { // use keyboard & mouse
 			return GetMousePosition() - transform.position;
 		}
@@ -77,7 +79,16 @@ public class Controller : MonoBehaviour {
 		return v;
 	}
 
+    public bool GetDash() {
+        if (!canMove) return false; //player is frozen
+        if (devMode || InputManager.Devices.Count == inputDeviceNum) {// use keyboard & mouse
+            return Input.GetKey(KeyCode.B);
+        }
+        else return inputDevice.GetControl(InputControlType.Action2);
+    }
+
 	public Vector3 GetMovementDirection() {
+        if (!canMove) return Vector3.zero; //Player is frozen
         if (devMode || InputManager.Devices.Count == inputDeviceNum) { // use keyboard & mouse
 			Vector3 dir = Vector3.zero;
 			if (Input.GetKey(KeyCode.W))
