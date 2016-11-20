@@ -32,6 +32,13 @@ public class PlayerManager : MonoBehaviour {
 		}
 	}
 
+    public Transform GetPlayerTransform(int playerID) {
+        return players[playerID].transform;
+    }
+
+    public Vector3 GetPosition(int playerID) {
+        return players[playerID].transform.position;
+    }
 
 	public Color GetColor(int playerID) {
 		return colors[playerID];
