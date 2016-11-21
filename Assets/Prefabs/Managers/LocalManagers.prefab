@@ -248,6 +248,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 4000012448076230}
   - 114: {fileID: 114000013970701250}
+  - 114: {fileID: 114000012039871244}
   m_Layer: 0
   m_Name: PowerupManager
   m_TagString: Untagged
@@ -372,7 +373,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &1000013966975546
 GameObject:
   m_ObjectHideFlags: 1
@@ -657,6 +658,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   addHitUI: {fileID: 114000013183075448}
+  positiveScore: {fileID: 1000010302374362, guid: 387057bea371a164fa91db5baa1f3728,
+    type: 2}
+  negativeScore: {fileID: 1000013062126018, guid: fe8a858d303e1ad4c90b0514068774fb,
+    type: 2}
 --- !u!114 &114000010714008506
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -974,6 +979,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_HorizontalFit: 2
   m_VerticalFit: 2
+--- !u!114 &114000012039871244
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000012358656008}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 158d80c867d7bee42b2b75d57d1722e7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114000012041999460
 MonoBehaviour:
   m_ObjectHideFlags: 1
