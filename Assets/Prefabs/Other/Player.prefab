@@ -605,6 +605,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxSpeed: 5
+  dashSpeed: 10
+  minCoolDownDash: 2
   modifiers: []
 --- !u!114 &114000011308612312
 MonoBehaviour:
