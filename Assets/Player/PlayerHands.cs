@@ -118,11 +118,14 @@ public class PlayerHands : MonoBehaviour {
                     val = 0;
                     chargeSpeed *= -1;
                 }
-                controller.Vibrate(val);
+                controller.Vibrate(val / 2f);
+				if (val >= 1 - superThrowThreshold)
+					controller.Vibrate(1);
                 resizableBar.transform.localScale = new Vector3(val, 1, 1);
                 yield return null;
             }
         }
+		controller.Vibrate(0);
 
 		balls[hand].transform.position = throwPosition.position;
 

@@ -5,7 +5,7 @@ _Color("Color", Color) = (1,1,1,1)
 }
 
 SubShader{
-	Tags{ "Queue" = "Opaque" }
+	//Tags{ "Queue" = "Opaque" }
 	LOD 100
 
 	Pass{

@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using InControl;
+using XInputDotNetPure;
 
 public class Controller : MonoBehaviour {
 
@@ -155,8 +156,8 @@ public class Controller : MonoBehaviour {
 	}
 
 	public void Vibrate(float intensity) {
-		//inputDevice.Vibrate(intensity);
-		//inputDevice.Vibrate(intensity, intensity);
+		GamePad.SetVibration((PlayerIndex)inputDeviceNum, intensity, intensity);
+		
 		// TODO neither of these work
 	}
 }
