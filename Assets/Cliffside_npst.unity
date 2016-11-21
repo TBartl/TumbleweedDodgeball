@@ -634,12 +634,9 @@ MonoBehaviour:
   spawnInterval: 5
   boxRadius: {x: 10, y: 4}
   prefabs:
-  - {fileID: 1000013903614682, guid: f85825572bb59904c936e399975e49a4, type: 2}
-  - {fileID: 1000013903614682, guid: f2a2b5cf0a110474badd347b37341cf7, type: 2}
-  - {fileID: 1000013903614682, guid: 502e7c62848d21447b734a65d00c9c87, type: 2}
-  - {fileID: 1000013903614682, guid: 32cdaa252eb8fcf48b67ed6909222168, type: 2}
   - {fileID: 1000013903614682, guid: b2c7abea858219c4f8182ed793f0a451, type: 2}
-  - {fileID: 1000012390416646, guid: 28f76c054e229db45823749ae790bfd8, type: 2}
+  - {fileID: 1000013903614682, guid: f18628d2adc56364cbfeaff708f1f55f, type: 2}
+  - {fileID: 1000013903614682, guid: 32cdaa252eb8fcf48b67ed6909222168, type: 2}
 --- !u!1 &192809071
 GameObject:
   m_ObjectHideFlags: 0
@@ -888,8 +885,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   addHitUI: {fileID: 2088404880}
-  positiveScore: {fileID: 0}
-  negativeScore: {fileID: 0}
+  positiveScore: {fileID: 1000010302374362, guid: 387057bea371a164fa91db5baa1f3728,
+    type: 2}
+  negativeScore: {fileID: 1000013062126018, guid: fe8a858d303e1ad4c90b0514068774fb,
+    type: 2}
 --- !u!1 &275010431
 GameObject:
   m_ObjectHideFlags: 0

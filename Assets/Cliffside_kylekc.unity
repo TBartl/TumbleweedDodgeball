@@ -3062,11 +3062,6 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 114000013947605996, guid: 7195cefd3cff64240bb942110d4250b7,
-        type: 2}
-      propertyPath: prefabs.Array.size
-      value: 6
-      objectReference: {fileID: 0}
     - target: {fileID: 4000010541229136, guid: 7195cefd3cff64240bb942110d4250b7, type: 2}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -3114,28 +3109,6 @@ Prefab:
       propertyPath: players.Array.data[2]
       value: 
       objectReference: {fileID: 369964280}
-    - target: {fileID: 224000013431957010, guid: 7195cefd3cff64240bb942110d4250b7,
-        type: 2}
-      propertyPath: m_SizeDelta.y
-      value: 55.81395
-      objectReference: {fileID: 0}
-    - target: {fileID: 224000013084658178, guid: 7195cefd3cff64240bb942110d4250b7,
-        type: 2}
-      propertyPath: m_SizeDelta.y
-      value: 230.69766
-      objectReference: {fileID: 0}
-    - target: {fileID: 114000013947605996, guid: 7195cefd3cff64240bb942110d4250b7,
-        type: 2}
-      propertyPath: prefabs.Array.data[6]
-      value: 
-      objectReference: {fileID: 1000011732276918, guid: 4501538b57b623b4da90a09a13d8085e,
-        type: 2}
-    - target: {fileID: 114000013947605996, guid: 7195cefd3cff64240bb942110d4250b7,
-        type: 2}
-      propertyPath: prefabs.Array.data[7]
-      value: 
-      objectReference: {fileID: 1000010745825914, guid: 2dea40bf994329e49b2bc47c2f6674ad,
-        type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7195cefd3cff64240bb942110d4250b7, type: 2}
   m_IsPrefabParent: 0

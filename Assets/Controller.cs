@@ -156,8 +156,7 @@ public class Controller : MonoBehaviour {
 	}
 
 	public void Vibrate(float intensity) {
-		GamePad.SetVibration((PlayerIndex)inputDeviceNum, intensity, intensity);
-		
-		// TODO neither of these work
+		//GamePad.SetVibration((PlayerIndex)inputDeviceNum, intensity, intensity);
+		inputDevice.Vibrate(intensity);
 	}
 }
