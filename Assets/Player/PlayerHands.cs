@@ -1,4 +1,4 @@
-﻿﻿using UnityEngine;
+﻿using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
 
@@ -70,7 +70,15 @@ public class PlayerHands : MonoBehaviour {
 	}
 
 	IEnumerator AddBall(Ball b, int hand) {
+
 		doingSomething = true;
+
+		try {
+			if (hand == 0) TutorialManager.lHands[playerData.num] = true;
+			if (hand == 1) TutorialManager.rHands[playerData.num] = true;
+		} catch {
+			//do nothing
+		}
 
 		b.Grab(playerData.num);
 		AddBallUI.BalltoUI(playerData.num, hand);
