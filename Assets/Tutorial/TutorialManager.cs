@@ -4,7 +4,6 @@ using System.Collections;
 public class TutorialManager : MonoBehaviour {
 
 	private int curTask = 0;
-
 	public GameObject[] Checks;
 
 	private float timer = 0;
