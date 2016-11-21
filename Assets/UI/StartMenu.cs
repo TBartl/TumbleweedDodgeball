@@ -202,11 +202,11 @@ public class StartMenu : MonoBehaviour {
 				}
 				GlobalPlayerManager.inst.SetMaterial(3,materials[currentMat[3]]);
 	        }
-	        else if (Input.GetKeyDown(KeyCode.K)) {
+	        else if (Input.GetKeyDown(KeyCode.J)) {
 				pReady[3] = true;
 				playerReady[3].SetActive(true);
 	        }
-	        else if (Input.GetKeyDown(KeyCode.J)) {
+	        else if (Input.GetKeyDown(KeyCode.K)) {
 				pReady[3] = false;
 				playerReady[3].SetActive(false);
 	        }
