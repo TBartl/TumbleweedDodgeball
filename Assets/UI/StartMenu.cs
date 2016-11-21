@@ -239,7 +239,7 @@ public class StartMenu : MonoBehaviour {
 			}
 		}
 		if (allReady && readyCount >= 2){
-			GlobalPlayerManager.inst.SetNumPlayers(readyCount);
+			GlobalPlayerManager.inst.SetNumPlayers(readyCount - 1);
 			SceneManager.LoadScene("Cliffside_npst");
 		}
 	}
