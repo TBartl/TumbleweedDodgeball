@@ -29,7 +29,16 @@ public class TutorialManager : MonoBehaviour {
 	void Update () {
 		if (timer > 0) {
 			timer -= Time.deltaTime;
-			return;
+			if (timer <= 0) {
+				TutorialMessage.nextMessage = true;
+				for (int i = 0; i < Directions.Length; ++i) {
+					startRot[i] = Directions[i].transform.rotation;
+					rHands[i] = false;
+					lHands[i] = false;
+					Checks[i].SetActive(false);
+				}
+			}
+ 			return;
 		}
 		if (curTask == 0) {
 			bool nextTask = true;
@@ -41,11 +50,7 @@ public class TutorialManager : MonoBehaviour {
 				}
 			}
 			if (nextTask) {
-				TutorialMessage.nextMessage = true;
-				for (int i = 0; i < Directions.Length; ++i) {
-					startRot[i] = Directions[i].transform.rotation;
-					Checks[i].SetActive(false);
-				}
+				timer = 2;
 				curTask++;
 			}
 
@@ -59,12 +64,8 @@ public class TutorialManager : MonoBehaviour {
 				}
 			}
 			if (nextTask) {
-				TutorialMessage.nextMessage = true;
+				timer = 2;
 				curTask++;
-				for (int i = 0; i < Players.Length; ++i) {
-					rHands[i] = false;
-					Checks[i].SetActive(false);
-				}
 			}
 		} else if (curTask == 2) {
 			bool nextTask = true;
@@ -75,12 +76,8 @@ public class TutorialManager : MonoBehaviour {
 				}
 			}
 			if (nextTask) {
-				TutorialMessage.nextMessage = true;
+				timer = 2;
 				curTask++;
-				for (int i = 0; i < Players.Length; ++i) {
-					lHands[i] = false;
-					Checks[i].SetActive(false);
-				}
 			}
 		} else if (curTask == 3) {
 			bool nextTask = true;
@@ -91,11 +88,8 @@ public class TutorialManager : MonoBehaviour {
 				}
 			}
 			if (nextTask) {
-				TutorialMessage.nextMessage = true;
+				timer = 2;
 				curTask++;
-//				for (int i = 0; i < Players.Length; ++i) {
-//					lHands[i] = false;
-//				}
 			}
 		}
 	}

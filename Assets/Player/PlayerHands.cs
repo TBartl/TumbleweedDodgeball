@@ -81,7 +81,6 @@ public class PlayerHands : MonoBehaviour {
 		}
 
 		b.Grab(playerData.num);
-		AddBallUI.BalltoUI(playerData.num, hand);
 		Vector3 originalPos = b.transform.position;
 		Vector3 targetPos = hands[hand].position;
 
@@ -139,7 +138,6 @@ public class PlayerHands : MonoBehaviour {
 		balls[hand].Throw(directionDiff.normalized * power);
 		balls[hand].GetComponent<BallSource>().SetThrower(playerData);
 		balls[hand] = null;
-		AddBallUI.BallfromUI(playerData.num, hand);
 
 		for (float t = 0; t < rethrowDelay; t += Time.deltaTime)
 			yield return null;
