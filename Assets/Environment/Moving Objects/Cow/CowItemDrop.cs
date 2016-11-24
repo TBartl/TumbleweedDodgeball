@@ -7,14 +7,12 @@ public class CowItemDrop : MonoBehaviour {
 	public float width;
 
 	float nextDropTime;
-	Mesh mesh;
 
 	public float minDuration, maxDuration;
 
 	// Use this for initialization
 	void Start () {
 		GenerateNextDropTime();
-		mesh = GetComponent<Mesh>();
 	}
 	
 	// Update is called once per frame

@@ -14,7 +14,7 @@ public class BallTrailCollider : MonoBehaviour {
 
 	void Start() {
 		trail = GetComponent<ParticleSystem>();
-		ballSource = GetComponentInParent<BallSource>();
+		//ballSource = GetComponentInParent<BallSource>();
 		particles = new ParticleSystem.Particle[trail.maxParticles];
 	}
 
@@ -33,5 +33,9 @@ public class BallTrailCollider : MonoBehaviour {
 				}
 			}
 		}
+	}
+
+	public void SetBallSource(BallSource ballSourceIn) {
+		ballSource = ballSourceIn;
 	}
 }
