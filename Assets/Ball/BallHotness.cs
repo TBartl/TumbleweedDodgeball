@@ -24,7 +24,10 @@ public class BallHotness : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		isHot = (rigid.velocity.magnitude >= threshold);
+		//isHot = (rigid.velocity.magnitude >= threshold);
+		if (rigid.velocity.magnitude < threshold) {
+			isHot = false;
+		}
 		if (isHot)
 			tr.startWidth = initialTrailWidth;
 		else
@@ -57,5 +60,9 @@ public class BallHotness : MonoBehaviour {
 
 	public bool GetIsHot() {
 		return isHot;
+	}
+
+	public void makeHot() {
+		isHot = true;
 	}
 }

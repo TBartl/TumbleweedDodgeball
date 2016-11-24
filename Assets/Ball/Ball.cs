@@ -30,5 +30,6 @@ public class Ball : MonoBehaviour {
 		rb.velocity = velocity;
 		transform.parent = null;
 		bounce.Reset();
+		hotness.makeHot();
 	}
 }

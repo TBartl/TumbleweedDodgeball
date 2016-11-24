@@ -10,14 +10,16 @@ public class BallHoming : MonoBehaviour {
 
 	Rigidbody2D rigid;
 	BallSource ballSource;
+	BallHotness hotness;
 	
 	void Awake() {
 		rigid = this.GetComponent<Rigidbody2D>();
 		ballSource = this.GetComponent<BallSource>();
+		hotness = GetComponent<BallHotness>();
 	}
 
     void FixedUpdate() {
-		if (rigid.velocity.magnitude > seekThreshold) {
+		if (hotness.GetIsHot() && rigid.velocity.magnitude > seekThreshold) {
 			GameObject target = FindClosestPlayer();
 
 			Vector3 currentDirection = rigid.velocity.normalized;
