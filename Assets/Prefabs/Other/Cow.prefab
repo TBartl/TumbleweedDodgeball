@@ -26,6 +26,7 @@ GameObject:
   - 114: {fileID: 114000010576328512}
   - 114: {fileID: 114000012628622942}
   - 114: {fileID: 114000010313003954}
+  - 114: {fileID: 114000010824403338}
   m_Layer: 0
   m_Name: Cow
   m_TagString: Untagged
@@ -40,8 +41,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000012869742214}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 6, y: -3, z: 0}
-  m_LocalScale: {x: 3, y: 1, z: 3.33}
+  m_LocalPosition: {x: -3.27, y: -3.3, z: 0}
+  m_LocalScale: {x: 3, y: 1, z: 3}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
@@ -142,15 +143,27 @@ MonoBehaviour:
   pathName: Cow Path
   pathColor: {r: 0, g: 1, b: 1, a: 1}
   nodes:
-  - {x: 6, y: -3, z: 0}
-  - {x: 10, y: -3, z: 0}
-  - {x: 11, y: 5.5, z: 0}
-  - {x: 5.5, y: 6, z: 0}
-  - {x: 6, y: -3, z: 0}
+  - {x: -3.2789412, y: -3.310812, z: 0}
+  - {x: 6.2484756, y: -3.2708874, z: 0}
+  - {x: 7.1161594, y: 4.834779, z: 0}
+  - {x: -3.6570377, y: 5.05658, z: 0}
+  - {x: -3.278941, y: -3.310812, z: 0}
   nodeCount: 5
   initialized: 1
   initialName: New Path 1
   pathVisible: 1
+--- !u!114 &114000010824403338
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000012869742214}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 97a78534019b3804e886cb8d2ae13ecd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ballPrefab: {fileID: 0}
 --- !u!114 &114000012628622942
 MonoBehaviour:
   m_ObjectHideFlags: 1
