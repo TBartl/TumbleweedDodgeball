@@ -19,15 +19,16 @@ public class StartMenu : MonoBehaviour {
 
 	private int numPlayers;
 
-	public Controller[] controllers;
+	private Controller[] controllers;
+
+	public GameObject controllerPrefab;
 	
 	void Start () {
+		controllers = new Controller[inGame.Length];
 		for (int i = 0; i < inGame.Length; ++i) {
 			inGame[i] = false;
 			pReady[i] = false;
-		}
-
-		for (int i = 0; i < 4; ++i) {
+			controllers[i] = Instantiate(controllerPrefab).GetComponent<Controller>();
 			controllers[i].inputDeviceNum = i;
 		}
 	}
@@ -273,60 +274,114 @@ public class StartMenu : MonoBehaviour {
         return false;
     }
 
+	//void GetInput(int playerNum) {
+	//	if (InputManager.Devices.Count >= playerNum + 1) {
+	//		InputDevice inputDevice = InputManager.Devices[playerNum];
+	//		if (inGame[playerNum]) {//color shit here
+	//			if (inputDevice.LeftStick.X < 0 && !pReady[playerNum]) { //playerReady
+	//				currentMat[playerNum]--;
+	//				if (currentMat[playerNum] < 0) currentMat[playerNum] = 9;
+	//				while (CompareColor(playerNum)) {
+	//					currentMat[playerNum]--;
+	//					if (currentMat[playerNum] < 0) currentMat[playerNum] = 9;
+	//				}
+	//				foreach (MeshRenderer r in Joined[playerNum].GetComponentsInChildren<MeshRenderer>()) {
+	//					r.material = materials[currentMat[playerNum]];
+	//				}
+	//				GlobalPlayerManager.inst.SetMaterial(playerNum, materials[currentMat[playerNum]]);
+	//			}
+	//			else if (inputDevice.LeftStick.X > 0 && !pReady[playerNum]) {
+	//				currentMat[playerNum]++;
+	//				if (currentMat[playerNum] > 9) currentMat[playerNum] = 0;
+	//				while (CompareColor(playerNum)) {
+	//					currentMat[playerNum]++;
+	//					if (currentMat[playerNum] > 9) currentMat[playerNum] = 0;
+	//				}
+	//				foreach (MeshRenderer r in Joined[playerNum].GetComponentsInChildren<MeshRenderer>()) {
+	//					r.material = materials[currentMat[playerNum]];
+	//				}
+	//				GlobalPlayerManager.inst.SetMaterial(playerNum, materials[currentMat[playerNum]]);
+	//			}
+	//			else if (inputDevice.Action1) {
+	//				pReady[0] = true;
+	//				playerReady[0].SetActive(true);
+	//			}
+	//			else if (inputDevice.Action2) {
+	//				pReady[0] = false;
+	//				playerReady[0].SetActive(false);
+	//			}
+	//		}
+	//		else {
+	//			if (inputDevice.Action1) {
+	//				inGame[0] = true;
+	//				Join[0].SetActive(false);
+	//				Joined[0].SetActive(true);
+	//				numPlayers++;
+	//				while (CompareColor(0)) {
+	//					currentMat[0]++;
+	//					if (currentMat[0] > 9) currentMat[0] = 0;
+	//				}
+	//				foreach (MeshRenderer r in Joined[0].GetComponentsInChildren<MeshRenderer>()) {
+	//					r.material = materials[currentMat[0]];
+	//				}
+	//				GlobalPlayerManager.inst.SetMaterial(0, materials[currentMat[0]]);
+	//			}
+	//		}
+
+	//	}
+	//}
+
 	void GetInput(int playerNum) {
-		if (InputManager.Devices.Count >= playerNum + 1) {
-			InputDevice inputDevice = InputManager.Devices[playerNum];
-			if (inGame[playerNum]) {//color shit here
-				if (inputDevice.LeftStick.X < 0 && !pReady[playerNum]) { //playerReady
+		Controller controller = controllers[playerNum];
+		if (inGame[playerNum]) {//color shit here
+			if (controller.GetHandActionDown(0) && !pReady[playerNum]) { //playerReady
+				currentMat[playerNum]--;
+				if (currentMat[playerNum] < 0) currentMat[playerNum] = 9;
+				while (CompareColor(playerNum)) {
 					currentMat[playerNum]--;
 					if (currentMat[playerNum] < 0) currentMat[playerNum] = 9;
-					while (CompareColor(playerNum)) {
-						currentMat[playerNum]--;
-						if (currentMat[playerNum] < 0) currentMat[playerNum] = 9;
-					}
-					foreach (MeshRenderer r in Joined[playerNum].GetComponentsInChildren<MeshRenderer>()) {
-						r.material = materials[currentMat[playerNum]];
-					}
-					GlobalPlayerManager.inst.SetMaterial(playerNum, materials[currentMat[playerNum]]);
 				}
-				else if (inputDevice.LeftStick.X > 0 && !pReady[playerNum]) {
+				foreach (MeshRenderer r in Joined[playerNum].GetComponentsInChildren<MeshRenderer>()) {
+					r.material = materials[currentMat[playerNum]];
+				}
+				GlobalPlayerManager.inst.SetMaterial(playerNum, materials[currentMat[playerNum]]);
+			}
+			else if (controller.GetHandActionDown(1) && !pReady[playerNum]) {
+				currentMat[playerNum]++;
+				if (currentMat[playerNum] > 9) currentMat[playerNum] = 0;
+				while (CompareColor(playerNum)) {
 					currentMat[playerNum]++;
 					if (currentMat[playerNum] > 9) currentMat[playerNum] = 0;
-					while (CompareColor(playerNum)) {
-						currentMat[playerNum]++;
-						if (currentMat[playerNum] > 9) currentMat[playerNum] = 0;
-					}
-					foreach (MeshRenderer r in Joined[playerNum].GetComponentsInChildren<MeshRenderer>()) {
-						r.material = materials[currentMat[playerNum]];
-					}
-					GlobalPlayerManager.inst.SetMaterial(playerNum, materials[currentMat[playerNum]]);
 				}
-				else if (inputDevice.Action1) {
-					pReady[0] = true;
-					playerReady[0].SetActive(true);
+				foreach (MeshRenderer r in Joined[playerNum].GetComponentsInChildren<MeshRenderer>()) {
+					r.material = materials[currentMat[playerNum]];
 				}
-				else if (inputDevice.Action2) {
-					pReady[0] = false;
-					playerReady[0].SetActive(false);
-				}
+				GlobalPlayerManager.inst.SetMaterial(playerNum, materials[currentMat[playerNum]]);
 			}
-			else {
-				if (inputDevice.Action1) {
-					inGame[0] = true;
-					Join[0].SetActive(false);
-					Joined[0].SetActive(true);
-					numPlayers++;
-					while (CompareColor(0)) {
-						currentMat[0]++;
-						if (currentMat[0] > 9) currentMat[0] = 0;
-					}
-					foreach (MeshRenderer r in Joined[0].GetComponentsInChildren<MeshRenderer>()) {
-						r.material = materials[currentMat[0]];
-					}
-					GlobalPlayerManager.inst.SetMaterial(0, materials[currentMat[0]]);
-				}
+			else if (controller.GetConfirmDown()) {
+				pReady[playerNum] = true;
+				playerReady[playerNum].SetActive(true);
 			}
-
+			else if (controller.GetBack()) {
+				pReady[playerNum] = false;
+				playerReady[playerNum].SetActive(false);
+			}
+		}
+		else {
+			if (controller.GetConfirmDown()) {
+				inGame[playerNum] = true;
+				Join[playerNum].SetActive(false);
+				Joined[playerNum].SetActive(true);
+				numPlayers++;
+				while (CompareColor(playerNum)) {
+					currentMat[playerNum]++;
+					if (currentMat[playerNum] > 9) currentMat[playerNum] = 0;
+				}
+				foreach (MeshRenderer r in Joined[playerNum].GetComponentsInChildren<MeshRenderer>()) {
+					r.material = materials[currentMat[playerNum]];
+				}
+				GlobalPlayerManager.inst.SetMaterial(playerNum, materials[currentMat[playerNum]]);
+			}
 		}
 	}
 }

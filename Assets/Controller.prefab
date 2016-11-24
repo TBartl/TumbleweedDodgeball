@@ -51,4 +51,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b4d8490b3dac36a47880249701181bbe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  inputDeviceNum: -1
+  inputDeviceNum: 0

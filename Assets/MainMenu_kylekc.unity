@@ -923,10 +923,12 @@ MonoBehaviour:
   - {fileID: 1941591766}
   - {fileID: 238646346}
   controllers:
-  - {fileID: 114000011129619420, guid: 1b743c4ca6277814c96e185900484dd0, type: 2}
-  - {fileID: 114000011129619420, guid: 1b743c4ca6277814c96e185900484dd0, type: 2}
-  - {fileID: 114000011129619420, guid: 1b743c4ca6277814c96e185900484dd0, type: 2}
-  - {fileID: 114000011129619420, guid: 1b743c4ca6277814c96e185900484dd0, type: 2}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  controllerPrefab: {fileID: 1000012332420916, guid: 1b743c4ca6277814c96e185900484dd0,
+    type: 2}
 --- !u!1 &1061839124
 GameObject:
   m_ObjectHideFlags: 0

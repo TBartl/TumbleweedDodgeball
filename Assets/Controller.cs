@@ -14,6 +14,7 @@ public class Controller : MonoBehaviour {
 
     bool prevLeftTriggerPressed = false;
     bool prevRightTriggerPressed = false;
+	bool confirmPressed = false;
 
     // used to store the current orientation of the player
     // that way if the player isn't pressing the right stick,
@@ -42,6 +43,7 @@ public class Controller : MonoBehaviour {
         else {
             prevLeftTriggerPressed = inputDevice.LeftBumper.IsPressed;
             prevRightTriggerPressed = inputDevice.RightBumper.IsPressed;
+			confirmPressed = inputDevice.Action1;
         }
     }
 
@@ -82,11 +84,15 @@ public class Controller : MonoBehaviour {
 
     public bool GetDash() {
         if (!canMove) return false; //player is frozen
-        if (devMode || InputManager.Devices.Count <= inputDeviceNum) {// use keyboard & mouse
-            return Input.GetKey(KeyCode.B);
-        }
-        else return inputDevice.GetControl(InputControlType.Action2);
+		return GetBack();
     }
+
+	public bool GetBack() { // B button
+		if (devMode || InputManager.Devices.Count <= inputDeviceNum) {// use keyboard & mouse
+			return Input.GetKey(KeyCode.B);
+		}
+		else return inputDevice.Action2;
+	}
 
     public Vector3 GetMovementDirection() {
         if (!canMove) return Vector3.zero; //Player is frozen
@@ -127,9 +133,9 @@ public class Controller : MonoBehaviour {
 
         switch (hand) {
             case 0:
-                return inputDevice.LeftBumper.IsPressed && prevLeftTriggerPressed == false;
+                return inputDevice.LeftBumper.IsPressed && !prevLeftTriggerPressed;
             case 1:
-                return inputDevice.RightBumper.IsPressed && prevRightTriggerPressed == false;
+                return inputDevice.RightBumper.IsPressed && !prevRightTriggerPressed;
         }
         return false;
     }
@@ -171,5 +177,20 @@ public class Controller : MonoBehaviour {
                 break;
         }
     }
+
+	public bool GetConfirmDown() {
+		if (devMode || InputManager.Devices.Count <= inputDeviceNum) { // use keyboard & mouse
+			//return Input.GetMouseButton(hand);
+			// I dunno what should go here, doesn't really matter
+		}
+
+		// use controller
+		if (inputDevice == null) {
+			PrintErrorMessage();
+			return false;
+		}
+
+		return inputDevice.Action1 && !confirmPressed;
+	}
 }
 
