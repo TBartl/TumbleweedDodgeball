@@ -40,6 +40,31 @@ public class StartMenu : MonoBehaviour {
 		GetInput(2);
 		GetInput(3);
 
+		bool start = false;
+		int count = 0;
+
+		for (int i = 0; i < inGame.Length; ++i) {
+			if (inGame[i]) {
+				++count;
+				if (count >= 2) {
+					start = true;
+					if (!pReady[i]) {
+						start = false;
+					}
+				}
+			}
+		}
+
+		//for (int i = 0; i < inGame.Length; ++i) {
+		//	if (inGame[i] && !pReady[i]) {
+		//		start = false;
+		//	}
+		//}
+
+		if (start) {
+			SceneManager.LoadScene("Levels/Cliffside");
+		}
+
 
 
 		//if (inGame[0]) {//color shit here
@@ -273,63 +298,6 @@ public class StartMenu : MonoBehaviour {
     	}
         return false;
     }
-
-	//void GetInput(int playerNum) {
-	//	if (InputManager.Devices.Count >= playerNum + 1) {
-	//		InputDevice inputDevice = InputManager.Devices[playerNum];
-	//		if (inGame[playerNum]) {//color shit here
-	//			if (inputDevice.LeftStick.X < 0 && !pReady[playerNum]) { //playerReady
-	//				currentMat[playerNum]--;
-	//				if (currentMat[playerNum] < 0) currentMat[playerNum] = 9;
-	//				while (CompareColor(playerNum)) {
-	//					currentMat[playerNum]--;
-	//					if (currentMat[playerNum] < 0) currentMat[playerNum] = 9;
-	//				}
-	//				foreach (MeshRenderer r in Joined[playerNum].GetComponentsInChildren<MeshRenderer>()) {
-	//					r.material = materials[currentMat[playerNum]];
-	//				}
-	//				GlobalPlayerManager.inst.SetMaterial(playerNum, materials[currentMat[playerNum]]);
-	//			}
-	//			else if (inputDevice.LeftStick.X > 0 && !pReady[playerNum]) {
-	//				currentMat[playerNum]++;
-	//				if (currentMat[playerNum] > 9) currentMat[playerNum] = 0;
-	//				while (CompareColor(playerNum)) {
-	//					currentMat[playerNum]++;
-	//					if (currentMat[playerNum] > 9) currentMat[playerNum] = 0;
-	//				}
-	//				foreach (MeshRenderer r in Joined[playerNum].GetComponentsInChildren<MeshRenderer>()) {
-	//					r.material = materials[currentMat[playerNum]];
-	//				}
-	//				GlobalPlayerManager.inst.SetMaterial(playerNum, materials[currentMat[playerNum]]);
-	//			}
-	//			else if (inputDevice.Action1) {
-	//				pReady[0] = true;
-	//				playerReady[0].SetActive(true);
-	//			}
-	//			else if (inputDevice.Action2) {
-	//				pReady[0] = false;
-	//				playerReady[0].SetActive(false);
-	//			}
-	//		}
-	//		else {
-	//			if (inputDevice.Action1) {
-	//				inGame[0] = true;
-	//				Join[0].SetActive(false);
-	//				Joined[0].SetActive(true);
-	//				numPlayers++;
-	//				while (CompareColor(0)) {
-	//					currentMat[0]++;
-	//					if (currentMat[0] > 9) currentMat[0] = 0;
-	//				}
-	//				foreach (MeshRenderer r in Joined[0].GetComponentsInChildren<MeshRenderer>()) {
-	//					r.material = materials[currentMat[0]];
-	//				}
-	//				GlobalPlayerManager.inst.SetMaterial(0, materials[currentMat[0]]);
-	//			}
-	//		}
-
-	//	}
-	//}
 
 	void GetInput(int playerNum) {
 		Controller controller = controllers[playerNum];

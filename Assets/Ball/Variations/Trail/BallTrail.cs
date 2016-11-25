@@ -34,7 +34,9 @@ public class BallTrail : MonoBehaviour {
 					trailObject.GetComponent<BallTrailCollider>().SetBallSource(ballSource);
 				}
 				else {
-					trail.Stop();
+					if (trailObject != null) {
+						trail.Stop();
+					}
 				}
 			}
 		}

@@ -22,7 +22,7 @@ public class BallTrailCollider : MonoBehaviour {
 		if (numParticles == 0) {
 			Destroy(gameObject);
 		}
-		for (int i = 0; i < numParticles; i += 5) {
+		for (int i = 0; i < numParticles; ++i) {
 			CheckForCollision(particles[i]);
 		}
 	}
@@ -30,7 +30,7 @@ public class BallTrailCollider : MonoBehaviour {
 	void CheckForCollision(ParticleSystem.Particle particle) {
 		foreach (GameObject player in PlayerManager.inst.players) {
 			if (player.GetComponent<PlayerData>() != ballSource.GetThrower()) {
-				if (Vector2.Distance(player.transform.position, particle.position) < 1) {
+				if (particle.lifetime >= 2.5 && Vector2.Distance(player.transform.position, particle.position) < .5) {
 					player.GetComponent<PlayerDaze>().InBallTrail();
 				}
 			}
