@@ -486,7 +486,7 @@ ParticleSystem:
   ShapeModule:
     serializedVersion: 2
     enabled: 1
-    type: 1
+    type: 11
     radius: 0.2
     angle: 25
     length: 5
@@ -508,7 +508,7 @@ ParticleSystem:
     serializedVersion: 2
     m_Type: 0
     rate:
-      scalar: 90
+      scalar: 120
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -781,7 +781,7 @@ ParticleSystem:
           rgba: 4279531089
         key1:
           serializedVersion: 2
-          rgba: 840201808
+          rgba: 4279531088
         key2:
           serializedVersion: 2
           rgba: 0
@@ -1659,7 +1659,7 @@ ParticleSystem:
       minMaxState: 1
     range: {x: 0, y: 1}
   CollisionModule:
-    enabled: 1
+    enabled: 0
     serializedVersion: 3
     type: 0
     collisionMode: 0

@@ -21,20 +21,28 @@ public class BallTrail : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if (hotness != null && hotness.GetIsHot() != hot) {
-			if (trailObject != null) {
-				trailObject.transform.position = transform.position;
+		if (hotness != null) {
+			if (hotness.GetIsHot() && trailObject != null) {
+				trailObject.transform.position = new Vector3(transform.position.x, transform.position.y, -1);
 			}
-			hot = hotness.GetIsHot();
-			if (hot) {
-				trailObject = Instantiate(trailPrefab);
-				trailObject.transform.position = transform.position;
-				trail = trailObject.GetComponent<ParticleSystem>();
-				trailObject.GetComponent<BallTrailCollider>().SetBallSource(ballSource);
+			if (hotness.GetIsHot() != hot) {
+				hot = hotness.GetIsHot();
+				if (hot) {
+					trailObject = Instantiate(trailPrefab);
+					trailObject.transform.position = transform.position;
+					trail = trailObject.GetComponent<ParticleSystem>();
+					trailObject.GetComponent<BallTrailCollider>().SetBallSource(ballSource);
+				}
+				else {
+					trail.Stop();
+				}
 			}
-			else {
-				trail.Stop();
-			}
+		}
+	}
+
+	void OnDestroy() {
+		if (trail != null) {
+			trail.Stop();
 		}
 	}
 }

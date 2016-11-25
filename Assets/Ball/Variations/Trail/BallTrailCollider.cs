@@ -14,12 +14,14 @@ public class BallTrailCollider : MonoBehaviour {
 
 	void Start() {
 		trail = GetComponent<ParticleSystem>();
-		//ballSource = GetComponentInParent<BallSource>();
 		particles = new ParticleSystem.Particle[trail.maxParticles];
 	}
 
 	void Update() {
 		int numParticles = trail.GetParticles(particles);
+		if (numParticles == 0) {
+			Destroy(gameObject);
+		}
 		for (int i = 0; i < numParticles; i += 5) {
 			CheckForCollision(particles[i]);
 		}
