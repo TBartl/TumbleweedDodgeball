@@ -1,17 +1,13 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class DropItemOnDestroy : MonoBehaviour {
+public class DropItemOnHide : OnHide {
 
 	public GameObject itemPrefab;
-	bool isQuitting = false;
+	public float probability;
 
-	void OnApplicationQuit() {
-		isQuitting = true;
-	}
-
-	void OnDestroy() {
-		if (!isQuitting) {
+	public override void Hide() {
+		if (Random.Range(0f, 1f) >= probability) {
 			GameObject item = Instantiate(itemPrefab);
 			item.transform.position = transform.position;
 		}
