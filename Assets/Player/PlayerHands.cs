@@ -20,6 +20,10 @@ public class PlayerHands : MonoBehaviour {
     public float chargeSpeed;
     public float rethrowDelay;
 
+    private bool isChargingBall = false;
+    private static bool throwBoth = false;
+    private int throwingFromHand;
+
     public GameObject barPrefab;
     Transform resizableBar;
 
@@ -52,12 +56,22 @@ public class PlayerHands : MonoBehaviour {
             //For both hands
             for (int i = 0; i < 2; i++) {
                 if (controller.GetHandActionDown(i)) {
-                    if (balls[i] != null)
+                    if (balls[i] != null) {
+                        throwingFromHand = i;
+                        isChargingBall = true;
                         StartCoroutine(ChargeThrowBall(i));
+                    }
                     else
                         StartCoroutine(Smack());
                     break;
                 }
+            }
+        }
+        else { //can throw 2 balls at the same time
+            if (isChargingBall && !throwBoth
+                   && controller.GetHandActionDown(throwingFromHand == 0 ? 1 : 0)
+                    && balls[throwingFromHand == 0 ? 1 : 0] != null) {
+                throwBoth = true;
             }
         }
     }
@@ -138,9 +152,23 @@ public class PlayerHands : MonoBehaviour {
 
         Vector2 directionDiff = controller.GetDirection().normalized;
         directionDiff = AimAssist(directionDiff);
-        balls[hand].Throw(directionDiff.normalized * power);
-        balls[hand].GetComponent<BallSource>().SetThrower(playerData);
-        balls[hand] = null;
+        
+        if (!throwBoth) { //only throwing one ball
+            balls[hand].Throw(directionDiff.normalized * power);
+            balls[hand].GetComponent<BallSource>().SetThrower(playerData);
+            balls[hand] = null;
+        }
+        else {//throw both balls
+            for(int i = 0; i < 2; ++i) {
+                balls[i].Throw(directionDiff.normalized * power);
+                balls[i].GetComponent<BallSource>().SetThrower(playerData);
+                balls[i] = null;
+            }
+        }
+
+        throwingFromHand = -1;
+        isChargingBall = false;
+        throwBoth = false;
 
         for (float t = 0; t < rethrowDelay; t += Time.deltaTime)
             yield return null;
