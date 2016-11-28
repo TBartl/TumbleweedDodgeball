@@ -1905,7 +1905,8 @@ MonoBehaviour:
   aimAssistAngle: 12
   smackEffect: {fileID: 23000013580686196}
   smackActive: 0.2
-  smackCooldown: 0.4
+  smackWindDown: 0.2
+  smackCoolDown: 1.6
 --- !u!114 &114000013450401840
 MonoBehaviour:
   m_ObjectHideFlags: 1

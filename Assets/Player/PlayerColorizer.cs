@@ -30,7 +30,7 @@ public class PlayerColorizer : MonoBehaviour {
 
 	IEnumerator Flash(Color c) {
 		foreach (SkinnedMeshRenderer r in this.GetComponentsInChildren<SkinnedMeshRenderer>()) {
-			r.material.color = c;
+			r.material.SetColor("_OverColor", c);
 		}
 
 		yield return new WaitForSeconds(.1f);

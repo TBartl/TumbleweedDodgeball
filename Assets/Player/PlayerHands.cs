@@ -13,6 +13,7 @@ public class PlayerHands : MonoBehaviour {
 
 	PlayerData playerData;
     Controller controller;
+	PlayerColorizer colorizer;
 
     public float throwPower = 20f;
     public Vector2 powerRange;
@@ -28,18 +29,28 @@ public class PlayerHands : MonoBehaviour {
 
     public MeshRenderer smackEffect;
     public float smackActive;
-    public float smackCooldown;
+    public float smackWindDown;
 
-    void Awake() {
+	List<bool> isPunching;
+
+	bool canSmack = true;
+	public float smackCoolDown = 3f;
+
+	void Awake() {
         playerData = GetComponentInParent<PlayerData>();
-        controller = GetComponentInParent<Controller>();
-        smackEffect.enabled = false;
+		controller = GetComponentInParent<Controller>();
+		colorizer = GetComponentInParent<PlayerColorizer>();
+		smackEffect.enabled = false;
     }
 
     void Start() {
 		isChargingBall = new List<bool>(0);
 		isChargingBall.Add(false);
 		isChargingBall.Add(false);
+
+		isPunching = new List<bool>(0);
+		isPunching.Add(false);
+		isPunching.Add(false);
 
 		balls = new List<Ball>();
         for (int i = 0; i < hands.Count; i++) {
@@ -58,8 +69,8 @@ public class PlayerHands : MonoBehaviour {
                     if (balls[i] != null) {
                         StartCoroutine(ChargeThrowBall());
                     }
-                    else
-                        StartCoroutine(Smack());
+                    else if (canSmack)
+                        StartCoroutine(Smack(i));
                     break;
                 }
             }
@@ -215,13 +226,15 @@ public class PlayerHands : MonoBehaviour {
         }
     }
 
-    IEnumerator Smack() {
+    IEnumerator Smack(int hand) {
         //Wait a frame so if we pick up a ball after Update() it's not a problem
         yield return new WaitForFixedUpdate();
         if (doingSomething)
             yield break;
 
         doingSomething = true;
+		isPunching[hand] = true;
+		canSmack = false;
 
         smackEffect.enabled = true;
         smackEffect.gameObject.layer = LayerMask.NameToLayer("Default");
@@ -235,10 +248,16 @@ public class PlayerHands : MonoBehaviour {
         smackEffect.gameObject.layer = LayerMask.NameToLayer("NoCollision");
         smackEffect.enabled = false;
 
-        yield return new WaitForSeconds(smackCooldown);
+		isPunching[hand] = false;
+
+		yield return new WaitForSeconds(smackWindDown);
 
         doingSomething = false;
-    }
+		
+		yield return new WaitForSeconds(smackCoolDown);
+		canSmack = true;
+		colorizer.FlashColor(Color.yellow * .5f);
+	}
 
     void OnTriggerStay2D(Collider2D other) {
         if (other.tag == "Ball") {
@@ -305,5 +324,9 @@ public class PlayerHands : MonoBehaviour {
 
 	public bool GetIsChargingBall(int hand) {
 		return isChargingBall[hand];
+	}
+
+	public bool GetIsPunching(int hand) {
+		return isPunching[hand];
 	}
 }

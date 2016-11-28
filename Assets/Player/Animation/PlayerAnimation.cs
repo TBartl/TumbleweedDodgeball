@@ -24,7 +24,7 @@ public class PlayerAnimation : MonoBehaviour {
 			speed = -speed;
 			if (angleDiff < 0)
 				angleDiff += 180;
-			if (angleDiff < 0)
+			else if (angleDiff > 0)
 				angleDiff -= 180;
 		}
 
@@ -36,6 +36,9 @@ public class PlayerAnimation : MonoBehaviour {
 
 		animator.SetBool("leftHandCharge", hands.GetIsChargingBall(0));
 		animator.SetBool("rightHandCharge", hands.GetIsChargingBall(1));
+
+		animator.SetBool("leftHandPunch", hands.GetIsPunching(0));
+		animator.SetBool("rightHandPunch", hands.GetIsPunching(1));
 	}
 
 
