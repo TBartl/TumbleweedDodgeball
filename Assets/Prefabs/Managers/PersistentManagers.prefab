@@ -140,6 +140,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1adb568a989bd614986a4ea19e84e3ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  randomPrefabs:
+  - {fileID: 1000013903614682, guid: f85825572bb59904c936e399975e49a4, type: 2}
+  - {fileID: 1000013903614682, guid: 32cdaa252eb8fcf48b67ed6909222168, type: 2}
+  - {fileID: 1000013903614682, guid: f2a2b5cf0a110474badd347b37341cf7, type: 2}
+  - {fileID: 1000013903614682, guid: f18628d2adc56364cbfeaff708f1f55f, type: 2}
+  - {fileID: 1000013903614682, guid: 502e7c62848d21447b734a65d00c9c87, type: 2}
 --- !u!114 &114000010780995426
 MonoBehaviour:
   m_ObjectHideFlags: 1
