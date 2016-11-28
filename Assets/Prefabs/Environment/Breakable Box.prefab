@@ -22,7 +22,8 @@ GameObject:
   - 33: {fileID: 33000012688762516}
   - 23: {fileID: 23000011285739286}
   - 61: {fileID: 61000014050898620}
-  - 114: {fileID: 114000011050108646}
+  - 114: {fileID: 114000014261809558}
+  - 114: {fileID: 114000010681545890}
   m_Layer: 0
   m_Name: Breakable Box
   m_TagString: Hittable
@@ -36,10 +37,10 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000010745825914}
-  m_LocalRotation: {x: 0, y: 0, z: -0.38268343, w: 0.92387956}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: 0.43666703, w: 0.8996232}
+  m_LocalPosition: {x: 1.45, y: 0.29, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -45}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 51.514004}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -93,7 +94,7 @@ BoxCollider2D:
   m_Offset: {x: 0, y: 0.050000012}
   serializedVersion: 2
   m_Size: {x: 0.8, y: 1.9}
---- !u!114 &114000011050108646
+--- !u!114 &114000010681545890
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -101,8 +102,23 @@ MonoBehaviour:
   m_GameObject: {fileID: 1000010745825914}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bcbc7db721748e2448ef3280f9df16f4, type: 3}
+  m_Script: {fileID: 11500000, guid: 63e1c8b07e5a2964398ca025394eeaa3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   shardsPrefab: {fileID: 1000010108324394, guid: 98839b1b0abbfaf4ab71d0d1016c6953,
     type: 2}
+  durationMin: 5
+  durationMax: 10
+--- !u!114 &114000014261809558
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000010745825914}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a5cc9a3ffe5a08c4f8e33d33630fbfa8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemPrefab: {fileID: 1000013903614682, guid: f85825572bb59904c936e399975e49a4, type: 2}
+  probability: 0.6

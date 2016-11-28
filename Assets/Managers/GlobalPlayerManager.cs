@@ -8,8 +8,9 @@ public class GlobalPlayerManager : MonoBehaviour {
 	public static GlobalPlayerManager inst;
 
 	public int players;
-	private bool[] inGame = new bool[4];
+
 	public List<PlayerColor> materials;
+	private bool[] inGame = new bool[4];
 
 	void Awake() {
 		if (inst == null)
