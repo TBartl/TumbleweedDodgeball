@@ -3,7 +3,7 @@ using System.Collections;
 
 public class Hittable : MonoBehaviour {
 
-	public virtual void Hit(PlayerData source)
+	public virtual void Hit(PlayerData source, Vector2 velocityHit)
 	{
 
 	}

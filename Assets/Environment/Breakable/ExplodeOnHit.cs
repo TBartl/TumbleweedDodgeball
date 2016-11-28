@@ -5,9 +5,9 @@ using System.Collections;
 public class ExplodeOnHit : Hittable{
 	public GameObject shardsPrefab;
 
-	public override void Hit(PlayerData source)
+	public override void Hit(PlayerData source, Vector2 velocityHit)
 	{
-		base.Hit(source);
+		base.Hit(source, velocityHit);
 		Destroy(this.gameObject);
 		Instantiate(shardsPrefab, this.transform.position, Quaternion.identity);
 	}

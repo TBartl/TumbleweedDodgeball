@@ -48,7 +48,7 @@ public class BallHotness : MonoBehaviour {
 			(other.gameObject.tag == "Hittable" ||
 			(other.gameObject.tag == "Player" && other.gameObject.GetComponent<PlayerHittable>().GetHittable(source.GetThrower())))
 			) {
-			other.gameObject.GetComponent<Hittable>().Hit(source.GetThrower());
+			other.gameObject.GetComponent<Hittable>().Hit(source.GetThrower(), rigid.velocity);
 			this.OnHitOther(other.gameObject);
 		}
 	}

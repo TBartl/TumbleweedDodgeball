@@ -14,14 +14,15 @@ public class PlayerHittable : Hittable {
 		playerData = this.GetComponent<PlayerData>();
 	}
 
-	public override void Hit(PlayerData source) {
+	public override void Hit(PlayerData source, Vector2 velocityHit) {
 		//check for invincibility 
 		if (hasInvincibilityFrames || PowerupManager.S.getPowerup(playerData.num) == Powerup.Invincible) return;
 
 		if (playerData == source)
 			return;
 
-		base.Hit(source);
+		base.Hit(source, velocityHit);
+        StartCoroutine(GetComponent<PlayerMovement>().KnockBack(velocityHit));
 		StartCoroutine(InvincibilityFrames());
 		if (source != null)
 			ScoreManager.inst.IncrementScore(source.num);

@@ -30,8 +30,8 @@ public class ExplodeAndRespawnOnHit : Hittable {
 		}
 	}
 
-	public override void Hit(PlayerData source) {
-		base.Hit(source);
+	public override void Hit(PlayerData source, Vector2 velocityHit) {
+		base.Hit(source, velocityHit);
 		rend.enabled = false;
 		coll.enabled = false;
 		Instantiate(shardsPrefab, this.transform.position, Quaternion.identity);
