@@ -45,9 +45,9 @@ public class TutorialManager : MonoBehaviour {
 		if (curTask == 0) {
 			bool nextTask = true;
 			for (int i = 0; i < Players.Length; ++i) {
-				if (startPos[i] == Players[i].transform.position) {
+				if (startPos[i] == Players[i].transform.position && GlobalPlayerManager.inst.IsInGame(i)) {
 					nextTask = false;
-				} else {
+				} else if (GlobalPlayerManager.inst.IsInGame(i)) {
 					Checks[i].SetActive(true);
 				}
 			}
@@ -59,7 +59,7 @@ public class TutorialManager : MonoBehaviour {
 		} else if (curTask == 1) {
 			bool nextTask = true;
 			for (int i = 0; i < Directions.Length; ++i) {
-				if (startRot[i] == Directions[i].transform.rotation) {
+				if (startRot[i] == Directions[i].transform.rotation && GlobalPlayerManager.inst.IsInGame(i)) {
 					nextTask = false;
 				} else {
 					Checks[i].SetActive(true);
@@ -72,7 +72,7 @@ public class TutorialManager : MonoBehaviour {
 		} else if (curTask == 2) {
 			bool nextTask = true;
 			for (int i = 0; i < rHands.Length; ++i) {
-				if(!rHands[i]) nextTask = false; 
+				if(!rHands[i] && GlobalPlayerManager.inst.IsInGame(i)) nextTask = false; 
 				else {
 					Checks[i].SetActive(true);
 				}
@@ -84,8 +84,8 @@ public class TutorialManager : MonoBehaviour {
 		} else if (curTask == 3) {//3
 			bool nextTask = true;
 			for (int i = 0; i < lHands.Length; ++i) {
-				if(!lHands[i]) nextTask = false;
-				else {
+				if(!lHands[i] && GlobalPlayerManager.inst.IsInGame(i)) nextTask = false;
+				else if (GlobalPlayerManager.inst.IsInGame(i)){
 					Checks[i].SetActive(true);
 				}
 			}
@@ -96,15 +96,15 @@ public class TutorialManager : MonoBehaviour {
 		} else if (curTask == 4) {
 			bool nextTask = true;
 			for (int i = 0; i < Players.Length; ++i) {
-				if (Players[i].GetComponent<Rigidbody2D>().velocity.magnitude > 5) {
+				if (Players[i].GetComponent<Rigidbody2D>().velocity.magnitude > 5 && GlobalPlayerManager.inst.IsInGame(i)) {
 					nextTask = false;
-				} else {
+				} else if (GlobalPlayerManager.inst.IsInGame(i)) {
 					Checks[i].SetActive(true);
 				}
 			}
 			for (int i = 0; i < dashed.Length; ++i) {
-				if(!dashed[i]) nextTask = false;
-				else {
+				if(!dashed[i]  && GlobalPlayerManager.inst.IsInGame(i)) nextTask = false;
+				else if (GlobalPlayerManager.inst.IsInGame(i)) {
 					Checks[i].SetActive(true);
 				}
 			}
