@@ -10,7 +10,11 @@ public class PlayerDirection : MonoBehaviour {
 	}
 
 	void Update () {
+		transform.rotation = Quaternion.Euler(0, 0, GetRotation());
+	}
+
+	public float GetRotation() {
 		Vector3 directionDiff = controller.GetDirection();
-		transform.rotation = Quaternion.Euler(0, 0, -90 + Mathf.Atan2(directionDiff.y, directionDiff.x) * Mathf.Rad2Deg);
+		return -90 + Mathf.Atan2(directionDiff.y, directionDiff.x) * Mathf.Rad2Deg;
 	}
 }

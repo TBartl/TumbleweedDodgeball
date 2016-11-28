@@ -3,6 +3,8 @@ using System.Collections;
 using System.Collections.Generic;
 
 public class PlayerMovement : MonoBehaviour {
+	PlayerColorizer colorizer;
+
 
 	public float maxSpeed;
     public float dashSpeed;
@@ -10,7 +12,7 @@ public class PlayerMovement : MonoBehaviour {
 	Rigidbody2D rb;
 	Controller controller;
     private bool isDashing = false;
-    private float lastDash = 0;
+	private bool canDash = true;
 
 	public List<float> modifiers;
 
@@ -18,6 +20,7 @@ public class PlayerMovement : MonoBehaviour {
 	{
 		rb = this.GetComponent<Rigidbody2D>();
 		controller = this.GetComponent<Controller>();
+		colorizer = this.GetComponent<PlayerColorizer>();
 	}
 
 	void FixedUpdate () {
@@ -29,17 +32,25 @@ public class PlayerMovement : MonoBehaviour {
                 speed *= f;
             rb.velocity = direction * speed;
         }
-        if (controller.GetDash() && Mathf.Abs(rb.velocity.x) > 0.5f && (Time.time - lastDash > minCoolDownDash)) StartCoroutine(Dash());
+        if (controller.GetDash() && Mathf.Abs(rb.velocity.magnitude) > 0.05f && canDash)
+			StartCoroutine(Dash());
 	}
 
     IEnumerator Dash() {
         isDashing = true;
+		Vector2 direction = rb.velocity.normalized;
         for(float i = 0; i <= 0.5f / 3f; i += Time.deltaTime) {
-            rb.velocity = new Vector2(getXVelocitySpeed(), getYVelocitySpeed());
+            rb.velocity = direction * dashSpeed;
             yield return null;
         }
         isDashing = false;
-        lastDash = Time.time;
+
+		canDash = false;
+		yield return new WaitForSeconds(minCoolDownDash);
+		canDash = true;
+
+		colorizer.FlashColor(Color.blue + Color.white * .7f);
+
     }
 
     public IEnumerator KnockBack(Vector2 velocityHit) {
@@ -74,18 +85,6 @@ public class PlayerMovement : MonoBehaviour {
             else knockBackY = yVel;
         }
         return knockBackY;
-    }
-
-    float getXVelocitySpeed() {
-        if (rb.velocity.x > 0.3f) return dashSpeed;
-        else if (rb.velocity.x < -0.3f) return -dashSpeed;
-        else return 0;
-    }
-
-    float getYVelocitySpeed() {
-        if (rb.velocity.y > 0.3f) return dashSpeed;
-        else if (rb.velocity.y < -0.3f) return -dashSpeed;
-        else return 0;
     }
 
 	public float GetSpeed() {

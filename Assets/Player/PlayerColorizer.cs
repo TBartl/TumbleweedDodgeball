@@ -16,12 +16,28 @@ public class PlayerColorizer : MonoBehaviour {
 		}
 
 		// Player model
-		// Player model
 		foreach (MeshRenderer r in this.GetComponentsInChildren<MeshRenderer>()) {
 			r.material = PlayerManager.inst.GetMaterial(playerData.num);
 		}
 		foreach (SkinnedMeshRenderer r in this.GetComponentsInChildren<SkinnedMeshRenderer>()) {
 			r.material = PlayerManager.inst.GetMaterial(playerData.num);
 		}		
+	}
+
+	public void FlashColor(Color c) {
+		StartCoroutine(Flash(c));
+	}
+
+	IEnumerator Flash(Color c) {
+		foreach (SkinnedMeshRenderer r in this.GetComponentsInChildren<SkinnedMeshRenderer>()) {
+			r.material.color = c;
+		}
+
+		yield return new WaitForSeconds(.1f);
+
+
+		foreach (SkinnedMeshRenderer r in this.GetComponentsInChildren<SkinnedMeshRenderer>()) {
+			r.material = PlayerManager.inst.GetMaterial(playerData.num);
+		}
 	}
 }
