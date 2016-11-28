@@ -32,6 +32,10 @@ public class PlayerManager : MonoBehaviour {
 		}
 	}
 
+    public bool playerIsActive(int playerID) {
+        return playerID < players.Count;
+    }
+
     public Transform GetPlayerTransform(int playerID) {
         return players[playerID].transform;
     }
@@ -53,5 +57,12 @@ public class PlayerManager : MonoBehaviour {
 
     public void UnfreezePlayers() {
         Controller.canMove = true;
+    }
+    
+    public bool GetRestartFromPlayers() {
+        foreach(GameObject go in players) {
+            if (go.GetComponent<Controller>().GetRestartPressed()) return true;
+        }
+        return false;
     }
 }

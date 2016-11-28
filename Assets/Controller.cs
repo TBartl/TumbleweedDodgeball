@@ -161,6 +161,10 @@ public class Controller : MonoBehaviour {
         return false;
     }
 
+    public bool GetRestartPressed() {
+        return inputDevice.Action1;
+    }
+
     public void Vibrate(float intensity) {
         switch (inputDeviceNum) {
             case 0:
