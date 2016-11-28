@@ -116,8 +116,8 @@ public class PlayerHands : MonoBehaviour {
     IEnumerator ChargeThrowBall() {
         doingSomething = true;
         //Get variables for this player's available powerups 
-        bool instantThrow = PowerupManager.S.getPowerup(controller.inputDeviceNum) == Powerup.ThrowQuick;
-        float increasedCharge = PowerupManager.S.getPowerup(controller.inputDeviceNum) == Powerup.QuickCharge ? 2 : 1;
+        bool instantThrow = PowerupManager.S.getPowerup(playerData.num) == Powerup.ThrowQuick;
+        float increasedCharge = PowerupManager.S.getPowerup(playerData.num) == Powerup.QuickCharge ? 2 : 1;
         resizableBar.parent.parent.gameObject.SetActive(true);
         transform.parent.GetComponent<PlayerMovement>().modifiers.Add(.2f);
 
