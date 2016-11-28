@@ -87,4 +87,12 @@ public class PlayerMovement : MonoBehaviour {
         else if (rb.velocity.y < -0.3f) return -dashSpeed;
         else return 0;
     }
+
+	public float GetSpeed() {
+		return rb.velocity.magnitude;
+	}
+
+	public bool GetDashing() {
+		return isDashing;
+	}
 }
