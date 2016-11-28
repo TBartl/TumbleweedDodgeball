@@ -91,6 +91,11 @@ public class PlayerMovement : MonoBehaviour {
 		return rb.velocity.magnitude;
 	}
 
+	public float GetRotation() {
+		Vector3 directionDiff = rb.velocity.normalized;
+		return -90 + Mathf.Atan2(directionDiff.y, directionDiff.x) * Mathf.Rad2Deg;
+	}
+
 	public bool GetDashing() {
 		return isDashing;
 	}
