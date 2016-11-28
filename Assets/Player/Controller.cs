@@ -154,23 +154,23 @@ public class Controller : MonoBehaviour {
     }
 
     public void Vibrate(float intensity) {
-		if (!DebugManager.vibrationsEnabled)
-			return;
+		//if (!DebugManager.vibrationsEnabled)
+		//	return;
 
-        switch (inputDeviceNum) {
-            case 0:
-                GamePad.SetVibration(0, intensity, intensity);
-                break;
-            case 1:
-                GamePad.SetVibration((PlayerIndex)1, intensity, intensity);
-                break;
-            case 2:
-                GamePad.SetVibration((PlayerIndex)2, intensity, intensity);
-                break;
-            case 3:
-                GamePad.SetVibration((PlayerIndex)3, intensity, intensity);
-                break;
-        }
+  //      switch (inputDeviceNum) {
+  //          case 0:
+  //              GamePad.SetVibration(0, intensity, intensity);
+  //              break;
+  //          case 1:
+  //              GamePad.SetVibration((PlayerIndex)1, intensity, intensity);
+  //              break;
+  //          case 2:
+  //              GamePad.SetVibration((PlayerIndex)2, intensity, intensity);
+  //              break;
+  //          case 3:
+  //              GamePad.SetVibration((PlayerIndex)3, intensity, intensity);
+  //              break;
+  //      }
     }
 
 	public bool GetConfirmDown() {
