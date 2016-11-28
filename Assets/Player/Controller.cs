@@ -25,7 +25,10 @@ public class Controller : MonoBehaviour {
     void Start() {
         if (InControl.InputManager.Devices.Count > inputDeviceNum) {
             inputDevice = InControl.InputManager.Devices[inputDeviceNum];
-        }
+			prevLeftTriggerPressed = inputDevice.LeftBumper.IsPressed;
+			prevRightTriggerPressed = inputDevice.RightBumper.IsPressed;
+			confirmPressed = inputDevice.Action1;
+		}
     }
 
     void Update() {

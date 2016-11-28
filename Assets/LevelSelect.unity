@@ -671,6 +671,8 @@ MonoBehaviour:
   - {fileID: 1633419585}
   - {fileID: 1663548230}
   controlMarker: {fileID: 355245815}
+  controllerPrefab: {fileID: 1000012332420916, guid: 1b743c4ca6277814c96e185900484dd0,
+    type: 2}
 --- !u!1 &1047186412
 GameObject:
   m_ObjectHideFlags: 0
