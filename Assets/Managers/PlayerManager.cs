@@ -22,19 +22,21 @@ public class PlayerManager : MonoBehaviour {
 			players[i].GetComponent<PlayerData>().num = i;
 			players[i].GetComponent<Controller>().inputDeviceNum = i;
 		}
-	}
 
-	void Start() {
+
 		colors = GlobalPlayerManager.inst.materials;
 		int curCount = 0;
 		for (int i = 0; i < 4; i++) {
-			if (!GlobalPlayerManager.inst.IsInGame(i)){
+			if (!GlobalPlayerManager.inst.IsInGame(i)) {
 				players[i].SetActive(false);
 			} else {
 				players[i].GetComponent<PlayerData>().num = curCount;
 				curCount++;
 			}
 		}
+	}
+
+	void Start() {
 	}
 
     public bool playerIsActive(int playerID) {

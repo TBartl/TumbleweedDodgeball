@@ -27,3 +27,5 @@ EditorBuildSettings:
     path: Assets/Levels/Cliffside.unity
   - enabled: 1
     path: Assets/Cliffside_kylekc.unity
+  - enabled: 1
+    path: Assets/Controls.unity
