@@ -5,7 +5,7 @@ using UnityEngine.UI;
 public class TutorialMessage : MonoBehaviour {
 
 	private string[] messages = {"Use Left Stick to walk", "Use Right Stick to Aim", "Use Right Bumper to pick up and throw balls with Right Hand"
-	, "Use Left Bumper to pick up and throw balls with Left Hand"};
+	, "Use Left Bumper to pick up and throw balls with Left Hand", "Use B to Dash in the Direction of Movement"};
 	private int curMessage = 0;
 	static public bool nextMessage;
 

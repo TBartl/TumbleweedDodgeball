@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
 
@@ -26,8 +26,14 @@ public class PlayerManager : MonoBehaviour {
 
 	void Start() {
 		colors = GlobalPlayerManager.inst.materials;
-		for (int i = 3; i > GlobalPlayerManager.inst.GetNumPlayers(); i--) {
-			players[i].SetActive(false);
+		int curCount = 0;
+		for (int i = 0; i < 4; i++) {
+			if (!GlobalPlayerManager.inst.IsInGame(i)){
+				players[i].SetActive(false);
+			} else {
+				players[i].GetComponent<PlayerData>().num = curCount;
+				curCount++;
+			}
 		}
 	}
 
