@@ -3,7 +3,7 @@ using System.Collections;
 using UnityEngine.SceneManagement;
 
 public class ColorChange : MonoBehaviour {
-
+	/*
 	public Material[] materials;
 	public int[] currentMat;
 
@@ -452,4 +452,5 @@ public class ColorChange : MonoBehaviour {
         }
         return false;
     }
+	*/
 }

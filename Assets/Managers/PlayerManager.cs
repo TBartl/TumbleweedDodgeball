@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
 
@@ -7,9 +7,7 @@ public class PlayerManager : MonoBehaviour {
 
 	[HideInInspector] 
 	public List<GameObject> players;
-	public List<Color> colors;
-	public List<Material> materials;
-
+	public List<PlayerColor> colors;
 
 	void Awake() {
 		if (inst == null)
@@ -27,7 +25,7 @@ public class PlayerManager : MonoBehaviour {
 	}
 
 	void Start() {
-		materials = GlobalPlayerManager.inst.materials;
+		colors = GlobalPlayerManager.inst.materials;
 		int curCount = 0;
 		for (int i = 0; i < 4; i++) {
 			if (!GlobalPlayerManager.inst.IsInGame(i)){
@@ -52,14 +50,16 @@ public class PlayerManager : MonoBehaviour {
     }
 
 	public Color GetColor(int playerID) {
-		return colors[playerID];
+		if (playerID >= colors.Count)
+			return Color.white;
+		return colors[playerID].col;
 	}
 
 	public Material GetMaterial(int playerID) {
-		return materials[playerID];
+		return colors[playerID].mat;
 	}
-	public void SetMaterials(List<Material> mats) {
-		materials = mats;
+	public void SetMaterials(List<PlayerColor> colors) {
+		this.colors = colors;
 	}
 
     public void UnfreezePlayers() {

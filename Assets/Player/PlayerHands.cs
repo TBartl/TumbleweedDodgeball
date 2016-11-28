@@ -5,12 +5,13 @@ using System.Collections.Generic;
 public class PlayerHands : MonoBehaviour {
 
     public List<Transform> hands;
-    public Transform throwPosition;
+    public List<Transform> throwPosition;
 
     List<Ball> balls;
     bool doingSomething = false;
+	List<bool> isChargingBall;
 
-    PlayerData playerData;
+	PlayerData playerData;
     Controller controller;
 
     public float throwPower = 20f;
@@ -19,10 +20,6 @@ public class PlayerHands : MonoBehaviour {
     public float superThrowThreshold;
     public float chargeSpeed;
     public float rethrowDelay;
-
-    private bool isChargingBall = false;
-    private static bool throwBoth = false;
-    private int throwingFromHand;
 
     public GameObject barPrefab;
     Transform resizableBar;
@@ -40,9 +37,11 @@ public class PlayerHands : MonoBehaviour {
     }
 
     void Start() {
+		isChargingBall = new List<bool>(0);
+		isChargingBall.Add(false);
+		isChargingBall.Add(false);
 
-        //TODO replace hands with predetermined bones in the armature
-        balls = new List<Ball>();
+		balls = new List<Ball>();
         for (int i = 0; i < hands.Count; i++) {
             balls.Add(null);
         }
@@ -57,21 +56,12 @@ public class PlayerHands : MonoBehaviour {
             for (int i = 0; i < 2; i++) {
                 if (controller.GetHandActionDown(i)) {
                     if (balls[i] != null) {
-                        throwingFromHand = i;
-                        isChargingBall = true;
-                        StartCoroutine(ChargeThrowBall(i));
+                        StartCoroutine(ChargeThrowBall());
                     }
                     else
                         StartCoroutine(Smack());
                     break;
                 }
-            }
-        }
-        else { //can throw 2 balls at the same time
-            if (isChargingBall && !throwBoth
-                   && controller.GetHandActionDown(throwingFromHand == 0 ? 1 : 0)
-                    && balls[throwingFromHand == 0 ? 1 : 0] != null) {
-                throwBoth = true;
             }
         }
     }
@@ -112,7 +102,7 @@ public class PlayerHands : MonoBehaviour {
         doingSomething = false;
     }
 
-    IEnumerator ChargeThrowBall(int hand) {
+    IEnumerator ChargeThrowBall() {
         doingSomething = true;
         //Get variables for this player's available powerups 
         bool instantThrow = PowerupManager.S.getPowerup(controller.inputDeviceNum) == Powerup.ThrowQuick;
@@ -122,30 +112,77 @@ public class PlayerHands : MonoBehaviour {
 
         float val = 0;
 
-        if (!instantThrow) {
-            while (controller.GetHandActionHeld(hand)) {
-                val += chargeSpeed * Time.deltaTime * increasedCharge;
-                if (val > 1) {
-                    val = 1;
-                    chargeSpeed *= -1;
-                }
-                if (val < 0) {
-                    val = 0;
-                    chargeSpeed *= -1;
-                }
-                controller.Vibrate(val / 2f);
-                if (val >= 1 - superThrowThreshold)
-                    controller.Vibrate(1);
-                resizableBar.transform.localScale = new Vector3(val, 1, 1);
-                yield return null;
+		// Buffers used to make sure player throws both balls when they intend to
+		// otherwise it would require frame perfect precision
+		float buffer0 = 0;
+		float buffer1 = 0;
+
+		while (true) {
+			bool hand0Primed = (controller.GetHandActionHeld(0) && balls[0] != null);
+			bool hand1Primed = (controller.GetHandActionHeld(1) && balls[1] != null);
+
+			if (!hand0Primed && !hand1Primed)
+				break;
+
+			buffer0 -= Time.deltaTime;
+			buffer1 -= Time.deltaTime;
+
+			if (hand0Primed) {
+				isChargingBall[0] = true;
+				buffer0 = .15f;
+			}
+			else if (buffer0 <= 0)
+				isChargingBall[0] = false;
+
+			if (hand1Primed) {
+				isChargingBall[1] = true;
+				buffer1 = .15f;
+			} else if (buffer1 <= 0)
+				isChargingBall[1] = false;
+
+
+			if (instantThrow) {
+				val = 1;
+				break;
+			}
+
+			val += chargeSpeed * Time.deltaTime * increasedCharge;
+            if (val > 1) {
+                val = 1;
+
+				if (!DebugManager.noChargeDecrease)
+					chargeSpeed *= -1;
             }
+            if (val < 0) {
+                val = 0;
+                chargeSpeed *= -1;
+            }
+            controller.Vibrate(val / 2f);
+            if (val >= 1 - superThrowThreshold)
+                controller.Vibrate(1);
+            resizableBar.transform.localScale = new Vector3(val, 1, 1);
+            yield return null;
         }
+
         controller.Vibrate(0);
-        balls[hand].transform.position = throwPosition.position;
 
+		if (isChargingBall[0] && balls[0]) {
+			balls[0].transform.position = throwPosition[0].position;
+			if (isChargingBall[1] && balls[1])
+				balls[0].transform.position = throwPosition[2].position;
+			balls[0].transform.rotation = Quaternion.identity;
+		}
+		if (isChargingBall[1] && balls[1]) {
+			balls[1].transform.position = throwPosition[1].position;
+			if (isChargingBall[0] && balls[0])
+				balls[0].transform.position = throwPosition[1].position;
+			balls[1].transform.rotation = Quaternion.identity;
+		}
 
-        float power = instantThrow ? throwPower : Mathf.Lerp(powerRange.x, powerRange.y, val);
-        if (val > 1 - superThrowThreshold) {
+		resizableBar.transform.localScale = new Vector3(val, 1, 1);
+
+		float power = Mathf.Lerp(powerRange.x, powerRange.y, val);
+        if (val > 1 - superThrowThreshold && (!DebugManager.noChargeDecrease || val != 1)) {
             power = superThrowPower;
             resizableBar.transform.localScale = new Vector3(1, 2f, 2f);
         }
@@ -153,28 +190,21 @@ public class PlayerHands : MonoBehaviour {
         Vector2 directionDiff = controller.GetDirection().normalized;
         directionDiff = AimAssist(directionDiff);
         
-        if (!throwBoth) { //only throwing one ball
-            balls[hand].Throw(directionDiff.normalized * power);
-            balls[hand].GetComponent<BallSource>().SetThrower(playerData);
-            balls[hand] = null;
+        for(int i = 0; i < 2; ++i) {
+			if (isChargingBall[i]) {
+				balls[i].Throw(directionDiff.normalized * power);
+				balls[i].GetComponent<BallSource>().SetThrower(playerData);
+				balls[i] = null;
+			}
         }
-        else {//throw both balls
-            for(int i = 0; i < 2; ++i) {
-                balls[i].Throw(directionDiff.normalized * power);
-                balls[i].GetComponent<BallSource>().SetThrower(playerData);
-                balls[i] = null;
-            }
-        }
-
-        throwingFromHand = -1;
-        isChargingBall = false;
-        throwBoth = false;
 
         for (float t = 0; t < rethrowDelay; t += Time.deltaTime)
             yield return null;
 
+		isChargingBall[0] = false;
+		isChargingBall[1] = false;
 
-        transform.parent.GetComponent<PlayerMovement>().modifiers.Remove(.2f);
+		transform.parent.GetComponent<PlayerMovement>().modifiers.Remove(.2f);
         resizableBar.parent.parent.gameObject.SetActive(false);
         doingSomething = false;
     }
@@ -268,4 +298,12 @@ public class PlayerHands : MonoBehaviour {
         }
         return currentDirection;
     }
+
+	public bool GetHandUp(int hand) {
+		return (balls[hand] != null);
+	}
+
+	public bool GetIsChargingBall(int hand) {
+		return isChargingBall[hand];
+	}
 }

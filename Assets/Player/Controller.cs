@@ -29,7 +29,7 @@ public class Controller : MonoBehaviour {
     }
 
     void Update() {
-        if (Input.GetKeyDown(KeyCode.F1) && inputDeviceNum == 0)
+        if (Input.GetKeyDown(KeyCode.F1) && inputDeviceNum >= 0)
             devMode = !devMode;
     }
 
@@ -81,18 +81,6 @@ public class Controller : MonoBehaviour {
         }
         return v;
     }
-
-    public bool GetDash() {
-        if (!canMove) return false; //player is frozen
-		return GetBack();
-    }
-
-	public bool GetBack() { // B button
-		if (devMode || InputManager.Devices.Count <= inputDeviceNum) {// use keyboard & mouse
-			return Input.GetKey(KeyCode.B);
-		}
-		else return inputDevice.Action2;
-	}
 
     public Vector3 GetMovementDirection() {
         if (!canMove) return Vector3.zero; //Player is frozen
@@ -166,6 +154,9 @@ public class Controller : MonoBehaviour {
     }
 
     public void Vibrate(float intensity) {
+		if (!DebugManager.vibrationsEnabled)
+			return;
+
         switch (inputDeviceNum) {
             case 0:
                 GamePad.SetVibration(0, intensity, intensity);
@@ -184,8 +175,7 @@ public class Controller : MonoBehaviour {
 
 	public bool GetConfirmDown() {
 		if (devMode || InputManager.Devices.Count <= inputDeviceNum) { // use keyboard & mouse
-			//return Input.GetMouseButton(hand);
-			// I dunno what should go here, doesn't really matter
+			return Input.GetMouseButtonDown(2);
 		}
 
 		// use controller
@@ -196,5 +186,21 @@ public class Controller : MonoBehaviour {
 
 		return inputDevice.Action1 && !confirmPressed;
 	}
+
+	public bool GetDash() {
+		if (!canMove)
+			return false; //player is frozen
+
+		return GetConfirmDown();
+	}
+
+	public bool GetBack() { // B button
+		if (devMode || InputManager.Devices.Count <= inputDeviceNum) {// use keyboard & mouse
+			return Input.GetKey(KeyCode.B);
+		} 
+		else
+			return inputDevice.Action2;
+	}
+
 }
 

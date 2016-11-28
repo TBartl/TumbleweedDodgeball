@@ -10,6 +10,7 @@ public class GlobalPlayerManager : MonoBehaviour {
 	public int players;
 	public List<Material> materials;
 	private bool[] inGame = new bool[4];
+	public List<PlayerColor> materials;
 
 	void Awake() {
 		if (inst == null)
@@ -19,7 +20,7 @@ public class GlobalPlayerManager : MonoBehaviour {
 		}
 	}
 	
-	public void SetMaterial(int playerID, Material Mat) {
+	public void SetMaterial(int playerID, PlayerColor Mat) {
 		materials[playerID] = Mat;
 	}
 

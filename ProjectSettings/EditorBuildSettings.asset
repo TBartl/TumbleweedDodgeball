@@ -5,11 +5,9 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
-    path: Assets/Levels/Cliffside.unity
   - enabled: 0
     path: Assets/main_tbartl.unity
-  - enabled: 0
+  - enabled: 1
     path: Assets/MainMenu.unity
   - enabled: 0
     path: Assets/CharSelect.unity
@@ -21,9 +19,7 @@ EditorBuildSettings:
     path: Assets/CharSelect_kylekc.unity
   - enabled: 0
     path: Assets/Cliffside_npst.unity
-  - enabled: 0
+  - enabled: 1
     path: Assets/Cliffside_kylekc.unity
-  - enabled: 0
-    path: Assets/Controls.unity
-  - enabled: 0
-    path: Assets/LevelSelect.unity
+  - enabled: 1
+    path: Assets/Levels/Cliffside.unity

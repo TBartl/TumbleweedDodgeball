@@ -2979,12 +2979,12 @@ Prefab:
     - target: {fileID: 224000013431957010, guid: 7195cefd3cff64240bb942110d4250b7,
         type: 2}
       propertyPath: m_SizeDelta.y
-      value: 55.81395
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224000013084658178, guid: 7195cefd3cff64240bb942110d4250b7,
         type: 2}
       propertyPath: m_SizeDelta.y
-      value: 230.69766
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224000013490624646, guid: 7195cefd3cff64240bb942110d4250b7,
         type: 2}

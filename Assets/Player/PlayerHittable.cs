@@ -8,7 +8,7 @@ public class PlayerHittable : Hittable {
 	public float flickerInterval = .2f;
 	bool hasInvincibilityFrames = false;
 
-	public MeshRenderer playerMesh;
+	public Renderer playerMesh;
 
 	void Awake() {
 		playerData = this.GetComponent<PlayerData>();
