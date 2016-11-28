@@ -9,10 +9,14 @@ public class GlobalPlayerManager : MonoBehaviour {
 
 	public int players;
 	public List<Material> materials;
+	private bool[] inGame = new bool[4];
 
 	void Awake() {
 		if (inst == null)
 			inst = this;
+		for (int i = 0; i < inGame.Length; ++i) {
+			inGame[i] = false;
+		}
 	}
 	
 	public void SetMaterial(int playerID, Material Mat) {
@@ -25,5 +29,13 @@ public class GlobalPlayerManager : MonoBehaviour {
 
 	public int GetNumPlayers () {
 		return players;
+	}
+
+	public void SetInGameTrue (int PlayerNum) {
+		inGame[PlayerNum] = true;
+	}
+
+	public bool IsInGame (int PlayerNum) {
+		return inGame[PlayerNum];
 	}
 }

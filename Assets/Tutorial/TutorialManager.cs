@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.SceneManagement;
 
 public class TutorialManager : MonoBehaviour {
 
@@ -14,10 +15,12 @@ public class TutorialManager : MonoBehaviour {
 	static public bool[] lHands;
 	private Vector3[] startPos = new Vector3[4];
 	private Quaternion[] startRot = new Quaternion[4];
+	static public bool[] dashed;
 
 	void Start () {
 		rHands = new bool[Players.Length];
 		lHands = new bool[Players.Length];
+		dashed = new bool[Players.Length];
 		for (int i = 0; i < Players.Length; ++i) {
 			startPos[i] = Players[i].transform.position;
 			startRot[i] = Directions[i].transform.rotation;
@@ -78,7 +81,7 @@ public class TutorialManager : MonoBehaviour {
 				timer = 2;
 				curTask++;
 			}
-		} else if (curTask == 3) {
+		} else if (curTask == 3) {//3
 			bool nextTask = true;
 			for (int i = 0; i < lHands.Length; ++i) {
 				if(!lHands[i]) nextTask = false;
@@ -89,6 +92,24 @@ public class TutorialManager : MonoBehaviour {
 			if (nextTask) {
 				timer = 2;
 				curTask++;
+			}
+		} else if (curTask == 4) {
+			bool nextTask = true;
+			for (int i = 0; i < Players.Length; ++i) {
+				if (Players[i].GetComponent<Rigidbody2D>().velocity.magnitude > 5) {
+					nextTask = false;
+				} else {
+					Checks[i].SetActive(true);
+				}
+			}
+			for (int i = 0; i < dashed.Length; ++i) {
+				if(!dashed[i]) nextTask = false;
+				else {
+					Checks[i].SetActive(true);
+				}
+			}
+			if (nextTask) {
+				SceneManager.LoadScene("MainMenu");
 			}
 		}
 	}

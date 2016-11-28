@@ -21,5 +21,9 @@ EditorBuildSettings:
     path: Assets/CharSelect_kylekc.unity
   - enabled: 0
     path: Assets/Cliffside_npst.unity
-  - enabled: 1
+  - enabled: 0
     path: Assets/Cliffside_kylekc.unity
+  - enabled: 0
+    path: Assets/Controls.unity
+  - enabled: 0
+    path: Assets/LevelSelect.unity

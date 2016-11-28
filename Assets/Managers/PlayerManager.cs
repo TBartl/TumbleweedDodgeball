@@ -10,6 +10,7 @@ public class PlayerManager : MonoBehaviour {
 	public List<Color> colors;
 	public List<Material> materials;
 
+
 	void Awake() {
 		if (inst == null)
 			inst = this;
@@ -27,8 +28,14 @@ public class PlayerManager : MonoBehaviour {
 
 	void Start() {
 		materials = GlobalPlayerManager.inst.materials;
-		for (int i = 3; i > GlobalPlayerManager.inst.GetNumPlayers(); i--) {
-			players[i].SetActive(false);
+		int curCount = 0;
+		for (int i = 0; i < 4; i++) {
+			if (!GlobalPlayerManager.inst.IsInGame(i)){
+				players[i].SetActive(false);
+			} else {
+				players[i].GetComponent<PlayerData>().num = curCount;
+				curCount++;
+			}
 		}
 	}
 

@@ -62,7 +62,8 @@ public class StartMenu : MonoBehaviour {
 		//}
 
 		if (start) {
-			SceneManager.LoadScene("Levels/Cliffside");
+			//SceneManager.LoadScene("Levels/Cliffside");
+			SceneManager.LoadScene("LevelSelect");
 		}
 
 
@@ -338,6 +339,7 @@ public class StartMenu : MonoBehaviour {
 		else {
 			if (controller.GetConfirmDown()) {
 				inGame[playerNum] = true;
+				GlobalPlayerManager.inst.SetInGameTrue(playerNum);
 				Join[playerNum].SetActive(false);
 				Joined[playerNum].SetActive(true);
 				numPlayers++;
