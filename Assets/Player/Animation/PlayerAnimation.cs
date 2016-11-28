@@ -27,13 +27,15 @@ public class PlayerAnimation : MonoBehaviour {
 			if (angleDiff < 0)
 				angleDiff -= 180;
 		}
-		Debug.Log(angleDiff);
 
 		animator.SetFloat("moveSpeed", speed);
 		animator.SetFloat("rotation", angleDiff);
 
 		animator.SetBool("leftHandUp", hands.GetHandUp(0));
 		animator.SetBool("rightHandUp", hands.GetHandUp(1));
+
+		animator.SetBool("leftHandCharge", hands.GetIsChargingBall(0));
+		animator.SetBool("rightHandCharge", hands.GetIsChargingBall(1));
 	}
 
 

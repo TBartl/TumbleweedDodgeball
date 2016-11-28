@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 public class DebugManager : MonoBehaviour {
 
 	public static bool vibrationsEnabled = true;
+	public static bool noChargeDecrease = false;
 
 	// Update is called once per frame
 	void Update () {
@@ -16,5 +17,8 @@ public class DebugManager : MonoBehaviour {
 
 		if (Input.GetKeyDown(KeyCode.Alpha2))
 			vibrationsEnabled = !vibrationsEnabled;
+
+		if (Input.GetKeyDown(KeyCode.Alpha3))
+			noChargeDecrease = !noChargeDecrease;
 	}
 }
