@@ -300,6 +300,7 @@ public class StartMenu : MonoBehaviour {
     }
 
 	void GetInput(int playerNum) {
+		Debug.Log(playerNum);
 		Controller controller = controllers[playerNum];
 		if (inGame[playerNum]) {//color shit here
 			if (controller.GetHandActionDown(0) && !pReady[playerNum]) { //playerReady

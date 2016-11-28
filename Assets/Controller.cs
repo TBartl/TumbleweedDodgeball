@@ -53,7 +53,7 @@ public class Controller : MonoBehaviour {
 
     public Vector3 GetDirection() {
         if (!canMove) return Vector3.zero; //player is frozen
-        if (devMode || InputManager.Devices.Count <= inputDeviceNum) { // use keyboard & mouse
+        if (devMode || InputManager.Devices.Count == inputDeviceNum) { // use keyboard & mouse
             return GetMousePosition() - transform.position;
         }
 
@@ -88,7 +88,7 @@ public class Controller : MonoBehaviour {
     }
 
 	public bool GetBack() { // B button
-		if (devMode || InputManager.Devices.Count <= inputDeviceNum) {// use keyboard & mouse
+		if (devMode || InputManager.Devices.Count == inputDeviceNum) {// use keyboard & mouse
 			return Input.GetKey(KeyCode.B);
 		}
 		else return inputDevice.Action2;
@@ -96,7 +96,7 @@ public class Controller : MonoBehaviour {
 
     public Vector3 GetMovementDirection() {
         if (!canMove) return Vector3.zero; //Player is frozen
-        if (devMode || InputManager.Devices.Count <= inputDeviceNum) { // use keyboard & mouse
+        if (devMode || InputManager.Devices.Count == inputDeviceNum) { // use keyboard & mouse
             Vector3 dir = Vector3.zero;
             if (Input.GetKey(KeyCode.W))
                 dir += Vector3.up;
@@ -121,7 +121,7 @@ public class Controller : MonoBehaviour {
 
     // returns true if the trigger was pressed down this frame
     public bool GetHandActionDown(int hand) {
-        if (devMode || InputManager.Devices.Count <= inputDeviceNum) { // use keyboard & mouse
+        if (devMode || InputManager.Devices.Count == inputDeviceNum) { // use keyboard & mouse
             return Input.GetMouseButtonDown(hand);
         }
 
@@ -142,7 +142,7 @@ public class Controller : MonoBehaviour {
 
     // returns true if the trigger is down at all
     public bool GetHandActionHeld(int hand) {
-        if (devMode || InputManager.Devices.Count <= inputDeviceNum) { // use keyboard & mouse
+        if (devMode || InputManager.Devices.Count == inputDeviceNum) { // use keyboard & mouse
             return Input.GetMouseButton(hand);
         }
 
@@ -183,9 +183,8 @@ public class Controller : MonoBehaviour {
     }
 
 	public bool GetConfirmDown() {
-		if (devMode || InputManager.Devices.Count <= inputDeviceNum) { // use keyboard & mouse
-			//return Input.GetMouseButton(hand);
-			// I dunno what should go here, doesn't really matter
+		if (devMode || InputManager.Devices.Count == inputDeviceNum) { // use keyboard & mouse
+			return Input.GetMouseButton(2);
 		}
 
 		// use controller
