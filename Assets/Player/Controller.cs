@@ -154,6 +154,9 @@ public class Controller : MonoBehaviour {
     }
 
     public void Vibrate(float intensity) {
+		if (!DebugManager.vibrationsEnabled)
+			return;
+
         switch (inputDeviceNum) {
             case 0:
                 GamePad.SetVibration(0, intensity, intensity);

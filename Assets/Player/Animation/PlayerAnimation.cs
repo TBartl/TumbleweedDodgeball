@@ -5,11 +5,13 @@ public class PlayerAnimation : MonoBehaviour {
 	PlayerMovement movement;
 	PlayerDirection direction;
 	Animator animator;
+	PlayerHands hands;
 	
 	void Awake() {
 		movement = GetComponent<PlayerMovement>();
 		direction = GetComponentInChildren<PlayerDirection>();
 		animator = this.GetComponentInChildren<Animator>();
+		hands = this.GetComponentInChildren<PlayerHands>();
 	}
 
 	void Update() {
@@ -29,6 +31,9 @@ public class PlayerAnimation : MonoBehaviour {
 
 		animator.SetFloat("moveSpeed", speed);
 		animator.SetFloat("rotation", angleDiff);
+
+		animator.SetBool("leftHandUp", hands.GetHandUp(0));
+		animator.SetBool("rightHandUp", hands.GetHandUp(1));
 	}
 
 

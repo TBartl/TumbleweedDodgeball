@@ -268,4 +268,8 @@ public class PlayerHands : MonoBehaviour {
         }
         return currentDirection;
     }
+
+	public bool GetHandUp(int hand) {
+		return (balls[hand] != null);
+	}
 }
