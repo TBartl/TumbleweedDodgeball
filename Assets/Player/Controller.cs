@@ -15,6 +15,7 @@ public class Controller : MonoBehaviour {
     bool prevLeftTriggerPressed = false;
     bool prevRightTriggerPressed = false;
 	bool confirmPressed = false;
+	bool zeroInput = false;
 
     // used to store the current orientation of the player
     // that way if the player isn't pressing the right stick,
@@ -47,12 +48,39 @@ public class Controller : MonoBehaviour {
             prevLeftTriggerPressed = inputDevice.LeftBumper.IsPressed;
             prevRightTriggerPressed = inputDevice.RightBumper.IsPressed;
 			confirmPressed = inputDevice.Action1;
+			if (inputDevice.LeftStick.X == 0 && inputDevice.LeftStick.Y == 0) {
+				zeroInput = true;
+			}
+			else {
+				zeroInput = false;
+			}
         }
     }
 
     void PrintErrorMessage() {
         //print("Error: No controller for input number " + inputDeviceNum + ". Plug in a controller or press F1 to enter dev mode");
     }
+
+	public Vector2 GetMainDirection() {
+		if (inputDevice == null) {
+			PrintErrorMessage();
+			return Vector2.zero;
+		}
+
+		if (!zeroInput) {
+			return Vector2.zero;
+		}
+
+		float x = inputDevice.LeftStick.X;
+		float y = inputDevice.LeftStick.Y;
+
+		if (Mathf.Abs(x) > Mathf.Abs(y)) {
+			return new Vector2(x, 0);
+		}
+		else {
+			return new Vector2(0, y);
+		}
+	}
 
     public Vector3 GetDirection() {
         if (!canMove) return Vector3.zero; //player is frozen
@@ -157,6 +185,7 @@ public class Controller : MonoBehaviour {
     }
 
 	public void Vibrate(float intensity) {
+		return;
 		if (!DebugManager.vibrationsEnabled)
 			return;
 

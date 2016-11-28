@@ -15,7 +15,6 @@ public class LevelSelect : MonoBehaviour {
 	public GameObject controllerPrefab;
 	Controller[] controllers;
 
-
 	void Start () {
 		levelMarkers[currentLevel].SetActive(true);
 		controllers = new Controller[InputManager.Devices.Count];
@@ -63,22 +62,22 @@ public class LevelSelect : MonoBehaviour {
 	}
 
 	void GetInput(int num) {
-		if (controllers[num].GetMovementDirection().x < 0) {
+		if (controllers[num].GetMainDirection().x < 0 && !controlSelected) {
 			levelMarkers[currentLevel].SetActive(false);
 			currentLevel = currentLevel == 0 ? levelMarkers.Length - 1 : currentLevel - 1;
 			levelMarkers[currentLevel].SetActive(true);
 		}
-		else if (controllers[num].GetMovementDirection().x > 0) {
+		else if (controllers[num].GetMainDirection().x > 0 && !controlSelected) {
 			levelMarkers[currentLevel].SetActive(false);
 			currentLevel = currentLevel == (levelMarkers.Length - 1) ? 0 : currentLevel + 1;
 			levelMarkers[currentLevel].SetActive(true);
 		}
-		else if (controllers[num].GetMovementDirection().y < 0 && !controlSelected) {
+		else if (controllers[num].GetMainDirection().y < 0 && !controlSelected) {
 			controlSelected = true;
 			levelMarkers[currentLevel].SetActive(false);
 			controlMarker.SetActive(true);
 		}
-		else if (controllers[num].GetMovementDirection().y > 0 && controlSelected) {
+		else if (controllers[num].GetMainDirection().y > 0 && controlSelected) {
 			controlSelected = false;
 			levelMarkers[currentLevel].SetActive(true);
 			controlMarker.SetActive(false);

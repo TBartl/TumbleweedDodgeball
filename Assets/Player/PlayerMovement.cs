@@ -18,6 +18,7 @@ public class PlayerMovement : MonoBehaviour {
 
 	void Awake()
 	{
+		modifiers = new List<float>();
 		rb = this.GetComponent<Rigidbody2D>();
 		controller = this.GetComponent<Controller>();
 		colorizer = this.GetComponent<PlayerColorizer>();
