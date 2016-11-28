@@ -1,7 +1,8 @@
 ﻿Shader "Unlit/UnlitTextureWithShadows" {
 Properties{
 	_MainTex("Base (RGB) Trans (A)", 2D) = "white" {}
-_Color("Color", Color) = (1,1,1,1)
+	_Color("Color", Color) = (1,1,1,1)
+	_OverColor("OverColor", Color) = (0,0,0,0)
 }
 
 SubShader{
@@ -18,6 +19,10 @@ SubShader{
 	// Multiply in texture
 	SetTexture[_MainTex]{
 		combine previous * texture
+	}
+	SetTexture[_MainTex]{
+		constantColor[_OverColor]
+		combine constant + previous
 	}
 }
 

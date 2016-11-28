@@ -49,7 +49,7 @@ public class PlayerMovement : MonoBehaviour {
 		yield return new WaitForSeconds(minCoolDownDash);
 		canDash = true;
 
-		colorizer.FlashColor(Color.blue + Color.white * .7f);
+		colorizer.FlashColor(Color.blue * .5f);
 
     }
 

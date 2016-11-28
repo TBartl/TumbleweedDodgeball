@@ -77,6 +77,7 @@ GameObject:
   - 114: {fileID: 114000010620058036}
   - 114: {fileID: 114000011125999118}
   - 114: {fileID: 114000011747105902}
+  - 114: {fileID: 114000013227090564}
   m_Layer: 0
   m_Name: Ball
   m_TagString: Ball
@@ -131,7 +132,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000013903614682}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -11, y: 6, z: 0}
+  m_LocalPosition: {x: 1.12, y: 6.28, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
@@ -331,6 +332,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gravity: 5
   bouncePercent: 0.5
+--- !u!114 &114000013227090564
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000013903614682}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 175178b4ccb66de4f9be49d617006c4c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  radius: 20
 --- !u!114 &114000014181126182
 MonoBehaviour:
   m_ObjectHideFlags: 1
