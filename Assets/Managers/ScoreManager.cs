@@ -22,7 +22,7 @@ public class ScoreManager : MonoBehaviour {
     
 	public void IncrementScore(int playerID) {
 		if (playerID >= 0 && playerID <= 4) {
-			scores[playerID] += 1;
+			scores[playerID] += 2;
 			addHitUI.UpdateScore(playerID, scores[playerID]);
             InitNumberShown(positiveScore, playerID);
 		}
