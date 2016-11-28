@@ -10,7 +10,6 @@ public class GlobalPlayerManager : MonoBehaviour {
 	public int players;
 	public List<Material> materials;
 	private bool[] inGame = new bool[4];
-	public List<PlayerColor> materials;
 
 	void Awake() {
 		if (inst == null)
