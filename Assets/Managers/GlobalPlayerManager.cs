@@ -8,14 +8,14 @@ public class GlobalPlayerManager : MonoBehaviour {
 	public static GlobalPlayerManager inst;
 
 	public int players;
-	public List<Material> materials;
+	public List<PlayerColor> materials;
 
 	void Awake() {
 		if (inst == null)
 			inst = this;
 	}
 	
-	public void SetMaterial(int playerID, Material Mat) {
+	public void SetMaterial(int playerID, PlayerColor Mat) {
 		materials[playerID] = Mat;
 	}
 

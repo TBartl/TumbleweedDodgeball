@@ -16,7 +16,11 @@ public class PlayerColorizer : MonoBehaviour {
 		}
 
 		// Player model
+		// Player model
 		foreach (MeshRenderer r in this.GetComponentsInChildren<MeshRenderer>()) {
+			r.material = PlayerManager.inst.GetMaterial(playerData.num);
+		}
+		foreach (SkinnedMeshRenderer r in this.GetComponentsInChildren<SkinnedMeshRenderer>()) {
 			r.material = PlayerManager.inst.GetMaterial(playerData.num);
 		}		
 	}

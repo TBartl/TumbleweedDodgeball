@@ -7,9 +7,9 @@ public class DebugManager : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		if (Input.GetKeyDown(KeyCode.Alpha1))
-			SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);	
+			SceneManager.LoadScene(0);	
 
 		if (Time.timeSinceLevelLoad > 183)
-			SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+			SceneManager.LoadScene(0);
 	}
 }

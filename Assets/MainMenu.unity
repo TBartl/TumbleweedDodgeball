@@ -133,6 +133,10 @@ Prefab:
       propertyPath: m_Name
       value: PlayerMenu (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 1000013157404372, guid: d195714d176b4d0468481159ab27af27, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d195714d176b4d0468481159ab27af27, type: 2}
   m_IsPrefabParent: 0
@@ -323,6 +327,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: 1000013157404372, guid: d195714d176b4d0468481159ab27af27, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d195714d176b4d0468481159ab27af27, type: 2}
   m_IsPrefabParent: 0
@@ -443,6 +451,10 @@ Prefab:
     - target: {fileID: 1000013157404372, guid: d195714d176b4d0468481159ab27af27, type: 2}
       propertyPath: m_Name
       value: PlayerMenu (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000013157404372, guid: d195714d176b4d0468481159ab27af27, type: 2}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d195714d176b4d0468481159ab27af27, type: 2}
@@ -1112,16 +1124,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   materials:
-  - {fileID: 2100000, guid: 8aa2fc53e3be06c41b52a21b3b467314, type: 2}
-  - {fileID: 2100000, guid: 30fff8dd9b791f4488bd21e6e52d1b4f, type: 2}
-  - {fileID: 2100000, guid: a96a3685b89ddc34f830aee8940b5203, type: 2}
-  - {fileID: 2100000, guid: b99b0b5eed265914bbe76ee25983a384, type: 2}
-  - {fileID: 2100000, guid: f52008aa3a9944f03a74d365343517c8, type: 2}
-  - {fileID: 2100000, guid: 90f5f4710b1674cd68685d28e3107665, type: 2}
-  - {fileID: 2100000, guid: cbd2a1720873949b2a091ea2d53b45f9, type: 2}
-  - {fileID: 2100000, guid: ed69d8fa2048b47a5a9f146ef8fd9579, type: 2}
-  - {fileID: 2100000, guid: 900b3fb695aaa4eb9b6df446899c629a, type: 2}
-  - {fileID: 2100000, guid: 6a16c03dc17784c318c09af179fa1851, type: 2}
+  - {fileID: 11400000, guid: 035c119318a80bc4891a9096219f109b, type: 2}
+  - {fileID: 11400000, guid: 6fb9506a6bacb4d41b7729bf9ff76741, type: 2}
+  - {fileID: 11400000, guid: 6308daf31899b9f4d9842ce43bcbe4f6, type: 2}
+  - {fileID: 11400000, guid: b6df16b363450024b99c20eb2f123a70, type: 2}
+  - {fileID: 11400000, guid: 2a2fa29d276086345adf61e2f1af203a, type: 2}
+  - {fileID: 11400000, guid: 84db0159bd945ea4f932264c96138c51, type: 2}
+  - {fileID: 11400000, guid: eb21356f97b2130458ff23cde6714355, type: 2}
+  - {fileID: 11400000, guid: 193414c24f4645f4398bf3bfd8607495, type: 2}
+  - {fileID: 11400000, guid: 24af22564f773b24fa1885043e05c2eb, type: 2}
+  - {fileID: 11400000, guid: a495fb38132a0a645bdb4c877e93e234, type: 2}
   currentMat: 00000000000000000000000000000000
   Join:
   - {fileID: 1415946037}
@@ -1881,6 +1893,10 @@ Prefab:
     - target: {fileID: 1000013157404372, guid: d195714d176b4d0468481159ab27af27, type: 2}
       propertyPath: m_Name
       value: PlayerMenu (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000013157404372, guid: d195714d176b4d0468481159ab27af27, type: 2}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d195714d176b4d0468481159ab27af27, type: 2}

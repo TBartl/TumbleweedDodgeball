@@ -7,7 +7,7 @@ public class StartMenu : MonoBehaviour {
 
 	private int curSelect = 0;
 
-	public Material[] materials;
+	public PlayerColor[] materials;
 	public int[] currentMat;
 
 	public GameObject[] Join;
@@ -40,17 +40,21 @@ public class StartMenu : MonoBehaviour {
 		GetInput(2);
 		GetInput(3);
 
-		bool start = false;
+		bool start = true;
 		int count = 0;
 
 		for (int i = 0; i < inGame.Length; ++i) {
 			if (inGame[i]) {
 				++count;
-				if (count >= 2) {
-					start = true;
-					if (!pReady[i]) {
-						start = false;
-					}
+			}
+		}
+		if (count < 2)
+			start = false;
+		else {
+			for (int i = 0; i < inGame.Length; ++i) {
+				if (inGame[i] && !pReady[i]) {
+					start = false;
+					break;
 				}
 			}
 		}
@@ -300,30 +304,21 @@ public class StartMenu : MonoBehaviour {
     }
 
 	void GetInput(int playerNum) {
-		Debug.Log(playerNum);
 		Controller controller = controllers[playerNum];
 		if (inGame[playerNum]) {//color shit here
-			if (controller.GetHandActionDown(0) && !pReady[playerNum]) { //playerReady
-				currentMat[playerNum]--;
-				if (currentMat[playerNum] < 0) currentMat[playerNum] = 9;
+			int colorOffset = 0;
+			if (controller.GetHandActionDown(0) && !pReady[playerNum]) 
+				colorOffset = -1;
+			else if (controller.GetHandActionDown(1) && !pReady[playerNum])
+				colorOffset = 1;
+
+			if (colorOffset != 0) {
+				currentMat[playerNum] = (currentMat[playerNum] + colorOffset + materials.Length) % materials.Length;
 				while (CompareColor(playerNum)) {
-					currentMat[playerNum]--;
-					if (currentMat[playerNum] < 0) currentMat[playerNum] = 9;
+					currentMat[playerNum] = (currentMat[playerNum] + colorOffset + materials.Length) % materials.Length;
 				}
-				foreach (MeshRenderer r in Joined[playerNum].GetComponentsInChildren<MeshRenderer>()) {
-					r.material = materials[currentMat[playerNum]];
-				}
-				GlobalPlayerManager.inst.SetMaterial(playerNum, materials[currentMat[playerNum]]);
-			}
-			else if (controller.GetHandActionDown(1) && !pReady[playerNum]) {
-				currentMat[playerNum]++;
-				if (currentMat[playerNum] > 9) currentMat[playerNum] = 0;
-				while (CompareColor(playerNum)) {
-					currentMat[playerNum]++;
-					if (currentMat[playerNum] > 9) currentMat[playerNum] = 0;
-				}
-				foreach (MeshRenderer r in Joined[playerNum].GetComponentsInChildren<MeshRenderer>()) {
-					r.material = materials[currentMat[playerNum]];
+				foreach (Renderer r in Joined[playerNum].GetComponentsInChildren<Renderer>()) {
+					r.material = materials[currentMat[playerNum]].mat;
 				}
 				GlobalPlayerManager.inst.SetMaterial(playerNum, materials[currentMat[playerNum]]);
 			}
@@ -346,8 +341,8 @@ public class StartMenu : MonoBehaviour {
 					currentMat[playerNum]++;
 					if (currentMat[playerNum] > 9) currentMat[playerNum] = 0;
 				}
-				foreach (MeshRenderer r in Joined[playerNum].GetComponentsInChildren<MeshRenderer>()) {
-					r.material = materials[currentMat[playerNum]];
+				foreach (Renderer r in Joined[playerNum].GetComponentsInChildren<Renderer>()) {
+					r.material = materials[currentMat[playerNum]].mat;
 				}
 				GlobalPlayerManager.inst.SetMaterial(playerNum, materials[currentMat[playerNum]]);
 			}
