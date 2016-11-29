@@ -5,7 +5,7 @@ public enum Powerup {
     IncreasedSpeed,
     IncreasedGrabRange,
     QuickCharge,
-    ThrowQuick,
+    MaxCharge,
     Invincible,
     Targeting,
     NoPowerup

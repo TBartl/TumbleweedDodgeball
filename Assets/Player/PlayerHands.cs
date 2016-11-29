@@ -116,7 +116,7 @@ public class PlayerHands : MonoBehaviour {
     IEnumerator ChargeThrowBall() {
         doingSomething = true;
         //Get variables for this player's available powerups 
-        bool instantThrow = PowerupManager.S.getPowerup(playerData.num) == Powerup.ThrowQuick;
+        bool maxCharge = PowerupManager.S.getPowerup(playerData.num) == Powerup.MaxCharge;
         float increasedCharge = PowerupManager.S.getPowerup(playerData.num) == Powerup.QuickCharge ? 2 : 1;
         resizableBar.parent.parent.gameObject.SetActive(true);
         transform.parent.GetComponent<PlayerMovement>().modifiers.Add(.2f);
@@ -152,9 +152,9 @@ public class PlayerHands : MonoBehaviour {
 				isChargingBall[1] = false;
 
 
-			if (instantThrow) {
+			if (maxCharge) {
 				val = 1;
-				break;
+				//break;
 			}
 
 			val += chargeSpeed * Time.deltaTime * increasedCharge;
@@ -189,7 +189,7 @@ public class PlayerHands : MonoBehaviour {
 				balls[0].transform.position = throwPosition[1].position;
 			balls[1].transform.rotation = Quaternion.identity;
 		}
-
+		
 		resizableBar.transform.localScale = new Vector3(val, 1, 1);
 
 		float power = Mathf.Lerp(powerRange.x, powerRange.y, val);
@@ -301,8 +301,6 @@ public class PlayerHands : MonoBehaviour {
         foreach (GameObject player in PlayerManager.inst.players) {
             if (player.GetComponent<PlayerData>().num != playerData.num) {
                 Vector2 playerDiff = (player.transform.position - this.transform.position).normalized;
-                //Debug.DrawRay(transform.position + Vector3.back, playerDiff, Color.green, 3f);
-                //Debug.DrawRay(transform.position + Vector3.back, currentDirection, Color.blue, 3f);
                 angle = Vector2.Angle(currentDirection, playerDiff);
                 if (angle < smallestAngle) {
                     smallestAngle = angle;
@@ -312,7 +310,6 @@ public class PlayerHands : MonoBehaviour {
         }
 
         if (smallestAngle <= aimAssistAngle) {
-            //Debug.DrawRay(transform.position + Vector3.back, newDirection, Color.red, 3f);
             return newDirection;
         }
         return currentDirection;

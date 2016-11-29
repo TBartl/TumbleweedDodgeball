@@ -7,7 +7,7 @@ public class DebugManager : MonoBehaviour {
 	public static DebugManager inst;
 
 	public static bool vibrationsEnabled = true;
-	public static bool noChargeDecrease = false;
+	public static bool noChargeDecrease = true;
 	public static bool useRandomPrefabs = false;
 
 
