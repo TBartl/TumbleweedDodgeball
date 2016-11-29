@@ -15,6 +15,8 @@ public class PlayerMovement : MonoBehaviour {
 	private bool canDash = true;
 
 	public List<float> modifiers;
+    public float dazeMovement = 1f;
+    public float chargeBallSpeed = 1f;
 
 	void Awake()
 	{
@@ -29,8 +31,11 @@ public class PlayerMovement : MonoBehaviour {
 
         if(!isDashing) {
             float speed = maxSpeed;
-            foreach (float f in modifiers)
-                speed *= f;
+            /*foreach (float f in modifiers)
+                speed *= f;*/
+            speed *= dazeMovement;
+            speed *= chargeBallSpeed;
+            rb.velocity = direction * speed;
             rb.velocity = direction * speed;
         }
         if (controller.GetDash() && Mathf.Abs(rb.velocity.magnitude) > 0.05f && canDash)

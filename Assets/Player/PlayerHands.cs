@@ -119,7 +119,7 @@ public class PlayerHands : MonoBehaviour {
         bool maxCharge = PowerupManager.S.getPowerup(playerData.num) == Powerup.MaxCharge;
         float increasedCharge = PowerupManager.S.getPowerup(playerData.num) == Powerup.QuickCharge ? 2 : 1;
         resizableBar.parent.parent.gameObject.SetActive(true);
-        transform.parent.GetComponent<PlayerMovement>().modifiers.Add(.2f);
+        transform.parent.GetComponent<PlayerMovement>().chargeBallSpeed = 0.2f; 
 
         float val = 0;
 
@@ -215,7 +215,7 @@ public class PlayerHands : MonoBehaviour {
 		isChargingBall[0] = false;
 		isChargingBall[1] = false;
 
-		transform.parent.GetComponent<PlayerMovement>().modifiers.Remove(.2f);
+        transform.parent.GetComponent<PlayerMovement>().chargeBallSpeed = 1f;
         resizableBar.parent.parent.gameObject.SetActive(false);
         doingSomething = false;
     }
