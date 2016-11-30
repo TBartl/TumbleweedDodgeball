@@ -184,9 +184,9 @@ public class PlayerHands : MonoBehaviour {
 			balls[0].transform.rotation = Quaternion.identity;
 		}
 		if (isChargingBall[1] && balls[1]) {
-			balls[1].transform.position = throwPosition[1].position;
+			balls[1].transform.position = throwPosition[0].position;
 			if (isChargingBall[0] && balls[0])
-				balls[0].transform.position = throwPosition[1].position;
+				balls[1].transform.position = throwPosition[1].position;
 			balls[1].transform.rotation = Quaternion.identity;
 		}
 		
