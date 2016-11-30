@@ -33,7 +33,7 @@ public class TutorialManager : MonoBehaviour {
 			timer -= Time.deltaTime;
 			if (timer <= 0) {
 				TutorialMessage.nextMessage = true;
-				for (int i = 0; i < Directions.Length; ++i) {
+				for (int i = 0; i < 4; ++i) {
 					startRot[i] = Directions[i].transform.rotation;
 					rHands[i] = false;
 					lHands[i] = false;
@@ -97,13 +97,11 @@ public class TutorialManager : MonoBehaviour {
 			bool nextTask = true;
 			for (int i = 0; i < Players.Length; ++i) {
 				if (Players[i].GetComponent<Rigidbody2D>().velocity.magnitude > 8 && GlobalPlayerManager.inst.IsInGame(i)) {
-					nextTask = false;
-				} else if (GlobalPlayerManager.inst.IsInGame(i)) {
-					Checks[i].SetActive(true);
+					dashed[i] = true;
 				}
 			}
 			for (int i = 0; i < dashed.Length; ++i) {
-				if(!dashed[i]  && GlobalPlayerManager.inst.IsInGame(i)) nextTask = false;
+				if(!dashed[i] && GlobalPlayerManager.inst.IsInGame(i)) nextTask = false;
 				else if (GlobalPlayerManager.inst.IsInGame(i)) {
 					Checks[i].SetActive(true);
 				}
