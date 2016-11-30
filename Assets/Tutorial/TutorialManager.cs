@@ -61,7 +61,7 @@ public class TutorialManager : MonoBehaviour {
 			for (int i = 0; i < Directions.Length; ++i) {
 				if (startRot[i] == Directions[i].transform.rotation && GlobalPlayerManager.inst.IsInGame(i)) {
 					nextTask = false;
-				} else {
+				} else if (GlobalPlayerManager.inst.IsInGame(i)){
 					Checks[i].SetActive(true);
 				}
 			}
@@ -73,7 +73,7 @@ public class TutorialManager : MonoBehaviour {
 			bool nextTask = true;
 			for (int i = 0; i < rHands.Length; ++i) {
 				if(!rHands[i] && GlobalPlayerManager.inst.IsInGame(i)) nextTask = false; 
-				else {
+				else if (GlobalPlayerManager.inst.IsInGame(i)){
 					Checks[i].SetActive(true);
 				}
 			}
