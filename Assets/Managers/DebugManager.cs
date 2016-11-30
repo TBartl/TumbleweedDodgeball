@@ -9,6 +9,7 @@ public class DebugManager : MonoBehaviour {
 	public static bool vibrationsEnabled = true;
 	public static bool noChargeDecrease = true;
 	public static bool useRandomPrefabs = false;
+	
 
 
 	public List<GameObject> randomPrefabs;
@@ -34,5 +35,15 @@ public class DebugManager : MonoBehaviour {
 
 		if (Input.GetKeyDown(KeyCode.Alpha4))
 			useRandomPrefabs = !useRandomPrefabs;
+
+		if (Input.GetKeyDown(KeyCode.Alpha5)) {
+			if (Time.timeScale == 1f)
+				Time.timeScale = 10f;
+			else if (Time.timeScale == 10f)
+				Time.timeScale = .1f;
+			else if (Time.timeScale == .1f)
+				Time.timeScale = 1f;
+
+		}
 	}
 }

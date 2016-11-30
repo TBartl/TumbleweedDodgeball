@@ -62,28 +62,28 @@ public class LevelSelect : MonoBehaviour {
 	}
 
 	void GetInput(int num) {
-		if (controllers[num].GetMainDirection().x < 0 && !controlSelected) {
+		if ((controllers[num].GetMainDirection().x < 0 || Input.GetKeyDown(KeyCode.A)) && !controlSelected) {
 			levelMarkers[currentLevel].SetActive(false);
 			currentLevel = currentLevel == 0 ? levelMarkers.Length - 1 : currentLevel - 1;
 			levelMarkers[currentLevel].SetActive(true);
 		}
-		else if (controllers[num].GetMainDirection().x > 0 && !controlSelected) {
+		else if ((controllers[num].GetMainDirection().x > 0 || Input.GetKeyDown(KeyCode.D)) && !controlSelected) {
 			levelMarkers[currentLevel].SetActive(false);
 			currentLevel = currentLevel == (levelMarkers.Length - 1) ? 0 : currentLevel + 1;
 			levelMarkers[currentLevel].SetActive(true);
 		}
-		else if (controllers[num].GetMainDirection().y < 0 && !controlSelected) {
+		else if ((controllers[num].GetMainDirection().y < 0 || Input.GetKeyDown(KeyCode.S)) && !controlSelected) {
 			controlSelected = true;
 			levelMarkers[currentLevel].SetActive(false);
 			controlMarker.SetActive(true);
 		}
-		else if (controllers[num].GetMainDirection().y > 0 && controlSelected) {
+		else if ((controllers[num].GetMainDirection().y > 0 || Input.GetKeyDown(KeyCode.W)) && controlSelected) {
 			controlSelected = false;
 			levelMarkers[currentLevel].SetActive(true);
 			controlMarker.SetActive(false);
 		}
 
-		if (controllers[num].GetConfirmDown()) {
+		if (controllers[num].GetConfirmDown() || Input.GetMouseButtonDown(2)) {
 			if (controlSelected) {
 				SceneManager.LoadScene("Controls");
 			}
