@@ -7,7 +7,7 @@ public class PlayerHands : MonoBehaviour {
     public List<Transform> hands;
     public List<Transform> throwPosition;
 
-    List<Ball> balls;
+    public List<Ball> balls;
     bool doingSomething = false;
 	List<bool> isChargingBall;
 
@@ -88,13 +88,12 @@ public class PlayerHands : MonoBehaviour {
 
         doingSomething = true;
 
-        try {
-            if (hand == 0) TutorialManager.lHands[playerData.num] = true;
-            if (hand == 1) TutorialManager.rHands[playerData.num] = true;
-        }
-        catch {
-            //do nothing
-        }
+		if (TutorialManager.inst) {
+			if (hand == 0)
+				TutorialManager.inst.lHands[playerData.num] = true;
+			if (hand == 1)
+				TutorialManager.inst.rHands[playerData.num] = true;
+		}
 
         b.Grab(playerData.num);
         Vector3 originalPos = b.transform.position;

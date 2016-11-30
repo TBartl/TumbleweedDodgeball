@@ -1853,6 +1853,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e8b09fcebb34544eab2a456e3b0bb9da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  waitTime: 2
+  text: {fileID: 514028898}
   Checks:
   - {fileID: 945262854}
   - {fileID: 1456112531}
@@ -1868,6 +1870,9 @@ MonoBehaviour:
   - {fileID: 263979960}
   - {fileID: 332928203}
   - {fileID: 1914287351}
+  rHands: 00000000
+  lHands: 00000000
+  dashed: 00000000
 --- !u!1 &1025518940
 GameObject:
   m_ObjectHideFlags: 0

@@ -9,7 +9,7 @@ public class PlayerManager : MonoBehaviour {
 	public List<GameObject> players;
 	public List<PlayerColor> colors;
 
-	void Awake() {
+	public void Awake() {
 		if (inst == null)
 			inst = this;
 		players = new List<GameObject>(GameObject.FindGameObjectsWithTag("Player"));
@@ -22,21 +22,17 @@ public class PlayerManager : MonoBehaviour {
 			players[i].GetComponent<PlayerData>().num = i;
 			players[i].GetComponent<Controller>().inputDeviceNum = i;
 		}
-
-
 		colors = GlobalPlayerManager.inst.materials;
 		int curCount = 0;
 		for (int i = 0; i < 4; i++) {
 			if (!GlobalPlayerManager.inst.IsInGame(i)) {
 				players[i].SetActive(false);
 			} else {
-				players[i].GetComponent<PlayerData>().num = curCount;
+				players[i].GetComponent<PlayerData>().num = i;
 				curCount++;
 			}
 		}
-	}
 
-	void Start() {
 	}
 
     public bool playerIsActive(int playerID) {

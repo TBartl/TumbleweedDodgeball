@@ -1,114 +1,124 @@
 ﻿using UnityEngine;
 using System.Collections;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class TutorialManager : MonoBehaviour {
 
-	private int curTask = 0;
-	public GameObject[] Checks;
+	public static TutorialManager inst;
 
-	private float timer = 0;
+	public float waitTime = 2f;
+	public Text text;
+	public GameObject[] Checks;
 
 	public GameObject[] Players;
 	public GameObject[] Directions;
-	static public bool[] rHands;
-	static public bool[] lHands;
+	public bool[] rHands = new bool[4];
+	public bool[] lHands = new bool[4];
 	private Vector3[] startPos = new Vector3[4];
 	private Quaternion[] startRot = new Quaternion[4];
-	static public bool[] dashed;
+	public bool[] dashed = new bool[4];
+
+	void Awake() {
+		inst = this;
+	}
 
 	void Start () {
-		rHands = new bool[Players.Length];
-		lHands = new bool[Players.Length];
-		dashed = new bool[Players.Length];
 		for (int i = 0; i < Players.Length; ++i) {
 			startPos[i] = Players[i].transform.position;
 			startRot[i] = Directions[i].transform.rotation;
 		}
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		if (timer > 0) {
-			timer -= Time.deltaTime;
-			if (timer <= 0) {
-				TutorialMessage.nextMessage = true;
-				for (int i = 0; i < 4; ++i) {
-					startRot[i] = Directions[i].transform.rotation;
-					rHands[i] = false;
-					lHands[i] = false;
-					Checks[i].SetActive(false);
-				}
-			}
- 			return;
-		}
-		if (curTask == 0) {
-			bool nextTask = true;
-			for (int i = 0; i < Players.Length; ++i) {
-				if (startPos[i] == Players[i].transform.position && GlobalPlayerManager.inst.IsInGame(i)) {
-					nextTask = false;
-				} else if (GlobalPlayerManager.inst.IsInGame(i)) {
-					Checks[i].SetActive(true);
-				}
-			}
-			if (nextTask) {
-				timer = 2;
-				curTask++;
-			}
 
-		} else if (curTask == 1) {
-			bool nextTask = true;
-			for (int i = 0; i < Directions.Length; ++i) {
-				if (startRot[i] == Directions[i].transform.rotation && GlobalPlayerManager.inst.IsInGame(i)) {
-					nextTask = false;
-				} else if (GlobalPlayerManager.inst.IsInGame(i)){
+		StartCoroutine(RunTutorial());
+	}
+
+	IEnumerator RunTutorial() {
+		ChangeTask();
+		yield return new WaitForSeconds(3);
+
+		text.text = "Use Left Stick to walk";
+		while (!CheckTaskDone()) {
+			for (int i = 0; i < 4; i++) {
+				if (Players[i].activeSelf == false)
+					continue;
+				if (startPos[i] != Players[i].transform.position)
 					Checks[i].SetActive(true);
-				}
 			}
-			if (nextTask) {
-				timer = 2;
-				curTask++;
-			}
-		} else if (curTask == 2) {
-			bool nextTask = true;
-			for (int i = 0; i < rHands.Length; ++i) {
-				if(!rHands[i] && GlobalPlayerManager.inst.IsInGame(i)) nextTask = false; 
-				else if (GlobalPlayerManager.inst.IsInGame(i)){
+			yield return null;
+		}		
+		yield return new WaitForSeconds(waitTime);
+		ChangeTask();
+
+		text.text = "Use Right Stick to Aim";
+		while (!CheckTaskDone()) {
+			for (int i = 0; i < 4; i++) {
+				if (Players[i].activeSelf == false)
+					continue;
+				if (startRot[i] != Directions[i].transform.rotation)
 					Checks[i].SetActive(true);
-				}
 			}
-			if (nextTask) {
-				timer = 2;
-				curTask++;
-			}
-		} else if (curTask == 3) {//3
-			bool nextTask = true;
-			for (int i = 0; i < lHands.Length; ++i) {
-				if(!lHands[i] && GlobalPlayerManager.inst.IsInGame(i)) nextTask = false;
-				else if (GlobalPlayerManager.inst.IsInGame(i)){
+			yield return null;
+		}
+		yield return new WaitForSeconds(waitTime);
+		ChangeTask();
+
+		text.text = "Use Right Bumper to pick up and throw balls with Right Hand";
+		while (!CheckTaskDone()) {
+			for (int i = 0; i < 4; i++) {
+				if (Players[i].activeSelf == false)
+					continue;
+				if (Players[i].GetComponentInChildren <PlayerHands>().balls[1])
 					Checks[i].SetActive(true);
-				}
 			}
-			if (nextTask) {
-				timer = 2;
-				curTask++;
-			}
-		} else if (curTask == 4) {
-			bool nextTask = true;
-			for (int i = 0; i < Players.Length; ++i) {
-				if (Players[i].GetComponent<Rigidbody2D>().velocity.magnitude > 8 && GlobalPlayerManager.inst.IsInGame(i)) {
-					dashed[i] = true;
-				}
-			}
-			for (int i = 0; i < dashed.Length; ++i) {
-				if(!dashed[i] && GlobalPlayerManager.inst.IsInGame(i)) nextTask = false;
-				else if (GlobalPlayerManager.inst.IsInGame(i)) {
+			yield return null;
+		}
+		yield return new WaitForSeconds(waitTime);
+		ChangeTask();
+
+		text.text = "Use Left Bumper to pick up and throw balls with Left Hand";
+		while (!CheckTaskDone()) {
+			for (int i = 0; i < 4; i++) {
+				if (Players[i].activeSelf == false)
+					continue;
+				if (Players[i].GetComponentInChildren<PlayerHands>().balls[0])
 					Checks[i].SetActive(true);
-				}
 			}
-			if (nextTask) {
-				SceneManager.LoadScene("MainMenu");
+			yield return null;
+		}
+		yield return new WaitForSeconds(waitTime);
+		ChangeTask();
+
+		text.text = "Use A to Dash in the Direction of Movement";
+		while (!CheckTaskDone()) {
+			for (int i = 0; i < 4; i++) {
+				if (Players[i].activeSelf == false)
+					continue;
+				if (Players[i].GetComponent<Rigidbody2D>().velocity.magnitude > 8)
+					Checks[i].SetActive(true);
+			}
+			yield return null;
+		}
+		yield return new WaitForSeconds(waitTime);
+		ChangeTask();
+
+		SceneManager.LoadScene("MainMenu");
+
+	}
+
+	void ChangeTask() {
+		for (int i = 0; i < 4; ++i) {
+			Checks[i].SetActive(false);
+		}
+	}
+
+	bool CheckTaskDone() {
+		for (int i = 0; i < 4; ++i) {
+			if (Players[i].activeSelf == false)
+				continue;
+			if (Checks[i].activeSelf == false ) {
+				return false;
 			}
 		}
+		return true;
 	}
 }
