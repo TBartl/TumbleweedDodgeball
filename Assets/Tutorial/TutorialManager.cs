@@ -13,8 +13,8 @@ public class TutorialManager : MonoBehaviour {
 
 	public GameObject[] Players;
 	public GameObject[] Directions;
-	public bool[] rHands = new bool[4];
-	public bool[] lHands = new bool[4];
+	public bool[] rHandsUp = new bool[4];
+	public bool[] lHandsUp = new bool[4];
 	private Vector3[] startPos = new Vector3[4];
 	private Quaternion[] startRot = new Quaternion[4];
 	public bool[] dashed = new bool[4];
@@ -70,6 +70,8 @@ public class TutorialManager : MonoBehaviour {
 				if (Players[i].activeSelf == false)
 					continue;
 				if (Players[i].GetComponentInChildren <PlayerHands>().balls[1])
+					rHandsUp[i] = true;
+				else if (rHandsUp[i])
 					Checks[i].SetActive(true);
 			}
 			yield return null;
@@ -83,6 +85,8 @@ public class TutorialManager : MonoBehaviour {
 				if (Players[i].activeSelf == false)
 					continue;
 				if (Players[i].GetComponentInChildren<PlayerHands>().balls[0])
+					lHandsUp[i] = true;
+				else if (lHandsUp[i])
 					Checks[i].SetActive(true);
 			}
 			yield return null;
