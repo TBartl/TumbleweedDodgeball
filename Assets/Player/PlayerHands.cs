@@ -87,14 +87,6 @@ public class PlayerHands : MonoBehaviour {
     IEnumerator AddBall(Ball b, int hand) {
 
         doingSomething = true;
-
-		if (TutorialManager.inst) {
-			if (hand == 0)
-				TutorialManager.inst.lHands[playerData.num] = true;
-			if (hand == 1)
-				TutorialManager.inst.rHands[playerData.num] = true;
-		}
-
         b.Grab(playerData.num);
         Vector3 originalPos = b.transform.position;
         Vector3 targetPos = hands[hand].position;
