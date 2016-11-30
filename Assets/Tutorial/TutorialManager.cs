@@ -10,6 +10,7 @@ public class TutorialManager : MonoBehaviour {
 	public float waitTime = 2f;
 	public Text text;
 	public GameObject[] Checks;
+	public GameObject[] CheckEnd;
 
 	public GameObject[] Players;
 	public GameObject[] Directions;
@@ -28,8 +29,13 @@ public class TutorialManager : MonoBehaviour {
 			startPos[i] = Players[i].transform.position;
 			startRot[i] = Directions[i].transform.rotation;
 		}
-
-		StartCoroutine(RunTutorial());
+		for (int i = 0; i < 4; ++i) {
+			Image temp = Checks[i].GetComponent<Image>();
+			temp.color = PlayerManager.inst.GetColor(i);
+			temp = CheckEnd[i].GetComponent<Image>();
+			temp.color = PlayerManager.inst.GetColor(i);
+		}
+ 		StartCoroutine(RunTutorial());
 	}
 
 	IEnumerator RunTutorial() {

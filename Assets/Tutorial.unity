@@ -1860,6 +1860,11 @@ MonoBehaviour:
   - {fileID: 1456112531}
   - {fileID: 2107346492}
   - {fileID: 1456336461}
+  CheckEnd:
+  - {fileID: 572422375}
+  - {fileID: 1875687329}
+  - {fileID: 681312728}
+  - {fileID: 1318816717}
   Players:
   - {fileID: 1614241990}
   - {fileID: 1037375785}
@@ -1870,8 +1875,8 @@ MonoBehaviour:
   - {fileID: 263979960}
   - {fileID: 332928203}
   - {fileID: 1914287351}
-  rHands: 00000000
-  lHands: 00000000
+  rHandsUp: 00000000
+  lHandsUp: 00000000
   dashed: 00000000
 --- !u!1 &1025518940
 GameObject:
@@ -3692,12 +3697,12 @@ Prefab:
     - target: {fileID: 224000013431957010, guid: 7195cefd3cff64240bb942110d4250b7,
         type: 2}
       propertyPath: m_SizeDelta.y
-      value: 0
+      value: 57.94155
       objectReference: {fileID: 0}
     - target: {fileID: 224000013084658178, guid: 7195cefd3cff64240bb942110d4250b7,
         type: 2}
       propertyPath: m_SizeDelta.y
-      value: 0
+      value: 230.74968
       objectReference: {fileID: 0}
     - target: {fileID: 114000013947605996, guid: 7195cefd3cff64240bb942110d4250b7,
         type: 2}
