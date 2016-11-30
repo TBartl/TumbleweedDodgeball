@@ -96,7 +96,7 @@ public class TutorialManager : MonoBehaviour {
 		} else if (curTask == 4) {
 			bool nextTask = true;
 			for (int i = 0; i < Players.Length; ++i) {
-				if (Players[i].GetComponent<Rigidbody2D>().velocity.magnitude > 5 && GlobalPlayerManager.inst.IsInGame(i)) {
+				if (Players[i].GetComponent<Rigidbody2D>().velocity.magnitude > 8 && GlobalPlayerManager.inst.IsInGame(i)) {
 					nextTask = false;
 				} else if (GlobalPlayerManager.inst.IsInGame(i)) {
 					Checks[i].SetActive(true);
