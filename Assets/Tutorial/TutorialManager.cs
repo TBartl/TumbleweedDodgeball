@@ -48,6 +48,8 @@ public class TutorialManager : MonoBehaviour {
 		}		
 		yield return new WaitForSeconds(waitTime);
 		ChangeTask();
+		for (int i = 0; i < 4; i++)
+			startRot[i] = Directions[i].transform.rotation;
 
 		text.text = "Use Right Stick to Aim";
 		while (!CheckTaskDone()) {
