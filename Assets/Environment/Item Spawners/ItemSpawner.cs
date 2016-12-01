@@ -8,6 +8,8 @@ public class ItemSpawner : MonoBehaviour {
 	public float timeBetweenDropsMin, timeBetweenDropsMax;
 	float nextDropTime;
 	public Vector2 initialForce;
+	// only spawns items when within spawnBounds
+	public Bounds spawnBounds;
 
 	// Use this for initialization
 	void Start () {
@@ -17,12 +19,15 @@ public class ItemSpawner : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		if (Time.time >= nextDropTime) {
-			GameObject item = Instantiate(itemPrefab);
-			item.transform.position = new Vector3(transform.position.x, transform.position.y, 0)
+			Vector3 newPosition = new Vector3(transform.position.x, transform.position.y, 0)
 				+ transform.rotation * offset;
-			Rigidbody2D itemBody = item.GetComponent<Rigidbody2D>();
-			if (itemBody != null) {
-				itemBody.AddForce(initialForce);
+			if (spawnBounds.Contains(newPosition)) {
+				GameObject item = Instantiate(itemPrefab);
+				item.transform.position = newPosition;
+				Rigidbody2D itemBody = item.GetComponent<Rigidbody2D>();
+				if (itemBody != null) {
+					itemBody.AddForce(transform.rotation * initialForce);
+				}
 			}
 			GenerateNextDropTime();
 		}

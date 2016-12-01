@@ -201,6 +201,8 @@ Transform:
   - {fileID: 1085947998}
   - {fileID: 1669363894}
   - {fileID: 1845459410}
+  - {fileID: 147716434}
+  - {fileID: 84675806}
   m_Father: {fileID: 559773149}
   m_RootOrder: 0
 --- !u!1 &82101016
@@ -269,6 +271,155 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 82101016}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &84675805
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 84675806}
+  - 33: {fileID: 84675809}
+  - 23: {fileID: 84675807}
+  - 61: {fileID: 84675808}
+  - 114: {fileID: 84675810}
+  m_Layer: 0
+  m_Name: Tombstone
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &84675806
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 84675805}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 21.8, y: 0.57, z: 0}
+  m_LocalScale: {x: 1, y: 0.25, z: 2}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_Children: []
+  m_Father: {fileID: 80662470}
+  m_RootOrder: 22
+--- !u!23 &84675807
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 84675805}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_Materials:
+  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 1
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_SelectedWireframeHidden: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+--- !u!61 &84675808
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 84675805}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
+--- !u!33 &84675809
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 84675805}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &84675810
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 84675805}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 090bc8a2c76dfad46820b51c0c733dce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemPrefab: {fileID: 1000013903614682, guid: 54c485bef553f9c408403abcb9ffd4f1, type: 2}
+  offset: {x: 0, y: -0.5, z: 0}
+  timeBetweenDropsMin: 15
+  timeBetweenDropsMax: 25
+  initialForce: {x: 0, y: -15}
+  spawnBounds:
+    m_Center: {x: 0, y: 0, z: 0}
+    m_Extent: {x: 24, y: 9, z: 100}
+--- !u!1 &147716433
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 147716434}
+  - 114: {fileID: 147716435}
+  m_Layer: 0
+  m_Name: Combo Spawner
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &147716434
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 147716433}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 6.12, y: 8.27, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_Children: []
+  m_Father: {fileID: 80662470}
+  m_RootOrder: 21
+--- !u!114 &147716435
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 147716433}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 090bc8a2c76dfad46820b51c0c733dce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemPrefab: {fileID: 1000013903614682, guid: 32cdaa252eb8fcf48b67ed6909222168, type: 2}
+  offset: {x: 0, y: 0, z: 0}
+  timeBetweenDropsMin: 15
+  timeBetweenDropsMax: 25
+  initialForce: {x: 0, y: 0}
+  spawnBounds:
+    m_Center: {x: 0, y: 0, z: 0}
+    m_Extent: {x: 24, y: 9, z: 100}
 --- !u!1 &201290563
 GameObject:
   m_ObjectHideFlags: 0
@@ -726,6 +877,16 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 80662470}
     m_Modifications:
+    - target: {fileID: 114000013431898074, guid: 4211debbf76f4ed4a82427fa61285748,
+        type: 2}
+      propertyPath: pathNames.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000013431898074, guid: 4211debbf76f4ed4a82427fa61285748,
+        type: 2}
+      propertyPath: rotations.Array.size
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4000013043099584, guid: 4211debbf76f4ed4a82427fa61285748, type: 2}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -758,9 +919,24 @@ Prefab:
       propertyPath: m_RootOrder
       value: 20
       objectReference: {fileID: 0}
+    - target: {fileID: 114000011036920934, guid: 4211debbf76f4ed4a82427fa61285748,
+        type: 2}
+      propertyPath: pathName
+      value: Town Train Path
+      objectReference: {fileID: 0}
     - target: {fileID: 114000013431898074, guid: 4211debbf76f4ed4a82427fa61285748,
         type: 2}
       propertyPath: pathName
+      value: Town Train Path
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000013431898074, guid: 4211debbf76f4ed4a82427fa61285748,
+        type: 2}
+      propertyPath: speed
+      value: 0.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000013431898074, guid: 4211debbf76f4ed4a82427fa61285748,
+        type: 2}
+      propertyPath: pathNames.Array.data[0]
       value: Town Train Path
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -1313,9 +1489,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemPrefab: {fileID: 1000013903614682, guid: 27ed9d0183a61314ca26dc691d88c323, type: 2}
   offset: {x: 2.5, y: 0, z: -1}
-  timeBetweenDropsMin: 10
-  timeBetweenDropsMax: 20
+  timeBetweenDropsMin: 15
+  timeBetweenDropsMax: 25
   initialForce: {x: 100, y: 0}
+  spawnBounds:
+    m_Center: {x: 0, y: 0, z: 0}
+    m_Extent: {x: 24, y: 9, z: 100}
 --- !u!1 &1381904428
 GameObject:
   m_ObjectHideFlags: 0
@@ -2121,12 +2300,12 @@ Prefab:
     - target: {fileID: 224000013431957010, guid: 7195cefd3cff64240bb942110d4250b7,
         type: 2}
       propertyPath: m_SizeDelta.y
-      value: 57.407406
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224000013084658178, guid: 7195cefd3cff64240bb942110d4250b7,
         type: 2}
       propertyPath: m_SizeDelta.y
-      value: 231.48148
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 114000013947605996, guid: 7195cefd3cff64240bb942110d4250b7,
         type: 2}

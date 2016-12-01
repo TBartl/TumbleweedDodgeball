@@ -552,7 +552,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 01bffa8aa898b437183cd5617f7b5303, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pathName: Town Train Path
+  pathName: New Path 1
   pathColor: {r: 0, g: 1, b: 1, a: 1}
   nodes:
   - {x: 0, y: 50, z: 0}
@@ -573,3 +573,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0.1
+  pathName: 
