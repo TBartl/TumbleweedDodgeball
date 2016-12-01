@@ -2,6 +2,6 @@
 using System.Collections;
 
 public class PlayerData : MonoBehaviour {
-	[HideInInspector]
+	//[HideInInspector]
     public int num;
 }
