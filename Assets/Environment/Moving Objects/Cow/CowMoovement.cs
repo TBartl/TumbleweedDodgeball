@@ -10,8 +10,6 @@ public class CowMoovement : MonoBehaviour {
 	float changeStateTime;
 	State state = State.STOPPED;
 	
-	//float speed, changeSpeedTime;
-	//public float maxSpeed, maxDuration;
 	Vector3[] path;
 	float percent = 0;
 
@@ -85,6 +83,7 @@ public class CowMoovement : MonoBehaviour {
 
 	void Deccelerate() {
 		currentSpeed -= acceleration * Time.deltaTime;
+		currentSpeed = Mathf.Max(currentSpeed, 0);
 	}
 
 

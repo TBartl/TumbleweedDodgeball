@@ -16,6 +16,9 @@ public class CowDirection : MonoBehaviour {
 	void Update () {
 		if (moovement.currentSpeed != 0 && transform.position != prevPosition) {
 			Quaternion rotation = Quaternion.LookRotation(transform.position - prevPosition, Vector3.up);
+			if (transform.position.x < prevPosition.x) {
+				rotation *= Quaternion.Euler(0, 0, 180);
+			}
 			rotation.x = 0;
 			rotation.y = 0;
 			transform.rotation = rotation;
