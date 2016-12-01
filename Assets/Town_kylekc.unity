@@ -1212,6 +1212,7 @@ GameObject:
   - 23: {fileID: 1085948001}
   - 61: {fileID: 1085948000}
   - 50: {fileID: 1085947999}
+  - 114: {fileID: 1085948003}
   m_Layer: 0
   m_Name: Wagon
   m_TagString: Untagged
@@ -1299,6 +1300,22 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1085947997}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1085948003
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1085947997}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 090bc8a2c76dfad46820b51c0c733dce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemPrefab: {fileID: 1000013903614682, guid: 27ed9d0183a61314ca26dc691d88c323, type: 2}
+  offset: {x: 2.5, y: 0, z: -1}
+  timeBetweenDropsMin: 10
+  timeBetweenDropsMax: 20
+  initialForce: {x: 100, y: 0}
 --- !u!1 &1381904428
 GameObject:
   m_ObjectHideFlags: 0
@@ -2104,12 +2121,12 @@ Prefab:
     - target: {fileID: 224000013431957010, guid: 7195cefd3cff64240bb942110d4250b7,
         type: 2}
       propertyPath: m_SizeDelta.y
-      value: 0
+      value: 57.407406
       objectReference: {fileID: 0}
     - target: {fileID: 224000013084658178, guid: 7195cefd3cff64240bb942110d4250b7,
         type: 2}
       propertyPath: m_SizeDelta.y
-      value: 0
+      value: 231.48148
       objectReference: {fileID: 0}
     - target: {fileID: 114000013947605996, guid: 7195cefd3cff64240bb942110d4250b7,
         type: 2}
