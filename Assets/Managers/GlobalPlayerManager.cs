@@ -10,7 +10,8 @@ public class GlobalPlayerManager : MonoBehaviour {
 	public int players;
 
 	public List<PlayerColor> materials;
-	private bool[] inGame = new bool[4];
+    public List<int> scores = new List<int>();
+    private bool[] inGame = new bool[4];
 
 	void Awake() {
 		if (inst == null)
@@ -39,4 +40,8 @@ public class GlobalPlayerManager : MonoBehaviour {
 	public bool IsInGame (int PlayerNum) {
 		return inGame[PlayerNum];
 	}
+
+    public void SetScores(List<int> scores_) {
+        scores = scores_;
+    }
 }

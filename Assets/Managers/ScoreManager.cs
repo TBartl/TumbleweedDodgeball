@@ -36,6 +36,12 @@ public class ScoreManager : MonoBehaviour {
 		}
 	}
 
+    public void SendScoresToGlobal() {
+        List<int> scores_ = new List<int>();
+        for (int i = 0; i < 4; ++i) scores_.Add(scores[i]);
+        GlobalPlayerManager.inst.SetScores(scores_);
+    }
+
     void InitNumberShown(GameObject prefab, int playerID) {
         Vector3 playerPos = PlayerManager.inst.GetPosition(playerID);
         Vector3 adjustedPos = new Vector3(playerPos.x, playerPos.y + 1f, playerPos.z);
@@ -43,31 +49,5 @@ public class ScoreManager : MonoBehaviour {
         go.transform.parent = PlayerManager.inst.GetPlayerTransform(playerID); //follow above player's head
         go.GetComponent<ScoreNumBehavior>().HandleScoreChange(); //Coroutine so that the number disappears after some time
     }
-
-    public void DeactivateEndScore() {
-        endScoreText.SetActive(false);
-    }
-
-    public void DisplayEndScore() {
-        int winner = GetWinner();
-        if(winner == -1) endScoreText.GetComponent<Text>().text = "\t\tIt's a draw!\nPress A to play again";
-        else endScoreText.GetComponent<Text>().text = "\tPlayer " + winner + " wins!\nPress A to play again";
-        endScoreText.SetActive(true);
-    }
-
-    int GetWinner() {
-        int winningID = -1;
-        int minScore = System.Int32.MinValue;
-        for(int i = 0; i < 4; ++i) {
-            if (scores[i] > minScore && PlayerManager.inst.playerIsActive(i)) winningID = i;
-        }
-
-        //check for draw
-        for (int i = 0; i < 4; ++i) {
-            if (winningID == -1) break;
-            if (i == winningID) continue;
-            if (scores[i] == scores[winningID] && PlayerManager.inst.playerIsActive(i)) winningID = -1;
-        }
-        return winningID;
-    }
+    
 }

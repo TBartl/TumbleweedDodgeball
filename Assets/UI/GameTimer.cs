@@ -39,28 +39,10 @@ public class GameTimer : MonoBehaviour {
             else timer.text = min + ":" + sec;
 		} else {
             //Display Score and reload screen on pressedbutton
-            if (!isShowingScore) {
-                ShowEndScore();
-                isShowingScore = true;
-            }
-            if (GetRestartInput()) {
-                ScoreManager.inst.DeactivateEndScore();
-                Scene scene = SceneManager.GetActiveScene();
-                SceneManager.LoadScene(scene.name);
-            }
-		}
+            ScoreManager.inst.SendScoresToGlobal();
+            SceneManager.LoadScene("EndScene_naxeheim");
+        }
 	}
-
-    void ShowEndScore() {
-        GameObject.Find("Image").SetActive(false);
-        GameObject.Find("Canvas").GetComponent<PlayerScoreUI>().DeactivateScoreTexts();
-        timer.enabled = false;
-        ScoreManager.inst.DisplayEndScore();
-    }
-
-    bool GetRestartInput() {
-        return Input.GetKeyDown(KeyCode.R) || PlayerManager.inst.GetRestartFromPlayers();
-    }
 
     IEnumerator FlashTimer() {
         while(curTime > 0) {
