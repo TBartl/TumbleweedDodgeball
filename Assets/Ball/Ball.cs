@@ -25,6 +25,7 @@ public class Ball : MonoBehaviour {
 	}
 
 	public virtual void Throw (Vector3 velocity) {
+		glow.Throwed();
 		col.enabled = true;
 		rb.isKinematic = false;
 		rb.velocity = velocity;

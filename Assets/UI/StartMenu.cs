@@ -327,9 +327,17 @@ public class StartMenu : MonoBehaviour {
 				pReady[playerNum] = true;
 				playerReady[playerNum].SetActive(true);
 			}
-			else if (controller.GetBack()) {
+			else if (controller.GetBack() && pReady[playerNum]) {
 				pReady[playerNum] = false;
 				playerReady[playerNum].SetActive(false);
+			} 
+			else if (controller.GetBack() && !pReady[playerNum]) {
+				inGame[playerNum] = false;
+				GlobalPlayerManager.inst.SetInGameFalse(playerNum);
+				Join[playerNum].SetActive(true);
+				Joined[playerNum].SetActive(false);
+				numPlayers--;
+				currentMat[playerNum] = 0;
 			}
 		}
 		else {

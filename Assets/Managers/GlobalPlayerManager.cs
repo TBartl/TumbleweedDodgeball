@@ -37,6 +37,10 @@ public class GlobalPlayerManager : MonoBehaviour {
 		inGame[PlayerNum] = true;
 	}
 
+	public void SetInGameFalse (int PlayerNum) {
+		inGame[PlayerNum] = false;
+	}
+
 	public bool IsInGame (int PlayerNum) {
 		return inGame[PlayerNum];
 	}
