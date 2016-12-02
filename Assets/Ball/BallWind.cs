@@ -5,11 +5,11 @@ public class BallWind : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-	
+		WindManager.instance.AddBall(GetComponent<Rigidbody2D>());
 	}
-	
-	// Update is called once per frame
-	void Update () {
-	
+
+	void OnDestroy() {
+		WindManager.instance.RemoveBall(GetComponent<Rigidbody2D>());
 	}
+
 }

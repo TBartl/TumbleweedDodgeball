@@ -26,7 +26,6 @@ GameObject:
   - 114: {fileID: 114000010576328512}
   - 114: {fileID: 114000012628622942}
   - 114: {fileID: 114000010313003954}
-  - 114: {fileID: 114000010824403338}
   m_Layer: 0
   m_Name: Cow
   m_TagString: Untagged
@@ -152,21 +151,6 @@ MonoBehaviour:
   initialized: 1
   initialName: New Path 1
   pathVisible: 1
---- !u!114 &114000010824403338
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1000012869742214}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 97a78534019b3804e886cb8d2ae13ecd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ballPrefab: {fileID: 0}
-  width: 0
-  minDuration: 0
-  maxDuration: 0
 --- !u!114 &114000012628622942
 MonoBehaviour:
   m_ObjectHideFlags: 1
