@@ -77,6 +77,7 @@ GameObject:
   - 114: {fileID: 114000011125999118}
   - 114: {fileID: 114000011747105902}
   - 114: {fileID: 114000012208738378}
+  - 114: {fileID: 114000012232940038}
   m_Layer: 0
   m_Name: SlowGrow
   m_TagString: Ball
@@ -317,8 +318,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hotness: {fileID: 0}
-  catchable: 0
+  catchable: 1
   maxSize: 2
+--- !u!114 &114000012232940038
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000013903614682}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6749dd89d8e4ec408b6f45604b93120, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114000012302093280
 MonoBehaviour:
   m_ObjectHideFlags: 1

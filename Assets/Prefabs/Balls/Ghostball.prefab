@@ -78,6 +78,7 @@ GameObject:
   - 114: {fileID: 114000012370941110}
   - 114: {fileID: 114000011744948182}
   - 114: {fileID: 114000013847930722}
+  - 114: {fileID: 114000010821830434}
   m_Layer: 9
   m_Name: Ghostball
   m_TagString: Ball
@@ -282,6 +283,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   glowChild: {fileID: 1000011605347460}
+--- !u!114 &114000010821830434
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000013903614682}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6749dd89d8e4ec408b6f45604b93120, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114000011744948182
 MonoBehaviour:
   m_ObjectHideFlags: 1

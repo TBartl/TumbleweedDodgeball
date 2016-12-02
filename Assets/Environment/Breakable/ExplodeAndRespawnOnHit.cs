@@ -8,6 +8,8 @@ public class ExplodeAndRespawnOnHit : Hittable {
 	Collider2D coll;
 	OnHide onHide;
 
+	bool shouldRespawn = true;
+
 	bool justDestroyed = false, isDestroyed = false;
 	float respawnTime;
 	public float durationMin, durationMax;
@@ -19,11 +21,11 @@ public class ExplodeAndRespawnOnHit : Hittable {
 	}
 
 	void Update() {
-		if (justDestroyed) {
+		if (justDestroyed && shouldRespawn) {
 			justDestroyed = false;
-			respawnTime = Time.time + Random.Range(durationMin, durationMax);
+			Respawn();
 		}
-		if (isDestroyed && Time.time >= respawnTime) {
+		if (isDestroyed && shouldRespawn && Time.time >= respawnTime) {
 			rend.enabled = true;
 			coll.enabled = true;
 			isDestroyed = false;
@@ -37,5 +39,14 @@ public class ExplodeAndRespawnOnHit : Hittable {
 		Instantiate(shardsPrefab, this.transform.position, Quaternion.identity);
 		justDestroyed = isDestroyed = true;
 		onHide.Hide();
+	}
+
+	public void NoRespawn() {
+		shouldRespawn = false;
+	}
+
+	public void Respawn() {
+		shouldRespawn = true;
+		respawnTime = Time.time + Random.Range(durationMin, durationMax);
 	}
 }
