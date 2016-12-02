@@ -7,7 +7,7 @@ using InControl;
 public class LevelSelect : MonoBehaviour {
 
 	private int currentLevel = 0;
-	public GameObject[] levelMarkers = new GameObject[2];
+	public GameObject[] levelMarkers = new GameObject[4];
 	public GameObject controlMarker;
 
 	private bool controlSelected = false;
@@ -62,25 +62,47 @@ public class LevelSelect : MonoBehaviour {
 	}
 
 	void GetInput(int num) {
-		if ((controllers[num].GetMainDirection().x < 0 || Input.GetKeyDown(KeyCode.A)) && !controlSelected) {
+		if ((controllers[num].GetMainDirection().x < 0f || Input.GetKeyDown(KeyCode.A)) && !controlSelected) {
 			levelMarkers[currentLevel].SetActive(false);
 			currentLevel = currentLevel == 0 ? levelMarkers.Length - 1 : currentLevel - 1;
 			levelMarkers[currentLevel].SetActive(true);
 		}
-		else if ((controllers[num].GetMainDirection().x > 0 || Input.GetKeyDown(KeyCode.D)) && !controlSelected) {
+		else if ((controllers[num].GetMainDirection().x > 0f || Input.GetKeyDown(KeyCode.D)) && !controlSelected) {
 			levelMarkers[currentLevel].SetActive(false);
 			currentLevel = currentLevel == (levelMarkers.Length - 1) ? 0 : currentLevel + 1;
 			levelMarkers[currentLevel].SetActive(true);
 		}
-		else if ((controllers[num].GetMainDirection().y < 0 || Input.GetKeyDown(KeyCode.S)) && !controlSelected) {
-			controlSelected = true;
-			levelMarkers[currentLevel].SetActive(false);
-			controlMarker.SetActive(true);
+		else if ((controllers[num].GetMainDirection().y < 0f || Input.GetKeyDown(KeyCode.S))) {
+			if (controlSelected) {
+				controlSelected = false;
+				currentLevel = (currentLevel < 2) ? currentLevel : currentLevel - 2;
+				levelMarkers[currentLevel].SetActive(true);
+				controlMarker.SetActive(false);
+			} else if (currentLevel > 1) {
+				controlSelected = true;
+				levelMarkers[currentLevel].SetActive(false);
+				controlMarker.SetActive(true);
+			} else {
+				levelMarkers[currentLevel].SetActive(false);
+				currentLevel += 2;
+				levelMarkers[currentLevel].SetActive(true);
+			}
 		}
-		else if ((controllers[num].GetMainDirection().y > 0 || Input.GetKeyDown(KeyCode.W)) && controlSelected) {
-			controlSelected = false;
-			levelMarkers[currentLevel].SetActive(true);
-			controlMarker.SetActive(false);
+		else if ((controllers[num].GetMainDirection().y > 0f || Input.GetKeyDown(KeyCode.W))) {
+			if (controlSelected) {
+				controlSelected = false;
+				currentLevel = (currentLevel < 2) ? currentLevel + 2 : currentLevel;
+				levelMarkers[currentLevel].SetActive(true);
+				controlMarker.SetActive(false);
+			} else if (currentLevel < 2) {
+				controlSelected = true;
+				levelMarkers[currentLevel].SetActive(false);
+				controlMarker.SetActive(true);
+			} else {
+				levelMarkers[currentLevel].SetActive(false);
+				currentLevel -= 2;
+				levelMarkers[currentLevel].SetActive(true);
+			}
 		}
 
 		if (controllers[num].GetConfirmDown() || Input.GetMouseButtonDown(2)) {
@@ -95,6 +117,14 @@ public class LevelSelect : MonoBehaviour {
 				else if (currentLevel == 1) {
 					Controller.canMove = false;
 					SceneManager.LoadScene("Levels/Cliffside");
+				}
+				else if (currentLevel == 2) {
+					Controller.canMove = false;
+					SceneManager.LoadScene("Town_kylekc");
+				}
+				else if (currentLevel == 3) {
+					Controller.canMove = false;
+					SceneManager.LoadScene("Train Station_kylekc");
 				}
 			}
 		}
