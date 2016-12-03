@@ -4876,12 +4876,12 @@ Prefab:
     - target: {fileID: 224000013431957010, guid: 7195cefd3cff64240bb942110d4250b7,
         type: 2}
       propertyPath: m_SizeDelta.y
-      value: 57.142857
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224000013084658178, guid: 7195cefd3cff64240bb942110d4250b7,
         type: 2}
       propertyPath: m_SizeDelta.y
-      value: 230.41473
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 114000013947605996, guid: 7195cefd3cff64240bb942110d4250b7,
         type: 2}
