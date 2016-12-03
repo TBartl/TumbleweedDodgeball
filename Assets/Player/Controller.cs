@@ -183,7 +183,7 @@ public class Controller : MonoBehaviour {
     public bool GetRestartPressed() {
 		if (inputDevice == null)
 			return Input.GetMouseButton(2);
-        return inputDevice.Action1;
+        return inputDevice.Action2;
     }
 
 	public void Vibrate(float intensity) {
