@@ -229,6 +229,9 @@ public class PlayerHands : MonoBehaviour {
 
         smackEffect.enabled = true;
         smackEffect.gameObject.layer = LayerMask.NameToLayer("Default");
+
+		AudioManager.instance.PlayClipAtPoint(AudioManager.instance.punch, transform.position);
+
         for (float t = 0; t < smackActive; t += Time.deltaTime) {
             smackEffect.transform.localPosition = Vector3.Lerp(
                 Vector3.forward * .1f,

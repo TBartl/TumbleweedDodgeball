@@ -78,6 +78,7 @@ GameObject:
   - 114: {fileID: 114000012249835244}
   - 114: {fileID: 114000013809602872}
   - 114: {fileID: 114000011842633166}
+  - 114: {fileID: 114000012180763320}
   m_Layer: 0
   m_Name: BallFast
   m_TagString: Ball
@@ -304,6 +305,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b6749dd89d8e4ec408b6f45604b93120, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &114000012180763320
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000013903614682}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 61d24c8a24e3d744fae472e3af64eed6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!114 &114000012249835244

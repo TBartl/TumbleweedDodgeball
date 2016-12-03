@@ -28,6 +28,8 @@ public class PlayerHittable : Hittable {
 			ScoreManager.inst.IncrementScore(source.num);
 		ScoreManager.inst.DecrementScore(playerData.num);
 
+		//AudioManager.instance.PlayClipAtPoint(AudioManager.instance.playerHit, transform.position);
+
 	}
 
 	public bool GetHittable(PlayerData source) {

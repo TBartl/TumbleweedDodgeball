@@ -799,6 +799,16 @@ Prefab:
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114000014152536670, guid: b3ae7bc4841fac742a87a3eba09fe7d4,
+        type: 2}
+      propertyPath: powerup.clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 3e8b72243b80a97489f304da2dd12fb4, type: 3}
+    - target: {fileID: 114000014152536670, guid: b3ae7bc4841fac742a87a3eba09fe7d4,
+        type: 2}
+      propertyPath: powerup.volume
+      value: 0.5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b3ae7bc4841fac742a87a3eba09fe7d4, type: 2}
   m_IsPrefabParent: 0
@@ -3103,6 +3113,16 @@ Prefab:
       propertyPath: players.Array.data[1]
       value: 
       objectReference: {fileID: 1037375785}
+    - target: {fileID: 224000013084658178, guid: 7195cefd3cff64240bb942110d4250b7,
+        type: 2}
+      propertyPath: m_SizeDelta.y
+      value: 230.41473
+      objectReference: {fileID: 0}
+    - target: {fileID: 224000013431957010, guid: 7195cefd3cff64240bb942110d4250b7,
+        type: 2}
+      propertyPath: m_SizeDelta.y
+      value: 57.142857
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7195cefd3cff64240bb942110d4250b7, type: 2}
   m_IsPrefabParent: 0

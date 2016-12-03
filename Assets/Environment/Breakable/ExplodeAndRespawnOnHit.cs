@@ -39,6 +39,8 @@ public class ExplodeAndRespawnOnHit : Hittable {
 		Instantiate(shardsPrefab, this.transform.position, Quaternion.identity);
 		justDestroyed = isDestroyed = true;
 		onHide.Hide();
+
+		AudioManager.instance.PlayClipAtPoint(AudioManager.instance.destructibleBreak, transform.position);
 	}
 
 	public void NoRespawn() {

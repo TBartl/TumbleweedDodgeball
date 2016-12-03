@@ -34,11 +34,10 @@ public class PlayerDaze : MonoBehaviour {
 	void OnTriggerStay2D(Collider2D other) {
 		if (other.tag == "Smack") {
 			if (other.GetComponentInParent<PlayerData>() != playerData) {
-                if (!isDazed) StartCoroutine(Daze());
-				/*if (timeRemaining <= 0)
-					ActivateDaze();
-				timeRemaining = duration;*/
-
+				if (!isDazed) {
+					AudioManager.instance.PlayClipAtPoint(AudioManager.instance.playerHit, transform.position);
+					StartCoroutine(Daze());
+				}
 			}
 		}
 	}

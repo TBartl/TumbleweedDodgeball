@@ -30,6 +30,7 @@ public class WindManager : MonoBehaviour {
 		if (!animatedWind && Time.time >= nextWindAnimationTime) {
 			animation.StartAnimation(force);
 			animatedWind = true;
+			AudioManager.instance.PlayClip(AudioManager.instance.wind);
 		}
 		if (!appliedForce && Time.time >= nextWindTime) {
 			StartCoroutine(ApplyForce());

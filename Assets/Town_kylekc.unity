@@ -1150,6 +1150,11 @@ Prefab:
       propertyPath: m_RootOrder
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 114000014152536670, guid: b3ae7bc4841fac742a87a3eba09fe7d4,
+        type: 2}
+      propertyPath: trainWhistle.volume
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b3ae7bc4841fac742a87a3eba09fe7d4, type: 2}
   m_IsPrefabParent: 0
@@ -1221,6 +1226,31 @@ Prefab:
         type: 2}
       propertyPath: pathNames.Array.data[0]
       value: Town Train Path
+      objectReference: {fileID: 0}
+    - target: {fileID: 82000010151335628, guid: 4211debbf76f4ed4a82427fa61285748,
+        type: 2}
+      propertyPath: spreadCustomCurve.m_RotationOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 82000010151335628, guid: 4211debbf76f4ed4a82427fa61285748,
+        type: 2}
+      propertyPath: panLevelCustomCurve.m_Curve.Array.data[0].value
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 82000010151335628, guid: 4211debbf76f4ed4a82427fa61285748,
+        type: 2}
+      propertyPath: MaxDistance
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 82000010151335628, guid: 4211debbf76f4ed4a82427fa61285748,
+        type: 2}
+      propertyPath: rolloffMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 82000010151335628, guid: 4211debbf76f4ed4a82427fa61285748,
+        type: 2}
+      propertyPath: MinDistance
+      value: 20
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 4211debbf76f4ed4a82427fa61285748, type: 2}
@@ -2717,12 +2747,12 @@ Prefab:
     - target: {fileID: 224000013431957010, guid: 7195cefd3cff64240bb942110d4250b7,
         type: 2}
       propertyPath: m_SizeDelta.y
-      value: 57.142857
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224000013084658178, guid: 7195cefd3cff64240bb942110d4250b7,
         type: 2}
       propertyPath: m_SizeDelta.y
-      value: 230.41473
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 114000013947605996, guid: 7195cefd3cff64240bb942110d4250b7,
         type: 2}

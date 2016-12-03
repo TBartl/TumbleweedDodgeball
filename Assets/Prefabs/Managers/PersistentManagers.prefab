@@ -19,6 +19,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 4000011670372748}
+  - 114: {fileID: 114000014152536670}
   m_Layer: 0
   m_Name: Audio Manager
   m_TagString: Untagged
@@ -174,3 +175,42 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 6fb9506a6bacb4d41b7729bf9ff76741, type: 2}
   - {fileID: 11400000, guid: 6308daf31899b9f4d9842ce43bcbe4f6, type: 2}
   - {fileID: 11400000, guid: b6df16b363450024b99c20eb2f123a70, type: 2}
+  scores: 
+--- !u!114 &114000014152536670
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000010184353530}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 34bdb14c2b3080d49aea6bd799c23e3c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  throwSound:
+    clip: {fileID: 8300000, guid: 6138339bf0ad1874b9a1cf9b5f733da5, type: 3}
+    volume: 0.4
+  playerHit:
+    clip: {fileID: 8300000, guid: b8d72eec04803e4488b2ffc670d13e68, type: 3}
+    volume: 0.4
+  otherHit:
+    clip: {fileID: 8300000, guid: 88d491dbd4e89be4aa78c528cfd38ebb, type: 3}
+    volume: 0.7
+  destructibleBreak:
+    clip: {fileID: 8300000, guid: f66975d840e67244eab54fc14fd9ea30, type: 3}
+    volume: 0.4
+  wind:
+    clip: {fileID: 8300000, guid: 38c60e95a39694a4cb3fe711da659608, type: 3}
+    volume: 0.4
+  punch:
+    clip: {fileID: 8300000, guid: 694d6ae6615c8b34993dc6b6ceead1db, type: 3}
+    volume: 1
+  moo:
+    clip: {fileID: 8300000, guid: 70750f4474e808746b1eeae7cd0b2ec8, type: 3}
+    volume: 0.5
+  powerup:
+    clip: {fileID: 8300000, guid: 3e8b72243b80a97489f304da2dd12fb4, type: 3}
+    volume: 0.5
+  trainWhistle:
+    clip: {fileID: 8300000, guid: 991f9ab7ac775dc4d91ea9d5e7c7b9e4, type: 3}
+    volume: 0.5

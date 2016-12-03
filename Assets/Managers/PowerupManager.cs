@@ -53,6 +53,7 @@ public class PowerupManager : MonoBehaviour {
     public void setPowerup(int player, Powerup newPower) {
         if (!isPlayerNumValid(player)) return;
         playerPowerup[player] = newPower;
+		AudioManager.instance.PlayClipAtPoint(AudioManager.instance.powerup, PlayerManager.inst.players[player].transform.position);
         StartCoroutine(TimeOutPowerup(newPower, getTimeOut(newPower), player)); //reset powerup after num seconds
     }
     

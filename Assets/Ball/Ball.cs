@@ -32,5 +32,7 @@ public class Ball : MonoBehaviour {
 		transform.parent = null;
 		bounce.Reset();
 		hotness.makeHot();
+
+		AudioManager.instance.PlayClipAtPoint(AudioManager.instance.throwSound, transform.position);
 	}
 }
