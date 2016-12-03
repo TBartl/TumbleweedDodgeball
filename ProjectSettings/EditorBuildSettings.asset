@@ -33,3 +33,7 @@ EditorBuildSettings:
     path: Assets/Controls.unity
   - enabled: 1
     path: Assets/EndScene_naxeheim.unity
+  - enabled: 1
+    path: Assets/Town_kylekc.unity
+  - enabled: 1
+    path: Assets/Train Station_kylekc.unity
