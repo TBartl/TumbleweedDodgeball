@@ -14,7 +14,6 @@ public class TrainAudio : MonoBehaviour {
 	// Update is called once per frame
 	void Update() {
 		if (Time.time >= nextWhistleTime) {
-			print("here");
 			AudioManager.instance.PlayClipAtPoint(AudioManager.instance.trainWhistle, transform.position);
 			GenerateNextWhistleTime();
 		}

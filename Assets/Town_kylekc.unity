@@ -1155,6 +1155,11 @@ Prefab:
       propertyPath: trainWhistle.volume
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114000014152536670, guid: b3ae7bc4841fac742a87a3eba09fe7d4,
+        type: 2}
+      propertyPath: type
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b3ae7bc4841fac742a87a3eba09fe7d4, type: 2}
   m_IsPrefabParent: 0

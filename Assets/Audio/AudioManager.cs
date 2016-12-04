@@ -14,16 +14,33 @@ public class AudioManager : MonoBehaviour {
 
 	[SerializeField]
 	public AudioClipWithVolume throwSound, playerHit, otherHit,
-		destructibleBreak, wind, punch, moo, powerup, trainWhistle;
+		destructibleBreak, wind, punch, moo, powerup, trainWhistle,
+		gamePlayMusic, menuMusic;
+
+	public enum SceneType { MENU, GAMEPLAY }
+
+	public SceneType type;
+	AudioSource musicSource;
 
 	void Awake() {
 		if (instance == null) {
 			instance = this;
+			Init();
+		}
+
+		if (instance.type != type) { // switching from menu to gameplay or vice versa
+			instance.type = type;
+			instance.SetMusic();
 		}
 
 		if (instance != this) {
 			Destroy(gameObject);
 		}
+	}
+
+	void Init() {
+		musicSource = GetComponent<AudioSource>();
+		SetMusic();
 	}
 
 	public void PlayClipAtPoint(AudioClipWithVolume clipWithVolume, Vector3 point) {
@@ -43,6 +60,20 @@ public class AudioManager : MonoBehaviour {
 			yield return null;
 		}
 		Destroy(source);
+	}
+
+	void SetMusic() {
+		switch (type) {
+			case SceneType.MENU:
+				musicSource.clip = menuMusic.clip;
+				musicSource.volume = menuMusic.volume;
+				break;
+			case SceneType.GAMEPLAY:
+				musicSource.clip = gamePlayMusic.clip;
+				musicSource.volume = gamePlayMusic.volume;
+				break;
+		}
+		musicSource.Play();
 	}
 	
 }
