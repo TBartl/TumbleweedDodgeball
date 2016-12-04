@@ -13,6 +13,8 @@ ModelImporter:
     100010: Cube
     100012: CactusBall
     100014: boot
+    100016: Cube_001
+    100018: Plane
     400000: //RootNode
     400002: Circle
     400004: tumbleweed
@@ -21,6 +23,8 @@ ModelImporter:
     400010: Cube
     400012: CactusBall
     400014: boot
+    400016: Cube_001
+    400018: Plane
     2300000: //RootNode
     2300002: Circle
     2300004: tumbleweed
@@ -29,6 +33,8 @@ ModelImporter:
     2300010: Cube
     2300012: CactusBall
     2300014: boot
+    2300016: Cube_001
+    2300018: Plane
     3300000: //RootNode
     3300002: Circle
     3300004: tumbleweed
@@ -37,6 +43,8 @@ ModelImporter:
     3300010: Cube
     3300012: CactusBall
     3300014: boot
+    3300016: Cube_001
+    3300018: Plane
     4300000: Plane
     4300002: tumbleweed
     4300004: Circle
@@ -45,6 +53,7 @@ ModelImporter:
     4300010: Cube
     4300012: CactusBall
     4300014: boot
+    4300016: Cube_001
     7400000: Default Take
     9500000: //RootNode
   materials:
