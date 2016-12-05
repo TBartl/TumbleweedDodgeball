@@ -3,7 +3,10 @@ using System.Collections;
 
 public class CameraZoom : MonoBehaviour {
 
-	public float offset = 9;
+	public float offset;
+	public float xOffset, yOffset;
+
+	public float minZ, maxZ;
 
 	public Transform cameraTransform;
 
@@ -36,6 +39,11 @@ public class CameraZoom : MonoBehaviour {
 		float xDif = Mathf.Abs(maxX - minX);
 		float yDif = Mathf.Abs(maxY - minY);
 
-		return - Mathf.Max((xDif / (2 * Mathf.Tan(GetComponent<Camera>().fieldOfView * Mathf.Deg2Rad)) + offset), (yDif / (2 * Mathf.Tan(GetComponent<Camera>().fieldOfView * Mathf.Deg2Rad)) + offset));
+		float z = -Mathf.Max((xDif / (2 * Mathf.Tan(GetComponent<Camera>().fieldOfView * Mathf.Deg2Rad)) * xOffset), (yDif / (2 * Mathf.Tan(GetComponent<Camera>().fieldOfView * Mathf.Deg2Rad)) * yOffset));
+
+		z = Mathf.Max(z, minZ);
+		z = Mathf.Min(z, maxZ);
+
+		return z;
 	}
 }

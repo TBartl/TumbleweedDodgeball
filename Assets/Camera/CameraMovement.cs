@@ -6,11 +6,15 @@ public class CameraMovement : MonoBehaviour {
 	public Transform cameraTransform;
 
 	Transform[] playerTransforms;
-	public float yOffset = -3.5f;
+	//public float yOffset;
+	public float minYOffset, maxYOffset;
+
+	CameraZoom zoom;
 
 	// Use this for initialization
 	void Start () {
 		cameraTransform = GetComponent<Camera>().transform;
+		zoom = GetComponent<CameraZoom>();
 		playerTransforms = new Transform[PlayerManager.inst.players.Count];
 		for (int i = 0; i < PlayerManager.inst.players.Count; ++i) {
 			playerTransforms[i] = PlayerManager.inst.players[i].transform;
@@ -32,6 +36,8 @@ public class CameraMovement : MonoBehaviour {
 			minY = Mathf.Min(minY, transform.position.y);
 			maxY = Mathf.Max(maxY, transform.position.y);
 		}
+
+		float yOffset = cameraTransform.position.z * (maxYOffset - minYOffset) / (zoom.maxZ - zoom.minZ);
 
 		return new Vector3((minX + maxX) / 2, (minY + maxY) / 2 + yOffset, cameraTransform.position.z);
 	}

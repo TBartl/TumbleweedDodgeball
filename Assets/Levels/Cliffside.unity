@@ -1316,7 +1316,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cameraTransform: {fileID: 0}
-  yOffset: -3
+  minYOffset: -3.34
+  maxYOffset: -2
 --- !u!114 &1002217763
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1328,7 +1329,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6dae96ebfd37df0449bd4e0f17045052, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  offset: 10.5
+  offset: 4.1
+  xOffset: 2.59
+  yOffset: 4.69
+  minZ: -15.26
+  maxZ: -9
   cameraTransform: {fileID: 0}
 --- !u!1001 &1003070576
 Prefab:
@@ -3111,12 +3116,12 @@ Prefab:
     - target: {fileID: 224000013431957010, guid: 7195cefd3cff64240bb942110d4250b7,
         type: 2}
       propertyPath: m_SizeDelta.y
-      value: 0
+      value: 57.142857
       objectReference: {fileID: 0}
     - target: {fileID: 224000013084658178, guid: 7195cefd3cff64240bb942110d4250b7,
         type: 2}
       propertyPath: m_SizeDelta.y
-      value: 0
+      value: 230.41473
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7195cefd3cff64240bb942110d4250b7, type: 2}
