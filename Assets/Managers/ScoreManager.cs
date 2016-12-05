@@ -30,7 +30,7 @@ public class ScoreManager : MonoBehaviour {
 
 	public void DecrementScore(int playerID) {
 		if (playerID >= 0 && playerID <= 4) {
-			scores[playerID] -= 1;
+			scores[playerID] = Mathf.Max(scores[playerID], 0);
 			addHitUI.UpdateScore(playerID, scores[playerID]);
             InitNumberShown(negativeScore, playerID);
 		}
