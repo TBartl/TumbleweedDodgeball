@@ -15,7 +15,7 @@ public class BallGlow : MonoBehaviour {
 
 	void Update() {
 		GameObject closest = FindClosestPlayer();
-		Color GlowColor = (closest == null) ? Color.white : PlayerManager.inst.GetColor(closest.GetComponent<PlayerData>().num);
+		Color GlowColor = (closest == null) ? new Color(1,1,1,.5f) : PlayerManager.inst.GetColor(closest.GetComponent<PlayerData>().num);
 		glowSprite.color = GlowColor; 
 	}
 
