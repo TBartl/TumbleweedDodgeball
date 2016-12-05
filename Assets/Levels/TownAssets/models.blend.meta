@@ -12,6 +12,9 @@ ModelImporter:
     100008: Window
     100010: Cube_002
     100012: wagon
+    100014: trainFront
+    100016: trainBack
+    100018: tombstone
     400000: //RootNode
     400002: Cube
     400004: Cube_001
@@ -19,6 +22,9 @@ ModelImporter:
     400008: Window
     400010: Cube_002
     400012: wagon
+    400014: trainFront
+    400016: trainBack
+    400018: tombstone
     2300000: //RootNode
     2300002: Cube
     2300004: Cube_001
@@ -26,6 +32,9 @@ ModelImporter:
     2300008: Window
     2300010: Cube_002
     2300012: wagon
+    2300014: trainFront
+    2300016: trainBack
+    2300018: tombstone
     3300000: //RootNode
     3300002: Cube
     3300004: Cube_001
@@ -33,12 +42,18 @@ ModelImporter:
     3300008: Window
     3300010: Cube_002
     3300012: wagon
+    3300014: trainFront
+    3300016: trainBack
+    3300018: tombstone
     4300000: Cube
     4300002: Cube_001
     4300004: Roof
     4300006: Window
     4300008: Cube_002
     4300010: wagon
+    4300012: trainFront
+    4300014: trainBack
+    4300016: tombstone
     7400000: Default Take
     9500000: //RootNode
   materials:
