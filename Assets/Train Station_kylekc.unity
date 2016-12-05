@@ -1812,6 +1812,7 @@ Transform:
   - {fileID: 572655474}
   - {fileID: 579026390}
   - {fileID: 1852218011}
+  - {fileID: 1069537439}
   m_Father: {fileID: 80662470}
   m_RootOrder: 1
 --- !u!1 &187530877 stripped
@@ -9586,6 +9587,71 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1068512625}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1069537438
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 1000013929793828, guid: 4211debbf76f4ed4a82427fa61285748,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1069537439}
+  - 50: {fileID: 1069537441}
+  - 61: {fileID: 1069537440}
+  m_Layer: 0
+  m_Name: RampCollider
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1069537439
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 4000012891454714, guid: 4211debbf76f4ed4a82427fa61285748,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1069537438}
+  m_LocalRotation: {x: -0, y: -0, z: -0.9211858, w: -0.3891231}
+  m_LocalPosition: {x: 0, y: -0.52, z: 0}
+  m_LocalScale: {x: 1.0000002, y: 1.0000002, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -225.90799}
+  m_Children: []
+  m_Father: {fileID: 187530876}
+  m_RootOrder: 5
+--- !u!61 &1069537440
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 61000013053679738, guid: 4211debbf76f4ed4a82427fa61285748,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1069537438}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Size: {x: 1.5, y: 1.5}
+--- !u!50 &1069537441
+Rigidbody2D:
+  serializedVersion: 2
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 50000012090906104, guid: 4211debbf76f4ed4a82427fa61285748,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1069537438}
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &1079734574
 GameObject:
   m_ObjectHideFlags: 0
