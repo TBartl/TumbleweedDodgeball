@@ -1817,6 +1817,8 @@ MonoBehaviour:
   dashSpeed: 20
   minCoolDownDash: 2
   modifiers: []
+  dazeMovement: 1
+  chargeBallSpeed: 1
 --- !u!114 &114000011218830520
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1895,6 +1897,7 @@ MonoBehaviour:
   - {fileID: 4000013201173868}
   - {fileID: 4000012120752406}
   - {fileID: 4000011492551254}
+  balls: []
   throwPower: 20
   powerRange: {x: 1, y: 17}
   superThrowPower: 40
@@ -1902,7 +1905,7 @@ MonoBehaviour:
   chargeSpeed: 1.5
   rethrowDelay: 0.3
   barPrefab: {fileID: 1000012365056356, guid: 2e29da32e7cfa764e90eb131ecb4b3ce, type: 2}
-  aimAssistAngle: 12
+  aimAssistAngle: 20
   smackEffect: {fileID: 23000013580686196}
   smackActive: 0.2
   smackWindDown: 0.2
