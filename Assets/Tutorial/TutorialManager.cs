@@ -13,6 +13,7 @@ public class TutorialManager : MonoBehaviour {
 	public GameObject[] CheckEnd;
 
 	public GameObject[] Players;
+	public GameObject[] Balls;
 	public GameObject[] Directions;
 	public bool[] rHandsUp = new bool[4];
 	public bool[] lHandsUp = new bool[4];
@@ -28,12 +29,17 @@ public class TutorialManager : MonoBehaviour {
 		for (int i = 0; i < Players.Length; ++i) {
 			startPos[i] = Players[i].transform.position;
 			startRot[i] = Directions[i].transform.rotation;
+			Balls[i].transform.position = Players[i].transform.position;
+			Balls[i].transform.SetParent(Players[i].transform);
+			Balls[i].SetActive(false);
 		}
 		for (int i = 0; i < 4; ++i) {
-			Image temp = Checks[i].GetComponent<Image>();
-			temp.color = PlayerManager.inst.GetColor(i);
-			temp = CheckEnd[i].GetComponent<Image>();
-			temp.color = PlayerManager.inst.GetColor(i);
+			if (Players[i].activeSelf) {
+				Image temp = Checks[i].GetComponent<Image>();
+				temp.color = PlayerManager.inst.GetColor(i);
+				temp = CheckEnd[i].GetComponent<Image>();
+				temp.color = PlayerManager.inst.GetColor(i);
+			}
 		}
  		StartCoroutine(RunTutorial());
 	}
@@ -70,12 +76,42 @@ public class TutorialManager : MonoBehaviour {
 		yield return new WaitForSeconds(waitTime);
 		ChangeTask();
 
+//		text.text = "Use A to Dash in the Direction of Movement";
+//		while (!CheckTaskDone()) {
+//			for (int i = 0; i < 4; i++) {
+//				if (Players[i].activeSelf == false)
+//					continue;
+//				if (Players[i].GetComponent<Rigidbody2D>().velocity.magnitude > 8)
+//					Checks[i].SetActive(true);
+//			}
+//			yield return null;
+//		}
+//		yield return new WaitForSeconds(waitTime);
+//		ChangeTask();
+
+		text.text = "Use Bumpers to Punch with a Free Hand";
+		while (!CheckTaskDone()) {
+			for (int i = 0; i < 4; i++) {
+				if (Players[i].activeSelf == false)
+					continue;
+				if (Players[i].GetComponentInChildren<PlayerHands>().GetIsPunching(0) || Players[i].GetComponentInChildren<PlayerHands>().GetIsPunching(1))
+					Checks[i].SetActive(true);
+			}
+			yield return null;
+		}
+		yield return new WaitForSeconds(waitTime);
+		ChangeTask();
+		for (int i = 0; i < 4; ++i) {
+			Balls[i].SetActive(true);
+			Balls[i].transform.SetParent(null);
+		}
+
 		text.text = "Use Right Bumper to pick up and throw balls with Right Hand";
 		while (!CheckTaskDone()) {
 			for (int i = 0; i < 4; i++) {
 				if (Players[i].activeSelf == false)
 					continue;
-				if (Players[i].GetComponentInChildren <PlayerHands>().balls[1])
+				if (Players[i].GetComponentInChildren<PlayerHands>().balls[1])
 					rHandsUp[i] = true;
 				else if (rHandsUp[i])
 					Checks[i].SetActive(true);
@@ -93,19 +129,6 @@ public class TutorialManager : MonoBehaviour {
 				if (Players[i].GetComponentInChildren<PlayerHands>().balls[0])
 					lHandsUp[i] = true;
 				else if (lHandsUp[i])
-					Checks[i].SetActive(true);
-			}
-			yield return null;
-		}
-		yield return new WaitForSeconds(waitTime);
-		ChangeTask();
-
-		text.text = "Use A to Dash in the Direction of Movement";
-		while (!CheckTaskDone()) {
-			for (int i = 0; i < 4; i++) {
-				if (Players[i].activeSelf == false)
-					continue;
-				if (Players[i].GetComponent<Rigidbody2D>().velocity.magnitude > 8)
 					Checks[i].SetActive(true);
 			}
 			yield return null;
