@@ -6,7 +6,6 @@ public class CameraMovement : MonoBehaviour {
 	public Transform cameraTransform;
 
 	Transform[] playerTransforms;
-	//public float yOffset;
 	public float minYOffset, maxYOffset;
 
 	CameraZoom zoom;

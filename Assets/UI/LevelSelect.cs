@@ -112,7 +112,7 @@ public class LevelSelect : MonoBehaviour {
 			else {
 				if (currentLevel == 0) {
 					Controller.canMove = false;
-					SceneManager.LoadScene("Tutorial");
+					SceneManager.LoadScene("Levels/Tutorial");
 				}
 				else if (currentLevel == 1) {
 					Controller.canMove = false;
@@ -120,11 +120,11 @@ public class LevelSelect : MonoBehaviour {
 				}
 				else if (currentLevel == 2) {
 					Controller.canMove = false;
-					SceneManager.LoadScene("Town_kylekc");
+					SceneManager.LoadScene("Levels/Town");
 				}
 				else if (currentLevel == 3) {
 					Controller.canMove = false;
-					SceneManager.LoadScene("Train Station_kylekc");
+					SceneManager.LoadScene("Levels/Train Station");
 				}
 			}
 		}

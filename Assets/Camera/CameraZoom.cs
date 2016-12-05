@@ -3,7 +3,6 @@ using System.Collections;
 
 public class CameraZoom : MonoBehaviour {
 
-	public float offset;
 	public float xOffset, yOffset;
 
 	public float minZ, maxZ;

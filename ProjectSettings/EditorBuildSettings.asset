@@ -22,7 +22,7 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Cliffside_npst.unity
   - enabled: 1
-    path: Assets/Tutorial.unity
+    path: Assets/Levels/Tutorial.unity
   - enabled: 0
     path: Assets/Tutorial_npst.unity
   - enabled: 1
@@ -33,7 +33,11 @@ EditorBuildSettings:
     path: Assets/Controls.unity
   - enabled: 1
     path: Assets/EndScene_naxeheim.unity
-  - enabled: 1
+  - enabled: 0
     path: Assets/Town_kylekc.unity
-  - enabled: 1
+  - enabled: 0
     path: Assets/Train Station_kylekc.unity
+  - enabled: 1
+    path: Assets/Levels/Town.unity
+  - enabled: 1
+    path: Assets/Levels/Train Station.unity
