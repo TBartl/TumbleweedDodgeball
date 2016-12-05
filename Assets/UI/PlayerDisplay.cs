@@ -8,7 +8,7 @@ public class PlayerDisplay : MonoBehaviour {
 
 	void Start () {
 		for (int i = 0; i < PlayerManager.inst.players.Count; i++) {
-            if (!GlobalPlayerManager.inst.IsInGame(i)) return;
+            if (!GlobalPlayerManager.inst.IsInGame(i)) continue;
             playerList[i].SetActive(true);
 			foreach (Text t in playerList[i].GetComponentsInChildren<Text>()) {
 				t.color = PlayerManager.inst.GetColor(i);
