@@ -304,4 +304,7 @@ MonoBehaviour:
   confirm:
     clip: {fileID: 8300000, guid: 944a640ae2bd8c2498ccdedee6dea040, type: 3}
     volume: 0.04
+  back:
+    clip: {fileID: 8300000, guid: 5b63659a0bf89ec43ab3782c9019087e, type: 3}
+    volume: 0.05
   type: 1

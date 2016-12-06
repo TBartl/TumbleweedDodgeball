@@ -332,17 +332,19 @@ public class StartMenu : MonoBehaviour {
 				playerReady[playerNum].SetActive(true);
 				AudioManager.instance.PlayClip(AudioManager.instance.confirm);
 			}
-			else if (controller.GetBack() && pReady[playerNum]) {
+			else if (controller.GetBackDown() && pReady[playerNum]) {
 				pReady[playerNum] = false;
 				playerReady[playerNum].SetActive(false);
+				AudioManager.instance.PlayClip(AudioManager.instance.back);
 			} 
-			else if (controller.GetBack() && !pReady[playerNum]) {
+			else if (controller.GetBackDown() && !pReady[playerNum]) {
 				inGame[playerNum] = false;
 				GlobalPlayerManager.inst.SetInGameFalse(playerNum);
 				Join[playerNum].SetActive(true);
 				Joined[playerNum].SetActive(false);
 				numPlayers--;
 				currentMat[playerNum] = 0;
+				AudioManager.instance.PlayClip(AudioManager.instance.back);
 			}
 		}
 		else {

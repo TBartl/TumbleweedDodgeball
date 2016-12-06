@@ -12,10 +12,8 @@ public class Controller : MonoBehaviour {
 
     InputDevice inputDevice = null;
 
-    bool prevLeftTriggerPressed = false;
-    bool prevRightTriggerPressed = false;
-	bool confirmPressed = false;
-	bool zeroInput = false;
+	bool prevLeftTriggerPressed = false, prevRightTriggerPressed = false,
+		confirmPressed = false, zeroInput = false, backPressed = false;
 
     // used to store the current orientation of the player
     // that way if the player isn't pressing the right stick,
@@ -48,6 +46,7 @@ public class Controller : MonoBehaviour {
             prevLeftTriggerPressed = inputDevice.LeftBumper.IsPressed;
             prevRightTriggerPressed = inputDevice.RightBumper.IsPressed;
 			confirmPressed = inputDevice.Action1;
+			backPressed = inputDevice.Action2;
 			if (inputDevice.LeftStick.X == 0 && inputDevice.LeftStick.Y == 0) {
 				zeroInput = true;
 			}
@@ -238,12 +237,17 @@ public class Controller : MonoBehaviour {
 		return inputDevice.Action1;
 	}
 
-	public bool GetBack() { // B button
+	public bool GetBackDown() { // B button
 		if (devMode || InputManager.Devices.Count <= inputDeviceNum) {// use keyboard & mouse
 			return Input.GetKey(KeyCode.B);
-		} 
-		else
-			return inputDevice.Action2;
+		}
+
+		if (inputDevice == null) {
+			PrintErrorMessage();
+			return false;
+		}
+
+		return inputDevice.Action2 && !backPressed;
 	}
 
 }

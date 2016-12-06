@@ -66,11 +66,13 @@ public class LevelSelect : MonoBehaviour {
 			levelMarkers[currentLevel].SetActive(false);
 			currentLevel = currentLevel == 0 ? levelMarkers.Length - 1 : currentLevel - 1;
 			levelMarkers[currentLevel].SetActive(true);
+			AudioManager.instance.PlayClip(AudioManager.instance.tick);
 		}
 		else if ((controllers[num].GetMainDirection().x > 0f || Input.GetKeyDown(KeyCode.D)) && !controlSelected) {
 			levelMarkers[currentLevel].SetActive(false);
 			currentLevel = currentLevel == (levelMarkers.Length - 1) ? 0 : currentLevel + 1;
 			levelMarkers[currentLevel].SetActive(true);
+			AudioManager.instance.PlayClip(AudioManager.instance.tick);
 		}
 		else if ((controllers[num].GetMainDirection().y < 0f || Input.GetKeyDown(KeyCode.S))) {
 			if (controlSelected) {
@@ -87,6 +89,7 @@ public class LevelSelect : MonoBehaviour {
 				currentLevel += 2;
 				levelMarkers[currentLevel].SetActive(true);
 			}
+			AudioManager.instance.PlayClip(AudioManager.instance.tick);
 		}
 		else if ((controllers[num].GetMainDirection().y > 0f || Input.GetKeyDown(KeyCode.W))) {
 			if (controlSelected) {
@@ -103,9 +106,11 @@ public class LevelSelect : MonoBehaviour {
 				currentLevel -= 2;
 				levelMarkers[currentLevel].SetActive(true);
 			}
+			AudioManager.instance.PlayClip(AudioManager.instance.tick);
 		}
 
 		if (controllers[num].GetConfirmDown() || Input.GetMouseButtonDown(2)) {
+			AudioManager.instance.PlayClip(AudioManager.instance.confirm);
 			if (controlSelected) {
 				SceneManager.LoadScene("Controls");
 			}

@@ -28,6 +28,7 @@ public class Controls : MonoBehaviour {
 
 	void GetInput(int num) {
 		if (controllers[num].GetConfirmDown()) {
+			AudioManager.instance.PlayClip(AudioManager.instance.confirm);
 			Controller.canMove = false;
 			SceneManager.LoadScene("LevelSelect");
 		}
