@@ -267,7 +267,7 @@ MonoBehaviour:
     volume: 0.4
   playerHit:
     clip: {fileID: 8300000, guid: b8d72eec04803e4488b2ffc670d13e68, type: 3}
-    volume: 0.4
+    volume: 1
   otherHit:
     clip: {fileID: 8300000, guid: 88d491dbd4e89be4aa78c528cfd38ebb, type: 3}
     volume: 0.7
@@ -288,11 +288,20 @@ MonoBehaviour:
     volume: 0.5
   trainWhistle:
     clip: {fileID: 8300000, guid: 991f9ab7ac775dc4d91ea9d5e7c7b9e4, type: 3}
-    volume: 0.5
+    volume: 1
   gamePlayMusic:
     clip: {fileID: 8300000, guid: 0fa7946ff6e151147bc56ad6a5953d2d, type: 3}
-    volume: 0.1
+    volume: 0.03
   menuMusic:
     clip: {fileID: 8300000, guid: 69049731d726e8b4b9a4c2b8432b6e9b, type: 3}
+    volume: 0.03
+  timer:
+    clip: {fileID: 8300000, guid: 8428a376ee0078c47a2075e42106aba6, type: 3}
     volume: 0.1
+  tick:
+    clip: {fileID: 8300000, guid: 95cf8bdd35b0ffa4784b68729037d2dc, type: 3}
+    volume: 0.08
+  confirm:
+    clip: {fileID: 8300000, guid: 944a640ae2bd8c2498ccdedee6dea040, type: 3}
+    volume: 0.04
   type: 1

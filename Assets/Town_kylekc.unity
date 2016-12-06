@@ -4103,11 +4103,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 3
       objectReference: {fileID: 0}
-    - target: {fileID: 114000014152536670, guid: b3ae7bc4841fac742a87a3eba09fe7d4,
-        type: 2}
-      propertyPath: trainWhistle.volume
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b3ae7bc4841fac742a87a3eba09fe7d4, type: 2}
   m_IsPrefabParent: 0
@@ -4284,6 +4279,11 @@ Prefab:
     - target: {fileID: 4000013043099584, guid: 4211debbf76f4ed4a82427fa61285748, type: 2}
       propertyPath: m_RootOrder
       value: 21
+      objectReference: {fileID: 0}
+    - target: {fileID: 82000010151335628, guid: 4211debbf76f4ed4a82427fa61285748,
+        type: 2}
+      propertyPath: m_Volume
+      value: 0.05
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 4211debbf76f4ed4a82427fa61285748, type: 2}

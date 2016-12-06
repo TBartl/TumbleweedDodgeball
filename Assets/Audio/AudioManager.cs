@@ -15,7 +15,7 @@ public class AudioManager : MonoBehaviour {
 	[SerializeField]
 	public AudioClipWithVolume throwSound, playerHit, otherHit,
 		destructibleBreak, wind, punch, moo, powerup, trainWhistle,
-		gamePlayMusic, menuMusic;
+		gamePlayMusic, menuMusic, timer, tick, confirm;
 
 	public enum SceneType { MENU, GAMEPLAY }
 
@@ -67,12 +67,16 @@ public class AudioManager : MonoBehaviour {
 			case SceneType.MENU:
 				musicSource.clip = menuMusic.clip;
 				musicSource.volume = menuMusic.volume;
+				StartMusic();
 				break;
 			case SceneType.GAMEPLAY:
 				musicSource.clip = gamePlayMusic.clip;
 				musicSource.volume = gamePlayMusic.volume;
 				break;
 		}
+	}
+
+	public void StartMusic() {
 		musicSource.Play();
 	}
 	

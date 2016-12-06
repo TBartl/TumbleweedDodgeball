@@ -308,10 +308,14 @@ public class StartMenu : MonoBehaviour {
 		Controller controller = controllers[playerNum];
 		if (inGame[playerNum]) {//color shit here
 			int colorOffset = 0;
-			if (controller.GetHandActionDown(0) && !pReady[playerNum]) 
+			if (controller.GetHandActionDown(0) && !pReady[playerNum]) {
+				AudioManager.instance.PlayClip(AudioManager.instance.tick);
 				colorOffset = -1;
-			else if (controller.GetHandActionDown(1) && !pReady[playerNum])
+			}
+			else if (controller.GetHandActionDown(1) && !pReady[playerNum]) {
+				AudioManager.instance.PlayClip(AudioManager.instance.tick);
 				colorOffset = 1;
+			}
 
 			if (colorOffset != 0) {
 				currentMat[playerNum] = (currentMat[playerNum] + colorOffset + materials.Length) % materials.Length;
@@ -323,9 +327,10 @@ public class StartMenu : MonoBehaviour {
 				}
 				GlobalPlayerManager.inst.SetMaterial(playerNum, materials[currentMat[playerNum]]);
 			}
-			else if (controller.GetConfirmDown()) {
+			else if (controller.GetConfirmDown() && !pReady[playerNum]) {
 				pReady[playerNum] = true;
 				playerReady[playerNum].SetActive(true);
+				AudioManager.instance.PlayClip(AudioManager.instance.confirm);
 			}
 			else if (controller.GetBack() && pReady[playerNum]) {
 				pReady[playerNum] = false;
@@ -342,6 +347,7 @@ public class StartMenu : MonoBehaviour {
 		}
 		else {
 			if (controller.GetConfirmDown()) {
+				AudioManager.instance.PlayClip(AudioManager.instance.confirm);
 				inGame[playerNum] = true;
 				GlobalPlayerManager.inst.SetInGameTrue(playerNum);
 				Join[playerNum].SetActive(false);
