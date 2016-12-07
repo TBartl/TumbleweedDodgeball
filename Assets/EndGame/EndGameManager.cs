@@ -86,10 +86,12 @@ public class EndGameManager : MonoBehaviour {
     }
 
     List<int> GenerateHeightsBasedOnScore() {
+        int maxScore = 0;
         List<int> scores = GlobalPlayerManager.inst.scores;
         SortedDictionary<int, List<int>> scoresToPlayer =
                 new SortedDictionary<int, List<int>>(new ReverseComparator<int>(Comparer<int>.Default));
         for (int i = 0; i < numActivePlayersInGame; ++i) {
+            if (scores[i] > maxScore) maxScore = scores[i];//get highest score in the game
             if (scoresToPlayer.ContainsKey(scores[i])) continue;
             scoresToPlayer.Add(scores[i], new List<int>()); //init dictionary
         }
@@ -103,11 +105,14 @@ public class EndGameManager : MonoBehaviour {
 
         List<int> heights = new List<int>();
         for (int i = 0; i < numActivePlayersInGame; ++i) heights.Add(0);//init list
-        int heightBar = maxHeigthBar;
         foreach (KeyValuePair<int, List<int>> entry in scoresToPlayer) {
             List<int> playersWithGivenScore = entry.Value;
-            foreach (int i in playersWithGivenScore) heights[i] = heightBar;
-            heightBar -= 3;
+            foreach (int i in playersWithGivenScore) {
+                if (entry.Key == maxScore) heights[i] = maxHeigthBar;
+                else {
+                    heights[i] = (int)Mathf.Max((float)maxHeigthBar * ((float)entry.Key / (float)maxScore), 1f);//relative height
+                }
+            }
         }
         return heights;
     }

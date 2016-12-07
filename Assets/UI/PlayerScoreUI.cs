@@ -16,8 +16,4 @@ public class PlayerScoreUI : MonoBehaviour {
 	public void UpdateScore (int playerID, int amount) {
 		hitText[playerID].text = "Score: " + amount;
 	}
-
-    public void DeactivateScoreTexts() {
-        foreach (Text t in hitText) t.enabled = false;
-    }
 }
