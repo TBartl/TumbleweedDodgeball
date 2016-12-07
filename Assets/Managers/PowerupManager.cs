@@ -3,12 +3,9 @@ using System.Collections;
 using System.Collections.Generic;
 
 public enum Powerup {
-    IncreasedSpeed,
-    IncreasedGrabRange,
-    QuickCharge,
+    IncreaseMoveSpeed,
     MaxCharge,
     Invincible,
-    Targeting,
     NoPowerup
 }
 
@@ -24,12 +21,9 @@ public class PowerupManager : MonoBehaviour {
 
         //init dictionary
         timeOutSeconds = new Dictionary<Powerup, int>();
-        timeOutSeconds.Add(Powerup.IncreasedSpeed, 10);
-        timeOutSeconds.Add(Powerup.IncreasedGrabRange, 10);
-        timeOutSeconds.Add(Powerup.QuickCharge, 10);
+        timeOutSeconds.Add(Powerup.IncreaseMoveSpeed, 10);
         timeOutSeconds.Add(Powerup.MaxCharge, 10);
         timeOutSeconds.Add(Powerup.Invincible, 10);
-        timeOutSeconds.Add(Powerup.Targeting, 10);
     }
 
     bool isPlayerNumValid(int playerNum) {

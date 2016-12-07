@@ -108,7 +108,6 @@ public class PlayerHands : MonoBehaviour {
         doingSomething = true;
         //Get variables for this player's available powerups 
         bool maxCharge = PowerupManager.S.getPowerup(playerData.num) == Powerup.MaxCharge;
-        float increasedCharge = PowerupManager.S.getPowerup(playerData.num) == Powerup.QuickCharge ? 2 : 1;
         resizableBar.parent.parent.gameObject.SetActive(true);
         transform.parent.GetComponent<PlayerMovement>().chargeBallSpeed = 0.2f; 
 
@@ -148,7 +147,7 @@ public class PlayerHands : MonoBehaviour {
 				//break;
 			}
 
-			val += chargeSpeed * Time.deltaTime * increasedCharge;
+			val += chargeSpeed * Time.deltaTime;
             if (val > 1) {
                 val = 1;
 
