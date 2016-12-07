@@ -11,7 +11,7 @@ public class WindManager : MonoBehaviour {
 	float nextWindAnimationTime;
 	public Vector2 forceMin, forceMax;
 	public int numFrames;
-	WindAnimation animation;
+	WindAnimation windAnimation;
 	Vector2 force;
 	bool animatedWind = false, appliedForce = false;
 	public float animationPreDelay;
@@ -19,7 +19,7 @@ public class WindManager : MonoBehaviour {
 	void Awake() {
 		balls = new List<Rigidbody2D>();
 		instance = this;
-		animation = GetComponentInChildren<WindAnimation>();
+		windAnimation = GetComponentInChildren<WindAnimation>();
 	}
 
 	void Start() {
@@ -28,7 +28,7 @@ public class WindManager : MonoBehaviour {
 	
 	void Update() {
 		if (!animatedWind && Time.time >= nextWindAnimationTime) {
-			animation.StartAnimation(force);
+			windAnimation.StartAnimation(force);
 			animatedWind = true;
 			AudioManager.instance.PlayClip(AudioManager.instance.wind);
 		}

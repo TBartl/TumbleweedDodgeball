@@ -112,24 +112,24 @@ public class LevelSelect : MonoBehaviour {
 		if (controllers[num].GetConfirmDown() || Input.GetMouseButtonDown(2)) {
 			AudioManager.instance.PlayClip(AudioManager.instance.confirm);
 			if (controlSelected) {
-				SceneManager.LoadScene("Controls");
+				SceneTransitioner.instance.LoadScene("Controls");
 			}
 			else {
 				if (currentLevel == 0) {
 					Controller.canMove = false;
-					SceneManager.LoadScene("Levels/Tutorial");
+					SceneTransitioner.instance.LoadScene("Levels/Tutorial");
 				}
 				else if (currentLevel == 1) {
 					Controller.canMove = false;
-					SceneManager.LoadScene("Levels/Cliffside");
+					SceneTransitioner.instance.LoadScene("Levels/Cliffside");
 				}
 				else if (currentLevel == 2) {
 					Controller.canMove = false;
-					SceneManager.LoadScene("Levels/Town");
+					SceneTransitioner.instance.LoadScene("Levels/Town");
 				}
 				else if (currentLevel == 3) {
 					Controller.canMove = false;
-					SceneManager.LoadScene("Levels/Train Station");
+					SceneTransitioner.instance.LoadScene("Levels/Train Station");
 				}
 			}
 		}

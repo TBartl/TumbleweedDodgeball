@@ -40,7 +40,7 @@ public class GameTimer : MonoBehaviour {
 		} else {
             //Display Score and reload screen on pressedbutton
             ScoreManager.inst.SendScoresToGlobal();
-            SceneManager.LoadScene("EndScene");
+            SceneTransitioner.instance.LoadScene("EndScene");
         }
 	}
 

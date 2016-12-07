@@ -67,7 +67,7 @@ public class StartMenu : MonoBehaviour {
 
 		if (start) {
 			//SceneManager.LoadScene("Levels/Cliffside");
-			SceneManager.LoadScene("LevelSelect");
+			SceneTransitioner.instance.LoadScene("LevelSelect");
 		}
 
 
