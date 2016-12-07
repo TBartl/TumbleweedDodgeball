@@ -2965,6 +2965,11 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 80662470}
     m_Modifications:
+    - target: {fileID: 114000010714425194, guid: 4501538b57b623b4da90a09a13d8085e,
+        type: 2}
+      propertyPath: itemPrefabs.Array.size
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 4000010824026606, guid: 4501538b57b623b4da90a09a13d8085e, type: 2}
       propertyPath: m_LocalPosition.x
       value: -10.694982
@@ -3002,6 +3007,24 @@ Prefab:
       propertyPath: probability
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114000010714425194, guid: 4501538b57b623b4da90a09a13d8085e,
+        type: 2}
+      propertyPath: itemPrefabs.Array.data[0]
+      value: 
+      objectReference: {fileID: 1000012390416646, guid: 148e195ab36b71e4f8f44c551321bf8f,
+        type: 2}
+    - target: {fileID: 114000010714425194, guid: 4501538b57b623b4da90a09a13d8085e,
+        type: 2}
+      propertyPath: itemPrefabs.Array.data[1]
+      value: 
+      objectReference: {fileID: 1000012390416646, guid: 28f76c054e229db45823749ae790bfd8,
+        type: 2}
+    - target: {fileID: 114000010714425194, guid: 4501538b57b623b4da90a09a13d8085e,
+        type: 2}
+      propertyPath: itemPrefabs.Array.data[2]
+      value: 
+      objectReference: {fileID: 1000012390416646, guid: 84502ef09d1110743aac6d91a841ff80,
+        type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 4501538b57b623b4da90a09a13d8085e, type: 2}
   m_IsPrefabParent: 0
@@ -10357,12 +10380,12 @@ Prefab:
     - target: {fileID: 224000013431957010, guid: 7195cefd3cff64240bb942110d4250b7,
         type: 2}
       propertyPath: m_SizeDelta.y
-      value: 56.603775
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224000013084658178, guid: 7195cefd3cff64240bb942110d4250b7,
         type: 2}
       propertyPath: m_SizeDelta.y
-      value: 228.3019
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 114000013947605996, guid: 7195cefd3cff64240bb942110d4250b7,
         type: 2}

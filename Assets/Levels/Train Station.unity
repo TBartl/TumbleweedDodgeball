@@ -525,6 +525,11 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 80662470}
     m_Modifications:
+    - target: {fileID: 114000014261809558, guid: 2dea40bf994329e49b2bc47c2f6674ad,
+        type: 2}
+      propertyPath: itemPrefabs.Array.size
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 4000010832184876, guid: 2dea40bf994329e49b2bc47c2f6674ad, type: 2}
       propertyPath: m_LocalPosition.x
       value: -23.723291
@@ -580,6 +585,24 @@ Prefab:
       propertyPath: probability
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114000014261809558, guid: 2dea40bf994329e49b2bc47c2f6674ad,
+        type: 2}
+      propertyPath: itemPrefabs.Array.data[0]
+      value: 
+      objectReference: {fileID: 1000012390416646, guid: 148e195ab36b71e4f8f44c551321bf8f,
+        type: 2}
+    - target: {fileID: 114000014261809558, guid: 2dea40bf994329e49b2bc47c2f6674ad,
+        type: 2}
+      propertyPath: itemPrefabs.Array.data[1]
+      value: 
+      objectReference: {fileID: 1000012390416646, guid: 28f76c054e229db45823749ae790bfd8,
+        type: 2}
+    - target: {fileID: 114000014261809558, guid: 2dea40bf994329e49b2bc47c2f6674ad,
+        type: 2}
+      propertyPath: itemPrefabs.Array.data[2]
+      value: 
+      objectReference: {fileID: 1000012390416646, guid: 84502ef09d1110743aac6d91a841ff80,
+        type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2dea40bf994329e49b2bc47c2f6674ad, type: 2}
   m_IsPrefabParent: 0
@@ -13159,8 +13182,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a5cc9a3ffe5a08c4f8e33d33630fbfa8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemPrefab: {fileID: 1000012390416646, guid: 28f76c054e229db45823749ae790bfd8, type: 2}
-  probability: 1
+  itemPrefabs: []
 --- !u!1 &1489423229
 GameObject:
   m_ObjectHideFlags: 0

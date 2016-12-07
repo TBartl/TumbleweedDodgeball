@@ -56,7 +56,7 @@ GameObject:
   - 114: {fileID: 114000011994580848}
   - 61: {fileID: 61000012766692960}
   m_Layer: 0
-  m_Name: PowerupQuickThrow
+  m_Name: Powerup Max Charge
   m_TagString: Powerup
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -164,7 +164,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e927a71fca976dc4aa134c59506aed67, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  powerup: 3
+  powerup: 1
 --- !u!114 &114000011994580848
 MonoBehaviour:
   m_ObjectHideFlags: 1
