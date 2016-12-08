@@ -21,9 +21,11 @@ public class Controller : MonoBehaviour {
     // where it was
     Vector3 direction = new Vector3(1, 0, 0);
 
+	static bool locked;
+
     void Start() {
-        if (InControl.InputManager.Devices.Count > inputDeviceNum) {
-            inputDevice = InControl.InputManager.Devices[inputDeviceNum];
+        if (InputManager.Devices.Count > inputDeviceNum) {
+            inputDevice = InputManager.Devices[inputDeviceNum];
 			prevLeftTriggerPressed = inputDevice.LeftBumper.IsPressed;
 			prevRightTriggerPressed = inputDevice.RightBumper.IsPressed;
 			confirmPressed = inputDevice.Action1;
@@ -66,6 +68,10 @@ public class Controller : MonoBehaviour {
 			return Vector2.zero;
 		}
 
+		if (locked) {
+			return Vector2.zero;
+		}
+
 		if (!zeroInput) {
 			return Vector2.zero;
 		}
@@ -83,7 +89,12 @@ public class Controller : MonoBehaviour {
 
     public Vector3 GetDirection() {
         if (!canMove) return Vector3.zero; //player is frozen
-        if (devMode || InputManager.Devices.Count <= inputDeviceNum) { // use keyboard & mouse
+
+		if (locked) {
+			return Vector3.zero;
+		}
+
+		if (devMode || InputManager.Devices.Count <= inputDeviceNum) { // use keyboard & mouse
             return GetMousePosition() - transform.position;
         }
 
@@ -114,7 +125,12 @@ public class Controller : MonoBehaviour {
 
     public Vector3 GetMovementDirection() {
         if (!canMove) return Vector3.zero; //Player is frozen
-        if (devMode || InputManager.Devices.Count <= inputDeviceNum) { // use keyboard & mouse
+
+		if (locked) {
+			return Vector3.zero;
+		}
+
+		if (devMode || InputManager.Devices.Count <= inputDeviceNum) { // use keyboard & mouse
             Vector3 dir = Vector3.zero;
             if (Input.GetKey(KeyCode.W))
                 dir += Vector3.up;
@@ -139,7 +155,12 @@ public class Controller : MonoBehaviour {
 
     // returns true if the trigger was pressed down this frame
     public bool GetHandActionDown(int hand) {
-        if (devMode || InputManager.Devices.Count <= inputDeviceNum) { // use keyboard & mouse
+
+		if (locked) {
+			return false;
+		}
+
+		if (devMode || InputManager.Devices.Count <= inputDeviceNum) { // use keyboard & mouse
             return Input.GetMouseButtonDown(hand);
         }
 
@@ -160,7 +181,12 @@ public class Controller : MonoBehaviour {
 
     // returns true if the trigger is down at all
     public bool GetHandActionHeld(int hand) {
-        if (devMode || InputManager.Devices.Count <= inputDeviceNum) { // use keyboard & mouse
+
+		if (locked) {
+			return false;
+		}
+
+		if (devMode || InputManager.Devices.Count <= inputDeviceNum) { // use keyboard & mouse
             return Input.GetMouseButton(hand);
         }
 
@@ -180,6 +206,11 @@ public class Controller : MonoBehaviour {
     }
 
     public bool GetRestartPressed() {
+
+		if (locked) {
+			return false;
+		}
+
 		if (inputDevice == null)
 			return Input.GetMouseButton(2);
         return inputDevice.Action2;
@@ -211,6 +242,11 @@ public class Controller : MonoBehaviour {
 	}
 
 	public bool GetConfirmDown() {
+
+		if (locked) {
+			return false;
+		}
+
 		if (devMode || InputManager.Devices.Count <= inputDeviceNum) { // use keyboard & mouse
 			return Input.GetMouseButtonDown(2);
 		}
@@ -225,6 +261,11 @@ public class Controller : MonoBehaviour {
 	}
 
 	public bool GetDash() {
+
+		if (locked) {
+			return false;
+		}
+
 		if (!canMove)
 			return false; //player is frozen
 		if (devMode || InputManager.Devices.Count <= inputDeviceNum) {
@@ -242,6 +283,11 @@ public class Controller : MonoBehaviour {
 	}
 
 	public bool GetBackDown() { // B button
+
+		if (locked) {
+			return false;
+		}
+
 		if (devMode || InputManager.Devices.Count <= inputDeviceNum) {// use keyboard & mouse
 			return Input.GetKey(KeyCode.B);
 		}
@@ -252,6 +298,14 @@ public class Controller : MonoBehaviour {
 		}
 
 		return inputDevice.Action2 && !backPressed;
+	}
+
+	public static void Lock() {
+		locked = true;
+	}
+
+	public static void Unlock() {
+		locked = false;
 	}
 
 }

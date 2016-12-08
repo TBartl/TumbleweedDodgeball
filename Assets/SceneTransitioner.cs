@@ -11,11 +11,13 @@ public class SceneTransitioner : MonoBehaviour {
 	public int numFrames;
 
 	void Awake() {
+		Controller.Lock();
 		instance = this;
 		StartCoroutine(FadeOut());
 	}
 
 	IEnumerator FadeIn(string scene) {
+		Controller.Lock();
 		for (int i = 0; i < numFrames; ++i) {
 			panel.color = new Color(panel.color.r, panel.color.g, panel.color.b, (float) i / (float) numFrames);
 			yield return null;
@@ -28,6 +30,7 @@ public class SceneTransitioner : MonoBehaviour {
 			panel.color = new Color(panel.color.r, panel.color.g, panel.color.b, (float) i / (float) numFrames);
 			yield return null;
 		}
+		Controller.Unlock();
 	}
 
 	public void LoadScene(string scene) {
