@@ -51,6 +51,9 @@ ModelImporter:
     100086: upperRing_R
     100088: upperThumb_L
     100090: upperThumb_R
+    100092: Plane
+    100094: Plane_001
+    100096: shield
     400000: Armature
     400002: cape_L
     400004: cape_R
@@ -97,13 +100,25 @@ ModelImporter:
     400086: upperRing_R
     400088: upperThumb_L
     400090: upperThumb_R
+    400092: Plane
+    400094: Plane_001
+    400096: shield
     2300000: Dazed
     2300002: Hit
+    2300004: Plane
+    2300006: Plane_001
+    2300008: shield
     3300000: Dazed
     3300002: Hit
+    3300004: Plane
+    3300006: Plane_001
+    3300008: shield
     4300000: Dazed
     4300002: Hit
     4300004: LowPoly
+    4300006: Plane_001
+    4300008: Plane
+    4300010: shield
     7400000: Default Take
     7400002: Idle
     7400004: PoseLib
