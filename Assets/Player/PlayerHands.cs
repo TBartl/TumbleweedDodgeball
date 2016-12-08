@@ -36,11 +36,14 @@ public class PlayerHands : MonoBehaviour {
 	bool canSmack = true;
 	public float smackCoolDown = 3f;
 
+	PlayerHitBoxIncrease hitBoxIncrease;
+
 	void Awake() {
         playerData = GetComponentInParent<PlayerData>();
 		controller = GetComponentInParent<Controller>();
 		colorizer = GetComponentInParent<PlayerColorizer>();
 		smackEffect.enabled = false;
+		hitBoxIncrease = transform.parent.GetComponentInChildren<PlayerHitBoxIncrease>();
     }
 
     void Start() {
@@ -105,7 +108,9 @@ public class PlayerHands : MonoBehaviour {
     }
 
     IEnumerator ChargeThrowBall() {
-        doingSomething = true;
+		hitBoxIncrease.Enable();
+
+		doingSomething = true;
         //Get variables for this player's available powerups 
         bool maxCharge = PowerupManager.S.getPowerup(playerData.num) == Powerup.MaxCharge;
         resizableBar.parent.parent.gameObject.SetActive(true);
@@ -198,6 +203,8 @@ public class PlayerHands : MonoBehaviour {
 				balls[i] = null;
 			}
         }
+
+		hitBoxIncrease.Disable();
 
         for (float t = 0; t < rethrowDelay; t += Time.deltaTime)
             yield return null;

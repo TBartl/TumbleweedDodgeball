@@ -18,7 +18,7 @@ public class Ball : MonoBehaviour {
 		hotness = this.GetComponent<BallHotness>();
 	}
 
-	public void Grab(int ID) {	
+	public void Grab(int ID) {
 		col.enabled = false;
 		rb.isKinematic = true;
 		glow.Grabbed();
