@@ -31,7 +31,7 @@ public class BallTrailCollider : MonoBehaviour {
 		foreach (GameObject player in PlayerManager.inst.players) {
 			if (player.activeSelf && player.GetComponent<PlayerData>() != ballSource.GetThrower()) {
 				if (particle.lifetime >= 2.5 && Vector2.Distance(player.transform.position, particle.position) < .5) {
-					player.GetComponent<PlayerDaze>().InBallTrail();
+					player.GetComponent<PlayerDaze>().Daze();
 				}
 			}
 		}

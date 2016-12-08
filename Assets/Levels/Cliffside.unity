@@ -2400,6 +2400,11 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 114000012953597478, guid: 9248d7b7c3bc46940a4b55d0939b9fe8,
+        type: 2}
+      propertyPath: recoveryCurve.m_Curve.Array.size
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 4000011357969870, guid: 9248d7b7c3bc46940a4b55d0939b9fe8, type: 2}
       propertyPath: m_LocalPosition.x
       value: -10.61
@@ -2431,6 +2436,41 @@ Prefab:
     - target: {fileID: 4000011357969870, guid: 9248d7b7c3bc46940a4b55d0939b9fe8, type: 2}
       propertyPath: m_RootOrder
       value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000012953597478, guid: 9248d7b7c3bc46940a4b55d0939b9fe8,
+        type: 2}
+      propertyPath: recoveryCurve.m_Curve.Array.data[1].time
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000012953597478, guid: 9248d7b7c3bc46940a4b55d0939b9fe8,
+        type: 2}
+      propertyPath: recoveryCurve.m_Curve.Array.data[1].value
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000012953597478, guid: 9248d7b7c3bc46940a4b55d0939b9fe8,
+        type: 2}
+      propertyPath: recoveryCurve.m_RotationOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000012953597478, guid: 9248d7b7c3bc46940a4b55d0939b9fe8,
+        type: 2}
+      propertyPath: recoveryCurve.m_Curve.Array.data[0].value
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000012953597478, guid: 9248d7b7c3bc46940a4b55d0939b9fe8,
+        type: 2}
+      propertyPath: recoveryCurve.m_Curve.Array.data[0].time
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000012953597478, guid: 9248d7b7c3bc46940a4b55d0939b9fe8,
+        type: 2}
+      propertyPath: recoveryCurve.m_Curve.Array.data[1].inSlope
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000012953597478, guid: 9248d7b7c3bc46940a4b55d0939b9fe8,
+        type: 2}
+      propertyPath: recoveryCurve.m_Curve.Array.data[1].outSlope
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 9248d7b7c3bc46940a4b55d0939b9fe8, type: 2}

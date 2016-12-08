@@ -621,10 +621,9 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 4000013032582428}
-  - 33: {fileID: 33000013841344748}
-  - 23: {fileID: 23000012847739734}
+  - 114: {fileID: 114000012881245180}
   m_Layer: 0
-  m_Name: Dazed
+  m_Name: Icons
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1355,10 +1354,10 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000012829726080}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: 0.38268343, y: 0, z: 0, w: 0.92387956}
+  m_LocalPosition: {x: 0, y: 0, z: -2}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 45, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 4000011357969870}
   m_RootOrder: 1
@@ -1626,35 +1625,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 4000010533420606}
   m_RootOrder: 3
---- !u!23 &23000012847739734
-MeshRenderer:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1000012829726080}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_Materials:
-  - {fileID: 2100000, guid: 8aa2fc53e3be06c41b52a21b3b467314, type: 2}
-  m_SubsetIndices: 
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_SelectedWireframeHidden: 0
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingOrder: 0
 --- !u!23 &23000013580686196
 MeshRenderer:
   m_ObjectHideFlags: 1
@@ -1691,13 +1661,6 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000010349396726}
   m_Mesh: {fileID: 4300002, guid: bb88687e242b09040a1b8933c58c9dff, type: 3}
---- !u!33 &33000013841344748
-MeshFilter:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1000012829726080}
-  m_Mesh: {fileID: 4300000, guid: bb88687e242b09040a1b8933c58c9dff, type: 3}
 --- !u!50 &50000010210598728
 Rigidbody2D:
   serializedVersion: 2
@@ -1865,6 +1828,28 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   num: 2
+--- !u!114 &114000012881245180
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000012829726080}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3871347606658fb46ba52fd290e9d463, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  visuals:
+  - mesh: {fileID: 4300014, guid: bb88687e242b09040a1b8933c58c9dff, type: 3}
+    material: {fileID: 2100000, guid: 661bc46316ca5934eb009cd891182ed5, type: 2}
+  - mesh: {fileID: 4300000, guid: bb88687e242b09040a1b8933c58c9dff, type: 3}
+    material: {fileID: 2100000, guid: 8aa2fc53e3be06c41b52a21b3b467314, type: 2}
+  - mesh: {fileID: 4300018, guid: bb88687e242b09040a1b8933c58c9dff, type: 3}
+    material: {fileID: 2100000, guid: 267c2b64d788aab4b9420f44c4e7aa37, type: 2}
+  - mesh: {fileID: 4300016, guid: bb88687e242b09040a1b8933c58c9dff, type: 3}
+    material: {fileID: 2100000, guid: ef9b704b3961bb344b2d081c2a619a5a, type: 2}
+  - mesh: {fileID: 4300010, guid: bb88687e242b09040a1b8933c58c9dff, type: 3}
+    material: {fileID: 2100000, guid: bb945ac01451b1f4ebc635ce5b8a493c, type: 2}
 --- !u!114 &114000012953597478
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1876,8 +1861,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89c9ee839cc30a448acdc791252d6045, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dazeIcon: {fileID: 23000012847739734}
-  moveModifier: 0.31
+  recoveryCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0.1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - time: 1
+      value: 1
+      inSlope: 2
+      outSlope: 2
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
   duration: 2
 --- !u!114 &114000012977783076
 MonoBehaviour:

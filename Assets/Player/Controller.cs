@@ -227,6 +227,10 @@ public class Controller : MonoBehaviour {
 	public bool GetDash() {
 		if (!canMove)
 			return false; //player is frozen
+		if (devMode || InputManager.Devices.Count <= inputDeviceNum) {
+			return Input.GetKey(KeyCode.B);
+		}
+
 
 		// use controller
 		if (inputDevice == null) {
