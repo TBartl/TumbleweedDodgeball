@@ -1140,7 +1140,6 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 193414c24f4645f4398bf3bfd8607495, type: 2}
   - {fileID: 11400000, guid: 24af22564f773b24fa1885043e05c2eb, type: 2}
   - {fileID: 11400000, guid: a495fb38132a0a645bdb4c877e93e234, type: 2}
-  currentMat: 00000000000000000000000000000000
   Join:
   - {fileID: 1415946037}
   - {fileID: 1863994139}

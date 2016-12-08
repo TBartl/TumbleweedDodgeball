@@ -64,8 +64,11 @@ public class EndGameManager : MonoBehaviour {
     void Update() {
         if (checkForRestartInput) {
             if (GetPlayerInput()) {//someone pressed B to restart
+				for (int i = 0; i < numActivePlayersInGame; ++i) {
+					StartMenu.AddToGame(i);
+				}
 				AudioManager.instance.PlayClip(AudioManager.instance.confirm);
-				SceneManager.LoadScene("MainMenu");
+				SceneTransitioner.instance.LoadScene("MainMenu");
             }
         }
     }

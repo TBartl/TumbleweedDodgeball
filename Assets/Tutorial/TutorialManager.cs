@@ -136,8 +136,7 @@ public class TutorialManager : MonoBehaviour {
 		yield return new WaitForSeconds(waitTime);
 		ChangeTask();
 
-		SceneTransitioner.instance.LoadScene("MainMenu");
-
+		SceneTransitioner.instance.LoadScene("LevelSelect");
 	}
 
 	void ChangeTask() {
