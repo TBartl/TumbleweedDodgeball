@@ -12,6 +12,7 @@ public class StartMenu : MonoBehaviour {
 
 	public GameObject[] Join;
 	public GameObject[] Joined;
+	public GameObject[] JoinedUI;
 	public GameObject[] playerReady;
 
 	private static bool[] inGame = new bool[4];
@@ -30,6 +31,7 @@ public class StartMenu : MonoBehaviour {
 				GlobalPlayerManager.inst.SetInGameTrue(i);
 				Join[i].SetActive(false);
 				Joined[i].SetActive(true);
+				JoinedUI[i].SetActive(true);
 				numPlayers++;
 				while (CompareColor(i)) {
 					currentMat[i]++;
@@ -112,11 +114,13 @@ public class StartMenu : MonoBehaviour {
 			else if (controller.GetConfirmDown() && !pReady[playerNum]) {
 				pReady[playerNum] = true;
 				playerReady[playerNum].SetActive(true);
+				JoinedUI[playerNum].SetActive(false);
 				AudioManager.instance.PlayClip(AudioManager.instance.confirm);
 			}
 			else if (controller.GetBackDown() && pReady[playerNum]) {
 				pReady[playerNum] = false;
 				playerReady[playerNum].SetActive(false);
+				JoinedUI[playerNum].SetActive(true);
 				AudioManager.instance.PlayClip(AudioManager.instance.back);
 			} 
 			else if (controller.GetBackDown() && !pReady[playerNum]) {
@@ -124,6 +128,7 @@ public class StartMenu : MonoBehaviour {
 				GlobalPlayerManager.inst.SetInGameFalse(playerNum);
 				Join[playerNum].SetActive(true);
 				Joined[playerNum].SetActive(false);
+				JoinedUI[playerNum].SetActive(false);
 				numPlayers--;
 				//currentMat[playerNum] = 0;
 				AudioManager.instance.PlayClip(AudioManager.instance.back);
@@ -136,6 +141,7 @@ public class StartMenu : MonoBehaviour {
 				GlobalPlayerManager.inst.SetInGameTrue(playerNum);
 				Join[playerNum].SetActive(false);
 				Joined[playerNum].SetActive(true);
+				JoinedUI[playerNum].SetActive(true);
 				numPlayers++;
 				while (CompareColor(playerNum)) {
 					currentMat[playerNum]++;
