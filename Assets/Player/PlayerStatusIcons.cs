@@ -25,6 +25,37 @@ public class PlayerStatusIcons : MonoBehaviour {
 	public List<StatusIconVisuals> visuals;
 	List<StatusIconPoolGO> pool = new List<StatusIconPoolGO>();
 	List<StatusIconType> statuses = new List<StatusIconType>();
+	PlayerData data;
+
+	public float separation = .5f;
+
+	Powerup lastPowerup;
+	bool wasLeader = false;
+
+	void Awake() {
+		data = this.GetComponentInParent<PlayerData>();
+	}
+
+	void Update() {
+		Powerup newPowerup = PowerupManager.S.getPowerup(data.num);
+		if (newPowerup != lastPowerup) {
+			if (lastPowerup != Powerup.NoPowerup)
+				RemoveStatus(StatusIconType.powerup + (int)lastPowerup);
+			if (newPowerup != Powerup.NoPowerup)
+				AddStatus(StatusIconType.powerup + (int)newPowerup);
+		}
+		lastPowerup = newPowerup;
+
+		bool isLeader = (ScoreManager.inst.GetLeader() == data.num);
+		if (wasLeader != isLeader) {
+			if (isLeader == true)
+				AddStatus(StatusIconType.scoreLeader);
+			else
+				RemoveStatus(StatusIconType.scoreLeader);
+
+		}
+
+	}
 
 	void ExpandPool() {
 		GameObject go = GameObject.CreatePrimitive(PrimitiveType.Cube);
@@ -56,6 +87,8 @@ public class PlayerStatusIcons : MonoBehaviour {
 			pool[i].mr.enabled = true;
 			pool[i].mr.material = visuals[(int)type].material;
 			pool[i].mf.mesh = visuals[(int)type].mesh;
+
+			pool[i].t.localPosition = Vector3.right * (i - (statuses.Count - 1) * .5f) * separation;
 		}
 	}
 
@@ -67,7 +100,7 @@ public class PlayerStatusIcons : MonoBehaviour {
 		}
 	}
 
-	public void RemoveIcon(StatusIconType status) {
+	public void RemoveStatus(StatusIconType status) {
 		if (statuses.Contains(status)) {
 			statuses.Remove(status);
 			UpdateIcons();

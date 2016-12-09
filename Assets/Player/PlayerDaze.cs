@@ -45,7 +45,7 @@ public class PlayerDaze : MonoBehaviour {
 			yield return null;
 		}
 		movement.dazeMovement = 1f;
-		icons.RemoveIcon(StatusIconType.dazed);
+		icons.RemoveStatus(StatusIconType.dazed);
 	}
 
 	bool AlreadyDazed() {

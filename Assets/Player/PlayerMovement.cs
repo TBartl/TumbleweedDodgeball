@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 public class PlayerMovement : MonoBehaviour {
 	PlayerColorizer colorizer;
-
+	PlayerData data;
 
 	public float maxSpeed;
     public float dashSpeed;
@@ -17,6 +17,7 @@ public class PlayerMovement : MonoBehaviour {
 	public List<float> modifiers;
     public float dazeMovement = 1f;
     public float chargeBallSpeed = 1f;
+	public float powerupMoveIncrease = 2f;
 
 	void Awake()
 	{
@@ -24,6 +25,7 @@ public class PlayerMovement : MonoBehaviour {
 		rb = this.GetComponent<Rigidbody2D>();
 		controller = this.GetComponent<Controller>();
 		colorizer = this.GetComponent<PlayerColorizer>();
+		data = this.GetComponent<PlayerData>();
 	}
 
 	void FixedUpdate () {
@@ -35,6 +37,10 @@ public class PlayerMovement : MonoBehaviour {
                 speed *= f;*/
             speed *= dazeMovement;
             speed *= chargeBallSpeed;
+			if (PowerupManager.S.getPowerup(data.num) == Powerup.IncreaseMoveSpeed) {
+				speed *= powerupMoveIncrease;
+			}
+
             rb.velocity = direction * speed;
             rb.velocity = direction * speed;
         }

@@ -1097,7 +1097,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000010031701256}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.55, y: 3.05, z: 0}
+  m_LocalPosition: {x: -10.61, y: 3.05, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
@@ -1827,6 +1827,7 @@ MonoBehaviour:
   modifiers: []
   dazeMovement: 1
   chargeBallSpeed: 1
+  powerupMoveIncrease: 2
 --- !u!114 &114000011218830520
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1892,7 +1893,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1000012829726080}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3871347606658fb46ba52fd290e9d463, type: 3}
+  m_Script: {fileID: 11500000, guid: 014e9ebbba291fb4ba9bf6de70be4910, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   visuals:
@@ -1906,6 +1907,7 @@ MonoBehaviour:
     material: {fileID: 2100000, guid: ef9b704b3961bb344b2d081c2a619a5a, type: 2}
   - mesh: {fileID: 4300010, guid: bb88687e242b09040a1b8933c58c9dff, type: 3}
     material: {fileID: 2100000, guid: bb945ac01451b1f4ebc635ce5b8a493c, type: 2}
+  separation: 0.63
 --- !u!114 &114000012953597478
 MonoBehaviour:
   m_ObjectHideFlags: 1

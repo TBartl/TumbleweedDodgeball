@@ -13,6 +13,7 @@ public class ScoreManager : MonoBehaviour {
     public GameObject endScoreText;
 
 	int[] scores = new int[4];
+	int leader = -1;
 
 	void Awake() {
 		if (inst == null)
@@ -25,6 +26,7 @@ public class ScoreManager : MonoBehaviour {
 			scores[playerID] += 2;
 			addHitUI.UpdateScore(playerID, scores[playerID]);
             InitNumberShown(positiveScore, playerID);
+			UpdateLeader();
 		}
 	}
 
@@ -34,7 +36,8 @@ public class ScoreManager : MonoBehaviour {
                 scores[playerID]--;
                 addHitUI.UpdateScore(playerID, scores[playerID]);
                 InitNumberShown(negativeScore, playerID);
-            }
+				UpdateLeader();
+			}
 		}
 	}
 
@@ -52,4 +55,23 @@ public class ScoreManager : MonoBehaviour {
         go.GetComponent<ScoreNumBehavior>().HandleScoreChange(); //Coroutine so that the number disappears after some time
     }
     
+	void UpdateLeader() {
+		bool tied = false;
+		leader = 0;
+		for (int i = 1; i < 4; ++i) {
+			if (scores[i] == scores[leader])
+				tied = true;
+			else if (scores[i] > scores[leader]) {
+				tied = false;
+				leader = i;
+			}
+		}
+		// Don't show tied people in game otherwise everyone would start with a crown
+		if (tied)
+			leader = -1;
+	}
+
+	public int GetLeader() {
+		return leader;
+	}
 }
