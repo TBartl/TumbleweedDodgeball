@@ -18,7 +18,8 @@ class ReverseComparator<T> : IComparer<T> {
 public class EndGameManager : MonoBehaviour {
 
     public List<GameObject> activeBars;
-    public GameObject restartText;
+    public GameObject MMtext, NLtext;
+    public GameObject MMMarker, NLMarker;
     public GameObject controllerPrefab;
 
     private bool checkForRestartInput = false;
@@ -62,15 +63,7 @@ public class EndGameManager : MonoBehaviour {
     }
 
     void Update() {
-        if (checkForRestartInput) {
-            if (GetPlayerInput()) {//someone pressed B to restart
-				for (int i = 0; i < numActivePlayersInGame; ++i) {
-					StartMenu.AddToGame(i);
-				}
-				AudioManager.instance.PlayClip(AudioManager.instance.confirm);
-				SceneTransitioner.instance.LoadScene("MainMenu");
-            }
-        }
+        if (checkForRestartInput) GetPlayerInput();
     }
 
     void InitTwoBars() {
@@ -123,14 +116,35 @@ public class EndGameManager : MonoBehaviour {
 
     IEnumerator ShowRestartInput() {
         yield return new WaitForSeconds(3); //wait for 5 seconds
-        restartText.SetActive(true);
+        MMtext.SetActive(true);
+        NLtext.SetActive(true);
+        MMMarker.SetActive(true);
         checkForRestartInput = true;
     }
 
-    bool GetPlayerInput() {
+    void GetPlayerInput() {
         foreach (Controller cont in controllers) {
-            if (cont.GetRestartPressed()) return true;
+            if(cont.GetMainDirection().x < 0f || cont.GetMainDirection().x > 0f
+                    || Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.D)) {
+                SwitchMarkerActive();
+                AudioManager.instance.PlayClip(AudioManager.instance.tick);
+            }
+            else if(cont.GetConfirmDown() || Input.GetMouseButtonDown(2)) {//chose to leave end scene
+                AudioManager.instance.PlayClip(AudioManager.instance.confirm);
+                if (MMMarker.active) SceneTransitioner.instance.LoadScene("MainMenu");
+                else SceneTransitioner.instance.LoadScene("LevelSelect");
+            }
         }
-        return false;
+    }
+
+    void SwitchMarkerActive() {
+        if(MMMarker.active) {
+            MMMarker.SetActive(false);
+            NLMarker.SetActive(true);
+        }
+        else {
+            MMMarker.SetActive(true);
+            NLMarker.SetActive(false);
+        }
     }
 }
