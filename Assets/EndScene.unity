@@ -4292,7 +4292,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fireworks: {fileID: 1000011418176950, guid: 941c331c856b9c243abf671e4bfd9a68, type: 2}
-  winningHeight: 9
+  winningHeight: 7
 --- !u!1 &1011177305
 GameObject:
   m_ObjectHideFlags: 0
@@ -5193,7 +5193,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fireworks: {fileID: 1000011418176950, guid: 941c331c856b9c243abf671e4bfd9a68, type: 2}
-  winningHeight: 9
+  winningHeight: 7
 --- !u!1 &1264596672
 GameObject:
   m_ObjectHideFlags: 0
@@ -7340,7 +7340,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fireworks: {fileID: 1000011418176950, guid: 941c331c856b9c243abf671e4bfd9a68, type: 2}
-  winningHeight: 9
+  winningHeight: 7
 --- !u!1 &1666160795
 GameObject:
   m_ObjectHideFlags: 0
@@ -7747,7 +7747,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fireworks: {fileID: 1000011418176950, guid: 941c331c856b9c243abf671e4bfd9a68, type: 2}
-  winningHeight: 9
+  winningHeight: 7
 --- !u!1 &1746305854
 GameObject:
   m_ObjectHideFlags: 0
