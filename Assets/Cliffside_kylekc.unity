@@ -1326,6 +1326,7 @@ GameObject:
   - 81: {fileID: 1002217757}
   - 114: {fileID: 1002217762}
   - 114: {fileID: 1002217763}
+  - 114: {fileID: 1002217764}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -1431,6 +1432,20 @@ MonoBehaviour:
   minZ: -15.26
   maxZ: -9
   cameraTransform: {fileID: 0}
+--- !u!114 &1002217764
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1002217756}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2854b53a8862e8c42af4c6b91fdabccd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  numFrames: 15
+  shakeIntensity: 0.35
+  framesBetweenShake: 2
 --- !u!1001 &1003070576
 Prefab:
   m_ObjectHideFlags: 0
@@ -3210,12 +3225,12 @@ Prefab:
     - target: {fileID: 224000013431957010, guid: 7195cefd3cff64240bb942110d4250b7,
         type: 2}
       propertyPath: m_SizeDelta.y
-      value: 55.73034
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224000013084658178, guid: 7195cefd3cff64240bb942110d4250b7,
         type: 2}
       propertyPath: m_SizeDelta.y
-      value: 230.11237
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 114000013639979814, guid: 7195cefd3cff64240bb942110d4250b7,
         type: 2}
@@ -3406,7 +3421,7 @@ Prefab:
     - target: {fileID: 224000014227228356, guid: 7195cefd3cff64240bb942110d4250b7,
         type: 2}
       propertyPath: m_SizeDelta.y
-      value: 34.157307
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7195cefd3cff64240bb942110d4250b7, type: 2}

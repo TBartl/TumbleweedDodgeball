@@ -80,6 +80,7 @@ GameObject:
   - 114: {fileID: 114000012232940038}
   - 114: {fileID: 114000013282383628}
   - 114: {fileID: 114000010371060054}
+  - 114: {fileID: 114000010840324130}
   m_Layer: 0
   m_Name: SlowGrow
   m_TagString: Ball
@@ -296,6 +297,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   glowChild: {fileID: 1000011605347460}
+--- !u!114 &114000010840324130
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000013903614682}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eddfcc5a9fec21e4d80c8ac6ec36fd39, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114000011125999118
 MonoBehaviour:
   m_ObjectHideFlags: 1
