@@ -25,7 +25,7 @@ public class EndGameManager : MonoBehaviour {
     private bool checkForRestartInput = false;
     Controller[] controllers;
     int numActivePlayersInGame = 0;
-    int maxHeigthBar = 9;
+    int maxHeigthBar = 7;
 
     void Awake() {
         //get controllers 

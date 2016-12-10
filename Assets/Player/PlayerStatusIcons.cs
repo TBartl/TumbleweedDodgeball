@@ -52,7 +52,7 @@ public class PlayerStatusIcons : MonoBehaviour {
 				AddStatus(StatusIconType.scoreLeader);
 			else
 				RemoveStatus(StatusIconType.scoreLeader);
-
+			wasLeader = isLeader;
 		}
 
 	}
