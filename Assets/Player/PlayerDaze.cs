@@ -5,6 +5,7 @@ public class PlayerDaze : MonoBehaviour {
 	PlayerData playerData;
 	PlayerMovement movement;
 	PlayerStatusIcons icons;
+	CameraShake cameraShake;
 
 	public AnimationCurve recoveryCurve;
 	public float duration = 2;
@@ -20,8 +21,10 @@ public class PlayerDaze : MonoBehaviour {
 	void OnTriggerStay2D(Collider2D other) {
 		if (other.tag == "Smack") {
 			if (other.GetComponentInParent<PlayerData>() != playerData) {
-				if (!AlreadyDazed())
+				if (!AlreadyDazed()) {
 					AudioManager.instance.PlayClipAtPoint(AudioManager.instance.playerHit, transform.position);
+					CameraShake.S.StartShake(.5f);
+				}
 				Daze();
 			}
 		}

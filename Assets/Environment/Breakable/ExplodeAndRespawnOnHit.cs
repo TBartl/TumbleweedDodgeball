@@ -43,6 +43,12 @@ public class ExplodeAndRespawnOnHit : Hittable {
 		AudioManager.instance.PlayClipAtPoint(AudioManager.instance.destructibleBreak, transform.position);
 	}
 
+	void OnTriggerStay2D(Collider2D other) {
+		if (other.tag == "Smack") {
+			Hit(other.GetComponentInParent<PlayerData>(), Vector2.zero);
+		}
+	}
+
 	public void NoRespawn() {
 		shouldRespawn = false;
 	}

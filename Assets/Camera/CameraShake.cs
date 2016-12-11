@@ -7,13 +7,16 @@ public class CameraShake : MonoBehaviour {
 	public float shakeIntensity;
 	public int framesBetweenShake;
 
+	public static CameraShake S;
+
 	// Use this for initialization
-	void Start () {
+	void Awake () {
+		S = this;
 	
 	}
-	
-	public void StartShake() {
-		StartCoroutine(Shake(shakeIntensity));
+
+	public void StartShake(float dampen = 1) {
+		StartCoroutine(Shake(shakeIntensity * dampen));
 	}
 
 	IEnumerator Shake(float shakeAmount) {
