@@ -22,7 +22,7 @@ TagManager:
   - Ghostball
   - NoCollision
   - OOBEnforcer
-  - 
+  - IgnoreOOB
   - 
   - 
   - 
