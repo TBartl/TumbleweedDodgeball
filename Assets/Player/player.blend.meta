@@ -58,6 +58,8 @@ ModelImporter:
     100100: Crown
     100102: Fire
     100104: Lightning
+    100106: Cone
+    100108: HitNew
     400000: Armature
     400002: cape_L
     400004: cape_R
@@ -111,6 +113,8 @@ ModelImporter:
     400100: Crown
     400102: Fire
     400104: Lightning
+    400106: Cone
+    400108: HitNew
     2300000: Dazed
     2300002: Hit
     2300004: Plane
@@ -139,6 +143,8 @@ ModelImporter:
     4300014: Crown
     4300016: Fire
     4300018: Lightning
+    4300020: Cone
+    4300022: HitNew
     7400000: Default Take
     7400002: Idle
     7400004: PoseLib
@@ -153,6 +159,8 @@ ModelImporter:
     7400022: HandChargeR
     9500000: //RootNode
     13700000: LowPoly
+    13700002: Cone
+    13700004: HitNew
   materials:
     importMaterials: 1
     materialName: 0

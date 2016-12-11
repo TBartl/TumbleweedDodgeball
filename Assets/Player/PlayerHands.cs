@@ -27,7 +27,7 @@ public class PlayerHands : MonoBehaviour {
 
     public float aimAssistAngle;
 
-    public MeshRenderer smackEffect;
+	public Animator hitEffect;
     public float smackActive;
     public float smackWindDown;
 
@@ -42,11 +42,12 @@ public class PlayerHands : MonoBehaviour {
         playerData = GetComponentInParent<PlayerData>();
 		controller = GetComponentInParent<Controller>();
 		colorizer = GetComponentInParent<PlayerColorizer>();
-		smackEffect.enabled = false;
 		hitBoxIncrease = transform.parent.GetComponentInChildren<PlayerHitBoxIncrease>();
     }
 
     void Start() {
+		hitEffect.GetComponent<SkinnedMeshRenderer>().material = GlobalPlayerManager.inst.materials[playerData.num].mat;
+		hitEffect.gameObject.SetActive(false);
 		isChargingBall = new List<bool>(0);
 		isChargingBall.Add(false);
 		isChargingBall.Add(false);
@@ -233,20 +234,17 @@ public class PlayerHands : MonoBehaviour {
 		isPunching[hand] = true;
 		canSmack = false;
 
-        smackEffect.enabled = true;
-        smackEffect.gameObject.layer = LayerMask.NameToLayer("Default");
+		hitEffect.gameObject.SetActive(true);
+		if (hand == 0)
+			hitEffect.transform.localRotation = Quaternion.Euler(0, 180, 0);
+		else
+			hitEffect.transform.localRotation = Quaternion.identity;
 
 		AudioManager.instance.PlayClipAtPoint(AudioManager.instance.punch, transform.position);
 
-        for (float t = 0; t < smackActive; t += Time.deltaTime) {
-            smackEffect.transform.localPosition = Vector3.Lerp(
-                Vector3.forward * .1f,
-                Vector3.zero,
-                Mathf.Sin((t / smackActive) * Mathf.PI));
-            yield return null;
-        }
-        smackEffect.gameObject.layer = LayerMask.NameToLayer("NoCollision");
-        smackEffect.enabled = false;
+		hitEffect.Play(0);
+		yield return new WaitForSeconds(smackActive);
+		hitEffect.gameObject.SetActive(false);
 
 		isPunching[hand] = false;
 
