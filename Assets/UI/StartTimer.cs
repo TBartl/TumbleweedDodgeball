@@ -27,7 +27,8 @@ public class StartTimer : MonoBehaviour {
 		cameraPositions.Add(Camera.main.transform.position);
 		started = false;
 		foreach (GameObject go in PlayerManager.inst.players) {
-			cameraPositions.Add(go.transform.position + new Vector3(0, -1f, -3.5f));
+			if (go.activeSelf)
+				cameraPositions.Add(go.transform.position + new Vector3(0, -1f, -3.5f));
 		}
 
 		for (float t = 3; t > 0; t -= Time.deltaTime) {
