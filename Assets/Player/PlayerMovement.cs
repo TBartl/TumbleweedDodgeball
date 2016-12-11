@@ -66,38 +66,13 @@ public class PlayerMovement : MonoBehaviour {
     }
 
     public IEnumerator KnockBack(Vector2 velocityHit) {
-        for(float i = 0; i <= 1f; i += Time.deltaTime) {
-            rb.velocity = new Vector2(GenerateKnockBackSpeedX(velocityHit.x), 
-                                        GenerateKnockBackSpeedY(velocityHit.y));
+        for(float i = 0; i <= .2f; i += Time.deltaTime) {
+			this.transform.position += (Vector3)velocityHit * Time.deltaTime * .2f;
             yield return null;
         }
     }
 
-    float GenerateKnockBackSpeedX(float xVel) {
-        float knockBackX = 0f;
-        if (xVel > 0) {
-            if (xVel > 10f) knockBackX = 10f;
-            else knockBackX = xVel;
-        }
-        else {
-            if (xVel < -10f) knockBackX = -10f;
-            else knockBackX = xVel;
-        }
-        return knockBackX;
-    }
-
-    float GenerateKnockBackSpeedY(float yVel) {
-        float knockBackY = 0f;
-        if (yVel > 0) {
-            if (yVel > 10f) knockBackY = 10f;
-            else knockBackY = yVel;
-        }
-        else {
-            if (yVel < -10f) knockBackY = -10f;
-            else knockBackY = yVel;
-        }
-        return knockBackY;
-    }
+    
 
 	public float GetSpeed() {
 		return rb.velocity.magnitude;

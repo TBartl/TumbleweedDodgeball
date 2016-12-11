@@ -24,6 +24,8 @@ public class PlayerDaze : MonoBehaviour {
 				if (!AlreadyDazed()) {
 					AudioManager.instance.PlayClipAtPoint(AudioManager.instance.playerHit, transform.position);
 					CameraShake.S.StartShake(.5f);
+					Vector2 diff = (transform.position - other.transform.position).normalized;
+					StartCoroutine(movement.KnockBack(diff * 20f));
 				}
 				Daze();
 			}
