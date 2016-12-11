@@ -30,6 +30,7 @@ public class StartTimer : MonoBehaviour {
 			if (go.activeSelf)
 				cameraPositions.Add(go.transform.position + new Vector3(0, -1f, -3.5f));
 		}
+		cameraPositions.Add(Camera.main.transform.position);
 
 		for (float t = 3; t > 0; t -= Time.deltaTime) {
 			image.sprite = images[Mathf.CeilToInt(t)];
