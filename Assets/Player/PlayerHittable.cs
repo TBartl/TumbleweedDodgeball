@@ -25,7 +25,7 @@ public class PlayerHittable : Hittable {
         StartCoroutine(GetComponent<PlayerMovement>().KnockBack(velocityHit));
 		StartCoroutine(InvincibilityFrames());
 		if (source != null)
-			ScoreManager.inst.IncrementScore(source.num);
+			ScoreManager.inst.IncrementScore(source.num, playerData.num);
 		ScoreManager.inst.DecrementScore(playerData.num);
 
 		//AudioManager.instance.PlayClipAtPoint(AudioManager.instance.playerHit, transform.position);

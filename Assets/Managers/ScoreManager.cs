@@ -21,9 +21,14 @@ public class ScoreManager : MonoBehaviour {
         addHitUI = GameObject.Find("Canvas").GetComponent<PlayerScoreUI>();
 	}
     
-	public void IncrementScore(int playerID) {
+	public void IncrementScore(int playerID, int hitID) {
 		if (playerID >= 0 && playerID <= 4) {
-			scores[playerID] += 2;
+			if (GetLeader() == hitID) {
+				scores[playerID] += 3;
+			}
+			else {
+				scores[playerID] += 2;
+			}
 			addHitUI.UpdateScore(playerID, scores[playerID]);
             InitNumberShown(positiveScore, playerID);
 			UpdateLeader();
