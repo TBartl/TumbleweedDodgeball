@@ -5205,6 +5205,7 @@ GameObject:
   - 81: {fileID: 1002217757}
   - 114: {fileID: 1002217762}
   - 114: {fileID: 1002217763}
+  - 114: {fileID: 1002217764}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -5310,6 +5311,20 @@ MonoBehaviour:
   minZ: -31
   maxZ: -9
   cameraTransform: {fileID: 0}
+--- !u!114 &1002217764
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1002217756}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2854b53a8862e8c42af4c6b91fdabccd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  numFrames: 15
+  shakeIntensity: 0.5
+  framesBetweenShake: 2
 --- !u!1 &1003966744
 GameObject:
   m_ObjectHideFlags: 0
@@ -10635,6 +10650,11 @@ Prefab:
         type: 2}
       propertyPath: m_Pivot.x
       value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 224000014227228356, guid: 7195cefd3cff64240bb942110d4250b7,
+        type: 2}
+      propertyPath: m_SizeDelta.y
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7195cefd3cff64240bb942110d4250b7, type: 2}

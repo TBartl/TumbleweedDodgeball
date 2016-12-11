@@ -36,9 +36,9 @@ public class TutorialManager : MonoBehaviour {
 		for (int i = 0; i < 4; ++i) {
 			if (Players[i].activeSelf) {
 				Image temp = Checks[i].GetComponent<Image>();
-				temp.color = PlayerManager.inst.GetColor(i);
+				temp.color = PlayerManager.inst.GetColor(Players[i].GetComponent<PlayerData>().num);
 				temp = CheckEnd[i].GetComponent<Image>();
-				temp.color = PlayerManager.inst.GetColor(i);
+				temp.color = PlayerManager.inst.GetColor(Players[i].GetComponent<PlayerData>().num);
 			}
 		}
  		StartCoroutine(RunTutorial());
