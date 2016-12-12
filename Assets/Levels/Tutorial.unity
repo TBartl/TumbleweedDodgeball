@@ -1655,6 +1655,11 @@ Prefab:
       propertyPath: m_RootOrder
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 114000014152536670, guid: b3ae7bc4841fac742a87a3eba09fe7d4,
+        type: 2}
+      propertyPath: type
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b3ae7bc4841fac742a87a3eba09fe7d4, type: 2}
   m_IsPrefabParent: 0
@@ -4846,6 +4851,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 36f6ec54f8d0649a4ac7088233f91158, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  images: []
+  curve:
+    serializedVersion: 2
+    m_Curve: []
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!114 &1517173260
 MonoBehaviour:
   m_ObjectHideFlags: 0
