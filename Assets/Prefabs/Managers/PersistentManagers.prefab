@@ -290,10 +290,10 @@ MonoBehaviour:
     clip: {fileID: 8300000, guid: 991f9ab7ac775dc4d91ea9d5e7c7b9e4, type: 3}
     volume: 1
   gamePlayMusic:
-    clip: {fileID: 8300000, guid: 0fa7946ff6e151147bc56ad6a5953d2d, type: 3}
+    clip: {fileID: 8300000, guid: 2b1378dabface4e49b87309c482359fb, type: 3}
     volume: 0.03
   menuMusic:
-    clip: {fileID: 8300000, guid: 69049731d726e8b4b9a4c2b8432b6e9b, type: 3}
+    clip: {fileID: 8300000, guid: 7c736509f966f4846b82701c087a52e5, type: 3}
     volume: 0.03
   timer:
     clip: {fileID: 8300000, guid: 8428a376ee0078c47a2075e42106aba6, type: 3}
@@ -307,4 +307,4 @@ MonoBehaviour:
   back:
     clip: {fileID: 8300000, guid: 5b63659a0bf89ec43ab3782c9019087e, type: 3}
     volume: 0.05
-  type: 1
+  type: 0
