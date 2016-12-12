@@ -345,7 +345,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hotness: {fileID: 0}
-  catchable: 1
+  smackable: 1
   maxScale: 3.5
   growRate: 2
   shrinkRate: 4

@@ -1265,6 +1265,8 @@ MonoBehaviour:
     type: 2}
   negativeScore: {fileID: 1000013062126018, guid: fe8a858d303e1ad4c90b0514068774fb,
     type: 2}
+  positiveScore3: {fileID: 1000010302374362, guid: a04beea89c90b714b95225564790af11,
+    type: 2}
   endScoreText: {fileID: 1000014187738982}
 --- !u!114 &114000010723926732
 MonoBehaviour:

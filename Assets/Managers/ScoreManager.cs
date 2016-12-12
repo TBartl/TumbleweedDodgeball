@@ -10,6 +10,7 @@ public class ScoreManager : MonoBehaviour {
 	public PlayerScoreUI addHitUI;
     public GameObject positiveScore;
     public GameObject negativeScore;
+	public GameObject positiveScore3;
     public GameObject endScoreText;
 
 	int[] scores = new int[4];
@@ -25,12 +26,13 @@ public class ScoreManager : MonoBehaviour {
 		if (playerID >= 0 && playerID <= 4) {
 			if (GetLeader() == hitID) {
 				scores[playerID] += 3;
+				InitNumberShown(positiveScore3, playerID);
 			}
 			else {
 				scores[playerID] += 2;
+				InitNumberShown(positiveScore, playerID);
 			}
 			addHitUI.UpdateScore(playerID, scores[playerID]);
-            InitNumberShown(positiveScore, playerID);
 			UpdateLeader();
 		}
 	}
