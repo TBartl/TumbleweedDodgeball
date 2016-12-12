@@ -29,7 +29,7 @@ public class BallTrail : MonoBehaviour {
 				hot = hotness.GetIsHot();
 				if (hot) {
 					trailObject = Instantiate(trailPrefab);
-					trailObject.transform.position = transform.position;
+					trailObject.transform.position = new Vector3(transform.position.x, transform.position.y, -1);
 					trail = trailObject.GetComponent<ParticleSystem>();
 					trailObject.GetComponent<BallTrailCollider>().SetBallSource(ballSource);
 				}

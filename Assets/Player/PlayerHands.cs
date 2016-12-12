@@ -109,7 +109,7 @@ public class PlayerHands : MonoBehaviour {
     }
 
     IEnumerator ChargeThrowBall() {
-		hitBoxIncrease.Enable();
+		//hitBoxIncrease.Enable();
 
 		doingSomething = true;
         //Get variables for this player's available powerups 
@@ -205,7 +205,7 @@ public class PlayerHands : MonoBehaviour {
 			}
         }
 
-		hitBoxIncrease.Disable();
+		//hitBoxIncrease.Disable();
 
         for (float t = 0; t < rethrowDelay; t += Time.deltaTime)
             yield return null;

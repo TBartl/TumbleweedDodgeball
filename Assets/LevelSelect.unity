@@ -731,8 +731,6 @@ GameObject:
   - 4: {fileID: 227779976}
   - 50: {fileID: 227779975}
   - 58: {fileID: 227779974}
-  - 114: {fileID: 227779973}
-  - 114: {fileID: 227779972}
   m_Layer: 0
   m_Name: BallBoomerang
   m_TagString: Ball
@@ -740,34 +738,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &227779972
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 114000010581076140, guid: 0a6f145c5281e40d38ed934f1ff0200f,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 227779971}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 16d3717a149064d45aca212714a041e2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  threshold: 5
-  speedBoost: 6
---- !u!114 &227779973
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 114000010143438534, guid: 0a6f145c5281e40d38ed934f1ff0200f,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 227779971}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5adecbe590968ca419fe004ddcc051e5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  hotness: {fileID: 0}
-  catchable: 1
 --- !u!58 &227779974
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -1556,9 +1526,6 @@ GameObject:
   - 4: {fileID: 803743628}
   - 50: {fileID: 803743627}
   - 58: {fileID: 803743626}
-  - 114: {fileID: 803743625}
-  - 114: {fileID: 803743624}
-  - 114: {fileID: 803743623}
   m_Layer: 0
   m_Name: Ghostball
   m_TagString: Ball
@@ -1566,45 +1533,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &803743623
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 114000013847930722, guid: 54c485bef553f9c408403abcb9ffd4f1,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 803743622}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8816d516b2e4adc4e85f8bee31738e03, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &803743624
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 114000013211762436, guid: 54c485bef553f9c408403abcb9ffd4f1,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 803743622}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ee9197d361aa2a74eb560ee75b5508bc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  threshold: 5
---- !u!114 &803743625
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 114000010143438534, guid: 54c485bef553f9c408403abcb9ffd4f1,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 803743622}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5adecbe590968ca419fe004ddcc051e5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  hotness: {fileID: 0}
-  catchable: 1
 --- !u!58 &803743626
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -2411,8 +2339,6 @@ GameObject:
   - 4: {fileID: 1082572421}
   - 50: {fileID: 1082572420}
   - 58: {fileID: 1082572419}
-  - 114: {fileID: 1082572418}
-  - 114: {fileID: 1082572417}
   m_Layer: 0
   m_Name: BallFast
   m_TagString: Ball
@@ -2420,34 +2346,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1082572417
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 114000012249835244, guid: f2a2b5cf0a110474badd347b37341cf7,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1082572416}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ee9197d361aa2a74eb560ee75b5508bc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  threshold: 5
---- !u!114 &1082572418
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 114000010761128094, guid: f2a2b5cf0a110474badd347b37341cf7,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1082572416}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ec0d9fd43bd77f8489287ed42f459d86, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  hotness: {fileID: 0}
-  catchable: 1
-  multiplier: 3
 --- !u!58 &1082572419
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -2649,8 +2547,6 @@ GameObject:
   - 4: {fileID: 1191724039}
   - 50: {fileID: 1191724038}
   - 58: {fileID: 1191724037}
-  - 114: {fileID: 1191724036}
-  - 114: {fileID: 1191724035}
   m_Layer: 0
   m_Name: SlowGrow
   m_TagString: Ball
@@ -2658,36 +2554,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1191724035
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 114000012208738378, guid: 27ed9d0183a61314ca26dc691d88c323,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1191724034}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f735e89dea78c3e48baa8ebede547518, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  hotness: {fileID: 0}
-  catchable: 1
-  maxScale: 3.5
-  growRate: 2
-  shrinkRate: 4
---- !u!114 &1191724036
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 114000010179219912, guid: 27ed9d0183a61314ca26dc691d88c323,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1191724034}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 117a2d3fb9e96fe46b42ac3270457daf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  threshold: 5
 --- !u!58 &1191724037
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -3341,9 +3207,6 @@ GameObject:
   - 4: {fileID: 1498580892}
   - 50: {fileID: 1498580891}
   - 58: {fileID: 1498580890}
-  - 114: {fileID: 1498580889}
-  - 114: {fileID: 1498580888}
-  - 114: {fileID: 1498580887}
   m_Layer: 0
   m_Name: BallHoming
   m_TagString: Ball
@@ -3351,47 +3214,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1498580887
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 114000011369388026, guid: b2c7abea858219c4f8182ed793f0a451,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1498580886}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ee9197d361aa2a74eb560ee75b5508bc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  threshold: 5
---- !u!114 &1498580888
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 114000012855236000, guid: b2c7abea858219c4f8182ed793f0a451,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1498580886}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ddcce71ee69bf9a41ac23d8a4e6fe253, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  aggressiveness: 3
-  seekThreshold: 5
---- !u!114 &1498580889
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 114000010143438534, guid: b2c7abea858219c4f8182ed793f0a451,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1498580886}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5adecbe590968ca419fe004ddcc051e5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  hotness: {fileID: 0}
-  catchable: 1
 --- !u!58 &1498580890
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -4373,8 +4195,6 @@ GameObject:
   - 4: {fileID: 1812024742}
   - 50: {fileID: 1812024741}
   - 58: {fileID: 1812024740}
-  - 114: {fileID: 1812024739}
-  - 114: {fileID: 1812024738}
   m_Layer: 0
   m_Name: BallCombo
   m_TagString: Ball
@@ -4382,34 +4202,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1812024738
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 114000010765540912, guid: 32cdaa252eb8fcf48b67ed6909222168,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1812024737}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4bfefb0fe5639174d920e69c91f21820, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  threshold: 5
-  speedBoost: 20
---- !u!114 &1812024739
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 114000010143438534, guid: 32cdaa252eb8fcf48b67ed6909222168,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1812024737}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5adecbe590968ca419fe004ddcc051e5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  hotness: {fileID: 0}
-  catchable: 1
 --- !u!58 &1812024740
 CircleCollider2D:
   m_ObjectHideFlags: 0
