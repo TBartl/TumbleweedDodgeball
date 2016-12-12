@@ -8,7 +8,13 @@ public class Ball : MonoBehaviour {
 	BallGlow glow;
 	[HideInInspector]
 	public BallHotness hotness;
-	public bool catchable;
+	public bool smackable;
+
+	float knockbackSpeed = 20;
+
+	float maxTorqueMag = 100;
+
+	BallSource source;
 
 	void Awake() {
 		rb = this.GetComponent<Rigidbody2D>();
@@ -16,6 +22,7 @@ public class Ball : MonoBehaviour {
 		bounce = this.GetComponentInChildren<BounceVertical>();
 		glow = this.GetComponent<BallGlow>();
 		hotness = this.GetComponent<BallHotness>();
+		source = GetComponent<BallSource>();
 	}
 
 	public void Grab(int ID) {
@@ -33,6 +40,15 @@ public class Ball : MonoBehaviour {
 		bounce.Reset();
 		hotness.makeHot();
 
+		rb.AddTorque(Random.Range(-maxTorqueMag, maxTorqueMag));
+
 		AudioManager.instance.PlayClipAtPoint(AudioManager.instance.throwSound, transform.position);
+	}
+
+	public void OnTriggerEnter2D(Collider2D coll) {
+		if (hotness.GetIsHot() && smackable && coll.tag == "Smack") {
+			rb.velocity = (transform.position - coll.transform.position).normalized * knockbackSpeed;
+			source.SetThrower(coll.gameObject.transform.parent.transform.parent.GetComponent<PlayerData>());
+		}
 	}
 }

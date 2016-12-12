@@ -7,8 +7,6 @@ public class BallTrail : MonoBehaviour {
 	bool hot = false;
 	ParticleSystem trail;
 	GameObject trailObject;
-	EdgeCollider2D trailCollider;
-	Vector3 prevPosition;
 	BallSource ballSource;
 
 	public GameObject trailPrefab;

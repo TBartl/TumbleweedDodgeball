@@ -23,13 +23,4 @@ public class BallParticles : MonoBehaviour {
 			}
 		}
 	}
-
-	//IEnumerator PlayParticles() {
-	//	particles.startColor = PlayerManager.inst.GetColor(source.GetThrower().num);
-	//	particles.Play();
-	//	for (int i = 0; i < numFrames; ++i) {
-	//		yield return null;
-	//	}
-	//	particles.Stop();
-	//}
 }

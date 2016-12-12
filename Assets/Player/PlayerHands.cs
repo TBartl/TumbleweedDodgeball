@@ -66,20 +66,20 @@ public class PlayerHands : MonoBehaviour {
     }
 
     void Update() {
-        if (!doingSomething) {
-            //For both hands
-            for (int i = 0; i < 2; i++) {
-                if (controller.GetHandActionDown(i)) {
-                    if (balls[i] != null) {
-                        StartCoroutine(ChargeThrowBall());
-                    }
-                    else if (canSmack)
-                        StartCoroutine(Smack(i));
-                    break;
-                }
-            }
-        }
-    }
+		if (!doingSomething) {
+			//For both hands
+			for (int i = 0; i < 2; i++) {
+				if (controller.GetHandActionDown(i)) {
+					if (balls[i] != null) {
+						StartCoroutine(ChargeThrowBall());
+					}
+					else if (canSmack)
+						StartCoroutine(Smack(i));
+					break;
+				}
+			}
+		}
+	}
 
     void LateUpdate() {
         for (int i = 0; i < balls.Count; i++) {
@@ -263,15 +263,13 @@ public class PlayerHands : MonoBehaviour {
                 Ball b = other.GetComponent<Ball>();
 
                 bool leftTriggerHeld = controller.GetHandActionHeld(0);
-                bool leftTriggerDown = controller.GetHandActionDown(0);
                 bool rightTriggerHeld = controller.GetHandActionHeld(1);
-                bool rightTriggerDown = controller.GetHandActionDown(1);
                 bool ballIsHot = b.hotness.GetIsHot();
 
-                if (balls[0] == null && ((ballIsHot && leftTriggerDown && b.catchable) || (!ballIsHot && leftTriggerHeld))) {
+                if (balls[0] == null && (!ballIsHot && leftTriggerHeld)) {
                     StartCoroutine(AddBall(b, 0));
                 }
-                else if (balls[1] == null && ((ballIsHot && rightTriggerDown && b.catchable) || (!ballIsHot && rightTriggerHeld))) {
+                else if (balls[1] == null && (!ballIsHot && rightTriggerHeld)) {
                     StartCoroutine(AddBall(b, 1));
                 }
 
