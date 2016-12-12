@@ -30,10 +30,12 @@ public class CameraMovement : MonoBehaviour {
 		float minX = float.MaxValue, maxX = float.MinValue, minY = float.MaxValue, maxY = float.MinValue;
 
 		foreach (Transform transform in playerTransforms) {
-			minX = Mathf.Min(minX, transform.position.x);
-			maxX = Mathf.Max(maxX, transform.position.x);
-			minY = Mathf.Min(minY, transform.position.y);
-			maxY = Mathf.Max(maxY, transform.position.y);
+			if (transform.gameObject.activeSelf) {
+				minX = Mathf.Min(minX, transform.position.x);
+				maxX = Mathf.Max(maxX, transform.position.x);
+				minY = Mathf.Min(minY, transform.position.y);
+				maxY = Mathf.Max(maxY, transform.position.y);
+			}
 		}
 
 		float yOffset = cameraTransform.position.z * (maxYOffset - minYOffset) / (zoom.maxZ - zoom.minZ);
