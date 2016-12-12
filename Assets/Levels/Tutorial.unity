@@ -3506,6 +3506,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   panel: {fileID: 843506162}
   numFrames: 25
+  cameraOffset: 3
+  cameraTransform: {fileID: 0}
+  doCameraPan: 0
 --- !u!1 &1215845249
 GameObject:
   m_ObjectHideFlags: 0
@@ -5136,6 +5139,7 @@ MonoBehaviour:
     type: 2}
   negativeScore: {fileID: 1000013062126018, guid: fe8a858d303e1ad4c90b0514068774fb,
     type: 2}
+  positiveScore3: {fileID: 0}
   endScoreText: {fileID: 301196484}
 --- !u!1 &1577516240
 GameObject:

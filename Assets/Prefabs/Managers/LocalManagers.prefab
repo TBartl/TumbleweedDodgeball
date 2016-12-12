@@ -1864,6 +1864,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   panel: {fileID: 114000013938029104}
   numFrames: 25
+  cameraOffset: 3
+  cameraTransform: {fileID: 0}
+  doCameraPan: 1
 --- !u!114 &114000013640028942
 MonoBehaviour:
   m_ObjectHideFlags: 1

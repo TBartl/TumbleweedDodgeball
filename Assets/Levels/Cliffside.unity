@@ -864,25 +864,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 2
       objectReference: {fileID: 0}
-    - target: {fileID: 114000010754467132, guid: 7195cefd3cff64240bb942110d4250b7,
+    - target: {fileID: 114000013639979814, guid: 7195cefd3cff64240bb942110d4250b7,
         type: 2}
-      propertyPath: players.Array.data[0]
-      value: 
-      objectReference: {fileID: 1614241990}
-    - target: {fileID: 114000010754467132, guid: 7195cefd3cff64240bb942110d4250b7,
-        type: 2}
-      propertyPath: players.Array.data[1]
-      value: 
-      objectReference: {fileID: 1037375785}
-    - target: {fileID: 224000014227228356, guid: 7195cefd3cff64240bb942110d4250b7,
-        type: 2}
-      propertyPath: m_SizeDelta.y
-      value: 34.157307
-      objectReference: {fileID: 0}
-    - target: {fileID: 224000013431957010, guid: 7195cefd3cff64240bb942110d4250b7,
-        type: 2}
-      propertyPath: m_SizeDelta.y
-      value: 55.73034
+      propertyPath: doCameraPan
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7195cefd3cff64240bb942110d4250b7, type: 2}
@@ -2011,11 +1996,6 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 9248d7b7c3bc46940a4b55d0939b9fe8, type: 2}
   m_IsPrefabParent: 0
---- !u!1 &1037375785 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1000010031701256, guid: 9248d7b7c3bc46940a4b55d0939b9fe8,
-    type: 2}
-  m_PrefabInternal: {fileID: 1037375784}
 --- !u!4 &1037375786 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4000010533420606, guid: 9248d7b7c3bc46940a4b55d0939b9fe8,
@@ -2984,11 +2964,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 80662470}
   m_RootOrder: 25
---- !u!1 &1614241990 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1000010031701256, guid: 9248d7b7c3bc46940a4b55d0939b9fe8,
-    type: 2}
-  m_PrefabInternal: {fileID: 2076264123}
 --- !u!1001 &1635210340
 Prefab:
   m_ObjectHideFlags: 0
