@@ -15,7 +15,7 @@ public class AudioManager : MonoBehaviour {
 	[SerializeField]
 	public AudioClipWithVolume throwSound, playerHit, otherHit,
 		destructibleBreak, wind, punch, moo, powerup, trainWhistle,
-		gamePlayMusic, menuMusic, timer, tick, confirm, back;
+		gamePlayMusic, menuMusic, timer, tick, confirm, back, crash;
 
 	public enum SceneType { MENU, GAMEPLAY }
 

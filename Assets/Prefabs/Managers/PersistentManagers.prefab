@@ -307,4 +307,7 @@ MonoBehaviour:
   back:
     clip: {fileID: 8300000, guid: 5b63659a0bf89ec43ab3782c9019087e, type: 3}
     volume: 0.05
+  crash:
+    clip: {fileID: 8300000, guid: 95b7a10b599440f45af66454398479da, type: 3}
+    volume: 0.5
   type: 0

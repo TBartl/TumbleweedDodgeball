@@ -137,7 +137,7 @@ Prefab:
     - target: {fileID: 224000012976891960, guid: c6f13534ae8523c4b920e98b6124800c,
         type: 2}
       propertyPath: m_SizeDelta.y
-      value: 0
+      value: 74.888885
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c6f13534ae8523c4b920e98b6124800c, type: 2}
@@ -862,7 +862,7 @@ Prefab:
     - target: {fileID: 224000012976891960, guid: c6f13534ae8523c4b920e98b6124800c,
         type: 2}
       propertyPath: m_SizeDelta.y
-      value: 0
+      value: 74.888885
       objectReference: {fileID: 0}
     - target: {fileID: 224000011390043288, guid: c6f13534ae8523c4b920e98b6124800c,
         type: 2}
@@ -1548,7 +1548,7 @@ Prefab:
     - target: {fileID: 224000012976891960, guid: c6f13534ae8523c4b920e98b6124800c,
         type: 2}
       propertyPath: m_SizeDelta.y
-      value: 0
+      value: 74.888885
       objectReference: {fileID: 0}
     - target: {fileID: 224000011390043288, guid: c6f13534ae8523c4b920e98b6124800c,
         type: 2}
@@ -1796,6 +1796,16 @@ Prefab:
       propertyPath: m_RootOrder
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 114000014152536670, guid: b3ae7bc4841fac742a87a3eba09fe7d4,
+        type: 2}
+      propertyPath: fireworks.clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 6ed3bba2f6252f047a8593cd13e0511f, type: 3}
+    - target: {fileID: 114000014152536670, guid: b3ae7bc4841fac742a87a3eba09fe7d4,
+        type: 2}
+      propertyPath: fireworks.volume
+      value: 0.5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b3ae7bc4841fac742a87a3eba09fe7d4, type: 2}
   m_IsPrefabParent: 0
@@ -2008,7 +2018,7 @@ Prefab:
     - target: {fileID: 224000012976891960, guid: c6f13534ae8523c4b920e98b6124800c,
         type: 2}
       propertyPath: m_SizeDelta.y
-      value: 0
+      value: 74.888885
       objectReference: {fileID: 0}
     - target: {fileID: 224000011390043288, guid: c6f13534ae8523c4b920e98b6124800c,
         type: 2}

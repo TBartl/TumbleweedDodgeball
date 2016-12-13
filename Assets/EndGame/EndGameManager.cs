@@ -27,6 +27,9 @@ public class EndGameManager : MonoBehaviour {
     int numActivePlayersInGame = 0;
     int maxHeigthBar = 7;
 
+	public float delay;
+	List<int> heights;
+
     void Awake() {
         //get controllers 
         controllers = new Controller[InputManager.Devices.Count];
@@ -48,19 +51,29 @@ public class EndGameManager : MonoBehaviour {
         }
 
         List<int> heightsOfBars = new List<int>();
-        //move bars around given number of players
-        if (numActivePlayersInGame == 2) InitTwoBars();
-        else if (numActivePlayersInGame == 3) InitThreeBars();
+		//move bars around given number of players
+		if (numActivePlayersInGame == 2) {
+			InitTwoBars();
+		}
+		else if (numActivePlayersInGame == 3) {
+			InitThreeBars();
+		}
         //else leave bars as is  
-        List<int> heights = GenerateHeightsBasedOnScore();
-        //grow the bars based on the sorted scores
-        for (int i = 0; i < numActivePlayersInGame; ++i) {
-            StartCoroutine(activeBars[i].GetComponent<GrowingScoreBarManager>().GrowToPos(heights[i]));
-        }
+        heights = GenerateHeightsBasedOnScore();
+		//grow the bars based on the sorted scores
+
+		Invoke("StartBarsGrowing", delay);
 
         //display restart text
         StartCoroutine(ShowRestartInput());
     }
+
+	void StartBarsGrowing() {
+		for (int i = 0; i < numActivePlayersInGame; ++i) {
+
+			StartCoroutine(activeBars[i].GetComponent<GrowingScoreBarManager>().GrowToPos(heights[i]));
+		}
+	}
 
     void Update() {
         if (checkForRestartInput) GetPlayerInput();
