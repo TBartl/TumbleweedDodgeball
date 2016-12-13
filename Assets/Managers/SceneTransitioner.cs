@@ -9,7 +9,7 @@ public class SceneTransitioner : MonoBehaviour {
 
 	public Image panel;
 	public int numFrames;
-	public float cameraOffset;
+	public float cameraTransitionAngle;
 
 	public Transform cameraTransform;
 	public bool doCameraPan;
@@ -23,12 +23,12 @@ public class SceneTransitioner : MonoBehaviour {
 
 	IEnumerator FadeIn(string scene) {
 		Controller.Lock();
-		Vector3 originalPosition = cameraTransform.position;
-		Vector3 finalPosition = new Vector3(originalPosition.x + cameraOffset, originalPosition.y, originalPosition.z);
+		Quaternion originalRotation = cameraTransform.rotation;
+		Quaternion finalRotation = originalRotation * Quaternion.AngleAxis(cameraTransitionAngle, new Vector3(0, 1, 0));
 		for (int i = 0; i < numFrames; ++i) {
 			panel.color = new Color(panel.color.r, panel.color.g, panel.color.b, (float) i / (float) numFrames);
 			if (doCameraPan) {
-				cameraTransform.position = Vector3.Lerp(originalPosition, finalPosition, (float)i / (float)numFrames);
+				cameraTransform.rotation = Quaternion.Lerp(originalRotation, finalRotation, (float)i / (float)numFrames);
 			}
 			yield return null;
 		}
@@ -36,12 +36,12 @@ public class SceneTransitioner : MonoBehaviour {
 	}
 
 	IEnumerator FadeOut() {
-		Vector3 originalPosition = cameraTransform.position;
-		Vector3 finalPosition = new Vector3(originalPosition.x - cameraOffset, originalPosition.y, originalPosition.z);
+		Quaternion originalRotation = cameraTransform.rotation;
+		Quaternion finalRotation = originalRotation * Quaternion.AngleAxis(-cameraTransitionAngle, new Vector3(0, 1, 0));
 		for (int i = numFrames - 1; i >= 0; --i) {
 			panel.color = new Color(panel.color.r, panel.color.g, panel.color.b, (float) i / (float) numFrames);
 			if (doCameraPan) {
-				cameraTransform.position = Vector3.Lerp(originalPosition, finalPosition, (float)i / (float)numFrames);
+				cameraTransform.rotation = Quaternion.Lerp(originalRotation, finalRotation, (float) i / (float) numFrames);
 			}
 			yield return null;
 		}

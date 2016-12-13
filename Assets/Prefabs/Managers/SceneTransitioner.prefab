@@ -53,6 +53,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   panel: {fileID: 0}
   numFrames: 25
-  cameraOffset: 3
+  cameraTransitionAngle: 45
   cameraTransform: {fileID: 0}
   doCameraPan: 1
