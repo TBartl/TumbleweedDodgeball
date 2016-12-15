@@ -6,7 +6,7 @@ public class GrowingScoreBarManager : MonoBehaviour {
     public GameObject fireworks;
     public float winningHeight;
 
-    float growthFrameToFrame = 0.1f;
+    float growthFrameToFrame = 0.05f;
 
 	public AudioSource fireworksAudio, drumRollAudio;
 

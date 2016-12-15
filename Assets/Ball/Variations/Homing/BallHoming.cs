@@ -34,13 +34,15 @@ public class BallHoming : MonoBehaviour {
         GameObject closestPlayer = null;
 		float shortestDistance = float.MaxValue;
         foreach (GameObject player in PlayerManager.inst.players) {
-            float thisDistance = DistanceToPlayer(player);
-            if (closestPlayer == null || thisDistance < shortestDistance) {
-                if (ballSource.GetThrower() == player.GetComponent<PlayerData>())
-					continue;
-                closestPlayer = player;
-                shortestDistance = thisDistance;
-            }
+			if (player.activeSelf) {
+				float thisDistance = DistanceToPlayer(player);
+				if (closestPlayer == null || thisDistance < shortestDistance) {
+					if (ballSource.GetThrower() == player.GetComponent<PlayerData>())
+						continue;
+					closestPlayer = player;
+					shortestDistance = thisDistance;
+				}
+			}
         }
         return closestPlayer;
     }
