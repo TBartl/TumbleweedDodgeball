@@ -6,7 +6,6 @@ public class BallHotnessCombo : BallHotness {
 	public float speedBoost = 10f;
 	List<PlayerData> alreadyHit = new List<PlayerData>();
 
-
 	protected override void OnHitOther(GameObject other) {
 		if (other.tag == "Player") {
 			PlayerData otherData = other.GetComponent<PlayerData>();
@@ -26,7 +25,7 @@ public class BallHotnessCombo : BallHotness {
 				alreadyHit.Add(otherData);
 				
 				// If we've hit everyone we can destroy this
-				if (alreadyHit.Count == PlayerManager.inst.players.Count - 1)
+				if (alreadyHit.Count == PlayerManager.inst.GetNumActivePlayers() - 1)
 					Destroy(this.gameObject);
 			}
 
@@ -51,6 +50,9 @@ public class BallHotnessCombo : BallHotness {
 					continue;
 				if (alreadyHit.Contains(player.GetComponent<PlayerData>()))
 					continue;
+				if (!player.activeSelf) {
+					continue;
+				}
 				closestPlayer = player;
 				shortestDistance = thisDistance;
 			}

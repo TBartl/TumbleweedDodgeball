@@ -9,6 +9,8 @@ public class PlayerManager : MonoBehaviour {
 	public List<GameObject> players;
 	public List<PlayerColor> colors;
 
+	private int numActivePlayers = -1;
+
 	public void Awake() {
 		if (inst == null)
 			inst = this;
@@ -30,6 +32,13 @@ public class PlayerManager : MonoBehaviour {
 			} else {
 				players[i].GetComponent<PlayerData>().num = i;
 				curCount++;
+			}
+		}
+
+		numActivePlayers = 0;
+		foreach (GameObject player in players) {
+			if (player.activeSelf) {
+				++numActivePlayers;
 			}
 		}
 
@@ -63,4 +72,8 @@ public class PlayerManager : MonoBehaviour {
     public void UnfreezePlayers() {
         Controller.canMove = true;
     }
+
+	public int GetNumActivePlayers() {
+		return numActivePlayers;
+	}
 }
