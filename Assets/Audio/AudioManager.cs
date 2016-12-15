@@ -72,6 +72,7 @@ public class AudioManager : MonoBehaviour {
 			case SceneType.GAMEPLAY:
 				musicSource.clip = gamePlayMusic.clip;
 				musicSource.volume = gamePlayMusic.volume;
+				StartMusic();
 				break;
 		}
 	}

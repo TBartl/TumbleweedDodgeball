@@ -35,7 +35,7 @@ public class StartTimer : MonoBehaviour {
 		for (float t = 3; t > 0; t -= Time.deltaTime) {
 			image.sprite = images[Mathf.CeilToInt(t)];
 			if (Mathf.Ceil(t) != prev) {
-				AudioManager.instance.PlayClip(AudioManager.instance.timer);
+				//AudioManager.instance.PlayClip(AudioManager.instance.timer);
 				prev = Mathf.Ceil(t);
 			}
 
@@ -55,8 +55,8 @@ public class StartTimer : MonoBehaviour {
 		image.sprite = images[0];
 		started = true;
 
-		AudioManager.instance.PlayClip(AudioManager.instance.timer);
-		AudioManager.instance.StartMusic();
+		//AudioManager.instance.PlayClip(AudioManager.instance.timer);
+		//AudioManager.instance.StartMusic();
 		for (float t = 0; t < 1f; t += Time.deltaTime)
 			yield return null;
 

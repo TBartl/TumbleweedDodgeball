@@ -290,8 +290,8 @@ MonoBehaviour:
     clip: {fileID: 8300000, guid: 991f9ab7ac775dc4d91ea9d5e7c7b9e4, type: 3}
     volume: 1
   gamePlayMusic:
-    clip: {fileID: 8300000, guid: 2b1378dabface4e49b87309c482359fb, type: 3}
-    volume: 0.03
+    clip: {fileID: 8300000, guid: e8062b29d32e07d4ca25201d49d07d97, type: 3}
+    volume: 0.08
   menuMusic:
     clip: {fileID: 8300000, guid: 7c736509f966f4846b82701c087a52e5, type: 3}
     volume: 0.03
