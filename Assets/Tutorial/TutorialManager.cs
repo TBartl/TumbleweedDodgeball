@@ -76,18 +76,18 @@ public class TutorialManager : MonoBehaviour {
 		yield return new WaitForSeconds(waitTime);
 		ChangeTask();
 
-//		text.text = "Use A to Dash in the Direction of Movement";
-//		while (!CheckTaskDone()) {
-//			for (int i = 0; i < 4; i++) {
-//				if (Players[i].activeSelf == false)
-//					continue;
-//				if (Players[i].GetComponent<Rigidbody2D>().velocity.magnitude > 8)
-//					Checks[i].SetActive(true);
-//			}
-//			yield return null;
-//		}
-//		yield return new WaitForSeconds(waitTime);
-//		ChangeTask();
+		text.text = "Use A to Dash in the Direction of Movement";
+		while (!CheckTaskDone()) {
+			for (int i = 0; i < 4; i++) {
+				if (Players[i].activeSelf == false)
+					continue;
+				if (Players[i].GetComponent<Rigidbody2D>().velocity.magnitude > 8)
+					Checks[i].SetActive(true);
+			}
+			yield return null;
+		}
+		yield return new WaitForSeconds(waitTime);
+		ChangeTask();
 
 		text.text = "Use Bumpers to Punch with a Free Hand";
 		while (!CheckTaskDone()) {
