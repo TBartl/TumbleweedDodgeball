@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Name: playerCol6
   m_EditorClassIdentifier: 
   mat: {fileID: 2100000, guid: cbd2a1720873949b2a091ea2d53b45f9, type: 2}
-  col: {r: 0.7058823, g: 0.7058823, b: 0.7058823, a: 1}
+  col: {r: 0.8, g: 0.8, b: 0.8, a: 1}
