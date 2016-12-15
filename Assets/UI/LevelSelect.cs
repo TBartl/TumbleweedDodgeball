@@ -7,10 +7,7 @@ using InControl;
 public class LevelSelect : MonoBehaviour {
 
 	private int currentLevel = 0;
-	public GameObject[] levelMarkers = new GameObject[4];
-	public GameObject controlMarker;
-
-	private bool controlSelected = false;
+	public GameObject[] levelMarkers;
 
 	public GameObject controllerPrefab;
 	Controller[] controllers;
@@ -62,76 +59,53 @@ public class LevelSelect : MonoBehaviour {
 	}
 
 	void GetInput(int num) {
-		if (( (controllers.Length > num && controllers[num].GetMainDirection().x < 0f) || Input.GetKeyDown(KeyCode.A)) && !controlSelected) {
+		if (( (controllers.Length > num && controllers[num].GetMainDirection().x < 0f) || Input.GetKeyDown(KeyCode.A))) {
 			levelMarkers[currentLevel].SetActive(false);
-			currentLevel = currentLevel == 0 ? levelMarkers.Length - 1 : currentLevel - 1;
+			currentLevel = currentLevel%2 == 0 ? currentLevel + 1 : currentLevel - 1;
 			levelMarkers[currentLevel].SetActive(true);
 			AudioManager.instance.PlayClip(AudioManager.instance.tick);
 		}
-		else if (( (controllers.Length > num && controllers[num].GetMainDirection().x > 0f) || Input.GetKeyDown(KeyCode.D)) && !controlSelected) {
+		else if (( (controllers.Length > num && controllers[num].GetMainDirection().x > 0f) || Input.GetKeyDown(KeyCode.D))) {
 			levelMarkers[currentLevel].SetActive(false);
-			currentLevel = currentLevel == (levelMarkers.Length - 1) ? 0 : currentLevel + 1;
+			currentLevel = currentLevel%2 != 0 ? currentLevel - 1 : currentLevel + 1;
 			levelMarkers[currentLevel].SetActive(true);
 			AudioManager.instance.PlayClip(AudioManager.instance.tick);
 		}
 		else if (( (controllers.Length > num && controllers[num].GetMainDirection().y < 0f) || Input.GetKeyDown(KeyCode.S))) {
-			if (controlSelected) {
-				controlSelected = false;
-				currentLevel = (currentLevel < 2) ? currentLevel : currentLevel - 2;
-				levelMarkers[currentLevel].SetActive(true);
-				controlMarker.SetActive(false);
-			} else if (currentLevel > 1) {
-				controlSelected = true;
-				levelMarkers[currentLevel].SetActive(false);
-				controlMarker.SetActive(true);
-			} else {
-				levelMarkers[currentLevel].SetActive(false);
-				currentLevel += 2;
-				levelMarkers[currentLevel].SetActive(true);
-			}
+			levelMarkers[currentLevel].SetActive(false);
+			currentLevel = currentLevel <= 3 ? currentLevel + 2 : currentLevel - 4;
+			levelMarkers[currentLevel].SetActive(true);
 			AudioManager.instance.PlayClip(AudioManager.instance.tick);
 		}
 		else if (( (controllers.Length > num && controllers[num].GetMainDirection().y > 0f) || Input.GetKeyDown(KeyCode.W))) {
-			if (controlSelected) {
-				controlSelected = false;
-				currentLevel = (currentLevel < 2) ? currentLevel + 2 : currentLevel;
-				levelMarkers[currentLevel].SetActive(true);
-				controlMarker.SetActive(false);
-			} else if (currentLevel < 2) {
-				controlSelected = true;
-				levelMarkers[currentLevel].SetActive(false);
-				controlMarker.SetActive(true);
-			} else {
-				levelMarkers[currentLevel].SetActive(false);
-				currentLevel -= 2;
-				levelMarkers[currentLevel].SetActive(true);
-			}
+			levelMarkers[currentLevel].SetActive(false);
+			currentLevel = currentLevel >= 1 ? currentLevel - 2 : currentLevel + 4;
+			levelMarkers[currentLevel].SetActive(true);
 			AudioManager.instance.PlayClip(AudioManager.instance.tick);
 		}
 
-		if ( (controllers.Length > num && controllers[num].GetConfirmDown()) || Input.GetMouseButtonDown(2)) {
+		if ( (controllers.Length > num && controllers[num].GetConfirmDown()) || Input.GetKeyDown(KeyCode.Return)) {
 			AudioManager.instance.PlayClip(AudioManager.instance.confirm);
-			if (controlSelected) {
+			if (currentLevel == 0) {
+				Controller.canMove = false;
+				SceneTransitioner.instance.LoadScene("Levels/Tutorial");
+			} else if (currentLevel == 1) {
+				Controller.canMove = false;
+				SceneTransitioner.instance.LoadScene("Levels/Cliffside");
+			} else if (currentLevel == 2) {
+				Controller.canMove = false;
+				SceneTransitioner.instance.LoadScene("Levels/Town");
+			} else if (currentLevel == 3) {
+				Controller.canMove = false;
+				SceneTransitioner.instance.LoadScene("Levels/Train Station");
+			} else if (currentLevel == 5) {
+				Controller.canMove = false;
 				SceneTransitioner.instance.LoadScene("Controls");
+			} else if (currentLevel == 4) {
+				Controller.canMove = false;
+				SceneTransitioner.instance.LoadScene("MainMenu");
 			}
-			else {
-				if (currentLevel == 0) {
-					Controller.canMove = false;
-					SceneTransitioner.instance.LoadScene("Levels/Tutorial");
-				}
-				else if (currentLevel == 1) {
-					Controller.canMove = false;
-					SceneTransitioner.instance.LoadScene("Levels/Cliffside");
-				}
-				else if (currentLevel == 2) {
-					Controller.canMove = false;
-					SceneTransitioner.instance.LoadScene("Levels/Town");
-				}
-				else if (currentLevel == 3) {
-					Controller.canMove = false;
-					SceneTransitioner.instance.LoadScene("Levels/Train Station");
-				}
-			}
+		
 		}
 	}
 }
