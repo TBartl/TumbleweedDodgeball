@@ -45,6 +45,10 @@ public class Ball : MonoBehaviour {
 		AudioManager.instance.PlayClipAtPoint(AudioManager.instance.throwSound, transform.position);
 	}
 
+	public bool GetIsSmackable() { //I really wanted to name this something sexual but I am completely sober right now so won't. This may change...
+		return smackable;
+	}
+
 	public void OnTriggerEnter2D(Collider2D coll) {
 		if (hotness.GetIsHot() && smackable && coll.tag == "Smack") {
 			rb.velocity = (transform.position - coll.transform.position).normalized * knockbackSpeed;

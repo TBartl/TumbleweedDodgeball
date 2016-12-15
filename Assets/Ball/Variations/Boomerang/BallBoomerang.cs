@@ -4,11 +4,16 @@ using System.Collections.Generic;
 
 public class BallBoomerang  : BallHotness {
 
-	public float speedBoost = -10f;
+	public float speedBoost = 0f;
 	GameObject thrower = null;
-	private float maxDistance = 10f;
+	private float maxDistance = 40f;
+	public Ball ball;
 
 	bool returning = false;
+
+	void Start() {
+		ball = this.GetComponent<Ball>();
+	}
 
 	void Update() {
 		if (thrower == null) thrower = FindPlayer();
@@ -35,13 +40,20 @@ public class BallBoomerang  : BallHotness {
 		} else Destroy(this.gameObject);
 	}
 
+	public void OnTriggerEnter2D(Collider2D coll) {
+		if (GetIsHot() && ball.GetIsSmackable() && coll.tag == "Smack") {
+			thrower = coll.gameObject.transform.parent.transform.parent.gameObject;
+			returning = false;
+		}
+	}
+
 	GameObject FindPlayer() {
-		GameObject closestPlayer = null;
+		GameObject Player = null;
 		foreach (GameObject player in PlayerManager.inst.players) {
 			if (source.GetThrower() == player.GetComponent<PlayerData>()) {
-				closestPlayer = player;
+				Player = player;
 			}
 		}
-		return closestPlayer;
+		return Player;
 	}
 }
