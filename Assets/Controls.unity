@@ -840,7 +840,7 @@ RectTransform:
   m_RootOrder: 7
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -137.5, y: -185.2}
+  m_AnchoredPosition: {x: -38, y: -185.2}
   m_SizeDelta: {x: 40, y: 40}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &344000169
@@ -1508,7 +1508,7 @@ MonoBehaviour:
     m_LineSpacing: 1
   m_Text: "Near Ball\n/          - Pick up Ball\n\nWith Ball in Hand\n/          -
     Throw Ball\n\nWithout Ball\n/          - Punch\n\n      - Move\n\n      - Aim\n\n
-    \     - Dash in direction of movement"
+    \     - Dash"
 --- !u!222 &965252385
 CanvasRenderer:
   m_ObjectHideFlags: 0
