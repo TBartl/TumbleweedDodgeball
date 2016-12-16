@@ -150,8 +150,8 @@ public class TutorialManager : MonoBehaviour {
 
         textImage.transform.localPosition = new Vector3(0, 30f, 0);
         textImage.sprite = textImage.sprite = textSprites[(int)TutorialText.finished];
-        yield return new WaitForSeconds(waitTime * 3);
-        SceneTransitioner.instance.LoadScene("LevelSelect");
+        yield return new WaitForSeconds(waitTime);
+        SceneTransitioner.instance.LoadNext("LevelSelect");
 	}
 
 	void ChangeTask() {
