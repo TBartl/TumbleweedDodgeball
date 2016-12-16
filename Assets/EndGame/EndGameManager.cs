@@ -60,17 +60,16 @@ public class EndGameManager : MonoBehaviour {
 		}
         //else leave bars as is  
         heights = GenerateHeightsBasedOnScore();
-		//grow the bars based on the sorted scores
+        //grow the bars based on the sorted scores
 
-		Invoke("StartBarsGrowing", delay);
-
+        Invoke("StartBarsGrowing", delay);
+        
         //display restart text
         StartCoroutine(ShowRestartInput());
     }
 
 	void StartBarsGrowing() {
 		for (int i = 0; i < numActivePlayersInGame; ++i) {
-
 			StartCoroutine(activeBars[i].GetComponent<GrowingScoreBarManager>().GrowToPos(heights[i]));
 		}
 	}
@@ -128,7 +127,7 @@ public class EndGameManager : MonoBehaviour {
 
 
     IEnumerator ShowRestartInput() {
-        yield return new WaitForSeconds(3); //wait for 5 seconds
+        yield return new WaitForSeconds(3); //wait for 3 seconds
         MMtext.SetActive(true);
         NLtext.SetActive(true);
         MMMarker.SetActive(true);

@@ -12,6 +12,7 @@ public class MoveCloud : MonoBehaviour {
 		speed = Mathf.Lerp(speedRange.x, speedRange.y, Random.value);	
 	}
 	
+
 	// Update is called once per frame
 	void Update () {
 		this.transform.position += Vector3.right * speed * Time.deltaTime;
