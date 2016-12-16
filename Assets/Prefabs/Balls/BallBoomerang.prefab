@@ -81,6 +81,7 @@ GameObject:
   - 114: {fileID: 114000012135810364}
   - 114: {fileID: 114000013705038778}
   - 114: {fileID: 114000011868194462}
+  - 114: {fileID: 114000012980152504}
   m_Layer: 0
   m_Name: BallBoomerang
   m_TagString: Ball
@@ -285,8 +286,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 16d3717a149064d45aca212714a041e2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  threshold: 5
-  speedBoost: 6
+  hotness: {fileID: 0}
+  ball: {fileID: 0}
 --- !u!114 &114000010620058036
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -345,6 +346,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a2adcceb1d62f4db6a26153031de443b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &114000012980152504
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000013903614682}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 117a2d3fb9e96fe46b42ac3270457daf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  threshold: 5
 --- !u!114 &114000013088777852
 MonoBehaviour:
   m_ObjectHideFlags: 1
