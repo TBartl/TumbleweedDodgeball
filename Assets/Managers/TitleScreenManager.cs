@@ -6,15 +6,19 @@ using InControl;
 public class TitleScreenManager : MonoBehaviour {
 
 	private Controller[] controllers;
+    private bool checkForInput = true;
 
 	public GameObject controllerPrefab;
 
-	public Text text;
+	public GameObject textGood;
+	public GameObject textBad;
 
 	// Use this for initialization
 	void Start () {
 		if (InputManager.Devices.Count <= 1) {
-			text.text = "Please insert at least 2 Xbox 360 controllers and restart the game.";
+			textGood.SetActive(false);
+			textBad.SetActive(true);
+			checkForInput = false;
 			return;
 		}
 		controllers = new Controller[4];
@@ -26,6 +30,7 @@ public class TitleScreenManager : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+        if (!checkForInput) return;
 		for (int i = 0; i < 4; ++i) {
 			GetInput(i);
 		}
