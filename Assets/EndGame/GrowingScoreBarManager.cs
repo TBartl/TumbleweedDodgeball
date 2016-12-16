@@ -17,21 +17,19 @@ public class GrowingScoreBarManager : MonoBehaviour {
             yield return null;
         }
 
-        //if winning height, start fireworks
-        if (maxYPos == winningHeight) {
-			if (drumRollAudio.isPlaying) {
-				drumRollAudio.Stop();
-			}
+		//if winning height, start fireworks
+		if (maxYPos == winningHeight) {
+			drumRollAudio.Stop();
 			AudioManager.instance.PlayClip(AudioManager.instance.crash);
-			fireworksAudio.Play();
+			fireworksAudio.mute = false;
 
 			Vector3 posFireworks = new Vector3(this.transform.position.x, -4f, -10f);
-            Quaternion rot = Quaternion.Euler(-90f, 0f, 0f);
-            GameObject fireworks1 = (GameObject)Instantiate(fireworks, posFireworks, rot);
+			Quaternion rot = Quaternion.Euler(-90f, 0f, 0f);
+			GameObject fireworks1 = (GameObject)Instantiate(fireworks, posFireworks, rot);
 
-            //wait for 1.5 seconds and then start another fireworks
-            yield return new WaitForSeconds(1.5f);
-            GameObject fireworks2 = (GameObject)Instantiate(fireworks, posFireworks, rot);
-        }
-    }
+			//wait for 1.5 seconds and then start another fireworks
+			yield return new WaitForSeconds(1.5f);
+			GameObject fireworks2 = (GameObject)Instantiate(fireworks, posFireworks, rot);
+		}
+	}
 }
