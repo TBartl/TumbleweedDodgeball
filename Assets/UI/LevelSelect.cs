@@ -79,7 +79,7 @@ public class LevelSelect : MonoBehaviour {
 		}
 		else if (( (controllers.Length > num && controllers[num].GetMainDirection().y > 0f) || Input.GetKeyDown(KeyCode.W))) {
 			levelMarkers[currentLevel].SetActive(false);
-			currentLevel = currentLevel >= 1 ? currentLevel - 2 : currentLevel + 4;
+			currentLevel = (currentLevel > 1) ? currentLevel - 2 : currentLevel + 4;
 			levelMarkers[currentLevel].SetActive(true);
 			AudioManager.instance.PlayClip(AudioManager.instance.tick);
 		}
