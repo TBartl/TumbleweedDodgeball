@@ -293,8 +293,8 @@ MonoBehaviour:
     clip: {fileID: 8300000, guid: a9bcf40cf5b9feb4185eb2498d407f93, type: 3}
     volume: 0.1
   menuMusic:
-    clip: {fileID: 8300000, guid: 8fba09625841a2e4fa46978c533e2f0c, type: 3}
-    volume: 0.15
+    clip: {fileID: 8300000, guid: 10a374809230c4433a59268b34cf087a, type: 3}
+    volume: 0.05
   timer:
     clip: {fileID: 8300000, guid: 254600b3d244ebc438f0c12a1e48ffda, type: 3}
     volume: 0.5
