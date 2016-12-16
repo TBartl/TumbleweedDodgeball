@@ -25,6 +25,7 @@ public class BallBoomerang : MonoBehaviour {
 
 	void Update() {
 		if (thrower == null) thrower = FindPlayer();
+        if (source.GetThrower() != null && !hotness.GetIsHot()) source.SetThrower(null);
 		if (returning) {
 			rigid.velocity = (thrower.transform.position - this.transform.position).normalized * (speedBoost);
 			if (Mathf.Abs(Vector3.Distance(thrower.transform.position, this.transform.position)) < 1f) Destroy(this.gameObject);
