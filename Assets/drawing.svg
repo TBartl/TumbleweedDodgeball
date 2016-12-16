@@ -1482,6 +1482,32 @@
          stdDeviation="9.1737288"
          id="feGaussianBlur5914-8-5-7-0-6" />
     </filter>
+    <filter
+       inkscape:collect="always"
+       style="color-interpolation-filters:sRGB"
+       id="filter5912-8-0-4-3-0"
+       x="-0.026362525"
+       width="1.0527251"
+       y="-0.10323736"
+       height="1.2064747">
+      <feGaussianBlur
+         inkscape:collect="always"
+         stdDeviation="9.1737288"
+         id="feGaussianBlur5914-8-5-7-0-9" />
+    </filter>
+    <filter
+       inkscape:collect="always"
+       style="color-interpolation-filters:sRGB"
+       id="filter5912-8-0-4-3-0-8"
+       x="-0.026362525"
+       width="1.0527251"
+       y="-0.10323736"
+       height="1.2064747">
+      <feGaussianBlur
+         inkscape:collect="always"
+         stdDeviation="9.1737288"
+         id="feGaussianBlur5914-8-5-7-0-9-3" />
+    </filter>
   </defs>
   <sodipodi:namedview
      id="base"
@@ -1490,9 +1516,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.22597459"
-     inkscape:cx="-6619.7675"
-     inkscape:cy="-10590.653"
+     inkscape:zoom="0.079894083"
+     inkscape:cx="-6711.9383"
+     inkscape:cy="-11863.556"
      inkscape:document-units="px"
      inkscape:current-layer="g5803"
      showgrid="false"
@@ -6084,7 +6110,7 @@
                height="478.75888"
                x="-7829.1157"
                y="11269.014" /></flowRegion><flowPara
-             id="flowPara6066"></flowPara></flowRoot>        <text
+             id="flowPara6066" /></flowRoot>        <text
            inkscape:export-ydpi="45"
            inkscape:export-xdpi="45"
            inkscape:export-filename="C:\Users\tabsk\Desktop\eecs-494-f16-p4\Assets\UI\LevelText\back.png"
@@ -6176,6 +6202,137 @@
              y="14657.875"
              style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Western;-inkscape-font-specification:'Western Thin';text-align:center;text-anchor:middle"
              id="tspan4593-28-5-3-1-8-5-7-5">Controls</tspan></text>
+        <text
+           inkscape:export-ydpi="45"
+           inkscape:export-xdpi="45"
+           inkscape:export-filename="C:\Users\tabsk\Desktop\eecs-494-f16-p4\Assets\UI\LevelText\SelectALevel.png"
+           sodipodi:linespacing="125%"
+           id="text4241-8-8-9-6-0-6-8-0-4-7-4-3"
+           y="13748.236"
+           x="139.70471"
+           style="font-style:normal;font-weight:normal;font-size:256.63696289px;line-height:125%;font-family:sans-serif;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;filter:url(#filter5912-8-0-4-3-0)"
+           xml:space="preserve"
+           transform="matrix(1.4850167,0,0,1.4850167,2603.8441,-2911.0317)"><tspan
+             id="tspan4593-3-450-8-67-1-4-8-5-1-1"
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Western;-inkscape-font-specification:'Western Thin';text-align:center;text-anchor:middle;fill:#000000;stroke:#000000;stroke-width:10;stroke-miterlimit:4;stroke-dasharray:none"
+             y="13748.236"
+             x="139.70462"
+             sodipodi:role="line">AAAAAAAAAAAAAAAAAAAAAAAAA</tspan></text>
+        <text
+           xml:space="preserve"
+           style="font-style:normal;font-weight:normal;font-size:381.11016846px;line-height:125%;font-family:sans-serif;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:14.85016727;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+           x="2811.3076"
+           y="17505.33"
+           id="text4241-8-8-9-6-0-6-1-2-4-4-2"
+           sodipodi:linespacing="125%"
+           inkscape:export-filename="C:\Users\tabsk\Desktop\eecs-494-f16-p4\Assets\UI\LevelText\SelectALevel.png"
+           inkscape:export-xdpi="45"
+           inkscape:export-ydpi="45"><tspan
+             sodipodi:role="line"
+             x="2811.3079"
+             y="17505.33"
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Western;-inkscape-font-specification:'Western Thin';text-align:center;text-anchor:middle;stroke:#000000;stroke-width:14.85016727;stroke-miterlimit:4;stroke-dasharray:none"
+             id="tspan4593-3-450-8-67-9-7-1-5-5">AAAAAAAAAAAAAAAAAAAAAAAAA</tspan></text>
+        <text
+           xml:space="preserve"
+           style="font-style:normal;font-weight:normal;font-size:381.11016846px;line-height:125%;font-family:sans-serif;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+           x="2808.3086"
+           y="17500.83"
+           id="text4241-8-8-2-67-4-9-8-5-7-6"
+           sodipodi:linespacing="125%"
+           inkscape:export-filename="C:\Users\tabsk\Desktop\eecs-494-f16-p4\Assets\UI\LevelText\SelectALevel.png"
+           inkscape:export-xdpi="45"
+           inkscape:export-ydpi="45"><tspan
+             sodipodi:role="line"
+             x="2808.3088"
+             y="17500.83"
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Western;-inkscape-font-specification:'Western Thin';text-align:center;text-anchor:middle"
+             id="tspan4593-28-5-3-1-8-5-7-4">AAAAAAAAAAAAAAAAAAAAAAAAA</tspan></text>
+        <g
+           id="g5763"
+           transform="matrix(0.66068831,0,0,0.66068831,-1188.5696,5908.5811)"
+           inkscape:export-filename="C:\Users\tabsk\Desktop\eecs-494-f16-p4\Assets\UI\LevelText\reccomendation.png"
+           inkscape:export-xdpi="45"
+           inkscape:export-ydpi="45">
+          <path
+             inkscape:connector-curvature="0"
+             id="rect5061-1"
+             d="m -3926.4102,16051.496 c -38.8629,1.752 -71.4931,25.517 -103.2031,45.49 -310.9836,199.277 -620.5296,400.779 -931.3795,600.26 -322.6054,207.973 -645.3182,415.782 -966.9174,625.309 -52.9574,42.487 -59.3305,130.096 -13.7737,180.218 40.1728,42.948 95.9176,65.276 143.1112,98.878 63.0575,41.765 127.2727,81.749 190.6629,123.007 537.9341,346.154 1074.0668,695.128 1613.9332,1038.276 64.9439,34.026 154.9315,-5.181 175.0547,-75.48 12.8019,-40.892 1.844,-83.826 -6.197,-124.475 -15.5205,-84.325 -32.5904,-168.555 -42.6995,-253.663 2.0757,-15.596 20.0787,-23.168 34.1989,-21.614 36.6634,1.781 73.3933,0.332 110.0843,0.946 335.2329,0.42 670.4663,-0.05 1005.6993,0.319 523.9011,0.09 1047.8041,0.167 1571.7031,-1.338 69.5142,-7.154 123.6976,-80.35 110.4982,-148.915 -7.6216,-34.46 -20.9451,-67.319 -30.3598,-101.247 -61.3615,-196.608 -124.494,-392.696 -182.5818,-590.268 -3.3249,-24.092 9.2954,-46.271 15.3018,-68.893 9.3482,-32.808 18.0401,-65.708 27.9783,-98.314 57.8522,-198.358 119.4091,-395.721 171.1711,-595.806 4.3643,-68.624 -56.5589,-134.207 -125.6074,-133.461 -877.3138,-1.548 -1754.63,0.603 -2631.9433,-1.008 -19.9452,-0.369 -40.0725,0.278 -59.9005,-0.887 -16.4753,-6.156 -22.6154,-27.289 -16.0711,-42.713 20.4536,-108.801 43.7397,-217.457 52.952,-327.951 -1.2163,-20.016 -13.2859,-36.874 -21.3237,-54.576 -15.3751,-28.185 -36.2768,-56.327 -67.1568,-68.395 -7.4675,-2.507 -15.3482,-3.856 -23.2344,-3.699 z"
+             style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:0.98999999;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:#5a1602;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:8;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate" />
+          <path
+             sodipodi:nodetypes="ccccccccc"
+             inkscape:connector-curvature="0"
+             id="rect5061"
+             d="m -3940.2754,16190.89 -1905.2516,1228.751 1905.2516,1228.753 -86.1672,-487.008 2865.0424,0 -224.3335,-718.668 224.3335,-764.82 -2865.0424,0 z"
+             style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:0.98999999;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:#a02c2c;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:8;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate" />
+          <text
+             transform="matrix(1.7775696,0,0,1.7775696,-3474.8983,-7114.9763)"
+             xml:space="preserve"
+             style="font-style:normal;font-weight:normal;font-size:256.63696289px;line-height:125%;font-family:sans-serif;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;filter:url(#filter5912-8-0-4-3-0-8)"
+             x="139.70471"
+             y="13748.236"
+             id="text4241-8-8-9-6-0-6-8-0-4-7-4-3-8"
+             sodipodi:linespacing="125%"
+             inkscape:export-filename="C:\Users\tabsk\Desktop\eecs-494-f16-p4\Assets\UI\LevelText\SelectALevel.png"
+             inkscape:export-xdpi="45"
+             inkscape:export-ydpi="45"><tspan
+               sodipodi:role="line"
+               x="139.70471"
+               y="13748.236"
+               style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Western;-inkscape-font-specification:'Western Thin';text-align:center;text-anchor:middle;fill:#000000;stroke:#000000;stroke-width:10;stroke-miterlimit:4;stroke-dasharray:none"
+               id="tspan4593-3-450-8-67-1-4-8-5-1-1-2">NEW PLAYERS</tspan><tspan
+               id="tspan5059"
+               sodipodi:role="line"
+               x="139.7047"
+               y="14069.032"
+               style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Western;-inkscape-font-specification:'Western Thin';text-align:center;text-anchor:middle;fill:#000000;stroke:#000000;stroke-width:10;stroke-miterlimit:4;stroke-dasharray:none">START HERE</tspan></text>
+          <text
+             inkscape:export-ydpi="45"
+             inkscape:export-xdpi="45"
+             inkscape:export-filename="C:\Users\tabsk\Desktop\eecs-494-f16-p4\Assets\UI\LevelText\SelectALevel.png"
+             sodipodi:linespacing="125%"
+             id="text4241-8-8-9-6-0-6-1-2-4-4-2-3"
+             y="17323.471"
+             x="-3226.5635"
+             style="font-style:normal;font-weight:normal;font-size:456.19006348px;line-height:125%;font-family:sans-serif;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:17.7756958;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+             xml:space="preserve"><tspan
+               id="tspan4593-3-450-8-67-9-7-1-5-5-1"
+               style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Western;-inkscape-font-specification:'Western Thin';text-align:center;text-anchor:middle;stroke:#000000;stroke-width:17.7756958;stroke-miterlimit:4;stroke-dasharray:none"
+               y="17323.471"
+               x="-3226.5635"
+               sodipodi:role="line">NEW PLAYERS</tspan><tspan
+               id="tspan5057"
+               style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Western;-inkscape-font-specification:'Western Thin';text-align:center;text-anchor:middle;stroke:#000000;stroke-width:17.7756958;stroke-miterlimit:4;stroke-dasharray:none"
+               y="17893.709"
+               x="-3226.5635"
+               sodipodi:role="line">START HERE</tspan></text>
+          <text
+             inkscape:export-ydpi="45"
+             inkscape:export-xdpi="45"
+             inkscape:export-filename="C:\Users\tabsk\Desktop\eecs-494-f16-p4\Assets\UI\LevelText\SelectALevel.png"
+             sodipodi:linespacing="125%"
+             id="text4241-8-8-2-67-4-9-8-5-7-6-1"
+             y="17318.086"
+             x="-3230.1533"
+             style="font-style:normal;font-weight:normal;font-size:456.19006348px;line-height:125%;font-family:sans-serif;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+             xml:space="preserve"><tspan
+               id="tspan4593-28-5-3-1-8-5-7-4-1"
+               style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Western;-inkscape-font-specification:'Western Thin';text-align:center;text-anchor:middle"
+               y="17318.086"
+               x="-3230.1533"
+               sodipodi:role="line">NEW PLAYERS</tspan><tspan
+               id="tspan5055"
+               style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Western;-inkscape-font-specification:'Western Thin';text-align:center;text-anchor:middle"
+               y="17888.324"
+               x="-3230.1533"
+               sodipodi:role="line">START HERE</tspan></text>
+          <path
+             sodipodi:nodetypes="ccccccccc"
+             inkscape:connector-curvature="0"
+             id="rect5061-5"
+             d="m -3940.2749,16190.89 -1905.2515,1228.751 1905.2515,1228.753 -86.167,-487.008 2865.042,0 -224.333,-718.668 224.333,-764.82 -2865.042,0 z"
+             style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:0.98999999;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:none;fill-opacity:1;fill-rule:nonzero;stroke:#fff0c9;stroke-width:130.53565979;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:130.53565318, 130.53565318;stroke-dashoffset:26.10713196;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate" />
+        </g>
       </g>
     </g>
   </g>
