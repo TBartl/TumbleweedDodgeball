@@ -88,22 +88,22 @@ public class LevelSelect : MonoBehaviour {
 			AudioManager.instance.PlayClip(AudioManager.instance.confirm);
 			if (currentLevel == 0) {
 				Controller.canMove = false;
-				SceneTransitioner.instance.LoadScene("Levels/Tutorial");
+				SceneTransitioner.instance.LoadNext("Levels/Tutorial");
 			} else if (currentLevel == 1) {
 				Controller.canMove = false;
-				SceneTransitioner.instance.LoadScene("Levels/Cliffside");
+				SceneTransitioner.instance.LoadNext("Levels/Cliffside");
 			} else if (currentLevel == 2) {
 				Controller.canMove = false;
-				SceneTransitioner.instance.LoadScene("Levels/Town");
+				SceneTransitioner.instance.LoadNext("Levels/Town");
 			} else if (currentLevel == 3) {
 				Controller.canMove = false;
-				SceneTransitioner.instance.LoadScene("Levels/Train Station");
+				SceneTransitioner.instance.LoadNext("Levels/Train Station");
 			} else if (currentLevel == 5) {
 				Controller.canMove = false;
-				SceneTransitioner.instance.LoadScene("Controls");
+				SceneTransitioner.instance.LoadNext("Controls");
 			} else if (currentLevel == 4) {
 				Controller.canMove = false;
-				SceneTransitioner.instance.LoadScene("MainMenu");
+				SceneTransitioner.instance.LoadBack("MainMenu");
 			}
 		
 		}

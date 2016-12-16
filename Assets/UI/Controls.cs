@@ -30,7 +30,7 @@ public class Controls : MonoBehaviour {
 		if (controllers[num].GetConfirmDown()) {
 			AudioManager.instance.PlayClip(AudioManager.instance.confirm);
 			Controller.canMove = false;
-			SceneTransitioner.instance.LoadScene("LevelSelect");
+			SceneTransitioner.instance.LoadBack("LevelSelect");
 		}
 	}
 }

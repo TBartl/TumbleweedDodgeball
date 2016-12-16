@@ -143,8 +143,12 @@ public class EndGameManager : MonoBehaviour {
             }
             else if(cont.GetConfirmDown() || Input.GetMouseButtonDown(2)) {//chose to leave end scene
                 AudioManager.instance.PlayClip(AudioManager.instance.confirm);
-                if (MMMarker.active) SceneTransitioner.instance.LoadScene("MainMenu");
-                else SceneTransitioner.instance.LoadScene("LevelSelect");
+				if (MMMarker.active) {
+					SceneTransitioner.instance.LoadNext("MainMenu");
+				}
+				else {
+					SceneTransitioner.instance.LoadNext("LevelSelect");
+				}
             }
         }
     }

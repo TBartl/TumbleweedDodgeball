@@ -75,7 +75,7 @@ public class StartMenu : MonoBehaviour {
 		}
 
 		if (start) {
-			SceneTransitioner.instance.LoadScene("LevelSelect");
+			SceneTransitioner.instance.LoadNext("LevelSelect");
 		}
 	}
 
@@ -151,6 +151,19 @@ public class StartMenu : MonoBehaviour {
 					r.material = materials[currentMat[playerNum]].mat;
 				}
 				GlobalPlayerManager.inst.SetMaterial(playerNum, materials[currentMat[playerNum]]);
+			}
+			else if (controller.GetBackDown()) {
+				bool noOneInGame = true;
+				foreach (bool b in inGame) {
+					if (b) {
+						noOneInGame = false;
+						break;
+					}
+				}
+
+				if (noOneInGame) {
+					SceneTransitioner.instance.LoadBack("Title Screen");
+				}
 			}
 		}
 	}
