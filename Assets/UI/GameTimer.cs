@@ -17,6 +17,8 @@ public class GameTimer : MonoBehaviour {
 
     private bool restartGame;
 
+	bool done = false;
+
 	void Start () {
 		timer = GetComponent<Text>();
 		play = false;
@@ -37,8 +39,9 @@ public class GameTimer : MonoBehaviour {
                 }
             }
             else timer.text = min + ":" + sec;
-		} else {
-            //Display Score and reload screen on pressedbutton
+		} else if (!done) {
+			//Display Score and reload screen on pressedbutton
+			done = true;
             ScoreManager.inst.SendScoresToGlobal();
             SceneTransitioner.instance.LoadNext("EndScene");
         }

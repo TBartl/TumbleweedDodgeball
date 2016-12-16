@@ -24,11 +24,13 @@ public class SceneTransitioner : MonoBehaviour {
 		loading = true;
 		cameraTransform = Camera.main.transform;
 		StartCoroutine(FadeOut());
-		if (back) {
-			StartCoroutine(PanInLeft());
-		}
-		else {
-			StartCoroutine(PanInRight());
+		if (doCameraPan) {
+			if (back) {
+				StartCoroutine(PanInLeft());
+			}
+			else {
+				StartCoroutine(PanInRight());
+			}
 		}
 	}
 
@@ -54,9 +56,7 @@ public class SceneTransitioner : MonoBehaviour {
 		Quaternion originalRotation = cameraTransform.rotation;
 		Quaternion finalRotation = originalRotation * Quaternion.AngleAxis(-cameraTransitionAngle, new Vector3(0, 1, 0));
 		for (int i = numFrames - 1; i >= 0; --i) {
-			if (doCameraPan) {
-				cameraTransform.rotation = Quaternion.Lerp(originalRotation, finalRotation, (float)i / (float)numFrames);
-			}
+			cameraTransform.rotation = Quaternion.Lerp(originalRotation, finalRotation, (float)i / (float)numFrames);
 			yield return null;
 		}
 	}
@@ -65,9 +65,7 @@ public class SceneTransitioner : MonoBehaviour {
 		Quaternion originalRotation = cameraTransform.rotation;
 		Quaternion finalRotation = originalRotation * Quaternion.AngleAxis(cameraTransitionAngle, new Vector3(0, 1, 0));
 		for (int i = numFrames - 1; i >= 0; --i) {
-			if (doCameraPan) {
-				cameraTransform.rotation = Quaternion.Lerp(originalRotation, finalRotation, (float)i / (float)numFrames);
-			}
+			cameraTransform.rotation = Quaternion.Lerp(originalRotation, finalRotation, (float)i / (float)numFrames);
 			yield return null;
 		}
 	}
@@ -76,9 +74,7 @@ public class SceneTransitioner : MonoBehaviour {
 		Quaternion originalRotation = cameraTransform.rotation;
 		Quaternion finalRotation = originalRotation * Quaternion.AngleAxis(cameraTransitionAngle, new Vector3(0, 1, 0));
 		for (int i = 0; i < numFrames; ++i) {
-			if (doCameraPan) {
-				cameraTransform.rotation = Quaternion.Lerp(originalRotation, finalRotation, (float)i / (float)numFrames);
-			}
+			cameraTransform.rotation = Quaternion.Lerp(originalRotation, finalRotation, (float)i / (float)numFrames);
 			yield return null;
 		}
 	}
@@ -87,27 +83,19 @@ public class SceneTransitioner : MonoBehaviour {
 		Quaternion originalRotation = cameraTransform.rotation;
 		Quaternion finalRotation = originalRotation * Quaternion.AngleAxis(-cameraTransitionAngle, new Vector3(0, 1, 0));
 		for (int i = 0; i < numFrames; ++i) {
-			if (doCameraPan) {
-				cameraTransform.rotation = Quaternion.Lerp(originalRotation, finalRotation, (float)i / (float)numFrames);
-			}
+			cameraTransform.rotation = Quaternion.Lerp(originalRotation, finalRotation, (float)i / (float)numFrames);
 			yield return null;
 		}
 	}
-
-	//public void LoadScene(string scene) {
-	//	if (!loading) {
-	//		loading = true;
-	//		StartCoroutine(FadeIn(scene));
-	//		StartCoroutine(PanOutRight());
-	//	}
-	//}
 
 	public void LoadNext(string scene) {
 		if (!loading) {
 			loading = true;
 			back = false;
 			StartCoroutine(FadeIn(scene));
-			StartCoroutine(PanOutRight());
+			if (doCameraPan) {
+				StartCoroutine(PanOutRight());
+			}
 		}
 	}
 
@@ -116,7 +104,9 @@ public class SceneTransitioner : MonoBehaviour {
 			loading = true;
 			back = true;
 			StartCoroutine(FadeIn(scene));
-			StartCoroutine(PanOutLeft());
+			if (doCameraPan) {
+				StartCoroutine(PanOutLeft());
+			}
 		}
 	}
 }
