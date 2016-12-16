@@ -2,9 +2,9 @@
 using System.Collections;
 using System.Collections.Generic;
 
-public class BallBoomerang : MonoBehaviour {
+public class BallBoomerang : Ball {
 
-	public BallHotness hotness;
+	//public BallHotness hotness;
 
 	protected Rigidbody2D rigid;
 	protected BallSource source;
@@ -12,15 +12,14 @@ public class BallBoomerang : MonoBehaviour {
 	private float speedBoost = 18f;
 	GameObject thrower = null;
 	private float maxDistance = 40f;
-	public Ball ball;
 
 	bool returning = false;
 
 	void Start() {
-		ball = this.GetComponent<Ball>();
-		hotness = this.GetComponent<BallHotness>();
-		rigid = this.GetComponent<Rigidbody2D>();
-		source = this.GetComponent<BallSource>();
+		//ball = this.GetComponent<Ball>();
+		//hotness = this.GetComponent<BallHotness>();
+		//rigid = this.GetComponent<Rigidbody2D>();
+		//source = this.GetComponent<BallSource>();
 	}
 
 	void Update() {
@@ -34,9 +33,24 @@ public class BallBoomerang : MonoBehaviour {
 		}
 	}
 
-	void OnCollisionEnter2D(Collision2D other) {	
-		if (thrower != null && !returning) returning = true;
-		else if (thrower != null) Destroy(this.gameObject);
+	void OnCollisionEnter2D(Collision2D other) {
+		//if (thrower != null && !returning) {
+		//	returning = true;
+		//}
+		//else if (thrower != null) {
+		//	Destroy(this.gameObject);
+		//}
+		// reverse direction if it wasnt returning so it returns
+		if (!returning) {
+			returning = true;
+			thrower = FindPlayer();
+			if (thrower != null) {
+				rigid.velocity = (thrower.transform.position - this.transform.position).normalized * (rigid.velocity.magnitude + speedBoost);
+			}
+		}
+		else {
+			Destroy(this.gameObject);
+		}
 	}
 
 	void OnHitOther(GameObject other) {
@@ -44,17 +58,21 @@ public class BallBoomerang : MonoBehaviour {
 		if (!returning) {
 			returning = true;
 			thrower = FindPlayer();
-			if (thrower != null)
+			if (thrower != null) {
 				rigid.velocity = (thrower.transform.position - this.transform.position).normalized * (rigid.velocity.magnitude + speedBoost);
-		} else Destroy(this.gameObject);
-	}
-
-	public void OnTriggerEnter2D(Collider2D coll) {
-		if (hotness.GetIsHot() && ball.GetIsSmackable() && coll.tag == "Smack") {
-			thrower = coll.gameObject.transform.parent.transform.parent.gameObject;
-			returning = false;
+			}
+		}
+		else {
+			Destroy(this.gameObject);
 		}
 	}
+
+	//public void OnTriggerEnter2D(Collider2D coll) {
+	//	if (hotness.GetIsHot() && GetIsSmackable() && coll.tag == "Smack") {
+	//		thrower = coll.gameObject.transform.parent.transform.parent.gameObject;
+	//		returning = false;
+	//	}
+	//}
 
 	GameObject FindPlayer() {
 		GameObject Player = null;

@@ -263,51 +263,51 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   throwSound:
-    clip: {fileID: 8300000, guid: 6138339bf0ad1874b9a1cf9b5f733da5, type: 3}
-    volume: 0.4
+    clip: {fileID: 8300000, guid: bf9a9afa23da18442a7bf097408a4805, type: 3}
+    volume: 0.8
   playerHit:
-    clip: {fileID: 8300000, guid: b8d72eec04803e4488b2ffc670d13e68, type: 3}
-    volume: 1
+    clip: {fileID: 8300000, guid: 5428da296d21eb5418ac6be8b5660b69, type: 3}
+    volume: 0.8
   otherHit:
-    clip: {fileID: 8300000, guid: 88d491dbd4e89be4aa78c528cfd38ebb, type: 3}
+    clip: {fileID: 8300000, guid: 99f480b6c28c4854e8974227b95e7538, type: 3}
     volume: 0.7
   destructibleBreak:
-    clip: {fileID: 8300000, guid: f66975d840e67244eab54fc14fd9ea30, type: 3}
-    volume: 0.4
+    clip: {fileID: 8300000, guid: 8074263b89250114aba43665413cf7ad, type: 3}
+    volume: 0.6
   wind:
-    clip: {fileID: 8300000, guid: 38c60e95a39694a4cb3fe711da659608, type: 3}
-    volume: 0.4
+    clip: {fileID: 8300000, guid: 7ec7368c8bb25d346bab0b2b27693a6c, type: 3}
+    volume: 0.05
   punch:
-    clip: {fileID: 8300000, guid: 694d6ae6615c8b34993dc6b6ceead1db, type: 3}
-    volume: 1
+    clip: {fileID: 8300000, guid: 87684df346f2695408f16ac663bfcb1a, type: 3}
+    volume: 0.9
   moo:
-    clip: {fileID: 8300000, guid: 70750f4474e808746b1eeae7cd0b2ec8, type: 3}
+    clip: {fileID: 8300000, guid: b4cff24728fd70341922a3434676a0af, type: 3}
     volume: 0.5
   powerup:
-    clip: {fileID: 8300000, guid: 3e8b72243b80a97489f304da2dd12fb4, type: 3}
-    volume: 0.5
-  trainWhistle:
-    clip: {fileID: 8300000, guid: 991f9ab7ac775dc4d91ea9d5e7c7b9e4, type: 3}
+    clip: {fileID: 8300000, guid: d76472c31fcecde43beea73549f6424f, type: 3}
     volume: 1
+  trainWhistle:
+    clip: {fileID: 8300000, guid: e4b534125c845e14cb768bdec10d9c30, type: 3}
+    volume: 0.5
   gamePlayMusic:
-    clip: {fileID: 8300000, guid: e8062b29d32e07d4ca25201d49d07d97, type: 3}
-    volume: 0.08
-  menuMusic:
-    clip: {fileID: 8300000, guid: 7c736509f966f4846b82701c087a52e5, type: 3}
-    volume: 0.03
-  timer:
-    clip: {fileID: 8300000, guid: 8428a376ee0078c47a2075e42106aba6, type: 3}
+    clip: {fileID: 8300000, guid: a9bcf40cf5b9feb4185eb2498d407f93, type: 3}
     volume: 0.1
+  menuMusic:
+    clip: {fileID: 8300000, guid: 8fba09625841a2e4fa46978c533e2f0c, type: 3}
+    volume: 0.15
+  timer:
+    clip: {fileID: 8300000, guid: 254600b3d244ebc438f0c12a1e48ffda, type: 3}
+    volume: 0.5
   tick:
-    clip: {fileID: 8300000, guid: 95cf8bdd35b0ffa4784b68729037d2dc, type: 3}
-    volume: 0.08
+    clip: {fileID: 8300000, guid: 50810a3e955465944a04571e8a0bf28f, type: 3}
+    volume: 0.1
   confirm:
-    clip: {fileID: 8300000, guid: 944a640ae2bd8c2498ccdedee6dea040, type: 3}
-    volume: 0.04
-  back:
-    clip: {fileID: 8300000, guid: 5b63659a0bf89ec43ab3782c9019087e, type: 3}
+    clip: {fileID: 8300000, guid: 71701f5b7a8e5094994366b162430db4, type: 3}
     volume: 0.05
+  back:
+    clip: {fileID: 8300000, guid: 0e333a23b37d0dc4db964c92a0da5f35, type: 3}
+    volume: 0.1
   crash:
-    clip: {fileID: 8300000, guid: 95b7a10b599440f45af66454398479da, type: 3}
-    volume: 0.2
+    clip: {fileID: 8300000, guid: f648349358509c642a6be0c16864b047, type: 3}
+    volume: 0.08
   type: 0

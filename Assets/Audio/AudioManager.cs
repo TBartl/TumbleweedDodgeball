@@ -51,19 +51,7 @@ public class AudioManager : MonoBehaviour {
 	}
 
 	public void PlayClip(AudioClipWithVolume clipWithVolume) {
-		//StartCoroutine(PlayAndDestroy(clipWithVolume));
 		source.PlayOneShot(clipWithVolume.clip, clipWithVolume.volume);
-	}
-
-	IEnumerator PlayAndDestroy(AudioClipWithVolume clipWithVolume) {
-		AudioSource source = gameObject.AddComponent<AudioSource>();
-		source.clip = clipWithVolume.clip;
-		source.volume = clipWithVolume.volume;
-		source.Play();
-		while (source.isPlaying) {
-			yield return null;
-		}
-		Destroy(source);
 	}
 
 	void SetMusic() {

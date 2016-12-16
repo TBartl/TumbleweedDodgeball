@@ -162,6 +162,7 @@ public class StartMenu : MonoBehaviour {
 				}
 
 				if (noOneInGame) {
+					AudioManager.instance.PlayClip(AudioManager.instance.back);
 					SceneTransitioner.instance.LoadBack("Title Screen");
 				}
 			}

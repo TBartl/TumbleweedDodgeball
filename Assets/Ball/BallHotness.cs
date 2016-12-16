@@ -23,8 +23,7 @@ public class BallHotness : MonoBehaviour {
 	}
 	
 	// Update is called once per frame
-	void Update () {
-		//isHot = (rigid.velocity.magnitude >= threshold);
+	protected virtual void Update () {
 		if (rigid.velocity.magnitude < threshold) {
 			isHot = false;
 		}
@@ -51,10 +50,17 @@ public class BallHotness : MonoBehaviour {
 			other.gameObject.GetComponent<Hittable>().Hit(source.GetThrower(), rigid.velocity);
 			this.OnHitOther(other.gameObject);
 		}
+		else {
+			HitAnything();
+		}
 	}
 	
 
 	protected virtual void OnHitOther(GameObject other) {
+
+	}
+
+	protected virtual void HitAnything() {
 
 	}
 
