@@ -494,7 +494,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 36f6ec54f8d0649a4ac7088233f91158, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  image: {fileID: 0}
   images:
   - {fileID: 21300000, guid: 346aec96dfc7b83449214053c9817cba, type: 3}
   - {fileID: 21300000, guid: 59114e0d0a7d7154eaf9ea475ee96dd4, type: 3}
@@ -1096,7 +1095,6 @@ GameObject:
   m_Component:
   - 224: {fileID: 305146263}
   - 222: {fileID: 305146266}
-  - 114: {fileID: 514028898}
   - 114: {fileID: 305146265}
   - 114: {fileID: 305146264}
   m_Layer: 5
@@ -1115,7 +1113,7 @@ RectTransform:
   m_GameObject: {fileID: 305146262}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 1477206431}
@@ -1128,15 +1126,30 @@ RectTransform:
 --- !u!114 &305146264
 MonoBehaviour:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 114000012096717698, guid: 7195cefd3cff64240bb942110d4250b7,
-    type: 2}
+  m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 305146262}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 0}
+  m_Script: {fileID: -765806418, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_Sprite: {fileID: 0}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
 --- !u!114 &305146265
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1364,40 +1377,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8bd1eb1143c7e174282f6ed18bb75163, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &514028898
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 114000010187766234, guid: 7195cefd3cff64240bb942110d4250b7,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 305146262}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 708705254, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
-  m_RaycastTarget: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_FontData:
-    m_Font: {fileID: 12800000, guid: 83d0d5f219c244c2f8df4a84c476e560, type: 3}
-    m_FontSize: 30
-    m_FontStyle: 0
-    m_BestFit: 0
-    m_MinSize: 0
-    m_MaxSize: 60
-    m_Alignment: 4
-    m_AlignByGeometry: 0
-    m_RichText: 1
-    m_HorizontalOverflow: 0
-    m_VerticalOverflow: 0
-    m_LineSpacing: 1
-  m_Text: 
 --- !u!1001 &537780800
 Prefab:
   m_ObjectHideFlags: 0
@@ -2856,6 +2835,7 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_Materials:
   - {fileID: 2100000, guid: 17d089281eb4bbd4d9bba530eb5ab884, type: 2}
+  - {fileID: 2100000, guid: e8b42617bade272488b44f4ac8087335, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_ProbeAnchor: {fileID: 0}
@@ -4467,6 +4447,7 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_Materials:
   - {fileID: 2100000, guid: 17d089281eb4bbd4d9bba530eb5ab884, type: 2}
+  - {fileID: 2100000, guid: e8b42617bade272488b44f4ac8087335, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_ProbeAnchor: {fileID: 0}
@@ -6244,7 +6225,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   waitTime: 2
-  text: {fileID: 514028898}
+  textImage: {fileID: 305146264}
+  textSprites:
+  - {fileID: 21300000, guid: 625fa28545e274e4cb1343470e08f98b, type: 3}
+  - {fileID: 21300000, guid: 3a0f91a91171680468ac915f59fb6340, type: 3}
+  - {fileID: 21300000, guid: 01dbe33c0f39a0a4a9a8292baef341e7, type: 3}
+  - {fileID: 21300000, guid: 5904916c5f5b319478cb44999e82815e, type: 3}
+  - {fileID: 21300000, guid: 7040c850675459f47bfbb33046346b7a, type: 3}
+  - {fileID: 21300000, guid: 5a26fcaa321afd046ae7f423497278ba, type: 3}
   Checks:
   - {fileID: 945262854}
   - {fileID: 1456112531}

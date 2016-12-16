@@ -1,14 +1,25 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+
+enum TutorialText {
+	leftStickWalk,
+	rightStickAim,
+	aDash,
+	punch,
+	rightHandThrow,
+	leftHandThrow
+}
 
 public class TutorialManager : MonoBehaviour {
 
 	public static TutorialManager inst;
 
 	public float waitTime = 2f;
-	public Text text;
+	public Image textImage;
+	public List<Sprite> textSprites; 
 	public GameObject[] Checks;
 	public GameObject[] CheckEnd;
 
@@ -47,8 +58,8 @@ public class TutorialManager : MonoBehaviour {
 	IEnumerator RunTutorial() {
 		ChangeTask();
 		yield return new WaitForSeconds(3);
-
-		text.text = "Use Left Stick to walk";
+		
+		textImage.sprite = textImage.sprite = textSprites[(int)TutorialText.leftStickWalk];
 		while (!CheckTaskDone()) {
 			for (int i = 0; i < 4; i++) {
 				if (Players[i].activeSelf == false)
@@ -63,7 +74,7 @@ public class TutorialManager : MonoBehaviour {
 		for (int i = 0; i < 4; i++)
 			startRot[i] = Directions[i].transform.rotation;
 
-		text.text = "Use Right Stick to Aim";
+		textImage.sprite = textImage.sprite = textSprites[(int)TutorialText.rightStickAim];
 		while (!CheckTaskDone()) {
 			for (int i = 0; i < 4; i++) {
 				if (Players[i].activeSelf == false)
@@ -76,7 +87,7 @@ public class TutorialManager : MonoBehaviour {
 		yield return new WaitForSeconds(waitTime);
 		ChangeTask();
 
-		text.text = "Use A to Dash in the Direction of Movement";
+		textImage.sprite = textImage.sprite = textSprites[(int)TutorialText.aDash];
 		while (!CheckTaskDone()) {
 			for (int i = 0; i < 4; i++) {
 				if (Players[i].activeSelf == false)
@@ -89,7 +100,7 @@ public class TutorialManager : MonoBehaviour {
 		yield return new WaitForSeconds(waitTime);
 		ChangeTask();
 
-		text.text = "Use Bumpers to Punch with a Free Hand";
+		textImage.sprite = textImage.sprite = textSprites[(int)TutorialText.punch];
 		while (!CheckTaskDone()) {
 			for (int i = 0; i < 4; i++) {
 				if (Players[i].activeSelf == false)
@@ -106,7 +117,7 @@ public class TutorialManager : MonoBehaviour {
 			Balls[i].transform.SetParent(null);
 		}
 
-		text.text = "Use Right Bumper to pick up and throw balls with Right Hand";
+		textImage.sprite = textImage.sprite = textSprites[(int)TutorialText.rightHandThrow];
 		while (!CheckTaskDone()) {
 			for (int i = 0; i < 4; i++) {
 				if (Players[i].activeSelf == false)
@@ -121,7 +132,7 @@ public class TutorialManager : MonoBehaviour {
 		yield return new WaitForSeconds(waitTime);
 		ChangeTask();
 
-		text.text = "Use Left Bumper to pick up and throw balls with Left Hand";
+		textImage.sprite = textImage.sprite = textSprites[(int)TutorialText.leftHandThrow];
 		while (!CheckTaskDone()) {
 			for (int i = 0; i < 4; i++) {
 				if (Players[i].activeSelf == false)

@@ -762,7 +762,7 @@
        fx="1777.6033"
        fy="4881.9946"
        r="47.802292"
-       gradientTransform="matrix(9.2601651,3.0818103e-5,-3.1731009e-5,9.5344736,-16584.323,-40597.463)"
+       gradientTransform="matrix(3.4040236,1.1328691e-5,-1.1664274e-5,3.5048591,-8162.8117,-8834.2893)"
        gradientUnits="userSpaceOnUse" />
     <linearGradient
        inkscape:collect="always"
@@ -884,32 +884,6 @@
        y1="6768.4204"
        x2="2578.3889"
        y2="6706.709" />
-    <filter
-       inkscape:collect="always"
-       style="color-interpolation-filters:sRGB"
-       id="filter6999"
-       x="-0.025202195"
-       width="1.0504044"
-       y="-0.18635987"
-       height="1.3727197">
-      <feGaussianBlur
-         inkscape:collect="always"
-         stdDeviation="16.795341"
-         id="feGaussianBlur7001" />
-    </filter>
-    <filter
-       inkscape:collect="always"
-       style="color-interpolation-filters:sRGB"
-       id="filter7108"
-       x="-0.025467562"
-       width="1.0509351"
-       y="-0.17302805"
-       height="1.3460561">
-      <feGaussianBlur
-         inkscape:collect="always"
-         stdDeviation="15.669451"
-         id="feGaussianBlur7110" />
-    </filter>
     <filter
        inkscape:collect="always"
        style="color-interpolation-filters:sRGB"
@@ -1332,6 +1306,91 @@
          stdDeviation="87.55432"
          id="feGaussianBlur5551" />
     </filter>
+    <filter
+       inkscape:collect="always"
+       style="color-interpolation-filters:sRGB"
+       id="filter5056"
+       x="-0.019402829"
+       width="1.0388057"
+       y="-0.2489619"
+       height="1.4979238">
+      <feGaussianBlur
+         inkscape:collect="always"
+         stdDeviation="22.437234"
+         id="feGaussianBlur5058" />
+    </filter>
+    <filter
+       inkscape:collect="always"
+       style="color-interpolation-filters:sRGB"
+       id="filter5384"
+       x="-0.020856337"
+       width="1.0417127"
+       y="-0.24176337"
+       height="1.4835267">
+      <feGaussianBlur
+         inkscape:collect="always"
+         stdDeviation="24.427654"
+         id="feGaussianBlur5386" />
+    </filter>
+    <filter
+       inkscape:collect="always"
+       style="color-interpolation-filters:sRGB"
+       id="filter4451-51-5"
+       x="-0.109875"
+       width="1.21975"
+       y="-0.095178343"
+       height="1.1903567">
+      <feGaussianBlur
+         inkscape:collect="always"
+         stdDeviation="4.2097097"
+         id="feGaussianBlur4453-33-3" />
+    </filter>
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient4551"
+       id="linearGradient5649"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(0.84642668,0,0,0.84642668,-2382.8624,2086.4118)"
+       x1="-887.57721"
+       y1="5525.7764"
+       x2="-888.22375"
+       y2="5750.5352" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient4495"
+       id="linearGradient5651"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="translate(-2246.621,1220.1148)"
+       x1="-887.57721"
+       y1="5525.7764"
+       x2="-888.22375"
+       y2="5750.5352" />
+    <filter
+       inkscape:collect="always"
+       style="color-interpolation-filters:sRGB"
+       id="filter4451-51-5-8"
+       x="-0.109875"
+       width="1.21975"
+       y="-0.095178343"
+       height="1.1903567">
+      <feGaussianBlur
+         inkscape:collect="always"
+         stdDeviation="4.2097097"
+         id="feGaussianBlur4453-33-3-4" />
+    </filter>
+    <filter
+       inkscape:collect="always"
+       style="color-interpolation-filters:sRGB"
+       id="filter5772"
+       x="-0.033363659"
+       width="1.0667273"
+       y="-0.24747125"
+       height="1.4949425">
+      <feGaussianBlur
+         inkscape:collect="always"
+         stdDeviation="22.778038"
+         id="feGaussianBlur5774" />
+    </filter>
   </defs>
   <sodipodi:namedview
      id="base"
@@ -1340,9 +1399,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.056493647"
-     inkscape:cx="451.21921"
-     inkscape:cy="-11560.532"
+     inkscape:zoom="0.22597459"
+     inkscape:cx="-3418.7483"
+     inkscape:cy="-8510.783"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -3233,218 +3292,218 @@
        inkscape:export-ydpi="45"
        inkscape:export-xdpi="45"
        inkscape:export-filename="C:\Users\tabsk\Desktop\eecs-494-f16-p4\Assets\UI\tutorialText1.png"
-       id="g8397-9"
-       transform="translate(-2214.4172,2272.6023)"
-       style="fill:#000000;opacity:0.99;filter:url(#filter6999)">
-      <text
-         inkscape:export-ydpi="45"
-         inkscape:export-xdpi="45"
-         inkscape:export-filename="C:\Users\tabsk\Desktop\eecs-494-f16-p4\Assets\UI\joinText.png"
-         sodipodi:linespacing="125%"
-         id="text4241-8-8-9-6-4"
-         y="5639.4521"
-         x="-374.69431"
-         style="font-style:normal;font-weight:normal;font-size:256.63696289px;line-height:125%;font-family:sans-serif;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-         xml:space="preserve"><tspan
-           id="tspan4593-3-450-3"
-           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Western;-inkscape-font-specification:'Western Thin';text-align:center;text-anchor:middle;stroke:#000000;stroke-width:10;stroke-miterlimit:4;stroke-dasharray:none;fill:#000000"
-           y="5639.4521"
-           x="-374.69431"
-           sodipodi:role="line">Use      To Move</tspan></text>
-      <text
-         inkscape:export-ydpi="45"
-         inkscape:export-xdpi="45"
-         inkscape:export-filename="C:\Users\tabsk\Desktop\eecs-494-f16-p4\Assets\UI\joinText.png"
-         sodipodi:linespacing="125%"
-         id="text4241-8-8-2-1"
-         y="5636.4219"
-         x="-376.7146"
-         style="font-style:normal;font-weight:normal;font-size:256.63696289px;line-height:125%;font-family:sans-serif;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-         xml:space="preserve"><tspan
-           id="tspan4593-28-1"
-           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Western;-inkscape-font-specification:'Western Thin';text-align:center;text-anchor:middle;fill:#000000"
-           y="5636.4219"
-           x="-376.7146"
-           sodipodi:role="line">Use      To Move</tspan></text>
-      <g
-         id="g8331-7"
-         transform="matrix(0.36759859,0,0,0.36759859,-575.95442,3345.2684)"
-         style="fill:#000000">
-        <g
-           transform="translate(-1150.5594,484.12932)"
-           style="stroke-width:50;stroke-miterlimit:4;stroke-dasharray:none;fill:#000000"
-           id="g8327-0">
-          <ellipse
-             style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:50;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
-             id="path8152-8-2-3-42"
-             cx="1026.9808"
-             cy="5649.8008"
-             rx="119.65743"
-             ry="94.900719" />
-          <ellipse
-             style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:50;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
-             id="path8152-7-9-6"
-             cx="1026.9808"
-             cy="5465.7139"
-             rx="266.9281"
-             ry="211.70161" />
-        </g>
-        <ellipse
-           ry="94.900719"
-           rx="119.65743"
-           cy="6133.9297"
-           cx="-123.57857"
-           id="path8152-8-2-38"
-           style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:10;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate" />
-        <ellipse
-           ry="211.70161"
-           rx="266.9281"
-           cy="5949.8428"
-           cx="-123.57857"
-           id="path8152-7-0"
-           style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:10;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate" />
-        <g
-           transform="matrix(1.1301797,0,0,0.9228192,-1335.3776,908.05763)"
-           id="g8263-8"
-           style="fill:#000000">
-          <text
-             inkscape:export-ydpi="45"
-             inkscape:export-xdpi="45"
-             inkscape:export-filename="C:\Users\tabsk\Desktop\eecs-494-f16-p4\Assets\UI\joinText.png"
-             sodipodi:linespacing="125%"
-             id="text4241-8-8-9-6-3-92"
-             y="5549.8999"
-             x="1072.5408"
-             style="font-style:normal;font-weight:normal;font-size:256.63696289px;line-height:125%;font-family:sans-serif;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-             xml:space="preserve"><tspan
-               id="tspan4593-3-450-0-0"
-               style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Western;-inkscape-font-specification:'Western Thin';text-align:center;text-anchor:middle;stroke:#000000;stroke-width:10;stroke-miterlimit:4;stroke-dasharray:none;fill:#000000"
-               y="5549.8999"
-               x="1072.5408"
-               sodipodi:role="line">R</tspan></text>
-          <text
-             inkscape:export-ydpi="45"
-             inkscape:export-xdpi="45"
-             inkscape:export-filename="C:\Users\tabsk\Desktop\eecs-494-f16-p4\Assets\UI\joinText.png"
-             sodipodi:linespacing="125%"
-             id="text4241-8-8-2-6-5"
-             y="5546.8696"
-             x="1070.5205"
-             style="font-style:normal;font-weight:normal;font-size:256.63696289px;line-height:125%;font-family:sans-serif;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-             xml:space="preserve"><tspan
-               id="tspan4593-28-8-2"
-               style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Western;-inkscape-font-specification:'Western Thin';text-align:center;text-anchor:middle;fill:#000000"
-               y="5546.8696"
-               x="1070.5205"
-               sodipodi:role="line">R</tspan></text>
-        </g>
-      </g>
-    </g>
-    <g
-       inkscape:export-ydpi="45"
-       inkscape:export-xdpi="45"
-       inkscape:export-filename="C:\Users\tabsk\Desktop\eecs-494-f16-p4\Assets\UI\tutorialText1.png"
        id="g8397"
        transform="translate(-2214.4172,2272.6023)">
-      <text
-         inkscape:export-ydpi="45"
-         inkscape:export-xdpi="45"
-         inkscape:export-filename="C:\Users\tabsk\Desktop\eecs-494-f16-p4\Assets\UI\joinText.png"
-         sodipodi:linespacing="125%"
-         id="text4241-8-8-9-6"
-         y="5639.4521"
-         x="-374.69431"
-         style="font-style:normal;font-weight:normal;font-size:256.63696289px;line-height:125%;font-family:sans-serif;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-         xml:space="preserve"><tspan
-           id="tspan4593-3-450"
-           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Western;-inkscape-font-specification:'Western Thin';text-align:center;text-anchor:middle;stroke:#000000;stroke-width:10;stroke-miterlimit:4;stroke-dasharray:none"
-           y="5639.4521"
-           x="-374.69431"
-           sodipodi:role="line">Use      To Move</tspan></text>
-      <text
-         inkscape:export-ydpi="45"
-         inkscape:export-xdpi="45"
-         inkscape:export-filename="C:\Users\tabsk\Desktop\eecs-494-f16-p4\Assets\UI\joinText.png"
-         sodipodi:linespacing="125%"
-         id="text4241-8-8-2"
-         y="5636.4219"
-         x="-376.7146"
-         style="font-style:normal;font-weight:normal;font-size:256.63696289px;line-height:125%;font-family:sans-serif;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-         xml:space="preserve"><tspan
-           id="tspan4593-28"
-           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Western;-inkscape-font-specification:'Western Thin';text-align:center;text-anchor:middle"
-           y="5636.4219"
-           x="-376.7146"
-           sodipodi:role="line">Use      To Move</tspan></text>
       <g
-         id="g8331"
-         transform="matrix(0.36759859,0,0,0.36759859,-575.95442,3345.2684)">
+         transform="translate(2.422905e-5,2.8201123e-6)"
+         id="g4918-2"
+         style="fill:#000000;filter:url(#filter5056)">
+        <text
+           xml:space="preserve"
+           style="font-style:normal;font-weight:normal;font-size:256.63696289px;line-height:125%;font-family:sans-serif;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+           x="-374.69431"
+           y="5639.4521"
+           id="text4241-8-8-9-6-13"
+           sodipodi:linespacing="125%"
+           inkscape:export-filename="C:\Users\tabsk\Desktop\eecs-494-f16-p4\Assets\UI\joinText.png"
+           inkscape:export-xdpi="45"
+           inkscape:export-ydpi="45"><tspan
+             sodipodi:role="line"
+             x="-374.69437"
+             y="5639.4521"
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Western;-inkscape-font-specification:'Western Thin';text-align:center;text-anchor:middle;stroke:#000000;stroke-width:10;stroke-miterlimit:4;stroke-dasharray:none;fill:#000000"
+             id="tspan4593-3-450-9">Use Left Stick      To Move</tspan></text>
+        <text
+           xml:space="preserve"
+           style="font-style:normal;font-weight:normal;font-size:256.63696289px;line-height:125%;font-family:sans-serif;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+           x="-376.7146"
+           y="5636.4219"
+           id="text4241-8-8-2-8"
+           sodipodi:linespacing="125%"
+           inkscape:export-filename="C:\Users\tabsk\Desktop\eecs-494-f16-p4\Assets\UI\joinText.png"
+           inkscape:export-xdpi="45"
+           inkscape:export-ydpi="45"><tspan
+             sodipodi:role="line"
+             x="-376.71466"
+             y="5636.4219"
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Western;-inkscape-font-specification:'Western Thin';text-align:center;text-anchor:middle;fill:#000000"
+             id="tspan4593-28-2">Use Left Stick      To Move</tspan></text>
         <g
-           transform="translate(-1150.5594,484.12932)"
-           style="stroke-width:50;stroke-miterlimit:4;stroke-dasharray:none"
-           id="g8327">
+           transform="matrix(0.36759859,0,0,0.36759859,8.1820588,3345.2684)"
+           id="g8331-1"
+           style="fill:#000000">
+          <g
+             id="g8327-8"
+             style="stroke-width:50;stroke-miterlimit:4;stroke-dasharray:none;fill:#000000"
+             transform="translate(-1150.5594,484.12932)">
+            <ellipse
+               ry="94.900719"
+               rx="119.65743"
+               cy="5649.8008"
+               cx="1026.9808"
+               id="path8152-8-2-3-42"
+               style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:50;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate" />
+            <ellipse
+               ry="211.70161"
+               rx="266.9281"
+               cy="5465.7139"
+               cx="1026.9808"
+               id="path8152-7-9-7"
+               style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:50;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate" />
+          </g>
           <ellipse
-             style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:50;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
-             id="path8152-8-2-3"
-             cx="1026.9808"
-             cy="5649.8008"
+             style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:10;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
+             id="path8152-8-2-9"
+             cx="-123.57857"
+             cy="6133.9297"
              rx="119.65743"
              ry="94.900719" />
           <ellipse
-             style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:50;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
-             id="path8152-7-9"
-             cx="1026.9808"
-             cy="5465.7139"
+             style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:10;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
+             id="path8152-7-7"
+             cx="-123.57857"
+             cy="5949.8428"
              rx="266.9281"
              ry="211.70161" />
-        </g>
-        <ellipse
-           ry="94.900719"
-           rx="119.65743"
-           cy="6133.9297"
-           cx="-123.57857"
-           id="path8152-8-2"
-           style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:#303030;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:10;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate" />
-        <ellipse
-           ry="211.70161"
-           rx="266.9281"
-           cy="5949.8428"
-           cx="-123.57857"
-           id="path8152-7"
-           style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:url(#radialGradient8192-5);fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:10;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate" />
-        <g
-           transform="matrix(1.1301797,0,0,0.9228192,-1335.3776,908.05763)"
-           id="g8263">
-          <text
-             inkscape:export-ydpi="45"
-             inkscape:export-xdpi="45"
-             inkscape:export-filename="C:\Users\tabsk\Desktop\eecs-494-f16-p4\Assets\UI\joinText.png"
-             sodipodi:linespacing="125%"
-             id="text4241-8-8-9-6-3"
-             y="5549.8999"
-             x="1072.5408"
-             style="font-style:normal;font-weight:normal;font-size:256.63696289px;line-height:125%;font-family:sans-serif;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-             xml:space="preserve"><tspan
-               id="tspan4593-3-450-0"
-               style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Western;-inkscape-font-specification:'Western Thin';text-align:center;text-anchor:middle;stroke:#000000;stroke-width:10;stroke-miterlimit:4;stroke-dasharray:none"
-               y="5549.8999"
+          <g
+             id="g8263-1"
+             transform="matrix(1.1301797,0,0,0.9228192,-1335.3776,908.05763)"
+             style="fill:#000000">
+            <text
+               xml:space="preserve"
+               style="font-style:normal;font-weight:normal;font-size:256.63696289px;line-height:125%;font-family:sans-serif;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
                x="1072.5408"
-               sodipodi:role="line">R</tspan></text>
-          <text
-             inkscape:export-ydpi="45"
-             inkscape:export-xdpi="45"
-             inkscape:export-filename="C:\Users\tabsk\Desktop\eecs-494-f16-p4\Assets\UI\joinText.png"
-             sodipodi:linespacing="125%"
-             id="text4241-8-8-2-6"
-             y="5546.8696"
-             x="1070.5205"
-             style="font-style:normal;font-weight:normal;font-size:256.63696289px;line-height:125%;font-family:sans-serif;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-             xml:space="preserve"><tspan
-               id="tspan4593-28-8"
-               style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Western;-inkscape-font-specification:'Western Thin';text-align:center;text-anchor:middle"
-               y="5546.8696"
+               y="5549.8999"
+               id="text4241-8-8-9-6-3-5"
+               sodipodi:linespacing="125%"
+               inkscape:export-filename="C:\Users\tabsk\Desktop\eecs-494-f16-p4\Assets\UI\joinText.png"
+               inkscape:export-xdpi="45"
+               inkscape:export-ydpi="45"><tspan
+                 sodipodi:role="line"
+                 x="1072.5408"
+                 y="5549.8999"
+                 style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Western;-inkscape-font-specification:'Western Thin';text-align:center;text-anchor:middle;stroke:#000000;stroke-width:10;stroke-miterlimit:4;stroke-dasharray:none;fill:#000000"
+                 id="tspan4593-3-450-0-4">L</tspan></text>
+            <text
+               xml:space="preserve"
+               style="font-style:normal;font-weight:normal;font-size:256.63696289px;line-height:125%;font-family:sans-serif;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
                x="1070.5205"
-               sodipodi:role="line">R</tspan></text>
+               y="5546.8696"
+               id="text4241-8-8-2-6-17"
+               sodipodi:linespacing="125%"
+               inkscape:export-filename="C:\Users\tabsk\Desktop\eecs-494-f16-p4\Assets\UI\joinText.png"
+               inkscape:export-xdpi="45"
+               inkscape:export-ydpi="45"><tspan
+                 sodipodi:role="line"
+                 x="1070.5205"
+                 y="5546.8696"
+                 style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Western;-inkscape-font-specification:'Western Thin';text-align:center;text-anchor:middle;fill:#000000"
+                 id="tspan4593-28-8-2">L</tspan></text>
+          </g>
+        </g>
+      </g>
+      <g
+         id="g4918">
+        <text
+           xml:space="preserve"
+           style="font-style:normal;font-weight:normal;font-size:256.63696289px;line-height:125%;font-family:sans-serif;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+           x="-374.69431"
+           y="5639.4521"
+           id="text4241-8-8-9-6"
+           sodipodi:linespacing="125%"
+           inkscape:export-filename="C:\Users\tabsk\Desktop\eecs-494-f16-p4\Assets\UI\joinText.png"
+           inkscape:export-xdpi="45"
+           inkscape:export-ydpi="45"><tspan
+             sodipodi:role="line"
+             x="-374.69437"
+             y="5639.4521"
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Western;-inkscape-font-specification:'Western Thin';text-align:center;text-anchor:middle;stroke:#000000;stroke-width:10;stroke-miterlimit:4;stroke-dasharray:none"
+             id="tspan4593-3-450">Use Left Stick      To Move</tspan></text>
+        <text
+           xml:space="preserve"
+           style="font-style:normal;font-weight:normal;font-size:256.63696289px;line-height:125%;font-family:sans-serif;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+           x="-376.7146"
+           y="5636.4219"
+           id="text4241-8-8-2"
+           sodipodi:linespacing="125%"
+           inkscape:export-filename="C:\Users\tabsk\Desktop\eecs-494-f16-p4\Assets\UI\joinText.png"
+           inkscape:export-xdpi="45"
+           inkscape:export-ydpi="45"><tspan
+             sodipodi:role="line"
+             x="-376.71466"
+             y="5636.4219"
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Western;-inkscape-font-specification:'Western Thin';text-align:center;text-anchor:middle"
+             id="tspan4593-28">Use Left Stick      To Move</tspan></text>
+        <g
+           transform="matrix(0.36759859,0,0,0.36759859,8.1820588,3345.2684)"
+           id="g8331">
+          <g
+             id="g8327"
+             style="stroke-width:50;stroke-miterlimit:4;stroke-dasharray:none"
+             transform="translate(-1150.5594,484.12932)">
+            <ellipse
+               ry="94.900719"
+               rx="119.65743"
+               cy="5649.8008"
+               cx="1026.9808"
+               id="path8152-8-2-3"
+               style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:50;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate" />
+            <ellipse
+               ry="211.70161"
+               rx="266.9281"
+               cy="5465.7139"
+               cx="1026.9808"
+               id="path8152-7-9"
+               style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:50;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate" />
+          </g>
+          <ellipse
+             style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:#303030;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:10;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
+             id="path8152-8-2"
+             cx="-123.57857"
+             cy="6133.9297"
+             rx="119.65743"
+             ry="94.900719" />
+          <ellipse
+             style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:url(#radialGradient8192-5);fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:10;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
+             id="path8152-7"
+             cx="-123.57857"
+             cy="5949.8428"
+             rx="266.9281"
+             ry="211.70161" />
+          <g
+             id="g8263"
+             transform="matrix(1.1301797,0,0,0.9228192,-1335.3776,908.05763)">
+            <text
+               xml:space="preserve"
+               style="font-style:normal;font-weight:normal;font-size:256.63696289px;line-height:125%;font-family:sans-serif;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+               x="1072.5408"
+               y="5549.8999"
+               id="text4241-8-8-9-6-3"
+               sodipodi:linespacing="125%"
+               inkscape:export-filename="C:\Users\tabsk\Desktop\eecs-494-f16-p4\Assets\UI\joinText.png"
+               inkscape:export-xdpi="45"
+               inkscape:export-ydpi="45"><tspan
+                 sodipodi:role="line"
+                 x="1072.5408"
+                 y="5549.8999"
+                 style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Western;-inkscape-font-specification:'Western Thin';text-align:center;text-anchor:middle;stroke:#000000;stroke-width:10;stroke-miterlimit:4;stroke-dasharray:none"
+                 id="tspan4593-3-450-0">L</tspan></text>
+            <text
+               xml:space="preserve"
+               style="font-style:normal;font-weight:normal;font-size:256.63696289px;line-height:125%;font-family:sans-serif;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+               x="1070.5205"
+               y="5546.8696"
+               id="text4241-8-8-2-6"
+               sodipodi:linespacing="125%"
+               inkscape:export-filename="C:\Users\tabsk\Desktop\eecs-494-f16-p4\Assets\UI\joinText.png"
+               inkscape:export-xdpi="45"
+               inkscape:export-ydpi="45"><tspan
+                 sodipodi:role="line"
+                 x="1070.5205"
+                 y="5546.8696"
+                 style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Western;-inkscape-font-specification:'Western Thin';text-align:center;text-anchor:middle"
+                 id="tspan4593-28-8">L</tspan></text>
+          </g>
         </g>
       </g>
     </g>
@@ -3453,7 +3512,7 @@
        inkscape:export-filename="C:\Users\tabsk\Desktop\eecs-494-f16-p4\Assets\UI\tutorialText3.png"
        inkscape:export-xdpi="45"
        inkscape:export-ydpi="45"
-       transform="translate(-13.83852,116.43704)"
+       transform="translate(-13.83852,1693.5251)"
        style="fill:#000000;filter:url(#filter7665)">
       <text
          inkscape:export-ydpi="45"
@@ -3466,12 +3525,12 @@
          style="font-style:normal;font-weight:normal;font-size:256.63696289px;line-height:125%;font-family:sans-serif;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
          xml:space="preserve"><tspan
            id="tspan9661-4"
-           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Western;-inkscape-font-specification:'Western Thin';text-align:center;text-anchor:middle;stroke:#000000;stroke-width:10;stroke-miterlimit:4;stroke-dasharray:none;fill:#000000"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Western;-inkscape-font-specification:'Western Thin';text-align:center;text-anchor:middle;fill:#000000;stroke:#000000;stroke-width:10;stroke-miterlimit:4;stroke-dasharray:none"
            y="8863.0635"
            x="-2554.2009"
            sodipodi:role="line">Use Bumpers      or      to </tspan><tspan
            id="tspan9992-0"
-           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Western;-inkscape-font-specification:'Western Thin';text-align:center;text-anchor:middle;stroke:#000000;stroke-width:10;stroke-miterlimit:4;stroke-dasharray:none;fill:#000000"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Western;-inkscape-font-specification:'Western Thin';text-align:center;text-anchor:middle;fill:#000000;stroke:#000000;stroke-width:10;stroke-miterlimit:4;stroke-dasharray:none"
            y="9183.8594"
            x="-2586.2805"
            sodipodi:role="line">Punch with a Free Hand</tspan></text>
@@ -3586,7 +3645,7 @@
        inkscape:export-filename="C:\Users\tabsk\Desktop\eecs-494-f16-p4\Assets\UI\tutorialText3.png"
        inkscape:export-xdpi="45"
        inkscape:export-ydpi="45"
-       transform="translate(-13.838506,116.43702)">
+       transform="translate(-13.838506,1693.525)">
       <text
          inkscape:export-ydpi="45"
          inkscape:export-xdpi="45"
@@ -3711,9 +3770,9 @@
       </g>
     </g>
     <g
-       transform="translate(7.919316e-7,7.5076121e-6)"
-       id="g6829-0"
-       style="fill:#000000;filter:url(#filter7108)"
+       transform="translate(-4.4506073e-5,7.5076121e-6)"
+       id="g5060-7"
+       style="fill:#000000;filter:url(#filter5384)"
        inkscape:export-filename="C:\Users\tabsk\Desktop\eecs-494-f16-p4\Assets\UI\tutorialText2.png"
        inkscape:export-xdpi="45"
        inkscape:export-ydpi="45">
@@ -3722,110 +3781,109 @@
          inkscape:export-xdpi="45"
          inkscape:export-filename="C:\Users\tabsk\Desktop\eecs-494-f16-p4\Assets\UI\tutorialText2.png"
          sodipodi:linespacing="125%"
-         id="text4241-8-8-9-6-1-0"
+         id="text4241-8-8-9-6-1-7"
          y="8383.4648"
          x="-2589.1116"
          style="font-style:normal;font-weight:normal;font-size:256.63696289px;line-height:125%;font-family:sans-serif;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
          xml:space="preserve"><tspan
-           id="tspan4593-3-450-7-0"
+           id="tspan4593-3-450-7-55"
            style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Western;-inkscape-font-specification:'Western Thin';text-align:center;text-anchor:middle;stroke:#000000;stroke-width:10;stroke-miterlimit:4;stroke-dasharray:none;fill:#000000"
            y="8383.4648"
            x="-2589.1116"
-           sodipodi:role="line">Use      To Aim</tspan></text>
+           sodipodi:role="line">Use Right Stick      To Aim</tspan></text>
       <g
-         id="g8331-3-3"
-         transform="matrix(0.36759859,0,0,0.36759859,-2720.4379,6089.2809)"
-         inkscape:export-filename="C:\Users\tabsk\Desktop\eecs-494-f16-p4\Assets\UI\tutorialText2.png"
-         inkscape:export-xdpi="45"
          inkscape:export-ydpi="45"
-         style="fill:#000000">
-        <g
-           transform="translate(-1150.5594,484.12932)"
-           style="stroke-width:50;stroke-miterlimit:4;stroke-dasharray:none;fill:#000000"
-           id="g8327-4-6">
-          <ellipse
-             style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:50;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
-             id="path8152-8-2-3-4-0"
-             cx="1026.9808"
-             cy="5649.8008"
-             rx="119.65743"
-             ry="94.900719" />
-          <ellipse
-             style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:50;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
-             id="path8152-7-9-0-3"
-             cx="1026.9808"
-             cy="5465.7139"
-             rx="266.9281"
-             ry="211.70161" />
-        </g>
+         inkscape:export-xdpi="45"
+         inkscape:export-filename="C:\Users\tabsk\Desktop\eecs-494-f16-p4\Assets\UI\tutorialText2.png"
+         id="g8327-4-2"
+         style="stroke-width:50;stroke-miterlimit:4;stroke-dasharray:none;fill:#000000"
+         transform="matrix(0.36759859,0,0,0.36759859,-2489.3819,6267.2462)">
         <ellipse
            ry="94.900719"
            rx="119.65743"
-           cy="6133.9297"
-           cx="-123.57857"
-           id="path8152-8-2-95-2"
-           style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:10;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate" />
+           cy="5649.8008"
+           cx="1026.9808"
+           id="path8152-8-2-3-4-5"
+           style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:50;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate" />
         <ellipse
            ry="211.70161"
            rx="266.9281"
-           cy="5949.8428"
-           cx="-123.57857"
-           id="path8152-7-1-8"
-           style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:10;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate" />
-        <g
-           transform="matrix(1.1301797,0,0,0.9228192,-1335.3776,908.05763)"
-           id="g8263-5-7"
-           style="fill:#000000">
-          <text
-             inkscape:export-ydpi="45"
-             inkscape:export-xdpi="45"
-             inkscape:export-filename="C:\Users\tabsk\Desktop\eecs-494-f16-p4\Assets\UI\joinText.png"
-             sodipodi:linespacing="125%"
-             id="text4241-8-8-9-6-3-9-1"
-             y="5549.8999"
-             x="1072.5408"
-             style="font-style:normal;font-weight:normal;font-size:256.63696289px;line-height:125%;font-family:sans-serif;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-             xml:space="preserve"><tspan
-               id="tspan4593-3-450-0-9-3"
-               style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Western;-inkscape-font-specification:'Western Thin';text-align:center;text-anchor:middle;stroke:#000000;stroke-width:10;stroke-miterlimit:4;stroke-dasharray:none;fill:#000000"
-               y="5549.8999"
-               x="1072.5408"
-               sodipodi:role="line">L</tspan></text>
-          <text
-             inkscape:export-ydpi="45"
-             inkscape:export-xdpi="45"
-             inkscape:export-filename="C:\Users\tabsk\Desktop\eecs-494-f16-p4\Assets\UI\joinText.png"
-             sodipodi:linespacing="125%"
-             id="text4241-8-8-2-6-1-6"
-             y="5546.8696"
-             x="1070.5205"
-             style="font-style:normal;font-weight:normal;font-size:256.63696289px;line-height:125%;font-family:sans-serif;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-             xml:space="preserve"><tspan
-               id="tspan4593-28-8-9-9"
-               style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Western;-inkscape-font-specification:'Western Thin';text-align:center;text-anchor:middle;fill:#000000"
-               y="5546.8696"
-               x="1070.5205"
-               sodipodi:role="line">L</tspan></text>
-        </g>
+           cy="5465.7139"
+           cx="1026.9808"
+           id="path8152-7-9-0-9"
+           style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:50;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate" />
       </g>
+      <ellipse
+         inkscape:export-ydpi="45"
+         inkscape:export-xdpi="45"
+         inkscape:export-filename="C:\Users\tabsk\Desktop\eecs-494-f16-p4\Assets\UI\tutorialText2.png"
+         style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:10;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
+         id="path8152-8-2-95-6"
+         cx="-2111.8652"
+         cy="8344.1045"
+         rx="43.985905"
+         ry="34.885372" />
+      <ellipse
+         inkscape:export-ydpi="45"
+         inkscape:export-xdpi="45"
+         inkscape:export-filename="C:\Users\tabsk\Desktop\eecs-494-f16-p4\Assets\UI\tutorialText2.png"
+         style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:10;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
+         id="path8152-7-1-2"
+         cx="-2111.8652"
+         cy="8276.4346"
+         rx="98.122391"
+         ry="77.821213" />
       <text
+         transform="scale(1.1066631,0.90361737)"
          inkscape:export-ydpi="45"
          inkscape:export-xdpi="45"
          inkscape:export-filename="C:\Users\tabsk\Desktop\eecs-494-f16-p4\Assets\UI\tutorialText2.png"
          sodipodi:linespacing="125%"
-         id="text4241-8-8-9-6-1-8-1"
+         id="text4241-8-8-9-6-3-9-2"
+         y="9191.6758"
+         x="-1908.1998"
+         style="font-style:normal;font-weight:normal;font-size:96.34409332px;line-height:125%;font-family:sans-serif;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:3.75410056;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         xml:space="preserve"><tspan
+           id="tspan4593-3-450-0-9-7"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Western;-inkscape-font-specification:'Western Thin';text-align:center;text-anchor:middle;stroke:#000000;stroke-width:3.75410056;stroke-miterlimit:4;stroke-dasharray:none;fill:#000000"
+           y="9191.6758"
+           x="-1908.1998"
+           sodipodi:role="line">R</tspan></text>
+      <text
+         transform="scale(1.1066631,0.90361737)"
+         inkscape:export-ydpi="45"
+         inkscape:export-xdpi="45"
+         inkscape:export-filename="C:\Users\tabsk\Desktop\eecs-494-f16-p4\Assets\UI\tutorialText2.png"
+         sodipodi:linespacing="125%"
+         id="text4241-8-8-2-6-1-26"
+         y="9190.5381"
+         x="-1908.9584"
+         style="font-style:normal;font-weight:normal;font-size:96.34409332px;line-height:125%;font-family:sans-serif;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         xml:space="preserve"><tspan
+           id="tspan4593-28-8-9-6"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Western;-inkscape-font-specification:'Western Thin';text-align:center;text-anchor:middle;fill:#000000"
+           y="9190.5381"
+           x="-1908.9584"
+           sodipodi:role="line">R</tspan></text>
+      <text
+         transform="translate(7.919316e-7,7.5076114e-6)"
+         inkscape:export-ydpi="45"
+         inkscape:export-xdpi="45"
+         inkscape:export-filename="C:\Users\tabsk\Desktop\eecs-494-f16-p4\Assets\UI\tutorialText2.png"
+         sodipodi:linespacing="125%"
+         id="text4241-8-8-9-6-1-8-5"
          y="8379.3857"
          x="-2591.4426"
          style="font-style:normal;font-weight:normal;font-size:256.63696289px;line-height:125%;font-family:sans-serif;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
          xml:space="preserve"><tspan
-           id="tspan4593-3-450-7-5-0"
+           id="tspan4593-3-450-7-5-3"
            style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Western;-inkscape-font-specification:'Western Thin';text-align:center;text-anchor:middle;stroke:none;stroke-width:10;stroke-miterlimit:4;stroke-dasharray:none;fill:#000000"
            y="8379.3857"
            x="-2591.4426"
-           sodipodi:role="line">Use      To Aim</tspan></text>
+           sodipodi:role="line">Use Right Stick      To Aim</tspan></text>
     </g>
     <g
-       id="g6829"
+       id="g5060"
        inkscape:export-filename="C:\Users\tabsk\Desktop\eecs-494-f16-p4\Assets\UI\tutorialText2.png"
        inkscape:export-xdpi="45"
        inkscape:export-ydpi="45">
@@ -3843,82 +3901,83 @@
            style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Western;-inkscape-font-specification:'Western Thin';text-align:center;text-anchor:middle;stroke:#000000;stroke-width:10;stroke-miterlimit:4;stroke-dasharray:none"
            y="8383.4648"
            x="-2589.1116"
-           sodipodi:role="line">Use      To Aim</tspan></text>
+           sodipodi:role="line">Use Right Stick      To Aim</tspan></text>
       <g
-         id="g8331-3"
-         transform="matrix(0.36759859,0,0,0.36759859,-2720.4379,6089.2809)"
-         inkscape:export-filename="C:\Users\tabsk\Desktop\eecs-494-f16-p4\Assets\UI\tutorialText2.png"
+         inkscape:export-ydpi="45"
          inkscape:export-xdpi="45"
-         inkscape:export-ydpi="45">
-        <g
-           transform="translate(-1150.5594,484.12932)"
-           style="stroke-width:50;stroke-miterlimit:4;stroke-dasharray:none"
-           id="g8327-4">
-          <ellipse
-             style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:50;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
-             id="path8152-8-2-3-4"
-             cx="1026.9808"
-             cy="5649.8008"
-             rx="119.65743"
-             ry="94.900719" />
-          <ellipse
-             style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:50;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
-             id="path8152-7-9-0"
-             cx="1026.9808"
-             cy="5465.7139"
-             rx="266.9281"
-             ry="211.70161" />
-        </g>
+         inkscape:export-filename="C:\Users\tabsk\Desktop\eecs-494-f16-p4\Assets\UI\tutorialText2.png"
+         id="g8327-4"
+         style="stroke-width:50;stroke-miterlimit:4;stroke-dasharray:none"
+         transform="matrix(0.36759859,0,0,0.36759859,-2489.3819,6267.2462)">
         <ellipse
            ry="94.900719"
            rx="119.65743"
-           cy="6133.9297"
-           cx="-123.57857"
-           id="path8152-8-2-95"
-           style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:#303030;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:10;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate" />
+           cy="5649.8008"
+           cx="1026.9808"
+           id="path8152-8-2-3-4"
+           style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:50;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate" />
         <ellipse
            ry="211.70161"
            rx="266.9281"
-           cy="5949.8428"
-           cx="-123.57857"
-           id="path8152-7-1"
-           style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:url(#radialGradient8192-5-3);fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:10;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate" />
-        <g
-           transform="matrix(1.1301797,0,0,0.9228192,-1335.3776,908.05763)"
-           id="g8263-5">
-          <text
-             inkscape:export-ydpi="45"
-             inkscape:export-xdpi="45"
-             inkscape:export-filename="C:\Users\tabsk\Desktop\eecs-494-f16-p4\Assets\UI\joinText.png"
-             sodipodi:linespacing="125%"
-             id="text4241-8-8-9-6-3-9"
-             y="5549.8999"
-             x="1072.5408"
-             style="font-style:normal;font-weight:normal;font-size:256.63696289px;line-height:125%;font-family:sans-serif;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-             xml:space="preserve"><tspan
-               id="tspan4593-3-450-0-9"
-               style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Western;-inkscape-font-specification:'Western Thin';text-align:center;text-anchor:middle;stroke:#000000;stroke-width:10;stroke-miterlimit:4;stroke-dasharray:none"
-               y="5549.8999"
-               x="1072.5408"
-               sodipodi:role="line">L</tspan></text>
-          <text
-             inkscape:export-ydpi="45"
-             inkscape:export-xdpi="45"
-             inkscape:export-filename="C:\Users\tabsk\Desktop\eecs-494-f16-p4\Assets\UI\joinText.png"
-             sodipodi:linespacing="125%"
-             id="text4241-8-8-2-6-1"
-             y="5546.8696"
-             x="1070.5205"
-             style="font-style:normal;font-weight:normal;font-size:256.63696289px;line-height:125%;font-family:sans-serif;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-             xml:space="preserve"><tspan
-               id="tspan4593-28-8-9"
-               style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Western;-inkscape-font-specification:'Western Thin';text-align:center;text-anchor:middle"
-               y="5546.8696"
-               x="1070.5205"
-               sodipodi:role="line">L</tspan></text>
-        </g>
+           cy="5465.7139"
+           cx="1026.9808"
+           id="path8152-7-9-0"
+           style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:50;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate" />
       </g>
+      <ellipse
+         inkscape:export-ydpi="45"
+         inkscape:export-xdpi="45"
+         inkscape:export-filename="C:\Users\tabsk\Desktop\eecs-494-f16-p4\Assets\UI\tutorialText2.png"
+         style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:#303030;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:10;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
+         id="path8152-8-2-95"
+         cx="-2111.8652"
+         cy="8344.1045"
+         rx="43.985905"
+         ry="34.885372" />
+      <ellipse
+         inkscape:export-ydpi="45"
+         inkscape:export-xdpi="45"
+         inkscape:export-filename="C:\Users\tabsk\Desktop\eecs-494-f16-p4\Assets\UI\tutorialText2.png"
+         style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:url(#radialGradient8192-5-3);fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:10;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
+         id="path8152-7-1"
+         cx="-2111.8652"
+         cy="8276.4346"
+         rx="98.122391"
+         ry="77.821213" />
       <text
+         transform="scale(1.1066631,0.90361737)"
+         inkscape:export-ydpi="45"
+         inkscape:export-xdpi="45"
+         inkscape:export-filename="C:\Users\tabsk\Desktop\eecs-494-f16-p4\Assets\UI\tutorialText2.png"
+         sodipodi:linespacing="125%"
+         id="text4241-8-8-9-6-3-9"
+         y="9191.6758"
+         x="-1908.1998"
+         style="font-style:normal;font-weight:normal;font-size:96.34409332px;line-height:125%;font-family:sans-serif;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:3.75410056;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         xml:space="preserve"><tspan
+           id="tspan4593-3-450-0-9"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Western;-inkscape-font-specification:'Western Thin';text-align:center;text-anchor:middle;stroke:#000000;stroke-width:3.75410056;stroke-miterlimit:4;stroke-dasharray:none"
+           y="9191.6758"
+           x="-1908.1998"
+           sodipodi:role="line">R</tspan></text>
+      <text
+         transform="scale(1.1066631,0.90361737)"
+         inkscape:export-ydpi="45"
+         inkscape:export-xdpi="45"
+         inkscape:export-filename="C:\Users\tabsk\Desktop\eecs-494-f16-p4\Assets\UI\tutorialText2.png"
+         sodipodi:linespacing="125%"
+         id="text4241-8-8-2-6-1"
+         y="9190.5381"
+         x="-1908.9584"
+         style="font-style:normal;font-weight:normal;font-size:96.34409332px;line-height:125%;font-family:sans-serif;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         xml:space="preserve"><tspan
+           id="tspan4593-28-8-9"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Western;-inkscape-font-specification:'Western Thin';text-align:center;text-anchor:middle"
+           y="9190.5381"
+           x="-1908.9584"
+           sodipodi:role="line">R</tspan></text>
+      <text
+         transform="translate(7.919316e-7,7.5076114e-6)"
          inkscape:export-ydpi="45"
          inkscape:export-xdpi="45"
          inkscape:export-filename="C:\Users\tabsk\Desktop\eecs-494-f16-p4\Assets\UI\tutorialText2.png"
@@ -3932,10 +3991,10 @@
            style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Western;-inkscape-font-specification:'Western Thin';text-align:center;text-anchor:middle;stroke:none;stroke-width:10;stroke-miterlimit:4;stroke-dasharray:none"
            y="8379.3857"
            x="-2591.4426"
-           sodipodi:role="line">Use      To Aim</tspan></text>
+           sodipodi:role="line">Use Right Stick      To Aim</tspan></text>
     </g>
     <g
-       transform="translate(-3.2998657e-5,-8.1173878e-6)"
+       transform="translate(-3.2998657e-5,1577.088)"
        id="g6773-8"
        style="fill:#000000;filter:url(#filter7709)"
        inkscape:export-filename="C:\Users\tabsk\Desktop\eecs-494-f16-p4\Assets\UI\tutorialText4.png"
@@ -3952,12 +4011,12 @@
          style="font-style:normal;font-weight:normal;font-size:256.63696289px;line-height:125%;font-family:sans-serif;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
          xml:space="preserve"><tspan
            id="tspan9992-2-2"
-           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Western;-inkscape-font-specification:'Western Thin';text-align:center;text-anchor:middle;stroke:#000000;stroke-width:10;stroke-miterlimit:4;stroke-dasharray:none;fill:#000000"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Western;-inkscape-font-specification:'Western Thin';text-align:center;text-anchor:middle;fill:#000000;stroke:#000000;stroke-width:10;stroke-miterlimit:4;stroke-dasharray:none"
            y="10009.881"
            x="-2586.2805"
            sodipodi:role="line">Use       to Pick Up and Throw</tspan><tspan
            id="tspan5859-5"
-           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Western;-inkscape-font-specification:'Western Thin';text-align:center;text-anchor:middle;stroke:#000000;stroke-width:10;stroke-miterlimit:4;stroke-dasharray:none;fill:#000000"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Western;-inkscape-font-specification:'Western Thin';text-align:center;text-anchor:middle;fill:#000000;stroke:#000000;stroke-width:10;stroke-miterlimit:4;stroke-dasharray:none"
            y="10330.677"
            x="-2554.2009"
            sodipodi:role="line">Balls with your Right Hand </tspan></text>
@@ -4012,12 +4071,12 @@
          style="font-style:normal;font-weight:normal;font-size:256.63696289px;line-height:125%;font-family:sans-serif;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
          xml:space="preserve"><tspan
            id="tspan9992-2-1-1"
-           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Western;-inkscape-font-specification:'Western Thin';text-align:center;text-anchor:middle;stroke:none;stroke-width:10;stroke-miterlimit:4;stroke-dasharray:none;fill:#000000"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Western;-inkscape-font-specification:'Western Thin';text-align:center;text-anchor:middle;fill:#000000;stroke:none;stroke-width:10;stroke-miterlimit:4;stroke-dasharray:none"
            y="10006.584"
            x="-2589.5771"
            sodipodi:role="line">Use       to Pick Up and Throw</tspan><tspan
            id="tspan5859-4-9"
-           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Western;-inkscape-font-specification:'Western Thin';text-align:center;text-anchor:middle;stroke:none;stroke-width:10;stroke-miterlimit:4;stroke-dasharray:none;fill:#000000"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Western;-inkscape-font-specification:'Western Thin';text-align:center;text-anchor:middle;fill:#000000;stroke:none;stroke-width:10;stroke-miterlimit:4;stroke-dasharray:none"
            y="10327.38"
            x="-2557.4976"
            sodipodi:role="line">Balls with your Right Hand </tspan></text>
@@ -4026,7 +4085,8 @@
        id="g6773"
        inkscape:export-filename="C:\Users\tabsk\Desktop\eecs-494-f16-p4\Assets\UI\tutorialText4.png"
        inkscape:export-xdpi="45"
-       inkscape:export-ydpi="45">
+       inkscape:export-ydpi="45"
+       transform="translate(0,1577.088)">
       <text
          inkscape:export-ydpi="45"
          inkscape:export-xdpi="45"
@@ -4084,7 +4144,7 @@
            inkscape:connector-curvature="0"
            id="path4317-07-8-4-7-8-8"
            d="m 2585.5629,7248.6324 -246.8455,0 c 0,-59.6318 -2.9753,-121.812 -2.9753,-121.812 0,0 60.5433,-1.6108 126.3981,-1.6108 68.1645,0 123.4227,55.2583 123.4227,123.4228 z"
-           style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:0.224;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:url(#linearGradient7037-1-7);fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:11.36788559;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4.0999999;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate" />
+           style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:0.22400004;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:url(#linearGradient7037-1-7);fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:11.36788559;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4.0999999;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate" />
       </g>
       <text
          inkscape:export-ydpi="45"
@@ -4108,7 +4168,7 @@
            sodipodi:role="line">Balls with your Right Hand </tspan></text>
     </g>
     <g
-       transform="translate(-3.2998657e-5,-3.3117387e-5)"
+       transform="translate(-3.2998657e-5,1577.088)"
        id="g6758-6"
        style="fill:#000000;filter:url(#filter7733)"
        inkscape:export-filename="C:\Users\tabsk\Desktop\eecs-494-f16-p4\Assets\UI\tutorialText5.png"
@@ -4171,12 +4231,12 @@
          style="font-style:normal;font-weight:normal;font-size:256.63696289px;line-height:125%;font-family:sans-serif;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
          xml:space="preserve"><tspan
            id="tspan9992-2-0-8"
-           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Western;-inkscape-font-specification:'Western Thin';text-align:center;text-anchor:middle;stroke:#000000;stroke-width:10;stroke-miterlimit:4;stroke-dasharray:none;fill:#000000"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Western;-inkscape-font-specification:'Western Thin';text-align:center;text-anchor:middle;fill:#000000;stroke:#000000;stroke-width:10;stroke-miterlimit:4;stroke-dasharray:none"
            y="10946.146"
            x="-2586.2805"
            sodipodi:role="line">Use       to Pick Up and Throw</tspan><tspan
            id="tspan5859-2-8"
-           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Western;-inkscape-font-specification:'Western Thin';text-align:center;text-anchor:middle;stroke:#000000;stroke-width:10;stroke-miterlimit:4;stroke-dasharray:none;fill:#000000"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Western;-inkscape-font-specification:'Western Thin';text-align:center;text-anchor:middle;fill:#000000;stroke:#000000;stroke-width:10;stroke-miterlimit:4;stroke-dasharray:none"
            y="11266.942"
            x="-2554.2009"
            sodipodi:role="line">Balls with your Left Hand </tspan></text>
@@ -4191,12 +4251,12 @@
          style="font-style:normal;font-weight:normal;font-size:256.63696289px;line-height:125%;font-family:sans-serif;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
          xml:space="preserve"><tspan
            id="tspan9992-2-1-2-3"
-           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Western;-inkscape-font-specification:'Western Thin';text-align:center;text-anchor:middle;stroke:none;stroke-width:10;stroke-miterlimit:4;stroke-dasharray:none;fill:#000000"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Western;-inkscape-font-specification:'Western Thin';text-align:center;text-anchor:middle;fill:#000000;stroke:none;stroke-width:10;stroke-miterlimit:4;stroke-dasharray:none"
            y="10942.85"
            x="-2589.5771"
            sodipodi:role="line">Use       to Pick Up and Throw</tspan><tspan
            id="tspan5859-4-8-2"
-           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Western;-inkscape-font-specification:'Western Thin';text-align:center;text-anchor:middle;stroke:none;stroke-width:10;stroke-miterlimit:4;stroke-dasharray:none;fill:#000000"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Western;-inkscape-font-specification:'Western Thin';text-align:center;text-anchor:middle;fill:#000000;stroke:none;stroke-width:10;stroke-miterlimit:4;stroke-dasharray:none"
            y="11263.646"
            x="-2557.4976"
            sodipodi:role="line">Balls with your Left Hand </tspan></text>
@@ -4205,7 +4265,8 @@
        id="g6758"
        inkscape:export-filename="C:\Users\tabsk\Desktop\eecs-494-f16-p4\Assets\UI\tutorialText5.png"
        inkscape:export-xdpi="45"
-       inkscape:export-ydpi="45">
+       inkscape:export-ydpi="45"
+       transform="translate(0,1577.088)">
       <g
          inkscape:export-ydpi="45"
          inkscape:export-xdpi="45"
@@ -5482,6 +5543,211 @@
            x="3453.4104"
            sodipodi:role="line"
            id="tspan5185-0-32-1-0-8">GO!</tspan></text>
+    </g>
+    <g
+       transform="translate(2.7967835e-5,-8.7277388e-6)"
+       id="g5653-1"
+       style="fill:#000000;filter:url(#filter5772)"
+       inkscape:export-filename="C:\Users\tabsk\Desktop\eecs-494-f16-p4\Assets\UI\tutorialText25.png"
+       inkscape:export-xdpi="45"
+       inkscape:export-ydpi="45">
+      <text
+         inkscape:export-ydpi="45"
+         inkscape:export-xdpi="45"
+         inkscape:export-filename="C:\Users\tabsk\Desktop\eecs-494-f16-p4\Assets\UI\tutorialText2.png"
+         sodipodi:linespacing="125%"
+         id="text4241-8-8-9-6-1-2-3"
+         y="9297.1748"
+         x="-2589.1116"
+         style="font-style:normal;font-weight:normal;font-size:256.63696289px;line-height:125%;font-family:sans-serif;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         xml:space="preserve"><tspan
+           id="tspan4593-3-450-7-1-2"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Western;-inkscape-font-specification:'Western Thin';text-align:center;text-anchor:middle;stroke:#000000;stroke-width:10;stroke-miterlimit:4;stroke-dasharray:none;fill:#000000"
+           y="9297.1748"
+           x="-2589.1116"
+           sodipodi:role="line">Use       To Dash</tspan></text>
+      <text
+         inkscape:export-ydpi="45"
+         inkscape:export-xdpi="45"
+         inkscape:export-filename="C:\Users\tabsk\Desktop\eecs-494-f16-p4\Assets\UI\tutorialText2.png"
+         sodipodi:linespacing="125%"
+         id="text4241-8-8-9-6-1-8-6-9"
+         y="9293.0957"
+         x="-2591.4426"
+         style="font-style:normal;font-weight:normal;font-size:256.63696289px;line-height:125%;font-family:sans-serif;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         xml:space="preserve"><tspan
+           id="tspan4593-3-450-7-5-0-6"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Western;-inkscape-font-specification:'Western Thin';text-align:center;text-anchor:middle;stroke:none;stroke-width:10;stroke-miterlimit:4;stroke-dasharray:none;fill:#000000"
+           y="9293.0957"
+           x="-2591.4426"
+           sodipodi:role="line">Use       To Dash</tspan></text>
+      <g
+         inkscape:export-ydpi="45"
+         inkscape:export-xdpi="45"
+         inkscape:export-filename="C:\Users\tabsk\Desktop\eecs-494-f16-p4\Assets\UI\aButton.png"
+         id="g5843-1-7"
+         transform="translate(306.3033,2333.6806)"
+         style="fill:#000000">
+        <circle
+           style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:10;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4.0999999;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
+           id="path4317-06-0-5"
+           cx="-3133.7639"
+           cy="6861.0483"
+           r="108.57143"
+           inkscape:export-filename="C:\Users\tabsk\Desktop\eecs-494-f16-p4\Assets\UI\joinText.png"
+           inkscape:export-xdpi="45"
+           inkscape:export-ydpi="45" />
+        <circle
+           style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:10;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4.0999999;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
+           id="path4317-0-5-084-9-1"
+           cx="-3133.7639"
+           cy="6861.0483"
+           r="91.897751"
+           inkscape:export-filename="C:\Users\tabsk\Desktop\eecs-494-f16-p4\Assets\UI\joinText.png"
+           inkscape:export-xdpi="45"
+           inkscape:export-ydpi="45" />
+        <text
+           xml:space="preserve"
+           style="font-style:normal;font-weight:normal;font-size:135.2245636px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:8.33594418;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;filter:url(#filter4451-51-5-8)"
+           x="-937.85211"
+           y="5694.0093"
+           id="text4337-1-7-3-0"
+           sodipodi:linespacing="125%"
+           transform="matrix(1.1996241,0,0,1.1996241,-2069.5259,88.334378)"
+           inkscape:export-filename="C:\Users\tabsk\Desktop\eecs-494-f16-p4\Assets\UI\joinText.png"
+           inkscape:export-xdpi="45"
+           inkscape:export-ydpi="45"><tspan
+             sodipodi:role="line"
+             id="tspan4339-6-8-8-3"
+             x="-937.85211"
+             y="5694.0093"
+             style="font-style:normal;font-variant:normal;font-weight:100;font-stretch:normal;font-family:Western;-inkscape-font-specification:'Western Thin';fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:8.33594418;stroke-miterlimit:4;stroke-dasharray:none">A</tspan></text>
+        <circle
+           style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:10;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4.0999999;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
+           id="path4317-0-58-50-7"
+           cx="-3133.7639"
+           cy="6861.0483"
+           r="108.57143"
+           inkscape:export-filename="C:\Users\tabsk\Desktop\eecs-494-f16-p4\Assets\UI\joinText.png"
+           inkscape:export-xdpi="45"
+           inkscape:export-ydpi="45" />
+        <text
+           xml:space="preserve"
+           style="font-style:normal;font-weight:normal;font-size:162.21864319px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+           x="-3194.5959"
+           y="6919.0049"
+           id="text4337-7-1-5"
+           sodipodi:linespacing="125%"
+           inkscape:export-filename="C:\Users\tabsk\Desktop\eecs-494-f16-p4\Assets\UI\joinText.png"
+           inkscape:export-xdpi="45"
+           inkscape:export-ydpi="45"><tspan
+             sodipodi:role="line"
+             id="tspan4339-9-2-4"
+             x="-3194.5959"
+             y="6919.0049"
+             style="font-style:normal;font-variant:normal;font-weight:100;font-stretch:normal;font-family:Western;-inkscape-font-specification:'Western Thin';fill:#000000;fill-opacity:1">A</tspan></text>
+      </g>
+    </g>
+    <g
+       id="g5653"
+       inkscape:export-filename="C:\Users\tabsk\Desktop\eecs-494-f16-p4\Assets\UI\tutorialText25.png"
+       inkscape:export-xdpi="45"
+       inkscape:export-ydpi="45">
+      <text
+         inkscape:export-ydpi="45"
+         inkscape:export-xdpi="45"
+         inkscape:export-filename="C:\Users\tabsk\Desktop\eecs-494-f16-p4\Assets\UI\tutorialText2.png"
+         sodipodi:linespacing="125%"
+         id="text4241-8-8-9-6-1-2"
+         y="9297.1748"
+         x="-2589.1116"
+         style="font-style:normal;font-weight:normal;font-size:256.63696289px;line-height:125%;font-family:sans-serif;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         xml:space="preserve"><tspan
+           id="tspan4593-3-450-7-1"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Western;-inkscape-font-specification:'Western Thin';text-align:center;text-anchor:middle;stroke:#000000;stroke-width:10;stroke-miterlimit:4;stroke-dasharray:none"
+           y="9297.1748"
+           x="-2589.1116"
+           sodipodi:role="line">Use       To Dash</tspan></text>
+      <text
+         inkscape:export-ydpi="45"
+         inkscape:export-xdpi="45"
+         inkscape:export-filename="C:\Users\tabsk\Desktop\eecs-494-f16-p4\Assets\UI\tutorialText2.png"
+         sodipodi:linespacing="125%"
+         id="text4241-8-8-9-6-1-8-6"
+         y="9293.0957"
+         x="-2591.4426"
+         style="font-style:normal;font-weight:normal;font-size:256.63696289px;line-height:125%;font-family:sans-serif;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         xml:space="preserve"><tspan
+           id="tspan4593-3-450-7-5-0"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Western;-inkscape-font-specification:'Western Thin';text-align:center;text-anchor:middle;stroke:none;stroke-width:10;stroke-miterlimit:4;stroke-dasharray:none"
+           y="9293.0957"
+           x="-2591.4426"
+           sodipodi:role="line">Use       To Dash</tspan></text>
+      <g
+         inkscape:export-ydpi="45"
+         inkscape:export-xdpi="45"
+         inkscape:export-filename="C:\Users\tabsk\Desktop\eecs-494-f16-p4\Assets\UI\aButton.png"
+         id="g5843-1"
+         transform="translate(306.3033,2333.6806)">
+        <circle
+           style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:#139e1b;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:10;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4.0999999;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
+           id="path4317-06-0"
+           cx="-3133.7639"
+           cy="6861.0483"
+           r="108.57143"
+           inkscape:export-filename="C:\Users\tabsk\Desktop\eecs-494-f16-p4\Assets\UI\joinText.png"
+           inkscape:export-xdpi="45"
+           inkscape:export-ydpi="45" />
+        <circle
+           style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:url(#linearGradient5649);fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:10;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4.0999999;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
+           id="path4317-0-5-084-9"
+           cx="-3133.7639"
+           cy="6861.0483"
+           r="91.897751"
+           inkscape:export-filename="C:\Users\tabsk\Desktop\eecs-494-f16-p4\Assets\UI\joinText.png"
+           inkscape:export-xdpi="45"
+           inkscape:export-ydpi="45" />
+        <text
+           xml:space="preserve"
+           style="font-style:normal;font-weight:normal;font-size:135.2245636px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#139e1b;fill-opacity:1;stroke:#000000;stroke-width:8.33594418;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;filter:url(#filter4451-51-5)"
+           x="-937.85211"
+           y="5694.0093"
+           id="text4337-1-7-3"
+           sodipodi:linespacing="125%"
+           transform="matrix(1.1996241,0,0,1.1996241,-2069.5259,88.334378)"
+           inkscape:export-filename="C:\Users\tabsk\Desktop\eecs-494-f16-p4\Assets\UI\joinText.png"
+           inkscape:export-xdpi="45"
+           inkscape:export-ydpi="45"><tspan
+             sodipodi:role="line"
+             id="tspan4339-6-8-8"
+             x="-937.85211"
+             y="5694.0093"
+             style="font-style:normal;font-variant:normal;font-weight:100;font-stretch:normal;font-family:Western;-inkscape-font-specification:'Western Thin';fill:#139e1b;fill-opacity:1;stroke:#000000;stroke-width:8.33594418;stroke-miterlimit:4;stroke-dasharray:none">A</tspan></text>
+        <circle
+           style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:url(#linearGradient5651);fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:10;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4.0999999;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
+           id="path4317-0-58-50"
+           cx="-3133.7639"
+           cy="6861.0483"
+           r="108.57143"
+           inkscape:export-filename="C:\Users\tabsk\Desktop\eecs-494-f16-p4\Assets\UI\joinText.png"
+           inkscape:export-xdpi="45"
+           inkscape:export-ydpi="45" />
+        <text
+           xml:space="preserve"
+           style="font-style:normal;font-weight:normal;font-size:162.21864319px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#1ad725;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+           x="-3194.5959"
+           y="6919.0049"
+           id="text4337-7-1"
+           sodipodi:linespacing="125%"
+           inkscape:export-filename="C:\Users\tabsk\Desktop\eecs-494-f16-p4\Assets\UI\joinText.png"
+           inkscape:export-xdpi="45"
+           inkscape:export-ydpi="45"><tspan
+             sodipodi:role="line"
+             id="tspan4339-9-2"
+             x="-3194.5959"
+             y="6919.0049"
+             style="font-style:normal;font-variant:normal;font-weight:100;font-stretch:normal;font-family:Western;-inkscape-font-specification:'Western Thin';fill:#1ad725;fill-opacity:1">A</tspan></text>
+      </g>
     </g>
   </g>
 </svg>
