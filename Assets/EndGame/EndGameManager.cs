@@ -28,7 +28,7 @@ public class EndGameManager : MonoBehaviour {
     int maxHeigthBar = 7;
 
 	public float delay;
-	List<int> heights;
+	List<float> heights;
 
     void Awake() {
         //get controllers 
@@ -43,14 +43,17 @@ public class EndGameManager : MonoBehaviour {
         for (int i = 0; i < 4; ++i) //4 is max number of players
             if (GlobalPlayerManager.inst.IsInGame(i)) ++numActivePlayersInGame;
 
-        for (int i = 0; i < numActivePlayersInGame; ++i) {
-            activeBars[i].transform.FindChild("ScoreBar").GetComponent<Renderer>().material.color = GlobalPlayerManager.inst.materials[i].col;
-            foreach (Renderer r in activeBars[i].transform.FindChild("Player").GetComponentsInChildren<Renderer>()) {
+        for (int i = 0, iBar = 0; i < 4; ++i) {
+			if (!GlobalPlayerManager.inst.IsInGame(i))
+				continue;
+            activeBars[iBar].transform.FindChild("ScoreBar").GetComponent<Renderer>().material.color = GlobalPlayerManager.inst.materials[i].col;
+            foreach (Renderer r in activeBars[iBar].transform.FindChild("Player").GetComponentsInChildren<Renderer>()) {
                 r.material = GlobalPlayerManager.inst.materials[i].mat;
             }
+			iBar += 1;
         }
 
-        List<int> heightsOfBars = new List<int>();
+        List<float> heightsOfBars = new List<float>();
 		//move bars around given number of players
 		if (numActivePlayersInGame == 2) {
 			InitTwoBars();
@@ -93,35 +96,21 @@ public class EndGameManager : MonoBehaviour {
         activeBars[2].transform.position = new Vector3(4, 2, -2);
     }
 
-    List<int> GenerateHeightsBasedOnScore() {
+    List<float> GenerateHeightsBasedOnScore() {
         int maxScore = 0;
-        List<int> scores = GlobalPlayerManager.inst.scores;
-        SortedDictionary<int, List<int>> scoresToPlayer =
-                new SortedDictionary<int, List<int>>(new ReverseComparator<int>(Comparer<int>.Default));
-        for (int i = 0; i < numActivePlayersInGame; ++i) {
-            if (scores[i] > maxScore) maxScore = scores[i];//get highest score in the game
-            if (scoresToPlayer.ContainsKey(scores[i])) continue;
-            scoresToPlayer.Add(scores[i], new List<int>()); //init dictionary
-        }
-        for (int i = 0; i < numActivePlayersInGame; ++i) {
-            List<int> entries;
-            scoresToPlayer.TryGetValue(scores[i], out entries);
-            entries.Add(i);
-            scoresToPlayer.Remove(scores[i]);
-            scoresToPlayer.Add(scores[i], entries);
-        }
+		for (int i = 0; i < 4; i++) {
+			if (!GlobalPlayerManager.inst.IsInGame(i))
+				continue;
+			if (GlobalPlayerManager.inst.scores[i] > maxScore)
+				maxScore = GlobalPlayerManager.inst.scores[i];
+		}
 
-        List<int> heights = new List<int>();
-        for (int i = 0; i < numActivePlayersInGame; ++i) heights.Add(0);//init list
-        foreach (KeyValuePair<int, List<int>> entry in scoresToPlayer) {
-            List<int> playersWithGivenScore = entry.Value;
-            foreach (int i in playersWithGivenScore) {
-                if (entry.Key == maxScore) heights[i] = maxHeigthBar;
-                else {
-                    heights[i] = (int)Mathf.Max((float)maxHeigthBar * ((float)entry.Key / (float)maxScore), 1f);//relative height
-                }
-            }
-        }
+        List<float> heights = new List<float>();
+		for (int i = 0; i < 4; i++) {
+			if (!GlobalPlayerManager.inst.IsInGame(i))
+				continue;
+			heights.Add(Mathf.Max((float)maxHeigthBar * ((float)GlobalPlayerManager.inst.scores[i] / (float)maxScore), .5f));
+		}
         return heights;
     }
 
