@@ -2,7 +2,12 @@
 using System.Collections;
 using System.Collections.Generic;
 
-public class BallBoomerang  : BallHotness {
+public class BallBoomerang : MonoBehaviour {
+
+	public BallHotness hotness;
+
+	protected Rigidbody2D rigid;
+	protected BallSource source;
 
 	private float speedBoost = 18f;
 	GameObject thrower = null;
@@ -13,6 +18,9 @@ public class BallBoomerang  : BallHotness {
 
 	void Start() {
 		ball = this.GetComponent<Ball>();
+		hotness = this.GetComponent<BallHotness>();
+		rigid = this.GetComponent<Rigidbody2D>();
+		source = this.GetComponent<BallSource>();
 	}
 
 	void Update() {
@@ -31,7 +39,7 @@ public class BallBoomerang  : BallHotness {
 		else if (thrower != null) Destroy(this.gameObject);
 	}
 
-	protected override void OnHitOther(GameObject other) {
+	void OnHitOther(GameObject other) {
 		// reverse direction if it wasnt returning so it returns
 		if (!returning) {
 			returning = true;
@@ -42,7 +50,7 @@ public class BallBoomerang  : BallHotness {
 	}
 
 	public void OnTriggerEnter2D(Collider2D coll) {
-		if (GetIsHot() && ball.GetIsSmackable() && coll.tag == "Smack") {
+		if (hotness.GetIsHot() && ball.GetIsSmackable() && coll.tag == "Smack") {
 			thrower = coll.gameObject.transform.parent.transform.parent.gameObject;
 			returning = false;
 		}
