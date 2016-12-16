@@ -22,6 +22,8 @@ public class AudioManager : MonoBehaviour {
 	public SceneType type;
 	AudioSource musicSource;
 
+	AudioSource source;
+
 	void Awake() {
 		if (instance == null) {
 			instance = this;
@@ -40,6 +42,7 @@ public class AudioManager : MonoBehaviour {
 
 	void Init() {
 		musicSource = GetComponent<AudioSource>();
+		source = gameObject.AddComponent<AudioSource>();
 		SetMusic();
 	}
 
@@ -48,7 +51,8 @@ public class AudioManager : MonoBehaviour {
 	}
 
 	public void PlayClip(AudioClipWithVolume clipWithVolume) {
-		StartCoroutine(PlayAndDestroy(clipWithVolume));
+		//StartCoroutine(PlayAndDestroy(clipWithVolume));
+		source.PlayOneShot(clipWithVolume.clip, clipWithVolume.volume);
 	}
 
 	IEnumerator PlayAndDestroy(AudioClipWithVolume clipWithVolume) {

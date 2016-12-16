@@ -14,9 +14,12 @@ public class SceneTransitioner : MonoBehaviour {
 	public Transform cameraTransform;
 	public bool doCameraPan;
 
+	bool loading;
+
 	void Awake() {
 		Controller.Lock();
 		instance = this;
+		loading = true;
 		cameraTransform = Camera.main.transform;
 		StartCoroutine(FadeOut());
 	}
@@ -46,9 +49,13 @@ public class SceneTransitioner : MonoBehaviour {
 			yield return null;
 		}
 		Controller.Unlock();
+		loading = false;
 	}
 
 	public void LoadScene(string scene) {
-		StartCoroutine(FadeIn(scene));
+		if (!loading) {
+			loading = true;
+			StartCoroutine(FadeIn(scene));
+		}
 	}
 }
