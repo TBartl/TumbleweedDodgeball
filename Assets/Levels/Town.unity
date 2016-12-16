@@ -2016,7 +2016,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 305945992}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 10.27, y: 6.73, z: -0.13}
+  m_LocalPosition: {x: 10.27, y: 6.73, z: 0.08}
   m_LocalScale: {x: 11.584528, y: 6.6074724, z: 0.5304138}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
@@ -10724,6 +10724,16 @@ Prefab:
         type: 2}
       propertyPath: doCameraPan
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224000014227228356, guid: 7195cefd3cff64240bb942110d4250b7,
+        type: 2}
+      propertyPath: m_SizeDelta.y
+      value: 34.35028
+      objectReference: {fileID: 0}
+    - target: {fileID: 224000013431957010, guid: 7195cefd3cff64240bb942110d4250b7,
+        type: 2}
+      propertyPath: m_SizeDelta.y
+      value: 56.94915
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7195cefd3cff64240bb942110d4250b7, type: 2}
