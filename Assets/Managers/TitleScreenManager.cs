@@ -44,7 +44,7 @@ public class TitleScreenManager : MonoBehaviour {
 
 		if (controller.GetConfirmDown()) {
 			AudioManager.instance.PlayClip(AudioManager.instance.confirm);
-			SceneTransitioner.instance.LoadScene("MainMenu");
+			SceneTransitioner.instance.LoadNext("MainMenu");
 		}
 	}
 }

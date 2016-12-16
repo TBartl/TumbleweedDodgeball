@@ -16,46 +16,107 @@ public class SceneTransitioner : MonoBehaviour {
 
 	bool loading;
 
+	static bool back = false;
+
 	void Awake() {
 		Controller.Lock();
 		instance = this;
 		loading = true;
 		cameraTransform = Camera.main.transform;
 		StartCoroutine(FadeOut());
+		if (back) {
+			StartCoroutine(PanInLeft());
+		}
+		else {
+			StartCoroutine(PanInRight());
+		}
 	}
 
 	IEnumerator FadeIn(string scene) {
 		Controller.Lock();
-		Quaternion originalRotation = cameraTransform.rotation;
-		Quaternion finalRotation = originalRotation * Quaternion.AngleAxis(cameraTransitionAngle, new Vector3(0, 1, 0));
 		for (int i = 0; i < numFrames; ++i) {
 			panel.color = new Color(panel.color.r, panel.color.g, panel.color.b, (float) i / (float) numFrames);
-			if (doCameraPan) {
-				cameraTransform.rotation = Quaternion.Lerp(originalRotation, finalRotation, (float)i / (float)numFrames);
-			}
 			yield return null;
 		}
 		SceneManager.LoadScene(scene);
 	}
 
 	IEnumerator FadeOut() {
-		Quaternion originalRotation = cameraTransform.rotation;
-		Quaternion finalRotation = originalRotation * Quaternion.AngleAxis(-cameraTransitionAngle, new Vector3(0, 1, 0));
 		for (int i = numFrames - 1; i >= 0; --i) {
 			panel.color = new Color(panel.color.r, panel.color.g, panel.color.b, (float) i / (float) numFrames);
-			if (doCameraPan) {
-				cameraTransform.rotation = Quaternion.Lerp(originalRotation, finalRotation, (float) i / (float) numFrames);
-			}
 			yield return null;
 		}
 		Controller.Unlock();
 		loading = false;
 	}
 
-	public void LoadScene(string scene) {
+	IEnumerator PanInRight() {
+		Quaternion originalRotation = cameraTransform.rotation;
+		Quaternion finalRotation = originalRotation * Quaternion.AngleAxis(-cameraTransitionAngle, new Vector3(0, 1, 0));
+		for (int i = numFrames - 1; i >= 0; --i) {
+			if (doCameraPan) {
+				cameraTransform.rotation = Quaternion.Lerp(originalRotation, finalRotation, (float)i / (float)numFrames);
+			}
+			yield return null;
+		}
+	}
+
+	IEnumerator PanInLeft() {
+		Quaternion originalRotation = cameraTransform.rotation;
+		Quaternion finalRotation = originalRotation * Quaternion.AngleAxis(cameraTransitionAngle, new Vector3(0, 1, 0));
+		for (int i = numFrames - 1; i >= 0; --i) {
+			if (doCameraPan) {
+				cameraTransform.rotation = Quaternion.Lerp(originalRotation, finalRotation, (float)i / (float)numFrames);
+			}
+			yield return null;
+		}
+	}
+
+	IEnumerator PanOutRight() {
+		Quaternion originalRotation = cameraTransform.rotation;
+		Quaternion finalRotation = originalRotation * Quaternion.AngleAxis(cameraTransitionAngle, new Vector3(0, 1, 0));
+		for (int i = 0; i < numFrames; ++i) {
+			if (doCameraPan) {
+				cameraTransform.rotation = Quaternion.Lerp(originalRotation, finalRotation, (float)i / (float)numFrames);
+			}
+			yield return null;
+		}
+	}
+
+	IEnumerator PanOutLeft() {
+		Quaternion originalRotation = cameraTransform.rotation;
+		Quaternion finalRotation = originalRotation * Quaternion.AngleAxis(-cameraTransitionAngle, new Vector3(0, 1, 0));
+		for (int i = 0; i < numFrames; ++i) {
+			if (doCameraPan) {
+				cameraTransform.rotation = Quaternion.Lerp(originalRotation, finalRotation, (float)i / (float)numFrames);
+			}
+			yield return null;
+		}
+	}
+
+	//public void LoadScene(string scene) {
+	//	if (!loading) {
+	//		loading = true;
+	//		StartCoroutine(FadeIn(scene));
+	//		StartCoroutine(PanOutRight());
+	//	}
+	//}
+
+	public void LoadNext(string scene) {
 		if (!loading) {
 			loading = true;
+			back = false;
 			StartCoroutine(FadeIn(scene));
+			StartCoroutine(PanOutRight());
+		}
+	}
+
+	public void LoadBack(string scene) {
+		if (!loading) {
+			loading = true;
+			back = true;
+			StartCoroutine(FadeIn(scene));
+			StartCoroutine(PanOutLeft());
 		}
 	}
 }
