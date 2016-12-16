@@ -10,7 +10,8 @@ enum TutorialText {
 	aDash,
 	punch,
 	rightHandThrow,
-	leftHandThrow
+	leftHandThrow,
+    finished
 }
 
 public class TutorialManager : MonoBehaviour {
@@ -57,7 +58,7 @@ public class TutorialManager : MonoBehaviour {
 
 	IEnumerator RunTutorial() {
 		ChangeTask();
-		yield return new WaitForSeconds(3);
+		yield return new WaitForSeconds(4);
 		
 		textImage.sprite = textImage.sprite = textSprites[(int)TutorialText.leftStickWalk];
 		while (!CheckTaskDone()) {
@@ -147,7 +148,10 @@ public class TutorialManager : MonoBehaviour {
 		yield return new WaitForSeconds(waitTime);
 		ChangeTask();
 
-		SceneTransitioner.instance.LoadScene("LevelSelect");
+        textImage.transform.localPosition = new Vector3(0, 30f, 0);
+        textImage.sprite = textImage.sprite = textSprites[(int)TutorialText.finished];
+        yield return new WaitForSeconds(waitTime * 3);
+        SceneTransitioner.instance.LoadScene("LevelSelect");
 	}
 
 	void ChangeTask() {
