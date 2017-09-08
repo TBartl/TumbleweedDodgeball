@@ -61,7 +61,7 @@ public class PlayerHands : MonoBehaviour {
             balls.Add(null);
         }
 
-        resizableBar = ((GameObject)Instantiate(barPrefab, new Vector3(transform.position.x, transform.position.y, transform.position.z - .16f), Quaternion.identity, this.transform)).transform.FindChild("BackgroundBar/Scalable");
+        resizableBar = ((GameObject)Instantiate(barPrefab, new Vector3(transform.position.x, transform.position.y, transform.position.z - .16f), Quaternion.identity, this.transform)).transform.Find("BackgroundBar/Scalable");
         resizableBar.parent.parent.gameObject.SetActive(false);
     }
 

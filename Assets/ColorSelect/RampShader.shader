@@ -1,4 +1,6 @@
-﻿// Upgrade NOTE: replaced '_Object2World' with 'unity_ObjectToWorld'
+﻿// Upgrade NOTE: replaced 'mul(UNITY_MATRIX_MVP,*)' with 'UnityObjectToClipPos(*)'
+
+// Upgrade NOTE: replaced '_Object2World' with 'unity_ObjectToWorld'
 
 Shader "RampShader"
 {
@@ -30,7 +32,7 @@ Shader "RampShader"
 			v2f vert (appdata v)
 			{
 				v2f o;
-				o.vertex = mul(UNITY_MATRIX_MVP, v.vertex);
+				o.vertex = UnityObjectToClipPos(v.vertex);
 				half3 worldNormal = UnityObjectToWorldNormal(v.normal);
 				o.diffuseDot = (dot(worldNormal, _WorldSpaceLightPos0.xyz) + 1) / 2;
 

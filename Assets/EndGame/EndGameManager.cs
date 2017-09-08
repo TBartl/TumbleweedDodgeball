@@ -46,8 +46,8 @@ public class EndGameManager : MonoBehaviour {
         for (int i = 0, iBar = 0; i < 4; ++i) {
 			if (!GlobalPlayerManager.inst.IsInGame(i))
 				continue;
-            activeBars[iBar].transform.FindChild("ScoreBar").GetComponent<Renderer>().material.color = GlobalPlayerManager.inst.materials[i].col;
-            foreach (Renderer r in activeBars[iBar].transform.FindChild("Player").GetComponentsInChildren<Renderer>()) {
+            activeBars[iBar].transform.Find("ScoreBar").GetComponent<Renderer>().material.color = GlobalPlayerManager.inst.materials[i].col;
+            foreach (Renderer r in activeBars[iBar].transform.Find("Player").GetComponentsInChildren<Renderer>()) {
                 r.material = GlobalPlayerManager.inst.materials[i].mat;
             }
 			iBar += 1;
